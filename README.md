@@ -1,10 +1,10 @@
-# Electron Node-RED
+# Dapparatus
 
 [![platform](https://img.shields.io/badge/platform-Node--RED-red)](https://nodered.org)
 [![GitHub version](https://badge.fury.io/gh/dceejay%2Felectron-node-red.svg)](https://badge.fury.io/gh/dceejay%2Felectron-node-red)
 [![GitHub license](https://img.shields.io/github/license/dceejay/electron-node-red.svg)](https://github.com/dceejay/electron-node-red/blob/master/LICENSE)
 
-This is an Electron template to embed [Node-RED](https://nodered.org) with an existing Node-RED project to create a native application.
+This is an Electron template to embed [Node-RED](https://nodered.org) with an existing Node-RED project to create a native application running Stacks Flows.
 
 This is not intended to be a useful tool as-is, but as a base for you to create your own versions. You will need to edit the `main.js` to suit your application and update the `package.json` file to include your own required nodes and dependencies.
 
@@ -44,9 +44,9 @@ As a pre-req, as well as a recent version of node.js, you will need the **yarn**
 
 ```bash
 # Clone this repository
-git clone https://github.com/dceejay/electron-node-red.git
+git clone https://github.com/cryptocracy/dapparatus.git
 # Go into the repository
-cd electron-node-red
+cd dapparatus
 # Install the yarn install tool globally
 sudo npm i -g yarn
 # Install project dependencies
