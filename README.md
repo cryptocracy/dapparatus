@@ -45,12 +45,18 @@ As a pre-req, as well as a recent version of node.js, you will need the **yarn**
 ```bash
 # Clone this repository
 git clone https://github.com/cryptocracy/dapparatus.git
+
 # Go into the repository
 cd dapparatus
+
 # Install the yarn install tool globally
 sudo npm i -g yarn
+
 # Install project dependencies
 yarn
+
+# Dev Run Locally
+yarn start
 ```
 
 ## Building local runtime
