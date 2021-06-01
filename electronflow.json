@@ -2,7 +2,7 @@
     {
         "id": "3e25c4f8.909dbc",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Setup",
         "disabled": false,
         "info": ""
     },
@@ -102,5 +102,43 @@
             },
             "lockMenu": "icon"
         }
+    },
+    {
+        "id": "538bcbb4.4327f4",
+        "type": "ui_tab",
+        "name": "Setup",
+        "icon": "fa-gear",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f31a148f.1ff8b8",
+        "type": "ui_group",
+        "name": "Setup",
+        "tab": "538bcbb4.4327f4",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b06a3b37.40afa8",
+        "type": "ui_template",
+        "z": "3e25c4f8.909dbc",
+        "group": "f31a148f.1ff8b8",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "5",
+        "format": "<h3>Import Version</h3>\nStep 1) Ctrl + Shift + E to open the Editor\n<br>\nStep 2) Import the dapparatus_alpha.json\n<br>\nStep 3) Use & Extend & Buidl",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 180,
+        "y": 200,
+        "wires": [
+            []
+        ]
     }
 ]
