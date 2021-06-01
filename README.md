@@ -4,7 +4,7 @@
 [![GitHub version](https://badge.fury.io/gh/dceejay%2Felectron-node-red.svg)](https://badge.fury.io/gh/dceejay%2Felectron-node-red)
 [![GitHub license](https://img.shields.io/github/license/dceejay/electron-node-red.svg)](https://github.com/dceejay/electron-node-red/blob/master/LICENSE)
 
-This is an Electron template to embed [Node-RED](https://nodered.org) with an existing Node-RED project to create a native application running Stacks Flows.
+This is an Electron template that embeds [Node-RED](https://nodered.org) to create decentralized application running on [Stacks](https://stacks.co).
 
 This is not intended to be a useful tool as-is, but as a base for you to create your own versions. You will need to edit the `main.js` to suit your application and update the `package.json` file to include your own required nodes and dependencies.
 
