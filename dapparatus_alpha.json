@@ -187,16 +187,6 @@
         "collapse": false
     },
     {
-        "id": "2fb6b67e.03acba",
-        "type": "ui_group",
-        "name": "History",
-        "tab": "",
-        "order": 5,
-        "disp": false,
-        "width": "12",
-        "collapse": false
-    },
-    {
         "id": "93f1cccf.344e5",
         "type": "ui_group",
         "name": "MintFT",
@@ -354,42 +344,6 @@
         "collapse": false
     },
     {
-        "id": "99e21961.dbd2f8",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "3348dd5e.728a92",
-        "order": 4,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "34540233.515bce",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "3348dd5e.728a92",
-        "order": 6,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "447f61d4.4dd94",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "3348dd5e.728a92",
-        "order": 7,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "f452f508.ff0ad8",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "3348dd5e.728a92",
-        "order": 8,
-        "width": 3,
-        "height": 1
-    },
-    {
         "id": "3042ba85.0457c6",
         "type": "ui_spacer",
         "name": "spacer",
@@ -414,24 +368,6 @@
         "group": "a336bc7c.eda43",
         "order": 4,
         "width": 2,
-        "height": 1
-    },
-    {
-        "id": "8cf2c080.52dc",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "69d70456.083fac",
-        "order": 4,
-        "width": "1",
-        "height": 1
-    },
-    {
-        "id": "1ff9a71c.18ab99",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "69d70456.083fac",
-        "order": 2,
-        "width": 1,
         "height": 1
     },
     {
@@ -514,6 +450,42 @@
         "hidden": false
     },
     {
+        "id": "27f4e76b.857c68",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "69d70456.083fac",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b98b7fb6.80585",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "69d70456.083fac",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a6beaca1.e70a7",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "3348dd5e.728a92",
+        "order": 8,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "e932f9ef.fa49e8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "3348dd5e.728a92",
+        "order": 4,
+        "width": "2",
+        "height": 1
+    },
+    {
         "id": "8ff35ce4.a1acd",
         "type": "ui_form",
         "z": "53028f3b.590b5",
@@ -591,8 +563,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 850,
-        "y": 480,
+        "x": 810,
+        "y": 820,
         "wires": [
             []
         ]
@@ -611,8 +583,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 860,
-        "y": 740,
+        "x": 820,
+        "y": 480,
         "wires": [
             []
         ]
@@ -677,8 +649,8 @@
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
-        "x": 210,
-        "y": 480,
+        "x": 150,
+        "y": 820,
         "wires": [
             []
         ]
@@ -727,8 +699,8 @@
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
-        "x": 200,
-        "y": 780,
+        "x": 140,
+        "y": 480,
         "wires": [
             []
         ]
@@ -852,8 +824,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 250,
-        "y": 440,
+        "x": 190,
+        "y": 760,
         "wires": [
             [
                 "24c58f0c.4ac51"
@@ -879,10 +851,12 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 250,
-        "y": 740,
+        "x": 190,
+        "y": 420,
         "wires": [
-            []
+            [
+                "f65c0e25.9c82d"
+            ]
         ]
     },
     {
@@ -892,9 +866,9 @@
         "group": "3348dd5e.728a92",
         "name": "Deposit Address",
         "order": 2,
-        "width": 12,
+        "width": 10,
         "height": 1,
-        "format": "Address: {{msg.payload}}",
+        "format": "<small>Mainnet Deposit Address:</small> {{msg.payload}}",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -913,26 +887,6 @@
         "events": "change",
         "x": 1380,
         "y": 100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "adb078ae.097988",
-        "type": "ui_template",
-        "z": "53028f3b.590b5",
-        "group": "3348dd5e.728a92",
-        "name": "QR Code",
-        "order": 5,
-        "width": 7,
-        "height": 2,
-        "format": "<div ng-bind-html=\"msg.payload\"></div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1000,
-        "y": 1100,
         "wires": [
             []
         ]
@@ -958,7 +912,7 @@
         "height": 1,
         "passthru": false,
         "label": "",
-        "tooltip": "",
+        "tooltip": "Copy Mainnet Address",
         "color": "",
         "bgcolor": "",
         "icon": "fa-copy",
@@ -1053,7 +1007,7 @@
         "name": "Reveal Keys Group",
         "group": "69d70456.083fac",
         "order": 5,
-        "width": "1",
+        "width": 1,
         "height": 1,
         "passthru": false,
         "label": "",
@@ -1208,8 +1162,8 @@
         "raw": false,
         "topic": "",
         "name": "Funding Notification",
-        "x": 1040,
-        "y": 1140,
+        "x": 1520,
+        "y": 1020,
         "wires": []
     },
     {
@@ -1551,7 +1505,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 280,
-        "y": 640,
+        "y": 660,
         "wires": [
             [
                 "4ffc51f.ae497b"
@@ -1570,7 +1524,7 @@
         "finalize": "",
         "libs": [],
         "x": 660,
-        "y": 640,
+        "y": 660,
         "wires": [
             [
                 "19547923.f698c7"
@@ -1584,7 +1538,7 @@
         "name": "ui change",
         "events": "change",
         "x": 860,
-        "y": 640,
+        "y": 660,
         "wires": [
             []
         ]
@@ -2429,7 +2383,7 @@
         "z": "53028f3b.590b5",
         "name": "Relative to Wallet Nav Defaults",
         "info": "need to check for keys \nthen if not found default",
-        "x": 150,
+        "x": 610,
         "y": 20,
         "wires": []
     },
@@ -2918,8 +2872,8 @@
         "id": "ae651374.a85b7",
         "type": "function",
         "z": "53028f3b.590b5",
-        "name": "get global deposit address",
-        "func": "var depositaddress = global.get(\"depositaddress\");\n\nmsg.payload = depositaddress;\nmsg.qrcodeinput = depositaddress;\nreturn msg;",
+        "name": "get global depositaddress",
+        "func": "var depositaddress = global.get(\"depositaddress\");\n\nmsg.payload = depositaddress;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4128,18 +4082,19 @@
         "id": "24c58f0c.4ac51",
         "type": "function",
         "z": "613e85c9.c6210c",
-        "name": "create ft-traits.clar",
+        "name": "create ft-trait.clar",
         "func": "//take the inputs and construct the Clarity contract file contents\nmsg.payload =   \"(define-trait ft-trait\\n\" +\n                \"  (\\n\" +\n                \"    ;; Transfer from the caller to a new principal\\n\" +\n                \"    (transfer (uint principal principal) (response bool uint))\\n\" +\n                \"\\n\" +\n                \"    ;; human readable name of the token\\n\" +\n                \"    (get-name () (response (string-ascii 32) uint))\\n\" +\n                \"\\n\" +\n                \"    ;; ticker symbol or empty if none\\n\" +\n                \"    (get-symbol () (response (string-ascii 32) uint))\\n\" +\n                \"\\n\" +\n                \"    ;; number of decimals used\\n\" +\n                \"    (get-decimals () (response uint uint))\\n\" +\n                \"\\n\" +\n                \"    ;; balance of the passed principal\\n\" +\n                \"    (get-balance-of (principal) (response uint uint))\\n\" +\n                \"\\n\" +\n                \"    ;; current total supply\\n\" +\n                \"    (get-total-supply () (response uint uint))\\n\" +\n                \"\\n\" +\n                \"    ;; optional URI that represents metadata of this token\\n\" +\n                \"    (get-token-uri () (response (optional (string-utf8 256)) uint))\\n\" +\n                \"  )\\n\" +\n                \")\";\n               \nmsg.filename = \"ft-trait.clar\"; // name the contract same as input custom token name\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 440,
+        "x": 470,
+        "y": 760,
         "wires": [
             [
-                "6c486db8.90b164"
+                "6c486db8.90b164",
+                "3046216.ef707de"
             ]
         ]
     },
@@ -4155,8 +4110,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 770,
-        "y": 440,
+        "x": 730,
+        "y": 700,
         "wires": []
     },
     {
@@ -4241,7 +4196,8 @@
         "wires": [
             [
                 "eb948104.cc071",
-                "84d8c5e6.9c38d8"
+                "84d8c5e6.9c38d8",
+                "7ad225d6.1b055c"
             ]
         ]
     },
@@ -4398,48 +4354,6 @@
         ]
     },
     {
-        "id": "a10b5797.7fa338",
-        "type": "ui_template",
-        "z": "88cec2c0.c8804",
-        "d": true,
-        "group": "f086e156.9d17b",
-        "name": "Mainnet Transaction List",
-        "order": 3,
-        "width": 13,
-        "height": 3,
-        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>Memo</th>\n        <th>Fee</th>\n        <th>Type</th>\n        <th>Date</th>\n        <th></th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://pbs.twimg.com/profile_images/1321461825758744576/4e3xAKz2_400x400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.token_transfer.memo}}</small></small></td>\n        <td><small>{{obj.fee_rate}}</small></td>\n        <td><small>{{obj.tx_type}}</small></td>\n        <td><small><small><small>{{obj.burn_block_time_iso}}</small></small></small></td>\n        <td><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"View in Explorer\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></a></td>\n    </tr>\n</table>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1130,
-        "y": 160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ec9a00f9.01cde",
-        "type": "ui_template",
-        "z": "88cec2c0.c8804",
-        "d": true,
-        "group": "cd33bbcb.590158",
-        "name": "Testnet Transaction List",
-        "order": 3,
-        "width": 13,
-        "height": 3,
-        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>Fee</th>\n        <th>Type</th>\n        <th>Date</th>\n        <th></th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://pbs.twimg.com/profile_images/1321461825758744576/4e3xAKz2_400x400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small>{{obj.fee_rate}}</small></td>\n        <td><small>{{obj.tx_type}}</small></td>\n        <td><small><small><small>{{obj.burn_block_time_iso}}</small></small></small></td>\n        <td><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"View in Explorer\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></a></td>\n    </tr>\n</table>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1130,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "41dd1831.d9dd58",
         "type": "switch",
         "z": "88cec2c0.c8804",
@@ -4553,7 +4467,8 @@
         "y": 480,
         "wires": [
             [
-                "6e0ecd2a.b323d4"
+                "6e0ecd2a.b323d4",
+                "2a3b6832.a2bfd8"
             ]
         ]
     },
@@ -4870,7 +4785,8 @@
         "wires": [
             [
                 "31e62cc7.08b544",
-                "d9cf5ca4.c88ce"
+                "d9cf5ca4.c88ce",
+                "76ca3c24.4327d4"
             ]
         ]
     },
@@ -4939,5 +4855,504 @@
                 "7c488f20.eb82d"
             ]
         ]
+    },
+    {
+        "id": "ede46ef8.979e2",
+        "type": "ui_template",
+        "z": "53028f3b.590b5",
+        "group": "3348dd5e.728a92",
+        "name": "Testnet Deposit Address",
+        "order": 5,
+        "width": 10,
+        "height": 1,
+        "format": "<small>Testnet Deposit Address:</small> {{msg.payload}}",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1050,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "177c7cea.453623",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "get global testnetdepositaddress",
+        "func": "var testnetdepositaddress = global.get(\"testnetdepositaddress\");\n\nmsg.payload = testnetdepositaddress;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1280,
+        "wires": [
+            [
+                "ede46ef8.979e2"
+            ]
+        ]
+    },
+    {
+        "id": "92252ed1.e85de",
+        "type": "delay",
+        "z": "53028f3b.590b5",
+        "name": "delay",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 590,
+        "y": 1280,
+        "wires": [
+            [
+                "177c7cea.453623"
+            ]
+        ]
+    },
+    {
+        "id": "2a3b6832.a2bfd8",
+        "type": "link out",
+        "z": "53028f3b.590b5",
+        "name": "Pass Testnet Deposit Address to Receive",
+        "links": [
+            "bbc59e5f.9e773"
+        ],
+        "x": 975,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "bbc59e5f.9e773",
+        "type": "link in",
+        "z": "53028f3b.590b5",
+        "name": "Get Testnet Deposit Address",
+        "links": [
+            "2a3b6832.a2bfd8"
+        ],
+        "x": 495,
+        "y": 1280,
+        "wires": [
+            [
+                "92252ed1.e85de"
+            ]
+        ]
+    },
+    {
+        "id": "4fdb78f4.9a1728",
+        "type": "ui_template",
+        "z": "53028f3b.590b5",
+        "group": "3348dd5e.728a92",
+        "name": "Transaction List (Testnet)",
+        "order": 10,
+        "width": 13,
+        "height": 5,
+        "format": "<h3>Testnet History</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>ID</th>\n        <th>Fee</th>\n        <th>Type</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://pbs.twimg.com/profile_images/1321461825758744576/4e3xAKz2_400x400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View in Explorer</a></small></small></small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td>{{obj.tx_type}}</td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1050,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5dfe14b.c2cbf",
+        "type": "ui_template",
+        "z": "53028f3b.590b5",
+        "group": "3348dd5e.728a92",
+        "name": "Transaction List (Mainnet)",
+        "order": 9,
+        "width": 13,
+        "height": 5,
+        "format": "<h3>Mainnet History</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>ID</th>\n        <th>Fee</th>\n        <th>Type</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://pbs.twimg.com/profile_images/1321461825758744576/4e3xAKz2_400x400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View In Explorer</a></small></small></small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td>{{obj.tx_type}}</td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1050,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "76ca3c24.4327d4",
+        "type": "link out",
+        "z": "88cec2c0.c8804",
+        "name": "Pass History to Wallet Receive (testnet)",
+        "links": [
+            "ffd4778e.e65b28"
+        ],
+        "x": 1035,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7ad225d6.1b055c",
+        "type": "link out",
+        "z": "88cec2c0.c8804",
+        "name": "Pass History to Wallet Receive (mainnet)",
+        "links": [
+            "64410f5b.984c5"
+        ],
+        "x": 1035,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "64410f5b.984c5",
+        "type": "link in",
+        "z": "53028f3b.590b5",
+        "name": "Get Mainnet Address History",
+        "links": [
+            "7ad225d6.1b055c"
+        ],
+        "x": 855,
+        "y": 1100,
+        "wires": [
+            [
+                "c5dfe14b.c2cbf"
+            ]
+        ]
+    },
+    {
+        "id": "ffd4778e.e65b28",
+        "type": "link in",
+        "z": "53028f3b.590b5",
+        "name": "Get Testnet Address History",
+        "links": [
+            "76ca3c24.4327d4"
+        ],
+        "x": 855,
+        "y": 1320,
+        "wires": [
+            [
+                "4fdb78f4.9a1728"
+            ]
+        ]
+    },
+    {
+        "id": "5856efa4.bf7d5",
+        "type": "ui_button",
+        "z": "53028f3b.590b5",
+        "name": "Copy BTN",
+        "group": "3348dd5e.728a92",
+        "order": 6,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "",
+        "tooltip": "Copy Testnet Address",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-copy",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1010,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd0c4350.1d133",
+        "type": "comment",
+        "z": "613e85c9.c6210c",
+        "name": "Clarity SIP-009 NFT - Standard",
+        "info": "https://github.com/stacksgov/sips/blob/main/sips/sip-009/sip-009-nft-standard.md",
+        "x": 190,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f65c0e25.9c82d",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "create nft-trait.clar",
+        "func": "//take the inputs and construct the Clarity contract file contents\nmsg.payload =   \"(define-trait nft-trait\\n\" +\n                \"  (\\n\" +\n                \"    ;; Last token ID, limited to uint range\\n\" +\n                \"    (get-last-token-id () (response uint uint))\\n\" +\n                \"\\n\" +\n                \"    ;; URI for metadata associated with the token \\n\" +\n                \"    (get-token-uri () (response (optional (string-utf8 256)) uint))\\n\" +\n                \"\\n\" +\n                \"    ;; Owner of a given token identifier\\n\" +\n                \"    (get-owner (uint) (response (optional principal) uint))\\n\" +\n                \"\\n\" +\n                \"    ;; Transfer from the sender to a new principal\\n\" +\n                \"    (transfer (uint principal principal) (response bool uint))\\n\" +\n                \"  )\\n\" +\n                \")\";\n               \nmsg.filename = \"nft-trait.clar\"; // name the contract same as input custom token name\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 420,
+        "wires": [
+            [
+                "4114412e.e4154"
+            ]
+        ]
+    },
+    {
+        "id": "3046216.ef707de",
+        "type": "file in",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "filename": "write file",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "ascii",
+        "x": 720,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4114412e.e4154",
+        "type": "file in",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "filename": "write file",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "ascii",
+        "x": 720,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fe53aae9.15c4a8",
+        "type": "comment",
+        "z": "613e85c9.c6210c",
+        "name": "Clarity SIP-010 FT - Standard",
+        "info": "https://github.com/stacksgov/sips/blob/hstove-feat/sip-10-ft/sips/sip-010/sip-010-fungible-token-standard.md",
+        "x": 180,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "a827d944.6e6138",
+        "type": "ui_button",
+        "z": "53028f3b.590b5",
+        "name": "Faucet BTN",
+        "group": "3348dd5e.728a92",
+        "order": 7,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "",
+        "tooltip": "Get Testnet Tokens from Faucet",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-tint",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1010,
+        "y": 1360,
+        "wires": [
+            [
+                "9e5990a.c851f7"
+            ]
+        ]
+    },
+    {
+        "id": "9e5990a.c851f7",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "get global testnetdepositaddress ",
+        "func": "var testnetdepositaddress = global.get(\"testnetdepositaddress\");\n\nmsg.testnetdepositaddress = testnetdepositaddress;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 1360,
+        "wires": [
+            [
+                "e68bc774.b2c998"
+            ]
+        ]
+    },
+    {
+        "id": "e68bc774.b2c998",
+        "type": "change",
+        "z": "53028f3b.590b5",
+        "name": "move",
+        "rules": [
+            {
+                "t": "move",
+                "p": "testnetdepositaddress",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1470,
+        "y": 1360,
+        "wires": [
+            [
+                "54fc3f11.12cfe"
+            ]
+        ]
+    },
+    {
+        "id": "54fc3f11.12cfe",
+        "type": "http request",
+        "z": "53028f3b.590b5",
+        "name": "POST Request",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://stacks-node-api.testnet.stacks.co/extended/v1/faucets/stx?address={{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1360,
+        "y": 1440,
+        "wires": [
+            [
+                "fd33c59a.3d90d8"
+            ]
+        ]
+    },
+    {
+        "id": "fd33c59a.3d90d8",
+        "type": "json",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1510,
+        "y": 1440,
+        "wires": [
+            [
+                "64d280dc.e00de",
+                "92d0d823.15acb8"
+            ]
+        ]
+    },
+    {
+        "id": "92d0d823.15acb8",
+        "type": "switch",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "property": "payload.success",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1670,
+        "y": 1560,
+        "wires": [
+            [
+                "37360f82.9c624"
+            ],
+            [
+                "3f0f2136.9439ae"
+            ],
+            [
+                "80728f11.16d8d"
+            ]
+        ]
+    },
+    {
+        "id": "80728f11.16d8d",
+        "type": "ui_toast",
+        "z": "53028f3b.590b5",
+        "position": "bottom left",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Faucet Error",
+        "name": "Error",
+        "x": 1910,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "3f0f2136.9439ae",
+        "type": "ui_toast",
+        "z": "53028f3b.590b5",
+        "position": "bottom left",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Faucet Failure",
+        "name": "Failure",
+        "x": 1910,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "37360f82.9c624",
+        "type": "ui_toast",
+        "z": "53028f3b.590b5",
+        "position": "bottom left",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Faucet Success",
+        "name": "Success",
+        "x": 1920,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "64d280dc.e00de",
+        "type": "debug",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 1400,
+        "wires": []
     }
 ]
