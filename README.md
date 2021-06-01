@@ -6,38 +6,17 @@
 
 This is an Electron template that embeds [Node-RED](https://nodered.org) to create decentralized applications running on the [Stacks](https://stacks.co) & Bitcoin Blockchains.
 
-This is not intended to be a useful tool as-is, but as a base for you to create your own versions. You will need to edit the `main.js` to suit your application and update the `package.json` file to include your own required nodes and dependencies.
+This is not intended to be a useful tool as-is, but as a base for you to create your own versions. 
+You will need to edit the `main.js` to suit your application and may need to update the `package.json` file to include your own required nodes and dependencies.
 
 There are several simple switches that can be set in the `NRelectron` section of
 the `package.json` file. More significant modifications will require modification
 of the `main.js` file. Have fun.
 
-## Wrapping an existing Node-RED project
-
-The `merger.js` utility should be run from within this projects directory and can be pointed at
-an existing Node-RED project directory. It will try to copy over and package up the
-relevant files into this project ready to install and build - so the simple flow would be
-
-```bash
-./merger.js {path to my Node-RED project directory}
-yarn
-yarn start
-```
-
-This uses the `package-template.json` file as the main electron setup - so you should edit any
-build parameters, product name, whether you want the app version to be editable, run in kiosk mode, etc in the `NRelectron` section before running.
-
-The app name, version and description are picked up from the package.json file of the original project.
-
-When running using yarn start - the flow file is picked from the current directory. When running as an app (but only if editable), then the flow file is copied into the users `.node-red` directory and is read and written from there. The default name can be changed in the package.json file if required.
-
-**NOTE**: Currently the settings are set around line 110 of the `main.js` file. If you do use any
-custom settings then currently you will need to modify this manually.
-
 ## Configuring the project for building
 
 This project uses the **electron-builder** project to help build native versions
-of Node-RED applications, so please read and become familiar with their
+of your applications, so please read and become familiar with their
 [documentation](https://www.electron.build/) as some basic knowledge is assumed.
 
 As a pre-req, as well as a recent version of node.js, you will need the **yarn** install tool.
