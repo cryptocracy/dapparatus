@@ -42,6 +42,13 @@
         "info": ""
     },
     {
+        "id": "725ce57a.a25e4c",
+        "type": "tab",
+        "label": "Registrar",
+        "disabled": false,
+        "info": "Used to Register Names and Potentially Namespaces"
+    },
+    {
         "id": "d9ba26fa.6d2b18",
         "type": "ui_base",
         "theme": {
@@ -143,7 +150,7 @@
         "type": "ui_tab",
         "name": "Wallet",
         "icon": "mi-account_balance_wallet",
-        "order": 2,
+        "order": 1,
         "disabled": false,
         "hidden": false
     },
@@ -250,7 +257,7 @@
         "type": "ui_tab",
         "name": "Feed",
         "icon": "fa-rss",
-        "order": 1,
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -281,7 +288,7 @@
         "tab": "a0d42798.ab3f38",
         "order": 2,
         "disp": false,
-        "width": 13,
+        "width": "13",
         "collapse": false
     },
     {
@@ -445,27 +452,9 @@
         "type": "ui_tab",
         "name": "History",
         "icon": "fa-history",
-        "order": 6,
+        "order": 5,
         "disabled": false,
         "hidden": false
-    },
-    {
-        "id": "27f4e76b.857c68",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "69d70456.083fac",
-        "order": 2,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "b98b7fb6.80585",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "69d70456.083fac",
-        "order": 4,
-        "width": 1,
-        "height": 1
     },
     {
         "id": "a6beaca1.e70a7",
@@ -484,6 +473,54 @@
         "order": 4,
         "width": "2",
         "height": 1
+    },
+    {
+        "id": "13638115.69b3ef",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "69d70456.083fac",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "5986cff4.85067",
+        "type": "ui_tab",
+        "name": "Registrar",
+        "icon": "mi-playlist_add",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4169470.fb991b8",
+        "type": "ui_group",
+        "name": "RegistrarNav",
+        "tab": "5986cff4.85067",
+        "order": 1,
+        "disp": false,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "b8de1f8f.ccd29",
+        "type": "ui_group",
+        "name": "RegYes",
+        "tab": "5986cff4.85067",
+        "order": 2,
+        "disp": false,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "2433119.0a997ee",
+        "type": "ui_group",
+        "name": "RegNo",
+        "tab": "5986cff4.85067",
+        "order": 3,
+        "disp": false,
+        "width": "13",
+        "collapse": false
     },
     {
         "id": "8ff35ce4.a1acd",
@@ -544,7 +581,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 510,
-        "y": 560,
+        "y": 620,
         "wires": [
             []
         ]
@@ -794,13 +831,13 @@
         "order": 1,
         "width": 0,
         "height": 0,
-        "format": "Your Default PROFILE PAGE",
+        "format": "<style>\n    img {\n      border-radius: 50%;\n    }\n</style>\n<div class=\"card\">\n  <div style=\"width:150px\"><img src=\"https://raw.githubusercontent.com/cryptocracy/dapparatus/master/default-profile-image.png\" alt=\"\">\n</div>\n  <h1 class='fqn'>FQN</h1>\n  <p class=\"bio\">BIO</p>\n  <p class=\"tipjar\">STXADDRESS</p>\n  <a href=\"#\"><i class=\"fa fa-twitter\"></i></a>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1280,
-        "y": 120,
+        "x": 540,
+        "y": 420,
         "wires": [
             []
         ]
@@ -874,7 +911,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 1020,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -921,7 +958,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 1010,
-        "y": 1020,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -932,8 +969,8 @@
         "z": "53028f3b.590b5",
         "name": "Relative to Receive Group",
         "info": "",
-        "x": 970,
-        "y": 940,
+        "x": 1050,
+        "y": 1040,
         "wires": []
     },
     {
@@ -979,7 +1016,7 @@
         "z": "53028f3b.590b5",
         "name": "Reveal Receive Group",
         "group": "69d70456.083fac",
-        "order": 3,
+        "order": 2,
         "width": 5,
         "height": 1,
         "passthru": false,
@@ -1006,7 +1043,7 @@
         "z": "53028f3b.590b5",
         "name": "Reveal Keys Group",
         "group": "69d70456.083fac",
-        "order": 5,
+        "order": 4,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -1034,13 +1071,14 @@
         "name": "Relative to Keys Group",
         "info": "",
         "x": 140,
-        "y": 520,
+        "y": 580,
         "wires": []
     },
     {
         "id": "2d7039.df9b8fc8",
         "type": "ui_button",
         "z": "53028f3b.590b5",
+        "d": true,
         "name": "Download Backup",
         "group": "433bfb40.a488a4",
         "order": 2,
@@ -1057,7 +1095,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 130,
-        "y": 600,
+        "y": 760,
         "wires": [
             []
         ]
@@ -1105,12 +1143,20 @@
                 "type": "text",
                 "required": true,
                 "rows": null
+            },
+            {
+                "label": "Mainnet TX",
+                "value": "stxnetwork",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
             }
         ],
         "formValue": {
             "stxdestination": "",
             "stxamount": "",
-            "stxmemo": ""
+            "stxmemo": "",
+            "stxnetwork": false
         },
         "payload": "",
         "submit": "Send",
@@ -1118,11 +1164,11 @@
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
-        "x": 120,
-        "y": 860,
+        "x": 80,
+        "y": 1080,
         "wires": [
             [
-                "ab1900ed.7b072"
+                "64c740c.17d6fc"
             ]
         ]
     },
@@ -1132,8 +1178,8 @@
         "z": "53028f3b.590b5",
         "name": "Relative to Send Group",
         "info": "",
-        "x": 140,
-        "y": 780,
+        "x": 120,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1142,8 +1188,8 @@
         "z": "53028f3b.590b5",
         "name": "ui change",
         "events": "change",
-        "x": 520,
-        "y": 820,
+        "x": 720,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -1163,7 +1209,7 @@
         "topic": "",
         "name": "Funding Notification",
         "x": 1520,
-        "y": 1020,
+        "y": 1120,
         "wires": []
     },
     {
@@ -1268,7 +1314,7 @@
         "name": "ui change",
         "events": "change",
         "x": 1220,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -1454,8 +1500,8 @@
         "links": [
             "ab1da12a.d30f4"
         ],
-        "x": 255,
-        "y": 820,
+        "x": 235,
+        "y": 1040,
         "wires": []
     },
     {
@@ -1477,8 +1523,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 110,
-        "y": 820,
+        "x": 90,
+        "y": 1040,
         "wires": [
             [
                 "5a906687.b83398"
@@ -1496,19 +1542,19 @@
         "height": 1,
         "passthru": false,
         "label": "YES, I HAVE MADE A BACK UP, AND I AM READY TO PROCEED",
-        "tooltip": "WARNING: DO NOT LOSE YOUR PASSWORD AND KEYS!",
+        "tooltip": "WARNING: DO NOT LOSE YOUR SECRET KEYS OR FORGET YOUR PASSWORD",
         "color": "",
         "bgcolor": "orange",
         "icon": "fa-warning",
-        "payload": "",
+        "payload": "WARNING: DO NOT LOSE YOUR SECRET KEYS OR FORGET YOUR PASSWORD!",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
         "x": 280,
-        "y": 660,
+        "y": 720,
         "wires": [
             [
-                "4ffc51f.ae497b"
+                "aab38fff.766ac"
             ]
         ]
     },
@@ -1523,8 +1569,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 660,
+        "x": 980,
+        "y": 700,
         "wires": [
             [
                 "19547923.f698c7"
@@ -1537,7 +1583,7 @@
         "z": "53028f3b.590b5",
         "name": "ui change",
         "events": "change",
-        "x": 860,
+        "x": 1020,
         "y": 660,
         "wires": [
             []
@@ -1563,7 +1609,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 1010,
-        "y": 980,
+        "y": 1080,
         "wires": [
             [
                 "7f288c7.b333674"
@@ -1579,7 +1625,7 @@
             "ab1da12a.d30f4"
         ],
         "x": 1155,
-        "y": 980,
+        "y": 1080,
         "wires": []
     },
     {
@@ -1598,8 +1644,8 @@
         "delay": "0",
         "topic": "searchinput",
         "topicType": "str",
-        "x": 130,
-        "y": 580,
+        "x": 150,
+        "y": 1360,
         "wires": [
             [
                 "1ae11b46.bb67d5",
@@ -1626,8 +1672,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 850,
-        "y": 80,
+        "x": 110,
+        "y": 380,
         "wires": [
             [
                 "9a974bff.85c4f8"
@@ -1640,7 +1686,7 @@
         "z": "42c07592.8d970c",
         "group": "be1bffc8.e254c",
         "name": "Results by Name (Found)",
-        "order": 1,
+        "order": 2,
         "width": 13,
         "height": 12,
         "format": "<style>\n    img {\n      border-radius: 50%;\n    }\n</style>\n<div height=\"60\" style=\"height: 60px;\">\n<img src=\"{{msg.payload[0].decodedToken.payload.claim.image[0].contentUrl}}\" width=\"60\"><br/>\n</div>\n<h3>{{msg.payload[0].decodedToken.payload.claim.name}}</h3>\n<p>{{msg.fqn}}</p>\n<p>{{msg.tipjar}}</p>\n<p>{{msg.payload[0].decodedToken.payload.claim.description}}</p>\n\n\n\n",
@@ -1648,8 +1694,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1690,
-        "y": 640,
+        "x": 1710,
+        "y": 1420,
         "wires": [
             []
         ]
@@ -1692,8 +1738,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
-        "y": 300,
+        "x": 700,
+        "y": 1080,
         "wires": [
             [
                 "697b50a.2220ab"
@@ -1711,8 +1757,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1070,
-        "y": 80,
+        "x": 330,
+        "y": 380,
         "wires": [
             [
                 "869168df.0b5888"
@@ -1744,8 +1790,8 @@
         "z": "42c07592.8d970c",
         "name": "",
         "events": "all",
-        "x": 1240,
-        "y": 80,
+        "x": 500,
+        "y": 380,
         "wires": [
             []
         ]
@@ -1794,8 +1840,8 @@
         "payload": "",
         "topic": "searchtype",
         "topicType": "str",
-        "x": 130,
-        "y": 360,
+        "x": 150,
+        "y": 1140,
         "wires": [
             [
                 "aca7dc96.8b27a",
@@ -1810,8 +1856,8 @@
         "z": "42c07592.8d970c",
         "name": "",
         "events": "all",
-        "x": 1080,
-        "y": 340,
+        "x": 1100,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -1834,8 +1880,8 @@
         "z": "42c07592.8d970c",
         "name": "Relative to Profiles",
         "info": "",
-        "x": 870,
-        "y": 40,
+        "x": 130,
+        "y": 340,
         "wires": []
     },
     {
@@ -1844,8 +1890,8 @@
         "z": "42c07592.8d970c",
         "name": "Relative to Searching",
         "info": "",
-        "x": 160,
-        "y": 300,
+        "x": 180,
+        "y": 1080,
         "wires": []
     },
     {
@@ -2672,7 +2718,7 @@
             "1f2a433e.62aced"
         ],
         "x": 55,
-        "y": 560,
+        "y": 620,
         "wires": [
             [
                 "eeaf115b.296ca"
@@ -2820,7 +2866,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 560,
+        "y": 620,
         "wires": [
             [
                 "fef21303.5661",
@@ -2842,7 +2888,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 510,
-        "y": 600,
+        "y": 580,
         "wires": []
     },
     {
@@ -2861,7 +2907,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "x": 150,
-        "y": 560,
+        "y": 620,
         "wires": [
             [
                 "c44ba5ac.c872a8"
@@ -2880,7 +2926,7 @@
         "finalize": "",
         "libs": [],
         "x": 810,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "e8e93b8a.a67e48"
@@ -2896,7 +2942,7 @@
             "57e2ecc0.94e904"
         ],
         "x": 535,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "86362642.e4ba48"
@@ -2919,7 +2965,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "x": 630,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "ae651374.a85b7"
@@ -3095,8 +3141,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 640,
+        "x": 670,
+        "y": 1420,
         "wires": [
             [
                 "f7df69fb.404dc8"
@@ -3116,8 +3162,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 810,
-        "y": 640,
+        "x": 830,
+        "y": 1420,
         "wires": [
             [
                 "6340ae52.9e9d7"
@@ -3132,8 +3178,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 950,
-        "y": 640,
+        "x": 970,
+        "y": 1420,
         "wires": [
             [
                 "cf8debc9.be5e58",
@@ -3155,8 +3201,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1690,
-        "y": 720,
+        "x": 1710,
+        "y": 1500,
         "wires": [
             []
         ]
@@ -3175,8 +3221,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1690,
-        "y": 760,
+        "x": 1710,
+        "y": 1540,
         "wires": [
             []
         ]
@@ -3195,8 +3241,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1700,
-        "y": 800,
+        "x": 1720,
+        "y": 1580,
         "wires": [
             []
         ]
@@ -3215,8 +3261,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1690,
-        "y": 680,
+        "x": 1710,
+        "y": 1460,
         "wires": [
             []
         ]
@@ -3232,8 +3278,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
-        "y": 380,
+        "x": 730,
+        "y": 1160,
         "wires": [
             [
                 "697b50a.2220ab"
@@ -3251,8 +3297,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
-        "y": 420,
+        "x": 720,
+        "y": 1200,
         "wires": [
             [
                 "697b50a.2220ab"
@@ -3270,8 +3316,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 720,
-        "y": 460,
+        "x": 740,
+        "y": 1240,
         "wires": [
             [
                 "697b50a.2220ab"
@@ -3289,8 +3335,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
-        "y": 340,
+        "x": 730,
+        "y": 1120,
         "wires": [
             [
                 "697b50a.2220ab"
@@ -3337,8 +3383,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 6,
-        "x": 410,
-        "y": 360,
+        "x": 430,
+        "y": 1140,
         "wires": [
             [
                 "9cc3c90.0e85138"
@@ -3369,8 +3415,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 260,
+        "x": 890,
+        "y": 1040,
         "wires": [
             [
                 "697b50a.2220ab"
@@ -3398,8 +3444,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 650,
-        "y": 260,
+        "x": 670,
+        "y": 1040,
         "wires": [
             [
                 "e4a65fcb.f9887"
@@ -3419,8 +3465,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 1330,
-        "y": 640,
+        "x": 1350,
+        "y": 1420,
         "wires": [
             [
                 "7ee905b1.f0129c"
@@ -3440,8 +3486,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1630,
-        "y": 600,
+        "x": 1650,
+        "y": 1380,
         "wires": []
     },
     {
@@ -3452,8 +3498,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1490,
-        "y": 640,
+        "x": 1510,
+        "y": 1420,
         "wires": [
             [
                 "bf9d3dbc.510e8",
@@ -3474,8 +3520,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1310,
-        "y": 600,
+        "x": 1330,
+        "y": 1380,
         "wires": []
     },
     {
@@ -3489,8 +3535,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1130,
-        "y": 640,
+        "x": 1150,
+        "y": 1420,
         "wires": [
             [
                 "e0d710ea.4884",
@@ -3511,8 +3557,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1090,
-        "y": 600,
+        "x": 1110,
+        "y": 1380,
         "wires": []
     },
     {
@@ -3535,8 +3581,8 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 400,
-        "y": 580,
+        "x": 420,
+        "y": 1360,
         "wires": [
             [
                 "e53e6919.d89028",
@@ -3584,8 +3630,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 630,
-        "y": 580,
+        "x": 650,
+        "y": 1360,
         "wires": []
     },
     {
@@ -3628,8 +3674,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 6,
-        "x": 410,
-        "y": 700,
+        "x": 430,
+        "y": 1480,
         "wires": [
             [
                 "b174b178.74327"
@@ -3686,8 +3732,8 @@
         "links": [
             "4b97e61.0fbac18"
         ],
-        "x": 355,
-        "y": 460,
+        "x": 375,
+        "y": 1240,
         "wires": []
     },
     {
@@ -3711,8 +3757,8 @@
         "topic": "searchtype",
         "payload": "fqn",
         "payloadType": "str",
-        "x": 150,
-        "y": 460,
+        "x": 170,
+        "y": 1240,
         "wires": [
             [
                 "62a9e217.4a2bcc",
@@ -3732,8 +3778,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 680,
+        "x": 670,
+        "y": 1460,
         "wires": [
             [
                 "c8b07fde.de5a8"
@@ -3753,8 +3799,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 810,
-        "y": 680,
+        "x": 830,
+        "y": 1460,
         "wires": [
             [
                 "7f1cca7e.aa5474"
@@ -3769,8 +3815,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 950,
-        "y": 680,
+        "x": 970,
+        "y": 1460,
         "wires": [
             [
                 "9020504f.895bf",
@@ -3791,8 +3837,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1090,
-        "y": 700,
+        "x": 1110,
+        "y": 1480,
         "wires": []
     },
     {
@@ -3847,8 +3893,8 @@
         "links": [
             "f5c69381.17376"
         ],
-        "x": 355,
-        "y": 500,
+        "x": 375,
+        "y": 1280,
         "wires": []
     },
     {
@@ -3881,7 +3927,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1970,
+        "x": 1270,
         "y": 120,
         "wires": [
             []
@@ -3906,7 +3952,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1560,
+        "x": 860,
         "y": 80,
         "wires": [
             [
@@ -3925,7 +3971,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1780,
+        "x": 1080,
         "y": 80,
         "wires": [
             [
@@ -3939,7 +3985,7 @@
         "z": "42c07592.8d970c",
         "name": "",
         "events": "all",
-        "x": 1940,
+        "x": 1240,
         "y": 80,
         "wires": [
             []
@@ -3951,7 +3997,7 @@
         "z": "42c07592.8d970c",
         "name": "Relative to New Post",
         "info": "",
-        "x": 1570,
+        "x": 870,
         "y": 40,
         "wires": []
     },
@@ -3959,7 +4005,7 @@
         "id": "ab1900ed.7b072",
         "type": "function",
         "z": "53028f3b.590b5",
-        "name": "Send STX",
+        "name": "Send STX (Mainnet)",
         "func": "const network = new stacksNetwork.StacksMainnet(); // or StacksTestnet\nconst senderKey = global.get('stxprivkey'); //get the STX Private Key Stored Globally\n\n// skip automatic fee estimation\nconst fee = new BigNum(180);\nconst memo = msg.payload.stxmemo;\n\nconst txOptions = {\n    recipient: msg.payload.stxdestination,\n    amount : new BigNum(msg.payload.stxamount),\n    fee,\n    senderKey,\n    network,\n    memo\n};\n\nconst transaction = await stacksTransactions.makeSTXTokenTransfer(txOptions);\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\nmsg.blockchain = \"0x\" + broadcastTxn;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
@@ -3979,8 +4025,8 @@
                 "module": "@stacks/network"
             }
         ],
-        "x": 310,
-        "y": 860,
+        "x": 520,
+        "y": 1040,
         "wires": [
             [
                 "b2229dc1.9782"
@@ -3991,7 +4037,7 @@
         "id": "b2229dc1.9782",
         "type": "debug",
         "z": "53028f3b.590b5",
-        "name": "",
+        "name": "mainnet send debug",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -4000,8 +4046,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 510,
-        "y": 860,
+        "x": 760,
+        "y": 1040,
         "wires": []
     },
     {
@@ -4015,8 +4061,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 800,
+        "x": 670,
+        "y": 1580,
         "wires": [
             [
                 "104e0697.7857a9"
@@ -4036,8 +4082,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 810,
-        "y": 800,
+        "x": 830,
+        "y": 1580,
         "wires": [
             [
                 "4c8e8c17.de9954"
@@ -4052,8 +4098,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 950,
-        "y": 800,
+        "x": 970,
+        "y": 1580,
         "wires": [
             [
                 "298788eb.64d0a8",
@@ -4074,8 +4120,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1090,
-        "y": 860,
+        "x": 1110,
+        "y": 1640,
         "wires": []
     },
     {
@@ -4111,21 +4157,21 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 730,
-        "y": 700,
+        "y": 720,
         "wires": []
     },
     {
         "id": "d8cb6e32.2d0f9",
         "type": "function",
         "z": "88cec2c0.c8804",
-        "name": "create msg.url",
+        "name": "create msg.url (mainnet history)",
         "func": "//var nettype = global.get(\"nettype\");\nvar nettype = \"stacks-node-api.mainnet.stacks.co\"; //mainnet\n\nvar depositaddress = msg.depositaddress;\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/address/\" + depositaddress + \"/transactions\";\nmsg.depositaddress = depositaddress; \nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
+        "x": 370,
         "y": 120,
         "wires": [
             [
@@ -4138,7 +4184,7 @@
         "id": "9a6d200b.74539",
         "type": "http request",
         "z": "88cec2c0.c8804",
-        "name": "get",
+        "name": "get history",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
@@ -4147,7 +4193,7 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 590,
+        "x": 610,
         "y": 120,
         "wires": [
             [
@@ -4163,7 +4209,7 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 730,
+        "x": 750,
         "y": 120,
         "wires": [
             [
@@ -4262,7 +4308,7 @@
         "id": "bd10f7a4.fbf888",
         "type": "inject",
         "z": "88cec2c0.c8804",
-        "name": "every 30s",
+        "name": "every 45s",
         "props": [
             {
                 "p": "payload"
@@ -4272,7 +4318,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "30",
+        "repeat": "45",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -4348,7 +4394,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 1130,
-        "y": 280,
+        "y": 440,
         "wires": [
             []
         ]
@@ -4375,7 +4421,8 @@
         "y": 120,
         "wires": [
             [
-                "d8cb6e32.2d0f9"
+                "d8cb6e32.2d0f9",
+                "1870731a.10f11d"
             ],
             [
                 "83a1ba7b.df6c98"
@@ -4609,8 +4656,8 @@
         "officon": "fa-wrench",
         "offcolor": "Yellow",
         "animate": true,
-        "x": 1560,
-        "y": 260,
+        "x": 1600,
+        "y": 80,
         "wires": [
             [
                 "e24b569f.c73348"
@@ -4625,8 +4672,8 @@
         "links": [
             "514072aa.46826c"
         ],
-        "x": 1695,
-        "y": 260,
+        "x": 1735,
+        "y": 80,
         "wires": []
     },
     {
@@ -4635,8 +4682,8 @@
         "z": "42c07592.8d970c",
         "name": "Relative to Network Type",
         "info": "",
-        "x": 1590,
-        "y": 220,
+        "x": 1630,
+        "y": 40,
         "wires": []
     },
     {
@@ -4651,7 +4698,7 @@
         "finalize": "",
         "libs": [],
         "x": 170,
-        "y": 240,
+        "y": 400,
         "wires": [
             [
                 "7b8a0529.d2e7dc"
@@ -4677,10 +4724,11 @@
         "repair": false,
         "outputs": 2,
         "x": 110,
-        "y": 280,
+        "y": 440,
         "wires": [
             [
-                "777be969.6a8278"
+                "777be969.6a8278",
+                "f56384b0.2d0ce8"
             ],
             [
                 "365a8400.1286bc"
@@ -4691,15 +4739,15 @@
         "id": "777be969.6a8278",
         "type": "function",
         "z": "88cec2c0.c8804",
-        "name": "create msg.url",
+        "name": "create msg.url (testnet history)",
         "func": "//var nettype = global.get(\"nettype\");\nvar nettype = \"stacks-node-api.testnet.stacks.co\";//testnet\n\nvar testnetdepositaddress = msg.testnetdepositaddress;\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/address/\" + testnetdepositaddress + \"/transactions\";\nmsg.testnetdepositaddress = testnetdepositaddress; \nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 280,
+        "x": 370,
+        "y": 440,
         "wires": [
             [
                 "c5f3e664.d8ea68"
@@ -4720,14 +4768,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 130,
-        "y": 320,
+        "y": 480,
         "wires": []
     },
     {
         "id": "c5f3e664.d8ea68",
         "type": "http request",
         "z": "88cec2c0.c8804",
-        "name": "get",
+        "name": "get history",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
@@ -4736,8 +4784,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 590,
-        "y": 280,
+        "x": 610,
+        "y": 440,
         "wires": [
             [
                 "abdd1ac0.441a18"
@@ -4752,8 +4800,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 730,
-        "y": 280,
+        "x": 750,
+        "y": 440,
         "wires": [
             [
                 "b29c45b9.b28068",
@@ -4781,7 +4829,7 @@
         "to": "",
         "reg": false,
         "x": 890,
-        "y": 280,
+        "y": 440,
         "wires": [
             [
                 "31e62cc7.08b544",
@@ -4805,7 +4853,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 900,
-        "y": 240,
+        "y": 400,
         "wires": [
             []
         ]
@@ -4824,14 +4872,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1100,
-        "y": 240,
+        "y": 400,
         "wires": []
     },
     {
         "id": "935bcdfb.6e722",
         "type": "inject",
         "z": "88cec2c0.c8804",
-        "name": "every 30s",
+        "name": "every 45s",
         "props": [
             {
                 "p": "payload"
@@ -4841,7 +4889,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "30",
+        "repeat": "45",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -4849,7 +4897,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 110,
-        "y": 200,
+        "y": 360,
         "wires": [
             [
                 "7c488f20.eb82d"
@@ -4981,7 +5029,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 1050,
-        "y": 1100,
+        "y": 1200,
         "wires": [
             []
         ]
@@ -4995,7 +5043,7 @@
             "ffd4778e.e65b28"
         ],
         "x": 1035,
-        "y": 320,
+        "y": 480,
         "wires": []
     },
     {
@@ -5019,7 +5067,7 @@
             "7ad225d6.1b055c"
         ],
         "x": 855,
-        "y": 1100,
+        "y": 1200,
         "wires": [
             [
                 "c5dfe14b.c2cbf"
@@ -5354,5 +5402,983 @@
         "x": 1690,
         "y": 1400,
         "wires": []
+    },
+    {
+        "id": "984d1c1c.ae8b1",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "Send STX (Testnet)",
+        "func": "const network = new stacksNetwork.StacksTestnet(); // or StacksTestnet\nconst senderKey = global.get('stxprivkey'); //get the STX Private Key Stored Globally\n\n// skip automatic fee estimation\nconst fee = new BigNum(180);\nconst memo = msg.payload.stxmemo;\n\nconst txOptions = {\n    recipient: msg.payload.stxdestination,\n    amount : new BigNum(msg.payload.stxamount),\n    fee,\n    senderKey,\n    network,\n    memo\n};\n\nconst transaction = await stacksTransactions.makeSTXTokenTransfer(txOptions);\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\nmsg.blockchain = \"0x\" + broadcastTxn;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            }
+        ],
+        "x": 510,
+        "y": 1080,
+        "wires": [
+            [
+                "13cb51b2.92190e"
+            ]
+        ]
+    },
+    {
+        "id": "64c740c.17d6fc",
+        "type": "switch",
+        "z": "53028f3b.590b5",
+        "name": "network check",
+        "property": "payload.stxnetwork",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 300,
+        "y": 1080,
+        "wires": [
+            [
+                "ab1900ed.7b072"
+            ],
+            [
+                "984d1c1c.ae8b1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "97bb4c64.615a",
+        "type": "comment",
+        "z": "613e85c9.c6210c",
+        "name": "FT Meta Data Sample",
+        "info": "{\n  \"title\": \"Asset Metadata\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"name\": {\n      \"type\": \"string\",\n      \"description\": \"Identifies the asset to which this token represents\"\n    },\n    \"description\": {\n      \"type\": \"string\",\n      \"description\": \"Describes the asset to which this token represents\"\n    },\n    \"image\": {\n      \"type\": \"string\",\n      \"description\": \"A URI pointing to a resource with mime type image/* representing the asset to which this token represents. Consider making any images at a width between 320 and 1080 pixels and aspect ratio between 1.91:1 and 4:5 inclusive.\"\n    }\n  }\n}",
+        "x": 160,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "65bea653.555e78",
+        "type": "comment",
+        "z": "613e85c9.c6210c",
+        "name": "NFT Meta Data Sample",
+        "info": "{\n  \"title\": \"Asset Metadata\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"name\": {\n      \"type\": \"string\",\n      \"description\": \"Identifies the asset to which this token represents\"\n    },\n    \"description\": {\n      \"type\": \"string\",\n      \"description\": \"Describes the asset to which this token represents\"\n    },\n    \"image\": {\n      \"type\": \"string\",\n      \"description\": \"A URI pointing to a resource with mime type image/* representing the asset to which this token represents. Consider making any images at a width between 320 and 1080 pixels and aspect ratio between 1.91:1 and 4:5 inclusive.\"\n    }\n  }\n}",
+        "x": 160,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "273d1bb1.c92c64",
+        "type": "http request",
+        "z": "88cec2c0.c8804",
+        "name": "get memepool",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 620,
+        "y": 540,
+        "wires": [
+            [
+                "a4559142.80ae5"
+            ]
+        ]
+    },
+    {
+        "id": "f56384b0.2d0ce8",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "create msg.url (testnet memepool)",
+        "func": "//var nettype = global.get(\"nettype\");\nvar nettype = \"stacks-node-api.testnet.stacks.co\";//testnet\n\nvar testnetdepositaddress = msg.testnetdepositaddress;\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/tx/mempool?address=\" + testnetdepositaddress;\nmsg.testnetdepositaddress = testnetdepositaddress; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 540,
+        "wires": [
+            [
+                "273d1bb1.c92c64"
+            ]
+        ]
+    },
+    {
+        "id": "1870731a.10f11d",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "create msg.url (mainnet memepool)",
+        "func": "//var nettype = global.get(\"nettype\");\nvar nettype = \"stacks-node-api.mainnet.stacks.co\";//mainnet\n\nvar depositaddress = msg.depositaddress;\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/tx/mempool?address=\" + depositaddress;\nmsg.depositaddress = depositaddress; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "47c44b8a.021464"
+            ]
+        ]
+    },
+    {
+        "id": "47c44b8a.021464",
+        "type": "http request",
+        "z": "88cec2c0.c8804",
+        "name": "get memepool",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 620,
+        "y": 200,
+        "wires": [
+            [
+                "d68a95ec.a7e598"
+            ]
+        ]
+    },
+    {
+        "id": "a4559142.80ae5",
+        "type": "json",
+        "z": "88cec2c0.c8804",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 770,
+        "y": 540,
+        "wires": [
+            [
+                "1afa4aa9.95a465"
+            ]
+        ]
+    },
+    {
+        "id": "d68a95ec.a7e598",
+        "type": "json",
+        "z": "88cec2c0.c8804",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 770,
+        "y": 200,
+        "wires": [
+            [
+                "82b073a2.33169"
+            ]
+        ]
+    },
+    {
+        "id": "82b073a2.33169",
+        "type": "debug",
+        "z": "88cec2c0.c8804",
+        "name": "mainnet memepool debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1afa4aa9.95a465",
+        "type": "debug",
+        "z": "88cec2c0.c8804",
+        "name": "testnet memepool debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "13cb51b2.92190e",
+        "type": "debug",
+        "z": "53028f3b.590b5",
+        "name": "mainnet send debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "fd0565f0.4e60b8",
+        "type": "ui_button",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "group": "433bfb40.a488a4",
+        "order": 6,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "DEFAULT",
+        "tooltip": "WARNING DO NOT DEFAULT UNLESS YOU BACKED UP YOUR EXISTING WALLET, ELSE YOU WILL NOT BE ABLE TO IMPORT!",
+        "color": "Black",
+        "bgcolor": "Red",
+        "icon": "fa-refresh",
+        "payload": "If you didn't back up your secret key you will not be able to Import!",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 100,
+        "y": 680,
+        "wires": [
+            [
+                "2b4eb4a9.5e9cac"
+            ]
+        ]
+    },
+    {
+        "id": "2b4eb4a9.5e9cac",
+        "type": "ui_toast",
+        "z": "53028f3b.590b5",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "YES Default",
+        "cancel": "NO DO NOT Default",
+        "raw": false,
+        "topic": "Are you sure you want to Default?",
+        "name": "",
+        "x": 290,
+        "y": 680,
+        "wires": [
+            [
+                "77c60c8f.807444"
+            ]
+        ]
+    },
+    {
+        "id": "aab38fff.766ac",
+        "type": "ui_toast",
+        "z": "53028f3b.590b5",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Yes I Made A Back Up",
+        "cancel": "No I Need to Go Back",
+        "raw": false,
+        "topic": "",
+        "name": "",
+        "x": 610,
+        "y": 720,
+        "wires": [
+            [
+                "4fefa72b.f1a018",
+                "5c29b72a.ccd058"
+            ]
+        ]
+    },
+    {
+        "id": "4fefa72b.f1a018",
+        "type": "debug",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "5c29b72a.ccd058",
+        "type": "switch",
+        "z": "53028f3b.590b5",
+        "name": "Checker",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Yes I Made A Back Up",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "No I Need to Go Back",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 780,
+        "y": 720,
+        "wires": [
+            [
+                "4ffc51f.ae497b"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "77c60c8f.807444",
+        "type": "switch",
+        "z": "53028f3b.590b5",
+        "name": "Checker",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "YES Default",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "NO DO NOT Default",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 500,
+        "y": 680,
+        "wires": [
+            [
+                "d1ea708.ffe4f9"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d1ea708.ffe4f9",
+        "type": "link out",
+        "z": "53028f3b.590b5",
+        "name": "pass to Default Wallet",
+        "links": [
+            "c5abc854.52b348"
+        ],
+        "x": 615,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "c5abc854.52b348",
+        "type": "link in",
+        "z": "53028f3b.590b5",
+        "name": "force Default Wallet",
+        "links": [
+            "d1ea708.ffe4f9"
+        ],
+        "x": 235,
+        "y": 20,
+        "wires": [
+            [
+                "41c98019.533a3"
+            ]
+        ]
+    },
+    {
+        "id": "84698dd4.df52a",
+        "type": "ui_switch",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "label": "",
+        "tooltip": "Status of Secret Key Discovery",
+        "group": "69d70456.083fac",
+        "order": 5,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-unlock",
+        "oncolor": "Green",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-exclamation-triangle",
+        "offcolor": "Yellow",
+        "animate": true,
+        "x": 930,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ae0bdb1.f264628",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "get secretkey from global",
+        "func": "var secretkey = global.get(\"secretkey\");\n\nmsg.payload = secretkey;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 880,
+        "wires": [
+            [
+                "a3a83849.586468"
+            ]
+        ]
+    },
+    {
+        "id": "a3a83849.586468",
+        "type": "switch",
+        "z": "53028f3b.590b5",
+        "name": "Empty?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 490,
+        "y": 880,
+        "wires": [
+            [
+                "4386c288.889d4c"
+            ],
+            [
+                "d3969942.03aec8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "da9b7b74.92a078",
+        "type": "inject",
+        "z": "53028f3b.590b5",
+        "name": "every 2s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 880,
+        "wires": [
+            [
+                "ae0bdb1.f264628"
+            ]
+        ]
+    },
+    {
+        "id": "d3969942.03aec8",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "set true",
+        "func": "msg.payload = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 880,
+        "wires": [
+            [
+                "84698dd4.df52a"
+            ]
+        ]
+    },
+    {
+        "id": "4386c288.889d4c",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "set true",
+        "func": "msg.payload = false;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 840,
+        "wires": [
+            [
+                "84698dd4.df52a"
+            ]
+        ]
+    },
+    {
+        "id": "840717c1.bd7348",
+        "type": "ui_switch",
+        "z": "42c07592.8d970c",
+        "d": true,
+        "name": "Follow Button",
+        "label": "Follow: ",
+        "tooltip": "",
+        "group": "be1bffc8.e254c",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-check-square-o",
+        "oncolor": "Green",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-square-o",
+        "offcolor": "White",
+        "animate": true,
+        "x": 1680,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bee6c88d.9c91d8",
+        "type": "inject",
+        "z": "42c07592.8d970c",
+        "name": "false",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 1530,
+        "y": 1320,
+        "wires": [
+            [
+                "840717c1.bd7348"
+            ]
+        ]
+    },
+    {
+        "id": "2e5c9809.47d898",
+        "type": "ui_text_input",
+        "z": "725ce57a.a25e4c",
+        "name": "Name Input",
+        "label": "",
+        "tooltip": "Provide Name Input",
+        "group": "4169470.fb991b8",
+        "order": 1,
+        "width": "8",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "reginput",
+        "topicType": "str",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "bc3ff6d0.ee84c8"
+            ]
+        ]
+    },
+    {
+        "id": "35abb96c.b1c1e6",
+        "type": "ui_dropdown",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select Namespace",
+        "group": "4169470.fb991b8",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": ".id",
+                "value": ".id",
+                "type": "str"
+            },
+            {
+                "label": ".btc",
+                "value": ".btc",
+                "type": "str"
+            },
+            {
+                "label": ".stx",
+                "value": ".stx",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "regtype",
+        "topicType": "str",
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "bc3ff6d0.ee84c8"
+            ]
+        ]
+    },
+    {
+        "id": "52664a19.8b0074",
+        "type": "ui_button",
+        "z": "725ce57a.a25e4c",
+        "name": "Register",
+        "group": "b8de1f8f.ccd29",
+        "order": 4,
+        "width": "5",
+        "height": "1",
+        "passthru": false,
+        "label": "Register Name",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-cart-plus",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 460,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a0d1ed29.96fe2",
+        "type": "ui_template",
+        "z": "725ce57a.a25e4c",
+        "group": "2433119.0a997ee",
+        "name": "Name Unavailable Page",
+        "order": 0,
+        "width": "13",
+        "height": "11",
+        "format": "<h3>Name Unavailable</h3>\n<p>The Name: {{msg.fqn}}</p>\n<p>Is already owned by: {{msg.payload.address}}</p>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/AeVg4iLHlI8?controls=0&amp;start=09&amp;autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" autoplay=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture\" allowfullscreen></iframe>\n<p>Hehehehe ;)</p>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 510,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "98e21dbf.8bee1",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "Registrar RegNo",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Registrar_RegYes\"\n    ],\n    \"show\": [\n      \"Registrar_Header\",\n      \"Registrar_RegNo\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 240,
+        "wires": [
+            [
+                "134958a6.b78bb7"
+            ]
+        ]
+    },
+    {
+        "id": "134958a6.b78bb7",
+        "type": "ui_ui_control",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "events": "all",
+        "x": 700,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "24a39c5c.a918b4",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "Registrar RegYes",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Registrar_RegNo\"\n    ],\n    \"show\": [\n      \"Registrar_Header\",\n      \"Registrar_RegYes\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 280,
+        "wires": [
+            [
+                "134958a6.b78bb7"
+            ]
+        ]
+    },
+    {
+        "id": "c6292cd.c3d33d",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "get per mainnet",
+        "func": "var nettype = \"stacks-node-api.mainnet.stacks.co\"; //mainnet\nvar fqn = msg.payload; //fully qualified name\n\nmsg.url = \"https://\" + nettype + \"/v1/names/\" + fqn;\nmsg.fqn = fqn;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 120,
+        "wires": [
+            [
+                "f3fedaf8.77da78",
+                "4ee684e6.5b971c"
+            ]
+        ]
+    },
+    {
+        "id": "bc3ff6d0.ee84c8",
+        "type": "join",
+        "z": "725ce57a.a25e4c",
+        "name": "join inputs",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 280,
+        "y": 120,
+        "wires": [
+            [
+                "ec6956df.0a1538"
+            ]
+        ]
+    },
+    {
+        "id": "ec6956df.0a1538",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "concat to form fqn",
+        "func": "var reginput = msg.payload.reginput;\nvar regtype = msg.payload.regtype;\n\nmsg.payload = reginput + regtype;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 120,
+        "wires": [
+            [
+                "c6292cd.c3d33d"
+            ]
+        ]
+    },
+    {
+        "id": "f3fedaf8.77da78",
+        "type": "debug",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "url",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4ee684e6.5b971c",
+        "type": "http request",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 890,
+        "y": 120,
+        "wires": [
+            [
+                "8c6bebfc.790968"
+            ]
+        ]
+    },
+    {
+        "id": "6813f2.73f46c1",
+        "type": "debug",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "8c6bebfc.790968",
+        "type": "json",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1050,
+        "y": 120,
+        "wires": [
+            [
+                "6813f2.73f46c1",
+                "630a9ff5.6005a"
+            ]
+        ]
+    },
+    {
+        "id": "630a9ff5.6005a",
+        "type": "switch",
+        "z": "725ce57a.a25e4c",
+        "name": "Owning Address Found?",
+        "property": "payload.address",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            },
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "98e21dbf.8bee1",
+                "a0d1ed29.96fe2"
+            ],
+            [
+                "24a39c5c.a918b4"
+            ],
+            [
+                "24a39c5c.a918b4"
+            ]
+        ]
     }
 ]
