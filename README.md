@@ -6,7 +6,7 @@
 
 This is an Electron template that embeds [Node-RED](https://nodered.org) to create decentralized applications running on the [Stacks](https://stacks.co) & Bitcoin Blockchains.
 
-This is not intended to be a useful tool as-is, but as a base for you to create your own versions. 
+This is not necessarily intended to be used as-is, but instead used as a base for what dapp you want to build. 
 You will need to edit the `main.js` to suit your application and may need to update the `package.json` file to include your own required nodes and dependencies.
 
 There are several simple switches that can be set in the `NRelectron` section of
@@ -90,7 +90,6 @@ from within the project folder.
 The initial flow file is named `electronflow.json` along with it's credentials file
 `electronflow_cred.json`. Just copy your existing flow in instead.
 
-The default is to start on the dashboard page - as this is intended to be just an application - without the Node-RED editor exposed to the end user, but there are some simple flags to
-to configure this within the package.json or at the top of main.js.
+The default is to start on the dashboard page - as this is intended to be just an application - without the Node-RED editor exposed to the end user, but there are some simple flags to to configure this within the package.json or at the top of main.js.
 
 ---
