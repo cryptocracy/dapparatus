@@ -1,0 +1,5358 @@
+[
+    {
+        "id": "e83b2318.6f5c6",
+        "type": "tab",
+        "label": "Globals",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "42c07592.8d970c",
+        "type": "tab",
+        "label": "Feed",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "53028f3b.590b5",
+        "type": "tab",
+        "label": "Wallet",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "613e85c9.c6210c",
+        "type": "tab",
+        "label": "Minting",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f7442446.0c97f8",
+        "type": "tab",
+        "label": "Assets",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "88cec2c0.c8804",
+        "type": "tab",
+        "label": "History",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d9ba26fa.6d2b18",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#121212",
+                "baseFont": "Copperplate,Copperplate Gothic Light,fantasy",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#f5de47",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4775ff",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#4775ff",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#4775ff",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#000000",
+                    "edited": true
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": true
+                },
+                "group-textColor": {
+                    "value": "#93aeff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#000000",
+                    "edited": true
+                },
+                "group-backgroundColor": {
+                    "value": "#000000",
+                    "edited": true
+                },
+                "widget-textColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "widget-backgroundColor": {
+                    "value": "#4775ff",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#000000",
+                    "edited": true
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "",
+            "hideToolbar": "true",
+            "allowSwipe": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            },
+            "lockMenu": "icon"
+        }
+    },
+    {
+        "id": "a0d42798.ab3f38",
+        "type": "ui_tab",
+        "name": "Wallet",
+        "icon": "mi-account_balance_wallet",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "bec9f54e.163bf8",
+        "type": "ui_group",
+        "name": "ImportGen",
+        "tab": "a0d42798.ab3f38",
+        "order": 1,
+        "disp": false,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "a0be6719.4b0e38",
+        "type": "ui_group",
+        "name": "Send",
+        "tab": "a0d42798.ab3f38",
+        "order": 5,
+        "disp": false,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "34217460.577dac",
+        "type": "ui_tab",
+        "name": "Minting",
+        "icon": "fa-leaf",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3348dd5e.728a92",
+        "type": "ui_group",
+        "name": "Receive",
+        "tab": "a0d42798.ab3f38",
+        "order": 6,
+        "disp": false,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "93f1cccf.344e5",
+        "type": "ui_group",
+        "name": "MintFT",
+        "tab": "34217460.577dac",
+        "order": 2,
+        "disp": false,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "9ba436be.effd28",
+        "type": "ui_group",
+        "name": "MintNFT",
+        "tab": "34217460.577dac",
+        "order": 3,
+        "disp": false,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "c2eb85a6.be5128",
+        "type": "ui_tab",
+        "name": "Assets",
+        "icon": "fa-bank",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "583ee0bf.fe5c5",
+        "type": "ui_group",
+        "name": "STX Hodl",
+        "tab": "c2eb85a6.be5128",
+        "order": 2,
+        "disp": false,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "2e2fb22f.78448e",
+        "type": "ui_group",
+        "name": "Token Hodl",
+        "tab": "c2eb85a6.be5128",
+        "order": 3,
+        "disp": false,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "4079dee5.d84aa",
+        "type": "ui_group",
+        "name": "NFT Hodl",
+        "tab": "c2eb85a6.be5128",
+        "order": 4,
+        "disp": false,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "8a056a57.4af708",
+        "type": "ui_tab",
+        "name": "Feed",
+        "icon": "fa-rss",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "eaf2cbdd.546078",
+        "type": "ui_group",
+        "name": "Feed",
+        "tab": "8a056a57.4af708",
+        "order": 2,
+        "disp": false,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "e5d0847b.1daa38",
+        "type": "ui_group",
+        "name": "Profile",
+        "tab": "8a056a57.4af708",
+        "order": 3,
+        "disp": false,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "69d70456.083fac",
+        "type": "ui_group",
+        "name": "WalletNav",
+        "tab": "a0d42798.ab3f38",
+        "order": 2,
+        "disp": false,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "433bfb40.a488a4",
+        "type": "ui_group",
+        "name": "Keys",
+        "tab": "a0d42798.ab3f38",
+        "order": 3,
+        "disp": false,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "d506506a.83f12",
+        "type": "ui_group",
+        "name": "Header",
+        "tab": "8a056a57.4af708",
+        "order": 1,
+        "disp": false,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "be1bffc8.e254c",
+        "type": "ui_group",
+        "name": "byName",
+        "tab": "8a056a57.4af708",
+        "order": 4,
+        "disp": false,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "6744e75c.f19528",
+        "type": "ui_link",
+        "name": "Editor",
+        "link": "/red",
+        "icon": "fa-gears",
+        "target": "newtab",
+        "order": 7
+    },
+    {
+        "id": "b2fc7e5b.7dc7c",
+        "type": "ui_group",
+        "name": "MintNav",
+        "tab": "34217460.577dac",
+        "order": 1,
+        "disp": false,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "a336bc7c.eda43",
+        "type": "ui_group",
+        "name": "AssetsNav",
+        "tab": "c2eb85a6.be5128",
+        "order": 1,
+        "disp": false,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "3042ba85.0457c6",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "b2fc7e5b.7dc7c",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "6ecfc851.7182c8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "a336bc7c.eda43",
+        "order": 2,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9407fa4c.7f63d8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "a336bc7c.eda43",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "f5ae9cfe.e2927",
+        "type": "ui_group",
+        "name": "byContractName",
+        "tab": "8a056a57.4af708",
+        "order": 5,
+        "disp": false,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "b8ecbd79.b0666",
+        "type": "ui_group",
+        "name": "byTokenName",
+        "tab": "8a056a57.4af708",
+        "order": 6,
+        "disp": false,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "40325bc7.69df84",
+        "type": "ui_group",
+        "name": "byPrincipleAddress",
+        "tab": "8a056a57.4af708",
+        "order": 7,
+        "disp": false,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "3134e5b0.37b9ba",
+        "type": "ui_group",
+        "name": "byTransactionID",
+        "tab": "8a056a57.4af708",
+        "order": 8,
+        "disp": false,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "51640c7f.5ee354",
+        "type": "ui_group",
+        "name": "NewPost",
+        "tab": "8a056a57.4af708",
+        "order": 9,
+        "disp": false,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "f086e156.9d17b",
+        "type": "ui_group",
+        "name": "Mainnet Transactions",
+        "tab": "12ca92d1.ac993d",
+        "order": 1,
+        "disp": true,
+        "width": "13",
+        "collapse": true
+    },
+    {
+        "id": "cd33bbcb.590158",
+        "type": "ui_group",
+        "name": "Testnet Transactions",
+        "tab": "12ca92d1.ac993d",
+        "order": 2,
+        "disp": true,
+        "width": "13",
+        "collapse": true
+    },
+    {
+        "id": "12ca92d1.ac993d",
+        "type": "ui_tab",
+        "name": "History",
+        "icon": "fa-history",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "27f4e76b.857c68",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "69d70456.083fac",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b98b7fb6.80585",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "69d70456.083fac",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a6beaca1.e70a7",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "3348dd5e.728a92",
+        "order": 8,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "e932f9ef.fa49e8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "3348dd5e.728a92",
+        "order": 4,
+        "width": "2",
+        "height": 1
+    },
+    {
+        "id": "8ff35ce4.a1acd",
+        "type": "ui_form",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "label": "Import / Generate Wallet",
+        "group": "bec9f54e.163bf8",
+        "order": 1,
+        "width": 13,
+        "height": 1,
+        "options": [
+            {
+                "label": "Password (Leave Empty if Importing)",
+                "value": "password",
+                "type": "password",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Secret Keys (Leave Empty if Generating)",
+                "value": "secretKey",
+                "type": "text",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "password": "",
+            "secretKey": ""
+        },
+        "payload": "",
+        "submit": "Import / Generate",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "11ea4e07.ace522"
+            ]
+        ]
+    },
+    {
+        "id": "fef21303.5661",
+        "type": "ui_template",
+        "z": "53028f3b.590b5",
+        "group": "433bfb40.a488a4",
+        "name": "Keys",
+        "order": 1,
+        "width": 13,
+        "height": 4,
+        "format": "<h4>Secret Key:</h4>\n<small><small><small>{{msg.payload.secretkey}}</small></small></small>\n\n<h4>App Key:</h4>\n<small><small><small>{{msg.payload.appskey}}</small></small></small>\n\n<h4>Data Private Key:</h4>\n<small><small>{{msg.payload.dataprivkey}}</small></small>\n\n<h4>STX Private Key:</h4>\n<small><small>{{msg.payload.stxprivkey}}</small></small>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 510,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e7b1f77f.e43e28",
+        "type": "ui_template",
+        "z": "613e85c9.c6210c",
+        "group": "93f1cccf.344e5",
+        "name": "TX Info Upon Create Fungible Tokens",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 810,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82a2dcd7.0af3c",
+        "type": "ui_template",
+        "z": "613e85c9.c6210c",
+        "group": "9ba436be.effd28",
+        "name": "TX Info Upon Create Non-Fungible Token",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 820,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5d42e5f8.acbdbc",
+        "type": "ui_form",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "label": "Mint Tokens Form",
+        "group": "93f1cccf.344e5",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Token Name",
+                "value": "ftname",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Token Symbol",
+                "value": "ftsymbol",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Token Amount",
+                "value": "ftamount",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Token Description",
+                "value": "ftmotto",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Token Image URL",
+                "value": "ftimage",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "ftname": "",
+            "ftsymbol": "",
+            "ftamount": "",
+            "ftmotto": "",
+            "ftimage": ""
+        },
+        "payload": "",
+        "submit": "Mint",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "x": 150,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "36c18ccc.c68334",
+        "type": "ui_form",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "label": "Mint NFT Form",
+        "group": "9ba436be.effd28",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "NFT Name",
+                "value": "nftname",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "NFT Description",
+                "value": "nftinfo",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "NFT Image URL",
+                "value": "nftimage",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "nftname": "",
+            "nftinfo": "",
+            "nftimage": ""
+        },
+        "payload": "",
+        "submit": "Mint",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "x": 140,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e20bf7bd.b8d768",
+        "type": "ui_template",
+        "z": "f7442446.0c97f8",
+        "group": "583ee0bf.fe5c5",
+        "name": "STX List",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<h3>STX List</h3>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 700,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4652e3a.22359",
+        "type": "ui_template",
+        "z": "f7442446.0c97f8",
+        "group": "2e2fb22f.78448e",
+        "name": "Tokens List",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<h3>Tokens List</h3>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 710,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3ec0ff84.583e8",
+        "type": "ui_template",
+        "z": "f7442446.0c97f8",
+        "group": "4079dee5.d84aa",
+        "name": "NFT List",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<h3>NFT List</h3>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 700,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6ae1e717.4f7178",
+        "type": "ui_template",
+        "z": "42c07592.8d970c",
+        "group": "eaf2cbdd.546078",
+        "name": "Default Home Feed Template",
+        "order": 1,
+        "width": 13,
+        "height": 8,
+        "format": "Default Home FEED\n{{msg.payload}}",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 560,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97a61763.fbe7e8",
+        "type": "ui_template",
+        "z": "42c07592.8d970c",
+        "group": "e5d0847b.1daa38",
+        "name": "Profile Page Template",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "Your Default PROFILE PAGE",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1280,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf0e5775.a2a2c8",
+        "type": "ui_button",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "group": "93f1cccf.344e5",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Deploy Token Interface Contract",
+        "tooltip": "THIS IS REQUIRED ONCE (for Fungible Tokens Minting)",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 190,
+        "y": 760,
+        "wires": [
+            [
+                "24c58f0c.4ac51"
+            ]
+        ]
+    },
+    {
+        "id": "b2f80a6.f1c84f8",
+        "type": "ui_button",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "group": "9ba436be.effd28",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Deploy NFT Interface Contract",
+        "tooltip": "THIS IS REQUIRED ONCE (for NFT Minting)",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 190,
+        "y": 420,
+        "wires": [
+            [
+                "f65c0e25.9c82d"
+            ]
+        ]
+    },
+    {
+        "id": "e8e93b8a.a67e48",
+        "type": "ui_template",
+        "z": "53028f3b.590b5",
+        "group": "3348dd5e.728a92",
+        "name": "Deposit Address",
+        "order": 2,
+        "width": 10,
+        "height": 1,
+        "format": "<small>Mainnet Deposit Address:</small> {{msg.payload}}",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1020,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e8bca44.35d1d6",
+        "type": "ui_ui_control",
+        "z": "53028f3b.590b5",
+        "name": "ui change",
+        "events": "change",
+        "x": 1380,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba1e514f.aa131",
+        "type": "comment",
+        "z": "53028f3b.590b5",
+        "name": "Relative to Import / Generate Group",
+        "info": "",
+        "x": 160,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8f304796.966b88",
+        "type": "ui_button",
+        "z": "53028f3b.590b5",
+        "name": "Copy BTN",
+        "group": "3348dd5e.728a92",
+        "order": 3,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "",
+        "tooltip": "Copy Mainnet Address",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-copy",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1010,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5064b9ae.d4c998",
+        "type": "comment",
+        "z": "53028f3b.590b5",
+        "name": "Relative to Receive Group",
+        "info": "",
+        "x": 970,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "f23536ee.f30cc8",
+        "type": "comment",
+        "z": "53028f3b.590b5",
+        "name": "Relative to Wallet Navigation Group",
+        "info": "",
+        "x": 1000,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "8be75b2d.4c8308",
+        "type": "ui_button",
+        "z": "53028f3b.590b5",
+        "name": "Reveal Send Group",
+        "group": "69d70456.083fac",
+        "order": 1,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Send",
+        "tooltip": "Navigate to Send",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-arrow-up",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 950,
+        "y": 60,
+        "wires": [
+            [
+                "599fb6ef.c2dcd8"
+            ]
+        ]
+    },
+    {
+        "id": "cc90dbd.872e028",
+        "type": "ui_button",
+        "z": "53028f3b.590b5",
+        "name": "Reveal Receive Group",
+        "group": "69d70456.083fac",
+        "order": 3,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Receive",
+        "tooltip": "Navigate to Receive",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-arrow-down",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 100,
+        "wires": [
+            [
+                "d35e73d8.237f"
+            ]
+        ]
+    },
+    {
+        "id": "b22caa0f.5ca9e8",
+        "type": "ui_button",
+        "z": "53028f3b.590b5",
+        "name": "Reveal Keys Group",
+        "group": "69d70456.083fac",
+        "order": 5,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "",
+        "tooltip": "Navigate to Keys",
+        "color": "",
+        "bgcolor": "orange",
+        "icon": "fa-key",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 950,
+        "y": 140,
+        "wires": [
+            [
+                "d5980233.7abec"
+            ]
+        ]
+    },
+    {
+        "id": "d4b0ee44.dbde",
+        "type": "comment",
+        "z": "53028f3b.590b5",
+        "name": "Relative to Keys Group",
+        "info": "",
+        "x": 140,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "2d7039.df9b8fc8",
+        "type": "ui_button",
+        "z": "53028f3b.590b5",
+        "name": "Download Backup",
+        "group": "433bfb40.a488a4",
+        "order": 2,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "",
+        "tooltip": "Warning: This downloads an unencrypted copy of your keys to this current machine.",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-download",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8776d946.30be38",
+        "type": "ui_ui_control",
+        "z": "53028f3b.590b5",
+        "name": "ui change",
+        "events": "change",
+        "x": 880,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c83da5a0.82f8f8",
+        "type": "ui_form",
+        "z": "53028f3b.590b5",
+        "name": "Send STX Form",
+        "label": "",
+        "group": "a0be6719.4b0e38",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Send To",
+                "value": "stxdestination",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Amount",
+                "value": "stxamount",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Memo",
+                "value": "stxmemo",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "stxdestination": "",
+            "stxamount": "",
+            "stxmemo": ""
+        },
+        "payload": "",
+        "submit": "Send",
+        "cancel": "Clear",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "x": 120,
+        "y": 860,
+        "wires": [
+            [
+                "ab1900ed.7b072"
+            ]
+        ]
+    },
+    {
+        "id": "75902f2d.392ba",
+        "type": "comment",
+        "z": "53028f3b.590b5",
+        "name": "Relative to Send Group",
+        "info": "",
+        "x": 140,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "dbe51251.9596a",
+        "type": "ui_ui_control",
+        "z": "53028f3b.590b5",
+        "name": "ui change",
+        "events": "change",
+        "x": 520,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "303d1f77.b3aa",
+        "type": "ui_toast",
+        "z": "53028f3b.590b5",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "green",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "Acknowledged",
+        "cancel": "",
+        "raw": false,
+        "topic": "",
+        "name": "Funding Notification",
+        "x": 1520,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "75e4c65c.98eba8",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "show Keys group",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Wallet_ImportGen\",\n      \"Wallet_WalletNav\",\n      \"Wallet_Send\",\n      \"Wallet_Receive\"\n    ],\n    \"show\": [\n      \"Wallet_Keys\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 340,
+        "wires": [
+            [
+                "8776d946.30be38"
+            ]
+        ]
+    },
+    {
+        "id": "b95d61cf.d0dc",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "show all wallet groups",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"\"\n    ],\n    \"show\": [\n      \"Wallet_ImportGen\",\n      \"Wallet_WalletNav\",\n      \"Wallet_Keys\",\n      \"Wallet_Send\",\n      \"Wallet_Receive\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 100,
+        "wires": [
+            [
+                "6dbe7d70.aa1854"
+            ]
+        ]
+    },
+    {
+        "id": "599fb6ef.c2dcd8",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "show Send group",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Wallet_ImportGen\",\n      \"Wallet_Keys\",\n      \"Wallet_WalletNav\",\n      \"Wallet_Receive\"\n    ],\n    \"show\": [\n      \"Wallet_Send\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 60,
+        "wires": [
+            [
+                "3e8bca44.35d1d6"
+            ]
+        ]
+    },
+    {
+        "id": "d35e73d8.237f",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "show Receive group",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Wallet_ImportGen\",\n      \"Wallet_Keys\",\n      \"Wallet_WalletNav\",\n      \"Wallet_Send\"\n    ],\n    \"show\": [\n      \"Wallet_Receive\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 100,
+        "wires": [
+            [
+                "3e8bca44.35d1d6"
+            ]
+        ]
+    },
+    {
+        "id": "d5980233.7abec",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "show Keys group",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Wallet_ImportGen\",\n      \"Wallet_Receive\",\n      \"Wallet_WalletNav\",\n      \"Wallet_Send\"\n    ],\n    \"show\": [\n      \"Wallet_Keys\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 140,
+        "wires": [
+            [
+                "3e8bca44.35d1d6"
+            ]
+        ]
+    },
+    {
+        "id": "5e2a54fd.5997ec",
+        "type": "ui_ui_control",
+        "z": "53028f3b.590b5",
+        "name": "ui change",
+        "events": "change",
+        "x": 1220,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e7fd97b.e3c436",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "hide all wallet groups",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Wallet_ImportGen\",\n      \"Wallet_WalletNav\",\n      \"Wallet_Keys\",\n      \"Wallet_Send\",\n      \"Wallet_Receive\"\n    ],\n    \"show\": [\n      \"\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 140,
+        "wires": [
+            [
+                "6dbe7d70.aa1854"
+            ]
+        ]
+    },
+    {
+        "id": "41c98019.533a3",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "show default import generate group",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Wallet_WalletNav\",\n      \"Wallet_Keys\",\n      \"Wallet_Send\",\n      \"Wallet_Receive\"\n    ],\n    \"show\": [\n      \"Wallet_ImportGen\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 60,
+        "wires": [
+            [
+                "6dbe7d70.aa1854"
+            ]
+        ]
+    },
+    {
+        "id": "619bcc3f.160834",
+        "type": "inject",
+        "z": "53028f3b.590b5",
+        "name": "show wallet all",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 100,
+        "wires": [
+            [
+                "b95d61cf.d0dc"
+            ]
+        ]
+    },
+    {
+        "id": "c363a8e2.a03df8",
+        "type": "inject",
+        "z": "53028f3b.590b5",
+        "name": "hide wallet all",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "3e7fd97b.e3c436"
+            ]
+        ]
+    },
+    {
+        "id": "6dbe7d70.aa1854",
+        "type": "ui_ui_control",
+        "z": "53028f3b.590b5",
+        "name": "debug ui changer",
+        "events": "change",
+        "x": 830,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa76ef29.88857",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "show Wallet Nav",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Wallet_ImportGen\",\n      \"Wallet_Keys\",\n      \"Wallet_Send\",\n      \"Wallet_Receive\"\n    ],\n    \"show\": [\n      \"Wallet_WalletNav\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 180,
+        "wires": [
+            [
+                "6dbe7d70.aa1854"
+            ]
+        ]
+    },
+    {
+        "id": "fec4c334.41bb7",
+        "type": "inject",
+        "z": "53028f3b.590b5",
+        "name": "show wallet nav",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "aa76ef29.88857"
+            ]
+        ]
+    },
+    {
+        "id": "ab1da12a.d30f4",
+        "type": "link in",
+        "z": "53028f3b.590b5",
+        "name": "Back to WalletNav",
+        "links": [
+            "5a906687.b83398",
+            "7f288c7.b333674"
+        ],
+        "x": 995,
+        "y": 180,
+        "wires": [
+            [
+                "c2bce8bc.c88598"
+            ]
+        ]
+    },
+    {
+        "id": "5a906687.b83398",
+        "type": "link out",
+        "z": "53028f3b.590b5",
+        "name": "Back to WalletNav (Send)",
+        "links": [
+            "ab1da12a.d30f4"
+        ],
+        "x": 255,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "a32ccd5c.cb02b",
+        "type": "ui_button",
+        "z": "53028f3b.590b5",
+        "name": "Back Button",
+        "group": "a0be6719.4b0e38",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-back",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 820,
+        "wires": [
+            [
+                "5a906687.b83398"
+            ]
+        ]
+    },
+    {
+        "id": "92aa6c86.c6a3",
+        "type": "ui_button",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "group": "433bfb40.a488a4",
+        "order": 3,
+        "width": 11,
+        "height": 1,
+        "passthru": false,
+        "label": "YES, I HAVE MADE A BACK UP, AND I AM READY TO PROCEED",
+        "tooltip": "WARNING: DO NOT LOSE YOUR PASSWORD AND KEYS!",
+        "color": "",
+        "bgcolor": "orange",
+        "icon": "fa-warning",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 280,
+        "y": 660,
+        "wires": [
+            [
+                "4ffc51f.ae497b"
+            ]
+        ]
+    },
+    {
+        "id": "4ffc51f.ae497b",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "show Wallet Nav group",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Wallet_ImportGen\",\n      \"Wallet_Keys\",\n      \"Wallet_Send\",\n      \"Wallet_Receive\"\n    ],\n    \"show\": [\n      \"Wallet_WalletNav\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 660,
+        "wires": [
+            [
+                "19547923.f698c7"
+            ]
+        ]
+    },
+    {
+        "id": "19547923.f698c7",
+        "type": "ui_ui_control",
+        "z": "53028f3b.590b5",
+        "name": "ui change",
+        "events": "change",
+        "x": 860,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f7b60a2c.0899d8",
+        "type": "ui_button",
+        "z": "53028f3b.590b5",
+        "name": "Back Button",
+        "group": "3348dd5e.728a92",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-back",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1010,
+        "y": 980,
+        "wires": [
+            [
+                "7f288c7.b333674"
+            ]
+        ]
+    },
+    {
+        "id": "7f288c7.b333674",
+        "type": "link out",
+        "z": "53028f3b.590b5",
+        "name": "Back to WalletNav (Receive)",
+        "links": [
+            "ab1da12a.d30f4"
+        ],
+        "x": 1155,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "9c1d91f6.ade66",
+        "type": "ui_text_input",
+        "z": "42c07592.8d970c",
+        "name": "Search Field",
+        "label": "",
+        "tooltip": "Search Input",
+        "group": "d506506a.83f12",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "searchinput",
+        "topicType": "str",
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "1ae11b46.bb67d5",
+                "27e68243.aae18e"
+            ]
+        ]
+    },
+    {
+        "id": "31abf2da.47ce9e",
+        "type": "ui_button",
+        "z": "42c07592.8d970c",
+        "name": "Profile BTN",
+        "group": "d506506a.83f12",
+        "order": 4,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "",
+        "tooltip": "Your Profile",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-user-circle",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 850,
+        "y": 80,
+        "wires": [
+            [
+                "9a974bff.85c4f8"
+            ]
+        ]
+    },
+    {
+        "id": "4441efbe.eecb4",
+        "type": "ui_template",
+        "z": "42c07592.8d970c",
+        "group": "be1bffc8.e254c",
+        "name": "Results by Name (Found)",
+        "order": 1,
+        "width": 13,
+        "height": 12,
+        "format": "<style>\n    img {\n      border-radius: 50%;\n    }\n</style>\n<div height=\"60\" style=\"height: 60px;\">\n<img src=\"{{msg.payload[0].decodedToken.payload.claim.image[0].contentUrl}}\" width=\"60\"><br/>\n</div>\n<h3>{{msg.payload[0].decodedToken.payload.claim.name}}</h3>\n<p>{{msg.fqn}}</p>\n<p>{{msg.tipjar}}</p>\n<p>{{msg.payload[0].decodedToken.payload.claim.description}}</p>\n\n\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1690,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f092708.971a79",
+        "type": "ui_button",
+        "z": "42c07592.8d970c",
+        "name": "Home",
+        "group": "d506506a.83f12",
+        "order": 3,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "",
+        "tooltip": "Feed Home",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-home",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 90,
+        "y": 80,
+        "wires": [
+            [
+                "c9d3b79d.f9a488"
+            ]
+        ]
+    },
+    {
+        "id": "9cc3c90.0e85138",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "show Results byName",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Feed_Feed\",\n      \"Feed_NewPost\",      \n      \"Feed_Profile\",\n      \"Feed_byContractName\",\n      \"Feed_byTokenName\",\n      \"Feed_byPrincipleAddress\",\n      \"Feed_byTransactionID\"\n    ],\n    \"show\": [\n      \"Feed_Header\",\n      \"Feed_byName\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 300,
+        "wires": [
+            [
+                "697b50a.2220ab"
+            ]
+        ]
+    },
+    {
+        "id": "9a974bff.85c4f8",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "show Profile",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Feed_Feed\",\n      \"Feed_NewPost\",\n      \"Feed_byContractName\",\n      \"Feed_byTokenName\",\n      \"Feed_byPrincipleAddress\",\n      \"Feed_byTransactionID\",\n      \"Feed_byName\"\n    ],\n    \"show\": [\n      \"Feed_Header\",\n      \"Feed_Profile\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 80,
+        "wires": [
+            [
+                "869168df.0b5888"
+            ]
+        ]
+    },
+    {
+        "id": "c9d3b79d.f9a488",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "show Feed",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Feed_Profile\",\n      \"Feed_NewPost\",\n      \"Feed_byContractName\",\n      \"Feed_byTokenName\",\n      \"Feed_byPrincipleAddress\",\n      \"Feed_byTransactionID\",\n      \"Feed_byName\"\n    ],\n    \"show\": [\n      \"Feed_Header\",\n      \"Feed_Feed\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "f9dcaec2.8526d"
+            ]
+        ]
+    },
+    {
+        "id": "869168df.0b5888",
+        "type": "ui_ui_control",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "events": "all",
+        "x": 1240,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a46035.a4068fc",
+        "type": "ui_dropdown",
+        "z": "42c07592.8d970c",
+        "name": "Search Type",
+        "label": "",
+        "tooltip": "Search Type",
+        "place": "",
+        "group": "d506506a.83f12",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "by Name",
+                "value": "fqn",
+                "type": "str"
+            },
+            {
+                "label": "by Transaction ID",
+                "value": "txid",
+                "type": "str"
+            },
+            {
+                "label": "by Contract Name",
+                "value": "bcn",
+                "type": "str"
+            },
+            {
+                "label": "by Token Name",
+                "value": "btn",
+                "type": "str"
+            },
+            {
+                "label": "by Principle Address",
+                "value": "bpa",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "searchtype",
+        "topicType": "str",
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "aca7dc96.8b27a",
+                "1ae11b46.bb67d5",
+                "62a9e217.4a2bcc"
+            ]
+        ]
+    },
+    {
+        "id": "697b50a.2220ab",
+        "type": "ui_ui_control",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "events": "all",
+        "x": 1080,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f9dcaec2.8526d",
+        "type": "ui_ui_control",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "events": "all",
+        "x": 500,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56f4ac51.d2f784",
+        "type": "comment",
+        "z": "42c07592.8d970c",
+        "name": "Relative to Profiles",
+        "info": "",
+        "x": 870,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "495cf799.4f5f78",
+        "type": "comment",
+        "z": "42c07592.8d970c",
+        "name": "Relative to Searching",
+        "info": "",
+        "x": 160,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d6791f8.0d4e9e",
+        "type": "comment",
+        "z": "42c07592.8d970c",
+        "name": "Relative to Feed Home",
+        "info": "",
+        "x": 140,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8e75a447.bdaee8",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "show Mint FT",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Minting_MintNav\",\n      \"Minting_MintNFT\"\n    ],\n    \"show\": [\n      \"Minting_MintFT\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "9706e8dc.3274b8"
+            ]
+        ]
+    },
+    {
+        "id": "fb875802.6b9498",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "show Mint NFT",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Minting_MintNav\",\n      \"Minting_MintFT\"\n    ],\n    \"show\": [\n      \"Minting_MintNFT\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "9706e8dc.3274b8"
+            ]
+        ]
+    },
+    {
+        "id": "a64ba7f9.9b1058",
+        "type": "ui_button",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "group": "b2fc7e5b.7dc7c",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Mint Tokens",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 200,
+        "wires": [
+            [
+                "8e75a447.bdaee8"
+            ]
+        ]
+    },
+    {
+        "id": "e536ab34.ec5928",
+        "type": "ui_button",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "group": "b2fc7e5b.7dc7c",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Mint NFTs",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "fb875802.6b9498"
+            ]
+        ]
+    },
+    {
+        "id": "69041be7.6e6554",
+        "type": "ui_button",
+        "z": "613e85c9.c6210c",
+        "name": "Back (FT)",
+        "group": "93f1cccf.344e5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "3e840dfd.8c84b2"
+            ]
+        ]
+    },
+    {
+        "id": "9706e8dc.3274b8",
+        "type": "ui_ui_control",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "events": "all",
+        "x": 560,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e840dfd.8c84b2",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "show Mint Nav",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Minting_MintFT\",\n      \"Minting_MintNFT\"\n    ],\n    \"show\": [\n      \"Minting_MintNav\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 60,
+        "wires": [
+            [
+                "9706e8dc.3274b8"
+            ]
+        ]
+    },
+    {
+        "id": "572ef062.2451d",
+        "type": "ui_button",
+        "z": "613e85c9.c6210c",
+        "name": "Back (NFT)",
+        "group": "9ba436be.effd28",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "3e840dfd.8c84b2"
+            ]
+        ]
+    },
+    {
+        "id": "875bb725.1f41c8",
+        "type": "ui_button",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "group": "a336bc7c.eda43",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "My STX",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "766120a8.82ec"
+            ]
+        ]
+    },
+    {
+        "id": "a847a12a.32176",
+        "type": "ui_button",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "group": "a336bc7c.eda43",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "My Tokens",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "b6514d9a.4695c"
+            ]
+        ]
+    },
+    {
+        "id": "a3aa0a48.6af878",
+        "type": "ui_button",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "group": "a336bc7c.eda43",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "My NFTs",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 460,
+        "wires": [
+            [
+                "a621f66c.a1e8e8"
+            ]
+        ]
+    },
+    {
+        "id": "766120a8.82ec",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "show STX Hodl",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Assets_AssetsNav\",\n      \"Assets_Token_Hodl\",\n      \"Assets_NFT_Hodl\"\n    ],\n    \"show\": [\n      \"Assets_STX_Hodl\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 220,
+        "wires": [
+            [
+                "dc8e6a9f.da7e58"
+            ]
+        ]
+    },
+    {
+        "id": "b6514d9a.4695c",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "show Token Hodl",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Assets_AssetsNav\",\n      \"Assets_STX_Hodl\",\n      \"Assets_NFT_Hodl\"\n    ],\n    \"show\": [\n      \"Assets_Token_Hodl\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 340,
+        "wires": [
+            [
+                "6486e8f2.2b5ba8"
+            ]
+        ]
+    },
+    {
+        "id": "a621f66c.a1e8e8",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "show NFT Hodl",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Assets_AssetsNav\",\n      \"Assets_Token_Hodl\",\n      \"Assets_STX_Hodl\"\n    ],\n    \"show\": [\n      \"Assets_NFT_Hodl\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 460,
+        "wires": [
+            [
+                "d0c88850.42e3f8"
+            ]
+        ]
+    },
+    {
+        "id": "6486e8f2.2b5ba8",
+        "type": "ui_ui_control",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "events": "all",
+        "x": 900,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0c88850.42e3f8",
+        "type": "ui_ui_control",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "events": "all",
+        "x": 900,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dc8e6a9f.da7e58",
+        "type": "ui_ui_control",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "events": "all",
+        "x": 900,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b071c2ae.98891",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "show AssetsNav",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Assets_STX_Hodl\",\n      \"Assets_Token_Hodl\",\n      \"Assets_NFT_Hodl\"\n    ],\n    \"show\": [\n      \"Assets_AssetsNav\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 80,
+        "wires": [
+            [
+                "f489d370.a3f58"
+            ]
+        ]
+    },
+    {
+        "id": "946ce368.259c4",
+        "type": "ui_button",
+        "z": "f7442446.0c97f8",
+        "name": "Back (STX Hodl)",
+        "group": "583ee0bf.fe5c5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "b7c045b5.ce7b68"
+            ]
+        ]
+    },
+    {
+        "id": "bae8fcf5.8fe8",
+        "type": "link in",
+        "z": "f7442446.0c97f8",
+        "name": "Back to AssetsNav",
+        "links": [
+            "b7c045b5.ce7b68",
+            "41054bc1.8381a4",
+            "e57ef1a9.83eda",
+            "18e0b33a.b8540d",
+            "d3afe6ff.e83ac8"
+        ],
+        "x": 255,
+        "y": 80,
+        "wires": [
+            [
+                "b071c2ae.98891"
+            ]
+        ]
+    },
+    {
+        "id": "b7c045b5.ce7b68",
+        "type": "link out",
+        "z": "f7442446.0c97f8",
+        "name": "Back (STX Hodl)",
+        "links": [
+            "bae8fcf5.8fe8"
+        ],
+        "x": 315,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "18e0b33a.b8540d",
+        "type": "link out",
+        "z": "f7442446.0c97f8",
+        "name": "Back (Token Hodl)",
+        "links": [
+            "bae8fcf5.8fe8"
+        ],
+        "x": 315,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d3afe6ff.e83ac8",
+        "type": "link out",
+        "z": "f7442446.0c97f8",
+        "name": "Back (NFT Hodl)",
+        "links": [
+            "bae8fcf5.8fe8"
+        ],
+        "x": 315,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "642359d2.46c568",
+        "type": "ui_button",
+        "z": "f7442446.0c97f8",
+        "name": "Back (Token Hodl)",
+        "group": "2e2fb22f.78448e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 380,
+        "wires": [
+            [
+                "18e0b33a.b8540d"
+            ]
+        ]
+    },
+    {
+        "id": "4487b5f5.444c5c",
+        "type": "ui_button",
+        "z": "f7442446.0c97f8",
+        "name": "Back (NFT Hodl)",
+        "group": "4079dee5.d84aa",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 500,
+        "wires": [
+            [
+                "d3afe6ff.e83ac8"
+            ]
+        ]
+    },
+    {
+        "id": "f489d370.a3f58",
+        "type": "ui_ui_control",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "events": "all",
+        "x": 900,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "841468ca.b4abe8",
+        "type": "comment",
+        "z": "53028f3b.590b5",
+        "name": "Relative to Wallet Nav Defaults",
+        "info": "need to check for keys \nthen if not found default",
+        "x": 610,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "282a4696.77ccaa",
+        "type": "inject",
+        "z": "613e85c9.c6210c",
+        "name": "default",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "3e840dfd.8c84b2"
+            ]
+        ]
+    },
+    {
+        "id": "747f392.a83a0c8",
+        "type": "link in",
+        "z": "e83b2318.6f5c6",
+        "name": "to set Globals",
+        "links": [
+            "2daab08b.7244f"
+        ],
+        "x": 135,
+        "y": 60,
+        "wires": [
+            [
+                "72d7bed8.b0365",
+                "513b5f96.c46f",
+                "744187ca.a29598",
+                "c071fb7c.7f1528",
+                "5a403cf1.054184",
+                "943d3e7.afb63c",
+                "dd43e46d.8e4b58"
+            ]
+        ]
+    },
+    {
+        "id": "1266fa09.3beff6",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set depositaddress",
+        "rules": [
+            {
+                "t": "move",
+                "p": "depositaddress",
+                "pt": "msg",
+                "to": "depositaddress",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dcc74cec.0f8bc",
+        "type": "inject",
+        "z": "f7442446.0c97f8",
+        "name": "default",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "b071c2ae.98891"
+            ]
+        ]
+    },
+    {
+        "id": "11ea4e07.ace522",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "import or generate wallet",
+        "func": "const password = msg.payload.password;\n\nlet secretKey = msg.payload.secretKey;\n\nif (secretKey) {\n    \n    const isValid = bip39.validateMnemonic(secretKey);\n    \n    if (!isValid) throw new Error(secretKey + ' is not a valid bip39 mnemonic key')\n    \n} else secretKey = stacksWalletSdk.generateSecretKey();\n\nconst wallet = await stacksWalletSdk.generateWallet({secretKey, password});\n\nmsg.payload = {secretKey, password, wallet};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "stacksWalletSdk",
+                "module": "@stacks/wallet-sdk"
+            },
+            {
+                "var": "bip39",
+                "module": "bip39"
+            }
+        ],
+        "x": 410,
+        "y": 300,
+        "wires": [
+            [
+                "75e4c65c.98eba8",
+                "2daab08b.7244f",
+                "8636d457.30a4c8",
+                "873657ef.83d408",
+                "1f2a433e.62aced",
+                "9be618dc.c92f28"
+            ]
+        ]
+    },
+    {
+        "id": "2daab08b.7244f",
+        "type": "link out",
+        "z": "53028f3b.590b5",
+        "name": "pass to Globals",
+        "links": [
+            "747f392.a83a0c8"
+        ],
+        "x": 615,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8636d457.30a4c8",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "generate deposit address 0 (Mainnet)",
+        "func": "//var nt = msg.gnt; //set var nt dynamically\nvar nt = 0; // set var nt as Mainnet \n//var nt = 128; // set var nt as TestNet\n\n\nconst obj = {\n    account : msg.payload.wallet.accounts[0],\n    transactionVersion : nt\n};\n\nconst address = stacksWalletSdk.getStxAddress(obj);\n\nmsg.depositaddress = address;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "stacksWalletSdk",
+                "module": "@stacks/wallet-sdk"
+            }
+        ],
+        "x": 750,
+        "y": 380,
+        "wires": [
+            [
+                "ddb791f7.87e8",
+                "8d24959.aba6a68",
+                "57e2ecc0.94e904"
+            ]
+        ]
+    },
+    {
+        "id": "ddb791f7.87e8",
+        "type": "link out",
+        "z": "53028f3b.590b5",
+        "name": "pass to Global (set deposit address 0 Mainnet)",
+        "links": [
+            "ecae4fe5.c96a1"
+        ],
+        "x": 975,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ecae4fe5.c96a1",
+        "type": "link in",
+        "z": "e83b2318.6f5c6",
+        "name": "to set Global (deposit address 0 Mainnet)",
+        "links": [
+            "ddb791f7.87e8"
+        ],
+        "x": 155,
+        "y": 340,
+        "wires": [
+            [
+                "1266fa09.3beff6"
+            ]
+        ]
+    },
+    {
+        "id": "72d7bed8.b0365",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set keys (encrypted)",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.wallet.encryptedSecretKey",
+                "pt": "msg",
+                "to": "keys",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "873657ef.83d408",
+        "type": "debug",
+        "z": "53028f3b.590b5",
+        "d": true,
+        "name": "Wallet Generate Debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "8d24959.aba6a68",
+        "type": "debug",
+        "z": "53028f3b.590b5",
+        "name": "Address Generate Debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "1f2a433e.62aced",
+        "type": "link out",
+        "z": "53028f3b.590b5",
+        "name": "Pass to Call Keys",
+        "links": [
+            "8d922f76.e3b27"
+        ],
+        "x": 615,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "8d922f76.e3b27",
+        "type": "link in",
+        "z": "53028f3b.590b5",
+        "name": "Pass from Call Keys",
+        "links": [
+            "1f2a433e.62aced"
+        ],
+        "x": 55,
+        "y": 560,
+        "wires": [
+            [
+                "eeaf115b.296ca"
+            ]
+        ]
+    },
+    {
+        "id": "b9efbcb9.47591",
+        "type": "inject",
+        "z": "53028f3b.590b5",
+        "name": "default?",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 60,
+        "wires": [
+            [
+                "96aaf9f9.094f38"
+            ]
+        ]
+    },
+    {
+        "id": "5a403cf1.054184",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set stxprivkey",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.wallet.accounts[0].stxPrivateKey",
+                "pt": "msg",
+                "to": "stxprivkey",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c071fb7c.7f1528",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set dataprivkey",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.wallet.accounts[0].dataPrivateKey",
+                "pt": "msg",
+                "to": "dataprivkey",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "513b5f96.c46f",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set secretkey",
+        "rules": [
+            {
+                "t": "move",
+                "p": "msg.payload.secretKey",
+                "pt": "msg",
+                "to": "secretkey",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "744187ca.a29598",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set appskey",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.wallet.accounts[0].appsKey",
+                "pt": "msg",
+                "to": "appskey",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c44ba5ac.c872a8",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "get wallet globals",
+        "func": "var secretkey = global.get(\"secretkey\");\nvar appskey = global.get(\"appskey\");\nvar dataprivkey = global.get(\"dataprivkey\");\nvar stxprivkey = global.get(\"stxprivkey\");\n\nmsg.payload = {secretkey, appskey, dataprivkey, stxprivkey};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 560,
+        "wires": [
+            [
+                "fef21303.5661",
+                "e44c9501.0edc98"
+            ]
+        ]
+    },
+    {
+        "id": "e44c9501.0edc98",
+        "type": "debug",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "eeaf115b.296ca",
+        "type": "delay",
+        "z": "53028f3b.590b5",
+        "name": "delay",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 150,
+        "y": 560,
+        "wires": [
+            [
+                "c44ba5ac.c872a8"
+            ]
+        ]
+    },
+    {
+        "id": "ae651374.a85b7",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "get global depositaddress",
+        "func": "var depositaddress = global.get(\"depositaddress\");\n\nmsg.payload = depositaddress;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1060,
+        "wires": [
+            [
+                "e8e93b8a.a67e48"
+            ]
+        ]
+    },
+    {
+        "id": "c1582304.80a9e",
+        "type": "link in",
+        "z": "53028f3b.590b5",
+        "name": "Get Deposit Address",
+        "links": [
+            "57e2ecc0.94e904"
+        ],
+        "x": 535,
+        "y": 1060,
+        "wires": [
+            [
+                "86362642.e4ba48"
+            ]
+        ]
+    },
+    {
+        "id": "86362642.e4ba48",
+        "type": "delay",
+        "z": "53028f3b.590b5",
+        "name": "delay",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 630,
+        "y": 1060,
+        "wires": [
+            [
+                "ae651374.a85b7"
+            ]
+        ]
+    },
+    {
+        "id": "57e2ecc0.94e904",
+        "type": "link out",
+        "z": "53028f3b.590b5",
+        "name": "Pass Deposit Address to Receive",
+        "links": [
+            "c1582304.80a9e"
+        ],
+        "x": 975,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "c2bce8bc.c88598",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "show Wallet Nav",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Wallet_ImportGen\",\n      \"Wallet_Keys\",\n      \"Wallet_Send\",\n      \"Wallet_Receive\"\n    ],\n    \"show\": [\n      \"Wallet_WalletNav\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 180,
+        "wires": [
+            [
+                "3e8bca44.35d1d6"
+            ]
+        ]
+    },
+    {
+        "id": "3175e1b6.2b537e",
+        "type": "file",
+        "z": "e83b2318.6f5c6",
+        "name": "",
+        "filename": "keys.json",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 760,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "96aaf9f9.094f38",
+        "type": "file in",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "filename": "keys.json",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 240,
+        "y": 60,
+        "wires": [
+            [
+                "73ffee75.2bd06"
+            ]
+        ]
+    },
+    {
+        "id": "73ffee75.2bd06",
+        "type": "switch",
+        "z": "53028f3b.590b5",
+        "name": "empty?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 380,
+        "y": 60,
+        "wires": [
+            [
+                "41c98019.533a3"
+            ],
+            [
+                "aa76ef29.88857"
+            ]
+        ]
+    },
+    {
+        "id": "943d3e7.afb63c",
+        "type": "function",
+        "z": "e83b2318.6f5c6",
+        "name": "store encrypted secret keys",
+        "func": "var secretsauce = msg.payload.wallet.encryptedSecretKey;\n\nmsg.payload = secretsauce;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 60,
+        "wires": [
+            [
+                "3175e1b6.2b537e"
+            ]
+        ]
+    },
+    {
+        "id": "8d9618d9.ee7718",
+        "type": "inject",
+        "z": "53028f3b.590b5",
+        "name": "force default",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 370,
+        "y": 20,
+        "wires": [
+            [
+                "41c98019.533a3"
+            ]
+        ]
+    },
+    {
+        "id": "dd43e46d.8e4b58",
+        "type": "debug",
+        "z": "e83b2318.6f5c6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "b174b178.74327",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "construct url",
+        "func": "var fqn = msg.payload.searchinput;\nvar nettype = global.get(\"nettype\");\n\nmsg.url = \"https://\" + nettype + \"/v1/names/\" + fqn;\nmsg.fqn = fqn;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 640,
+        "wires": [
+            [
+                "f7df69fb.404dc8"
+            ]
+        ]
+    },
+    {
+        "id": "f7df69fb.404dc8",
+        "type": "http request",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 810,
+        "y": 640,
+        "wires": [
+            [
+                "6340ae52.9e9d7"
+            ]
+        ]
+    },
+    {
+        "id": "6340ae52.9e9d7",
+        "type": "json",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 950,
+        "y": 640,
+        "wires": [
+            [
+                "cf8debc9.be5e58",
+                "adcdd527.9195a8"
+            ]
+        ]
+    },
+    {
+        "id": "f5f39fb5.6cb16",
+        "type": "ui_template",
+        "z": "42c07592.8d970c",
+        "group": "f5ae9cfe.e2927",
+        "name": "Results by Contract Name",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "RESULTS by Contract Name\n{{msg.payload}}",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1690,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d55c49e6.0417f8",
+        "type": "ui_template",
+        "z": "42c07592.8d970c",
+        "group": "b8ecbd79.b0666",
+        "name": "Results by Token Name",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "RESULTS by Token Name\n{{msg.payload}}",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1690,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8278106d.461fb",
+        "type": "ui_template",
+        "z": "42c07592.8d970c",
+        "group": "40325bc7.69df84",
+        "name": "Results by Principle Address",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<h3>Balance: {{msg.payload.stx.balance}}</h3>\n<h5>Locked: {{msg.payload.stx.locked}} </h5>\n<p>Total Sent: {{msg.payload.stx.total_sent}}</p>\n<p>Total Received: {{msg.payload.stx.total_received}}</p>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1700,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e19596ee.3cac38",
+        "type": "ui_template",
+        "z": "42c07592.8d970c",
+        "group": "3134e5b0.37b9ba",
+        "name": "Results by Transaction ID",
+        "order": 1,
+        "width": 13,
+        "height": 8,
+        "format": "<h4>Sender:</h4>\n<p>{{msg.payload.sender_address}}</p>\n<br>\n<h4>Recipient:</h4>\n<p>{{msg.payload.token_transfer.recipient_address}}</p>\n<br>\n<p>Amount: {{msg.payload.token_transfer.amount}}</p>\n<p>Fee: {{msg.payload.fee_rate}}</p>\n<p>Nonce: {{msg.payload.nonce}}</p>\n<p>Status: {{msg.payload.tx_status}}</p>\n<p>Memo: {{msg.payload.token_transfer.memo}}</p>\n<h5>{{msg.payload.tx_id}}</h5>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1690,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d82e07c9.ba41c8",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "show Results byContractName",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Feed_Feed\",\n      \"Feed_NewPost\",      \n      \"Feed_Profile\",\n      \"Feed_byName\",\n      \"Feed_byTokenName\",\n      \"Feed_byPrincipleAddress\",\n      \"Feed_byTransactionID\"\n    ],\n    \"show\": [\n      \"Feed_Header\",\n      \"Feed_byContractName\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 380,
+        "wires": [
+            [
+                "697b50a.2220ab"
+            ]
+        ]
+    },
+    {
+        "id": "fb018c07.853cd",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "show Results byTokenName",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Feed_Feed\",\n      \"Feed_NewPost\",      \n      \"Feed_Profile\",\n      \"Feed_byContractName\",\n      \"Feed_byName\",\n      \"Feed_byPrincipleAddress\",\n      \"Feed_byTransactionID\"\n    ],\n    \"show\": [\n      \"Feed_Header\",\n      \"Feed_byTokenName\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 420,
+        "wires": [
+            [
+                "697b50a.2220ab"
+            ]
+        ]
+    },
+    {
+        "id": "79fa716d.83c1c",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "show Results byPrincipleAddress",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Feed_Feed\",\n      \"Feed_NewPost\",      \n      \"Feed_Profile\",\n      \"Feed_byContractName\",\n      \"Feed_byTokenName\",\n      \"Feed_byName\",\n      \"Feed_byTransactionID\"\n    ],\n    \"show\": [\n      \"Feed_Header\",\n      \"Feed_byPrincipleAddress\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 460,
+        "wires": [
+            [
+                "697b50a.2220ab"
+            ]
+        ]
+    },
+    {
+        "id": "597e8480.42705c",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "show Results byTransactionID",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Feed_Feed\",\n      \"Feed_NewPost\",      \n      \"Feed_Profile\",\n      \"Feed_byContractName\",\n      \"Feed_byTokenName\",\n      \"Feed_byName\",\n      \"Feed_byPrincipleAddress\"\n    ],\n    \"show\": [\n      \"Feed_Header\",\n      \"Feed_byTransactionID\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 340,
+        "wires": [
+            [
+                "697b50a.2220ab"
+            ]
+        ]
+    },
+    {
+        "id": "aca7dc96.8b27a",
+        "type": "switch",
+        "z": "42c07592.8d970c",
+        "name": "route by type",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "fqn",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "txid",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "bcn",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "btn",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "bpa",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 410,
+        "y": 360,
+        "wires": [
+            [
+                "9cc3c90.0e85138"
+            ],
+            [
+                "597e8480.42705c"
+            ],
+            [
+                "d82e07c9.ba41c8"
+            ],
+            [
+                "fb018c07.853cd"
+            ],
+            [
+                "79fa716d.83c1c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e4a65fcb.f9887",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "Hide Results",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Feed_Feed\",\n      \"Feed_NewPost\",\n      \"Feed_Profile\",\n      \"Feed_byContractName\",\n      \"Feed_byTokenName\",\n      \"Feed_byPrincipleAddress\",\n      \"Feed_byTransactionID\",\n      \"Feed_byName\"\n    ],\n    \"show\": [\n      \"Feed_Header\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 260,
+        "wires": [
+            [
+                "697b50a.2220ab"
+            ]
+        ]
+    },
+    {
+        "id": "3eee9e35.2b1b42",
+        "type": "inject",
+        "z": "42c07592.8d970c",
+        "name": "hider",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 650,
+        "y": 260,
+        "wires": [
+            [
+                "e4a65fcb.f9887"
+            ]
+        ]
+    },
+    {
+        "id": "f68b4db.53f03b",
+        "type": "http request",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1330,
+        "y": 640,
+        "wires": [
+            [
+                "7ee905b1.f0129c"
+            ]
+        ]
+    },
+    {
+        "id": "bf9d3dbc.510e8",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1630,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "7ee905b1.f0129c",
+        "type": "json",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1490,
+        "y": 640,
+        "wires": [
+            [
+                "bf9d3dbc.510e8",
+                "4441efbe.eecb4"
+            ]
+        ]
+    },
+    {
+        "id": "e0d710ea.4884",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1310,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "cf8debc9.be5e58",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "clean up profile url",
+        "func": "var tipjar = msg.payload.address;\nvar fqn = msg.fqn;\n\nvar xfil = msg.payload.zonefile;\nvar yfil = xfil.split(\"https://\")[1]; //remove everything prior and including https://\nvar zfil = yfil.split(\"profile.json\")[0]; //remove everything after and including profile.json\n\nmsg.payload = zfil;\n\nmsg.header = null;\nmsg.url = \"https://\" + zfil + \"profile.json\";\nmsg.tipjar = tipjar;\nmsg.fqn = fqn;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 640,
+        "wires": [
+            [
+                "e0d710ea.4884",
+                "f68b4db.53f03b"
+            ]
+        ]
+    },
+    {
+        "id": "adcdd527.9195a8",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "1ae11b46.bb67d5",
+        "type": "join",
+        "z": "42c07592.8d970c",
+        "name": "join inputs",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 400,
+        "y": 580,
+        "wires": [
+            [
+                "e53e6919.d89028",
+                "61989514.7403fc"
+            ]
+        ]
+    },
+    {
+        "id": "8c7d3d6d.b42c6",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set searchtype",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "searchtype",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 540,
+        "wires": [
+            [
+                "81cd1a79.579b68"
+            ]
+        ]
+    },
+    {
+        "id": "e53e6919.d89028",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "61989514.7403fc",
+        "type": "switch",
+        "z": "42c07592.8d970c",
+        "name": "route by type",
+        "property": "payload.searchtype",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "fqn",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "txid",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "bcn",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "btn",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "bpa",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 410,
+        "y": 700,
+        "wires": [
+            [
+                "b174b178.74327"
+            ],
+            [
+                "7bd2758e.52929c"
+            ],
+            [],
+            [],
+            [
+                "57553aff.199e04"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "81cd1a79.579b68",
+        "type": "debug",
+        "z": "e83b2318.6f5c6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "4b97e61.0fbac18",
+        "type": "link in",
+        "z": "e83b2318.6f5c6",
+        "name": "to set Global (search type)",
+        "links": [
+            "62a9e217.4a2bcc"
+        ],
+        "x": 155,
+        "y": 540,
+        "wires": [
+            [
+                "8c7d3d6d.b42c6"
+            ]
+        ]
+    },
+    {
+        "id": "62a9e217.4a2bcc",
+        "type": "link out",
+        "z": "42c07592.8d970c",
+        "name": "to set Search Type",
+        "links": [
+            "4b97e61.0fbac18"
+        ],
+        "x": 355,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "af7e1628.bed168",
+        "type": "inject",
+        "z": "42c07592.8d970c",
+        "name": "default searchtype",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "searchtype",
+        "payload": "fqn",
+        "payloadType": "str",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "62a9e217.4a2bcc",
+                "aca7dc96.8b27a",
+                "1ae11b46.bb67d5"
+            ]
+        ]
+    },
+    {
+        "id": "7bd2758e.52929c",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "construct url",
+        "func": "var txid = msg.payload.searchinput;\nvar nettype = global.get(\"nettype\");\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/tx/\" + txid;\nmsg.txid = txid;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 680,
+        "wires": [
+            [
+                "c8b07fde.de5a8"
+            ]
+        ]
+    },
+    {
+        "id": "c8b07fde.de5a8",
+        "type": "http request",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 810,
+        "y": 680,
+        "wires": [
+            [
+                "7f1cca7e.aa5474"
+            ]
+        ]
+    },
+    {
+        "id": "7f1cca7e.aa5474",
+        "type": "json",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 950,
+        "y": 680,
+        "wires": [
+            [
+                "9020504f.895bf",
+                "e19596ee.3cac38"
+            ]
+        ]
+    },
+    {
+        "id": "9020504f.895bf",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "cafc8579.023e18",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set searchinput",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "searchinput",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 580,
+        "wires": [
+            [
+                "6b22d1dd.7b4a8"
+            ]
+        ]
+    },
+    {
+        "id": "6b22d1dd.7b4a8",
+        "type": "debug",
+        "z": "e83b2318.6f5c6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "27e68243.aae18e",
+        "type": "link out",
+        "z": "42c07592.8d970c",
+        "name": "to set Search Input",
+        "links": [
+            "f5c69381.17376"
+        ],
+        "x": 355,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "f5c69381.17376",
+        "type": "link in",
+        "z": "e83b2318.6f5c6",
+        "name": "to set Global (search input)",
+        "links": [
+            "27e68243.aae18e"
+        ],
+        "x": 155,
+        "y": 580,
+        "wires": [
+            [
+                "cafc8579.023e18"
+            ]
+        ]
+    },
+    {
+        "id": "158f434e.a7681d",
+        "type": "ui_template",
+        "z": "42c07592.8d970c",
+        "group": "51640c7f.5ee354",
+        "name": "New Post Template",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "New Post PAGE",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1970,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56f77a5a.ccbb54",
+        "type": "ui_button",
+        "z": "42c07592.8d970c",
+        "name": "New Post BTN",
+        "group": "d506506a.83f12",
+        "order": 5,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "",
+        "tooltip": "New Post",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-edit",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1560,
+        "y": 80,
+        "wires": [
+            [
+                "1139baa5.720a75"
+            ]
+        ]
+    },
+    {
+        "id": "1139baa5.720a75",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "show NewPost",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Feed_Feed\",\n      \"Feed_Profile\",\n      \"Feed_byContractName\",\n      \"Feed_byTokenName\",\n      \"Feed_byPrincipleAddress\",\n      \"Feed_byTransactionID\",\n      \"Feed_byName\"\n    ],\n    \"show\": [\n      \"Feed_Header\",\n      \"Feed_NewPost\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1780,
+        "y": 80,
+        "wires": [
+            [
+                "696ce85d.daa998"
+            ]
+        ]
+    },
+    {
+        "id": "696ce85d.daa998",
+        "type": "ui_ui_control",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "events": "all",
+        "x": 1940,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "114e68d3.24bdc7",
+        "type": "comment",
+        "z": "42c07592.8d970c",
+        "name": "Relative to New Post",
+        "info": "",
+        "x": 1570,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "ab1900ed.7b072",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "Send STX",
+        "func": "const network = new stacksNetwork.StacksMainnet(); // or StacksTestnet\nconst senderKey = global.get('stxprivkey'); //get the STX Private Key Stored Globally\n\n// skip automatic fee estimation\nconst fee = new BigNum(180);\nconst memo = msg.payload.stxmemo;\n\nconst txOptions = {\n    recipient: msg.payload.stxdestination,\n    amount : new BigNum(msg.payload.stxamount),\n    fee,\n    senderKey,\n    network,\n    memo\n};\n\nconst transaction = await stacksTransactions.makeSTXTokenTransfer(txOptions);\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\nmsg.blockchain = \"0x\" + broadcastTxn;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            }
+        ],
+        "x": 310,
+        "y": 860,
+        "wires": [
+            [
+                "b2229dc1.9782"
+            ]
+        ]
+    },
+    {
+        "id": "b2229dc1.9782",
+        "type": "debug",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "57553aff.199e04",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "construct url",
+        "func": "var stxaddress = msg.payload.searchinput;\nvar nettype = global.get(\"nettype\");\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/address/\" + stxaddress + \"/balances\";\nmsg.stxaddress = stxaddress;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 800,
+        "wires": [
+            [
+                "104e0697.7857a9"
+            ]
+        ]
+    },
+    {
+        "id": "104e0697.7857a9",
+        "type": "http request",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 810,
+        "y": 800,
+        "wires": [
+            [
+                "4c8e8c17.de9954"
+            ]
+        ]
+    },
+    {
+        "id": "4c8e8c17.de9954",
+        "type": "json",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 950,
+        "y": 800,
+        "wires": [
+            [
+                "298788eb.64d0a8",
+                "8278106d.461fb"
+            ]
+        ]
+    },
+    {
+        "id": "298788eb.64d0a8",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "24c58f0c.4ac51",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "create ft-trait.clar",
+        "func": "//take the inputs and construct the Clarity contract file contents\nmsg.payload =   \"(define-trait ft-trait\\n\" +\n                \"  (\\n\" +\n                \"    ;; Transfer from the caller to a new principal\\n\" +\n                \"    (transfer (uint principal principal) (response bool uint))\\n\" +\n                \"\\n\" +\n                \"    ;; human readable name of the token\\n\" +\n                \"    (get-name () (response (string-ascii 32) uint))\\n\" +\n                \"\\n\" +\n                \"    ;; ticker symbol or empty if none\\n\" +\n                \"    (get-symbol () (response (string-ascii 32) uint))\\n\" +\n                \"\\n\" +\n                \"    ;; number of decimals used\\n\" +\n                \"    (get-decimals () (response uint uint))\\n\" +\n                \"\\n\" +\n                \"    ;; balance of the passed principal\\n\" +\n                \"    (get-balance-of (principal) (response uint uint))\\n\" +\n                \"\\n\" +\n                \"    ;; current total supply\\n\" +\n                \"    (get-total-supply () (response uint uint))\\n\" +\n                \"\\n\" +\n                \"    ;; optional URI that represents metadata of this token\\n\" +\n                \"    (get-token-uri () (response (optional (string-utf8 256)) uint))\\n\" +\n                \"  )\\n\" +\n                \")\";\n               \nmsg.filename = \"ft-trait.clar\"; // name the contract same as input custom token name\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 760,
+        "wires": [
+            [
+                "6c486db8.90b164",
+                "3046216.ef707de"
+            ]
+        ]
+    },
+    {
+        "id": "6c486db8.90b164",
+        "type": "debug",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "d8cb6e32.2d0f9",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "create msg.url",
+        "func": "//var nettype = global.get(\"nettype\");\nvar nettype = \"stacks-node-api.mainnet.stacks.co\"; //mainnet\n\nvar depositaddress = msg.depositaddress;\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/address/\" + depositaddress + \"/transactions\";\nmsg.depositaddress = depositaddress; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "9a6d200b.74539",
+                "377b9e1e.2fe582"
+            ]
+        ]
+    },
+    {
+        "id": "9a6d200b.74539",
+        "type": "http request",
+        "z": "88cec2c0.c8804",
+        "name": "get",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 590,
+        "y": 120,
+        "wires": [
+            [
+                "9e0455b9.a67188"
+            ]
+        ]
+    },
+    {
+        "id": "9e0455b9.a67188",
+        "type": "json",
+        "z": "88cec2c0.c8804",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 730,
+        "y": 120,
+        "wires": [
+            [
+                "f5938fe4.005cf",
+                "9c5cf7ef.f9d388"
+            ]
+        ]
+    },
+    {
+        "id": "f5938fe4.005cf",
+        "type": "change",
+        "z": "88cec2c0.c8804",
+        "name": "move results",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.results",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 120,
+        "wires": [
+            [
+                "eb948104.cc071",
+                "84d8c5e6.9c38d8",
+                "7ad225d6.1b055c"
+            ]
+        ]
+    },
+    {
+        "id": "9c5cf7ef.f9d388",
+        "type": "ui_template",
+        "z": "88cec2c0.c8804",
+        "group": "f086e156.9d17b",
+        "name": "Number of Tx's",
+        "order": 1,
+        "width": "13",
+        "height": "1",
+        "format": "<small><small>{{msg.depositaddress}}</small></small> has {{msg.payload.total}} Transaction(s). ",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 900,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb948104.cc071",
+        "type": "debug",
+        "z": "88cec2c0.c8804",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "84d8c5e6.9c38d8",
+        "type": "ui_template",
+        "z": "88cec2c0.c8804",
+        "group": "f086e156.9d17b",
+        "name": "Transaction List (Mainnet)",
+        "order": 2,
+        "width": 13,
+        "height": 9,
+        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>ID</th>\n        <th>Fee</th>\n        <th>Type</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://pbs.twimg.com/profile_images/1321461825758744576/4e3xAKz2_400x400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">Show In Explorer</a></small></small></small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td>{{obj.tx_type}}</td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1130,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd10f7a4.fbf888",
+        "type": "inject",
+        "z": "88cec2c0.c8804",
+        "name": "every 30s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "5c0a9600.38623c"
+            ]
+        ]
+    },
+    {
+        "id": "377b9e1e.2fe582",
+        "type": "debug",
+        "z": "88cec2c0.c8804",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "url",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "5c0a9600.38623c",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "get global depositaddress",
+        "func": "msg.depositaddress = global.get(\"depositaddress\");\n//or get global 'testnetdepositaddress'\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "41dd1831.d9dd58"
+            ]
+        ]
+    },
+    {
+        "id": "64123e79.c35e8",
+        "type": "comment",
+        "z": "88cec2c0.c8804",
+        "name": "sample addresses",
+        "info": "MainNet Examples:\nw/ History:\nSP33XEHK2SXXH625VG6W6665WBBPX1ENQVKNEYCYY\n\nw/o History:\nSP31DA6FTSJX2WGTZ69SFY11BH51NZMB0ZW97B5P0\n\nTest Examples:\nw/ History:\n\n\nw/o History:\n",
+        "x": 370,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "31e62cc7.08b544",
+        "type": "ui_template",
+        "z": "88cec2c0.c8804",
+        "group": "cd33bbcb.590158",
+        "name": "Transaction List (Testnet)",
+        "order": 2,
+        "width": 13,
+        "height": 9,
+        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>ID</th>\n        <th>Fee</th>\n        <th>Type</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://pbs.twimg.com/profile_images/1321461825758744576/4e3xAKz2_400x400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"View in Explorer\">{{obj.tx_id}}</a></small></small></small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td>{{obj.tx_type}}</td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1130,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41dd1831.d9dd58",
+        "type": "switch",
+        "z": "88cec2c0.c8804",
+        "name": "drop if empty",
+        "property": "depositaddress",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            },
+            {
+                "t": "empty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "d8cb6e32.2d0f9"
+            ],
+            [
+                "83a1ba7b.df6c98"
+            ]
+        ]
+    },
+    {
+        "id": "777d2c6a.7f1fc4",
+        "type": "inject",
+        "z": "e83b2318.6f5c6",
+        "name": "get debugger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 700,
+        "wires": [
+            [
+                "67e57a99.f2ae84"
+            ]
+        ]
+    },
+    {
+        "id": "5c350943.5f5178",
+        "type": "debug",
+        "z": "e83b2318.6f5c6",
+        "name": "obj debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "67e57a99.f2ae84",
+        "type": "function",
+        "z": "e83b2318.6f5c6",
+        "name": "get all globals",
+        "func": "var keys = global.get(\"keys\");\nvar secretkey = global.get(\"secretkey\");\nvar appskey = global.get(\"appskey\");\nvar dataprivkey = global.get(\"dataprivkey\");\nvar stxprivkey = global.get(\"stxprivkey\");\nvar depositaddress = global.get(\"depositaddress\");\nvar testnetdepositaddress = global.get(\"testnetdepositaddress\");\nvar searchtype = global.get(\"searchtype\");\nvar searchinput = global.get(\"searchinput\");\nvar nettype = global.get(\"nettype\");\n\n\nmsg.payload = \"globals in msg obj\";\nmsg.keys = keys;\nmsg.secretkey = secretkey;\nmsg.appskey = appskey;\nmsg.dataprivkey = dataprivkey;\nmsg.stxprivkey = stxprivkey;\nmsg.depositaddress = depositaddress;\nmsg.testnetdepositaddress = testnetdepositaddress;\nmsg.searchtype = searchtype;\nmsg.searchinput = searchinput;\nmsg.nettype = nettype;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 700,
+        "wires": [
+            [
+                "5c350943.5f5178"
+            ]
+        ]
+    },
+    {
+        "id": "9be618dc.c92f28",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "generate deposit address 0 (Testnet)",
+        "func": "//var nt = msg.gnt; //set var nt dynamically\n//var nt = 0; // set var nt as Mainnet \nvar nt = 128; // set var nt as TestNet\n\n\nconst obj = {\n    account : msg.payload.wallet.accounts[0],\n    transactionVersion : nt\n};\n\nconst address = stacksWalletSdk.getStxAddress(obj);\n\nmsg.testnetdepositaddress = address;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "stacksWalletSdk",
+                "module": "@stacks/wallet-sdk"
+            }
+        ],
+        "x": 750,
+        "y": 480,
+        "wires": [
+            [
+                "6e0ecd2a.b323d4",
+                "2a3b6832.a2bfd8"
+            ]
+        ]
+    },
+    {
+        "id": "82ad780a.3c6158",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set testnetdepositaddress",
+        "rules": [
+            {
+                "t": "move",
+                "p": "testnetdepositaddress",
+                "pt": "msg",
+                "to": "testnetdepositaddress",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6e0ecd2a.b323d4",
+        "type": "link out",
+        "z": "53028f3b.590b5",
+        "name": "pass to Global (set deposit address 0 Testnet)",
+        "links": [
+            "ea10c130.37f4c"
+        ],
+        "x": 975,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ea10c130.37f4c",
+        "type": "link in",
+        "z": "e83b2318.6f5c6",
+        "name": "to set Global (deposit address 0 Testnet)",
+        "links": [
+            "6e0ecd2a.b323d4"
+        ],
+        "x": 155,
+        "y": 380,
+        "wires": [
+            [
+                "82ad780a.3c6158"
+            ]
+        ]
+    },
+    {
+        "id": "83a1ba7b.df6c98",
+        "type": "debug",
+        "z": "88cec2c0.c8804",
+        "name": "error mainnet history",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "514072aa.46826c",
+        "type": "link in",
+        "z": "e83b2318.6f5c6",
+        "name": "pass to Global set nettype",
+        "links": [
+            "c47cbd1c.729f6",
+            "e24b569f.c73348"
+        ],
+        "x": 155,
+        "y": 460,
+        "wires": [
+            [
+                "ba154c63.e2beb"
+            ]
+        ]
+    },
+    {
+        "id": "ba154c63.e2beb",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set nettype",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "nettype",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7d5389b4.cfc178",
+        "type": "ui_switch",
+        "z": "42c07592.8d970c",
+        "name": "Network Switch",
+        "label": "",
+        "tooltip": "Toggle Network: Mainnet (Globe) or Testnet (Wrench)",
+        "group": "d506506a.83f12",
+        "order": 6,
+        "width": 1,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "stacks-node-api.mainnet.stacks.co",
+        "onvalueType": "str",
+        "onicon": "fa-globe",
+        "oncolor": "Green",
+        "offvalue": "stacks-node-api.testnet.stacks.co",
+        "offvalueType": "str",
+        "officon": "fa-wrench",
+        "offcolor": "Yellow",
+        "animate": true,
+        "x": 1560,
+        "y": 260,
+        "wires": [
+            [
+                "e24b569f.c73348"
+            ]
+        ]
+    },
+    {
+        "id": "e24b569f.c73348",
+        "type": "link out",
+        "z": "42c07592.8d970c",
+        "name": "to set Global nettype",
+        "links": [
+            "514072aa.46826c"
+        ],
+        "x": 1695,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b4f82858.0c7968",
+        "type": "comment",
+        "z": "42c07592.8d970c",
+        "name": "Relative to Network Type",
+        "info": "",
+        "x": 1590,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "7c488f20.eb82d",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "get global testnetdepositaddress",
+        "func": "msg.testnetdepositaddress = global.get(\"testnetdepositaddress\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "7b8a0529.d2e7dc"
+            ]
+        ]
+    },
+    {
+        "id": "7b8a0529.d2e7dc",
+        "type": "switch",
+        "z": "88cec2c0.c8804",
+        "name": "drop if empty",
+        "property": "testnetdepositaddress",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            },
+            {
+                "t": "empty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "777be969.6a8278"
+            ],
+            [
+                "365a8400.1286bc"
+            ]
+        ]
+    },
+    {
+        "id": "777be969.6a8278",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "create msg.url",
+        "func": "//var nettype = global.get(\"nettype\");\nvar nettype = \"stacks-node-api.testnet.stacks.co\";//testnet\n\nvar testnetdepositaddress = msg.testnetdepositaddress;\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/address/\" + testnetdepositaddress + \"/transactions\";\nmsg.testnetdepositaddress = testnetdepositaddress; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 280,
+        "wires": [
+            [
+                "c5f3e664.d8ea68"
+            ]
+        ]
+    },
+    {
+        "id": "365a8400.1286bc",
+        "type": "debug",
+        "z": "88cec2c0.c8804",
+        "name": "error testnet history",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 130,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c5f3e664.d8ea68",
+        "type": "http request",
+        "z": "88cec2c0.c8804",
+        "name": "get",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 590,
+        "y": 280,
+        "wires": [
+            [
+                "abdd1ac0.441a18"
+            ]
+        ]
+    },
+    {
+        "id": "abdd1ac0.441a18",
+        "type": "json",
+        "z": "88cec2c0.c8804",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 730,
+        "y": 280,
+        "wires": [
+            [
+                "b29c45b9.b28068",
+                "c6af28a4.3c3d58"
+            ]
+        ]
+    },
+    {
+        "id": "b29c45b9.b28068",
+        "type": "change",
+        "z": "88cec2c0.c8804",
+        "name": "move results",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.results",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 280,
+        "wires": [
+            [
+                "31e62cc7.08b544",
+                "d9cf5ca4.c88ce",
+                "76ca3c24.4327d4"
+            ]
+        ]
+    },
+    {
+        "id": "c6af28a4.3c3d58",
+        "type": "ui_template",
+        "z": "88cec2c0.c8804",
+        "group": "cd33bbcb.590158",
+        "name": "Number of Tx's",
+        "order": 1,
+        "width": "13",
+        "height": "1",
+        "format": "<small><small>{{msg.testnetdepositaddress}}</small></small> has {{msg.payload.total}} Transaction(s). ",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 900,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d9cf5ca4.c88ce",
+        "type": "debug",
+        "z": "88cec2c0.c8804",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "935bcdfb.6e722",
+        "type": "inject",
+        "z": "88cec2c0.c8804",
+        "name": "every 30s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 200,
+        "wires": [
+            [
+                "7c488f20.eb82d"
+            ]
+        ]
+    },
+    {
+        "id": "ede46ef8.979e2",
+        "type": "ui_template",
+        "z": "53028f3b.590b5",
+        "group": "3348dd5e.728a92",
+        "name": "Testnet Deposit Address",
+        "order": 5,
+        "width": 10,
+        "height": 1,
+        "format": "<small>Testnet Deposit Address:</small> {{msg.payload}}",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1050,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "177c7cea.453623",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "get global testnetdepositaddress",
+        "func": "var testnetdepositaddress = global.get(\"testnetdepositaddress\");\n\nmsg.payload = testnetdepositaddress;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1280,
+        "wires": [
+            [
+                "ede46ef8.979e2"
+            ]
+        ]
+    },
+    {
+        "id": "92252ed1.e85de",
+        "type": "delay",
+        "z": "53028f3b.590b5",
+        "name": "delay",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 590,
+        "y": 1280,
+        "wires": [
+            [
+                "177c7cea.453623"
+            ]
+        ]
+    },
+    {
+        "id": "2a3b6832.a2bfd8",
+        "type": "link out",
+        "z": "53028f3b.590b5",
+        "name": "Pass Testnet Deposit Address to Receive",
+        "links": [
+            "bbc59e5f.9e773"
+        ],
+        "x": 975,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "bbc59e5f.9e773",
+        "type": "link in",
+        "z": "53028f3b.590b5",
+        "name": "Get Testnet Deposit Address",
+        "links": [
+            "2a3b6832.a2bfd8"
+        ],
+        "x": 495,
+        "y": 1280,
+        "wires": [
+            [
+                "92252ed1.e85de"
+            ]
+        ]
+    },
+    {
+        "id": "4fdb78f4.9a1728",
+        "type": "ui_template",
+        "z": "53028f3b.590b5",
+        "group": "3348dd5e.728a92",
+        "name": "Transaction List (Testnet)",
+        "order": 10,
+        "width": 13,
+        "height": 5,
+        "format": "<h3>Testnet History</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>ID</th>\n        <th>Fee</th>\n        <th>Type</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://pbs.twimg.com/profile_images/1321461825758744576/4e3xAKz2_400x400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View in Explorer</a></small></small></small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td>{{obj.tx_type}}</td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1050,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5dfe14b.c2cbf",
+        "type": "ui_template",
+        "z": "53028f3b.590b5",
+        "group": "3348dd5e.728a92",
+        "name": "Transaction List (Mainnet)",
+        "order": 9,
+        "width": 13,
+        "height": 5,
+        "format": "<h3>Mainnet History</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>ID</th>\n        <th>Fee</th>\n        <th>Type</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://pbs.twimg.com/profile_images/1321461825758744576/4e3xAKz2_400x400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View In Explorer</a></small></small></small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td>{{obj.tx_type}}</td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1050,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "76ca3c24.4327d4",
+        "type": "link out",
+        "z": "88cec2c0.c8804",
+        "name": "Pass History to Wallet Receive (testnet)",
+        "links": [
+            "ffd4778e.e65b28"
+        ],
+        "x": 1035,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7ad225d6.1b055c",
+        "type": "link out",
+        "z": "88cec2c0.c8804",
+        "name": "Pass History to Wallet Receive (mainnet)",
+        "links": [
+            "64410f5b.984c5"
+        ],
+        "x": 1035,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "64410f5b.984c5",
+        "type": "link in",
+        "z": "53028f3b.590b5",
+        "name": "Get Mainnet Address History",
+        "links": [
+            "7ad225d6.1b055c"
+        ],
+        "x": 855,
+        "y": 1100,
+        "wires": [
+            [
+                "c5dfe14b.c2cbf"
+            ]
+        ]
+    },
+    {
+        "id": "ffd4778e.e65b28",
+        "type": "link in",
+        "z": "53028f3b.590b5",
+        "name": "Get Testnet Address History",
+        "links": [
+            "76ca3c24.4327d4"
+        ],
+        "x": 855,
+        "y": 1320,
+        "wires": [
+            [
+                "4fdb78f4.9a1728"
+            ]
+        ]
+    },
+    {
+        "id": "5856efa4.bf7d5",
+        "type": "ui_button",
+        "z": "53028f3b.590b5",
+        "name": "Copy BTN",
+        "group": "3348dd5e.728a92",
+        "order": 6,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "",
+        "tooltip": "Copy Testnet Address",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-copy",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1010,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd0c4350.1d133",
+        "type": "comment",
+        "z": "613e85c9.c6210c",
+        "name": "Clarity SIP-009 NFT - Standard",
+        "info": "https://github.com/stacksgov/sips/blob/main/sips/sip-009/sip-009-nft-standard.md",
+        "x": 190,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f65c0e25.9c82d",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "create nft-trait.clar",
+        "func": "//take the inputs and construct the Clarity contract file contents\nmsg.payload =   \"(define-trait nft-trait\\n\" +\n                \"  (\\n\" +\n                \"    ;; Last token ID, limited to uint range\\n\" +\n                \"    (get-last-token-id () (response uint uint))\\n\" +\n                \"\\n\" +\n                \"    ;; URI for metadata associated with the token \\n\" +\n                \"    (get-token-uri () (response (optional (string-utf8 256)) uint))\\n\" +\n                \"\\n\" +\n                \"    ;; Owner of a given token identifier\\n\" +\n                \"    (get-owner (uint) (response (optional principal) uint))\\n\" +\n                \"\\n\" +\n                \"    ;; Transfer from the sender to a new principal\\n\" +\n                \"    (transfer (uint principal principal) (response bool uint))\\n\" +\n                \"  )\\n\" +\n                \")\";\n               \nmsg.filename = \"nft-trait.clar\"; // name the contract same as input custom token name\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 420,
+        "wires": [
+            [
+                "4114412e.e4154"
+            ]
+        ]
+    },
+    {
+        "id": "3046216.ef707de",
+        "type": "file in",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "filename": "write file",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "ascii",
+        "x": 720,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4114412e.e4154",
+        "type": "file in",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "filename": "write file",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "ascii",
+        "x": 720,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fe53aae9.15c4a8",
+        "type": "comment",
+        "z": "613e85c9.c6210c",
+        "name": "Clarity SIP-010 FT - Standard",
+        "info": "https://github.com/stacksgov/sips/blob/hstove-feat/sip-10-ft/sips/sip-010/sip-010-fungible-token-standard.md",
+        "x": 180,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "a827d944.6e6138",
+        "type": "ui_button",
+        "z": "53028f3b.590b5",
+        "name": "Faucet BTN",
+        "group": "3348dd5e.728a92",
+        "order": 7,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "",
+        "tooltip": "Get Testnet Tokens from Faucet",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-tint",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1010,
+        "y": 1360,
+        "wires": [
+            [
+                "9e5990a.c851f7"
+            ]
+        ]
+    },
+    {
+        "id": "9e5990a.c851f7",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "get global testnetdepositaddress ",
+        "func": "var testnetdepositaddress = global.get(\"testnetdepositaddress\");\n\nmsg.testnetdepositaddress = testnetdepositaddress;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 1360,
+        "wires": [
+            [
+                "e68bc774.b2c998"
+            ]
+        ]
+    },
+    {
+        "id": "e68bc774.b2c998",
+        "type": "change",
+        "z": "53028f3b.590b5",
+        "name": "move",
+        "rules": [
+            {
+                "t": "move",
+                "p": "testnetdepositaddress",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1470,
+        "y": 1360,
+        "wires": [
+            [
+                "54fc3f11.12cfe"
+            ]
+        ]
+    },
+    {
+        "id": "54fc3f11.12cfe",
+        "type": "http request",
+        "z": "53028f3b.590b5",
+        "name": "POST Request",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://stacks-node-api.testnet.stacks.co/extended/v1/faucets/stx?address={{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1360,
+        "y": 1440,
+        "wires": [
+            [
+                "fd33c59a.3d90d8"
+            ]
+        ]
+    },
+    {
+        "id": "fd33c59a.3d90d8",
+        "type": "json",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1510,
+        "y": 1440,
+        "wires": [
+            [
+                "64d280dc.e00de",
+                "92d0d823.15acb8"
+            ]
+        ]
+    },
+    {
+        "id": "92d0d823.15acb8",
+        "type": "switch",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "property": "payload.success",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1670,
+        "y": 1560,
+        "wires": [
+            [
+                "37360f82.9c624"
+            ],
+            [
+                "3f0f2136.9439ae"
+            ],
+            [
+                "80728f11.16d8d"
+            ]
+        ]
+    },
+    {
+        "id": "80728f11.16d8d",
+        "type": "ui_toast",
+        "z": "53028f3b.590b5",
+        "position": "bottom left",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Faucet Error",
+        "name": "Error",
+        "x": 1910,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "3f0f2136.9439ae",
+        "type": "ui_toast",
+        "z": "53028f3b.590b5",
+        "position": "bottom left",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Faucet Failure",
+        "name": "Failure",
+        "x": 1910,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "37360f82.9c624",
+        "type": "ui_toast",
+        "z": "53028f3b.590b5",
+        "position": "bottom left",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "Faucet Success",
+        "name": "Success",
+        "x": 1920,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "64d280dc.e00de",
+        "type": "debug",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 1400,
+        "wires": []
+    }
+]
