@@ -35,6 +35,13 @@
         "info": ""
     },
     {
+        "id": "725ce57a.a25e4c",
+        "type": "tab",
+        "label": "Registrar",
+        "disabled": false,
+        "info": "Used to Register Names and Potentially Namespaces"
+    },
+    {
         "id": "88cec2c0.c8804",
         "type": "tab",
         "label": "History",
@@ -42,11 +49,11 @@
         "info": ""
     },
     {
-        "id": "725ce57a.a25e4c",
+        "id": "4552b603.ca4548",
         "type": "tab",
-        "label": "Registrar",
-        "disabled": false,
-        "info": "Used to Register Names and Potentially Namespaces"
+        "label": "Storage",
+        "disabled": true,
+        "info": ""
     },
     {
         "id": "d9ba26fa.6d2b18",
@@ -452,7 +459,7 @@
         "type": "ui_tab",
         "name": "History",
         "icon": "fa-history",
-        "order": 5,
+        "order": 6,
         "disabled": false,
         "hidden": false
     },
@@ -487,8 +494,8 @@
         "id": "5986cff4.85067",
         "type": "ui_tab",
         "name": "Registrar",
-        "icon": "mi-playlist_add",
-        "order": 6,
+        "icon": "mi-verified_user",
+        "order": 5,
         "disabled": false,
         "hidden": false
     },
@@ -520,6 +527,91 @@
         "order": 3,
         "disp": false,
         "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "79c53eca.29302",
+        "type": "ui_group",
+        "name": "RegWTF",
+        "tab": "5986cff4.85067",
+        "order": 4,
+        "disp": false,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "ffd631ab.0ac03",
+        "type": "ui_group",
+        "name": "RegDefault",
+        "tab": "5986cff4.85067",
+        "order": 5,
+        "disp": false,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "46da4633.73efe8",
+        "type": "ui_group",
+        "name": "RegAttempt",
+        "tab": "5986cff4.85067",
+        "order": 6,
+        "disp": false,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "29b10f64.f52cf",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "f086e156.9d17b",
+        "order": 2,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "fab77431.c4cd98",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "f086e156.9d17b",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "204f6be7.72a2a4",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "cd33bbcb.590158",
+        "order": 2,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9745cc9b.e436a",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "cd33bbcb.590158",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "ad398c17.4bb0a",
+        "type": "ui_tab",
+        "d": true,
+        "name": "Storage",
+        "icon": "fa-floppy-o",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ae1844b2.235ae8",
+        "type": "ui_group",
+        "name": "Auth",
+        "tab": "ad398c17.4bb0a",
+        "order": 1,
+        "disp": false,
+        "width": "6",
         "collapse": false
     },
     {
@@ -573,14 +665,14 @@
         "group": "433bfb40.a488a4",
         "name": "Keys",
         "order": 1,
-        "width": 13,
-        "height": 4,
-        "format": "<h4>Secret Key:</h4>\n<small><small><small>{{msg.payload.secretkey}}</small></small></small>\n\n<h4>App Key:</h4>\n<small><small><small>{{msg.payload.appskey}}</small></small></small>\n\n<h4>Data Private Key:</h4>\n<small><small>{{msg.payload.dataprivkey}}</small></small>\n\n<h4>STX Private Key:</h4>\n<small><small>{{msg.payload.stxprivkey}}</small></small>",
+        "width": "13",
+        "height": "2",
+        "format": "<h4>Secret Key:</h4>\n<small>{{msg.payload.secretkey}}</small>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 510,
+        "x": 650,
         "y": 620,
         "wires": [
             []
@@ -829,8 +921,8 @@
         "group": "e5d0847b.1daa38",
         "name": "Profile Page Template",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": "13",
+        "height": "8",
         "format": "<style>\n    img {\n      border-radius: 50%;\n    }\n</style>\n<div class=\"card\">\n  <div style=\"width:150px\"><img src=\"https://raw.githubusercontent.com/cryptocracy/dapparatus/master/default-profile-image.png\" alt=\"\">\n</div>\n  <h1 class='fqn'>FQN</h1>\n  <p class=\"bio\">BIO</p>\n  <p class=\"tipjar\">STXADDRESS</p>\n  <a href=\"#\"><i class=\"fa fa-twitter\"></i></a>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -933,7 +1025,7 @@
         "type": "comment",
         "z": "53028f3b.590b5",
         "name": "Relative to Import / Generate Group",
-        "info": "",
+        "info": "A wallet needs to be instantiated.\nThis basically just means:\n\nSituation A) \n1) Enter a Password\n2) Back up Secret Key (currently displaying)\n\nOR\n\nSituation B)\n1) Enter Secret Key (unencrypted version)\n2) Confirm you have a Backup\n\n\nTodo: Download Buttons for \n1) Unencrypted Keys (w/ warning)\n2) Encrypted Keys Button (w/ warning)\n\n\n* if you only back up an encrypted copy of your secret key, YOU BETTER NOT FORGET YOUR PASSWORD!",
         "x": 160,
         "y": 260,
         "wires": []
@@ -2480,7 +2572,8 @@
                 "c071fb7c.7f1528",
                 "5a403cf1.054184",
                 "943d3e7.afb63c",
-                "dd43e46d.8e4b58"
+                "dd43e46d.8e4b58",
+                "a9991487.0825e8"
             ]
         ]
     },
@@ -2504,7 +2597,7 @@
         "to": "",
         "reg": false,
         "x": 530,
-        "y": 340,
+        "y": 420,
         "wires": [
             []
         ]
@@ -2630,7 +2723,7 @@
             "ddb791f7.87e8"
         ],
         "x": 155,
-        "y": 340,
+        "y": 420,
         "wires": [
             [
                 "1266fa09.3beff6"
@@ -2858,14 +2951,14 @@
         "id": "c44ba5ac.c872a8",
         "type": "function",
         "z": "53028f3b.590b5",
-        "name": "get wallet globals",
-        "func": "var secretkey = global.get(\"secretkey\");\nvar appskey = global.get(\"appskey\");\nvar dataprivkey = global.get(\"dataprivkey\");\nvar stxprivkey = global.get(\"stxprivkey\");\n\nmsg.payload = {secretkey, appskey, dataprivkey, stxprivkey};\n\nreturn msg;",
+        "name": "get keys globals",
+        "func": "var secretkey = global.get(\"secretkey\");\n\nmsg.payload = secretkey;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
+        "x": 300,
         "y": 620,
         "wires": [
             [
@@ -2887,7 +2980,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 510,
+        "x": 650,
         "y": 580,
         "wires": []
     },
@@ -3127,7 +3220,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 510,
-        "y": 300,
+        "y": 340,
         "wires": []
     },
     {
@@ -3610,7 +3703,7 @@
         "to": "",
         "reg": false,
         "x": 520,
-        "y": 540,
+        "y": 680,
         "wires": [
             [
                 "81cd1a79.579b68"
@@ -3705,7 +3798,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 690,
-        "y": 540,
+        "y": 680,
         "wires": []
     },
     {
@@ -3717,7 +3810,7 @@
             "62a9e217.4a2bcc"
         ],
         "x": 155,
-        "y": 540,
+        "y": 680,
         "wires": [
             [
                 "8c7d3d6d.b42c6"
@@ -3861,7 +3954,7 @@
         "to": "",
         "reg": false,
         "x": 520,
-        "y": 580,
+        "y": 720,
         "wires": [
             [
                 "6b22d1dd.7b4a8"
@@ -3882,7 +3975,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 690,
-        "y": 580,
+        "y": 720,
         "wires": []
     },
     {
@@ -3906,7 +3999,7 @@
             "27e68243.aae18e"
         ],
         "x": 155,
-        "y": 580,
+        "y": 720,
         "wires": [
             [
                 "cafc8579.023e18"
@@ -4171,8 +4264,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
-        "y": 120,
+        "x": 690,
+        "y": 160,
         "wires": [
             [
                 "9a6d200b.74539",
@@ -4193,8 +4286,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 610,
-        "y": 120,
+        "x": 950,
+        "y": 160,
         "wires": [
             [
                 "9e0455b9.a67188"
@@ -4209,8 +4302,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 750,
-        "y": 120,
+        "x": 1110,
+        "y": 160,
         "wires": [
             [
                 "f5938fe4.005cf",
@@ -4237,13 +4330,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 890,
-        "y": 120,
+        "x": 1290,
+        "y": 160,
         "wires": [
             [
                 "eb948104.cc071",
-                "84d8c5e6.9c38d8",
-                "7ad225d6.1b055c"
+                "7ad225d6.1b055c",
+                "d9c5c3a8.083ff"
             ]
         ]
     },
@@ -4254,15 +4347,15 @@
         "group": "f086e156.9d17b",
         "name": "Number of Tx's",
         "order": 1,
-        "width": "13",
-        "height": "1",
-        "format": "<small><small>{{msg.depositaddress}}</small></small> has {{msg.payload.total}} Transaction(s). ",
+        "width": 6,
+        "height": 1,
+        "format": "<small><small>{{msg.depositaddress}}</small></small> has {{msg.payload.total}} Transaction(s) in Total. ",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 900,
-        "y": 80,
+        "x": 1300,
+        "y": 200,
         "wires": [
             []
         ]
@@ -4280,8 +4373,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 80,
+        "x": 1620,
+        "y": 160,
         "wires": []
     },
     {
@@ -4289,17 +4382,17 @@
         "type": "ui_template",
         "z": "88cec2c0.c8804",
         "group": "f086e156.9d17b",
-        "name": "Transaction List (Mainnet)",
-        "order": 2,
+        "name": "Transaction History (Mainnet)",
+        "order": 5,
         "width": 13,
         "height": 9,
-        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>ID</th>\n        <th>Fee</th>\n        <th>Type</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://pbs.twimg.com/profile_images/1321461825758744576/4e3xAKz2_400x400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">Show In Explorer</a></small></small></small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td>{{obj.tx_type}}</td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>        \n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">Show In Explorer</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1130,
-        "y": 120,
+        "x": 1580,
+        "y": 300,
         "wires": [
             []
         ]
@@ -4326,7 +4419,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 110,
-        "y": 40,
+        "y": 80,
         "wires": [
             [
                 "5c0a9600.38623c"
@@ -4346,8 +4439,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
-        "y": 80,
+        "x": 940,
+        "y": 200,
         "wires": []
     },
     {
@@ -4362,7 +4455,7 @@
         "finalize": "",
         "libs": [],
         "x": 150,
-        "y": 80,
+        "y": 120,
         "wires": [
             [
                 "41dd1831.d9dd58"
@@ -4376,7 +4469,7 @@
         "name": "sample addresses",
         "info": "MainNet Examples:\nw/ History:\nSP33XEHK2SXXH625VG6W6665WBBPX1ENQVKNEYCYY\n\nw/o History:\nSP31DA6FTSJX2WGTZ69SFY11BH51NZMB0ZW97B5P0\n\nTest Examples:\nw/ History:\n\n\nw/o History:\n",
         "x": 370,
-        "y": 40,
+        "y": 80,
         "wires": []
     },
     {
@@ -4384,17 +4477,17 @@
         "type": "ui_template",
         "z": "88cec2c0.c8804",
         "group": "cd33bbcb.590158",
-        "name": "Transaction List (Testnet)",
-        "order": 2,
+        "name": "Transaction History (Testnet)",
+        "order": 5,
         "width": 13,
         "height": 9,
-        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>ID</th>\n        <th>Fee</th>\n        <th>Type</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://pbs.twimg.com/profile_images/1321461825758744576/4e3xAKz2_400x400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"View in Explorer\">{{obj.tx_id}}</a></small></small></small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td>{{obj.tx_type}}</td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"View in Explorer\">{{obj.tx_id}}</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1130,
-        "y": 440,
+        "x": 1600,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -4417,7 +4510,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 110,
+        "x": 350,
         "y": 120,
         "wires": [
             [
@@ -4451,7 +4544,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 130,
-        "y": 700,
+        "y": 900,
         "wires": [
             [
                 "67e57a99.f2ae84"
@@ -4472,7 +4565,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 710,
-        "y": 700,
+        "y": 900,
         "wires": []
     },
     {
@@ -4480,14 +4573,14 @@
         "type": "function",
         "z": "e83b2318.6f5c6",
         "name": "get all globals",
-        "func": "var keys = global.get(\"keys\");\nvar secretkey = global.get(\"secretkey\");\nvar appskey = global.get(\"appskey\");\nvar dataprivkey = global.get(\"dataprivkey\");\nvar stxprivkey = global.get(\"stxprivkey\");\nvar depositaddress = global.get(\"depositaddress\");\nvar testnetdepositaddress = global.get(\"testnetdepositaddress\");\nvar searchtype = global.get(\"searchtype\");\nvar searchinput = global.get(\"searchinput\");\nvar nettype = global.get(\"nettype\");\n\n\nmsg.payload = \"globals in msg obj\";\nmsg.keys = keys;\nmsg.secretkey = secretkey;\nmsg.appskey = appskey;\nmsg.dataprivkey = dataprivkey;\nmsg.stxprivkey = stxprivkey;\nmsg.depositaddress = depositaddress;\nmsg.testnetdepositaddress = testnetdepositaddress;\nmsg.searchtype = searchtype;\nmsg.searchinput = searchinput;\nmsg.nettype = nettype;\n\nreturn msg;",
+        "func": "var keys = global.get(\"keys\");\nvar secretkey = global.get(\"secretkey\");\nvar appskey = global.get(\"appskey\");\nvar dataprivkey = global.get(\"dataprivkey\");\nvar stxprivkey = global.get(\"stxprivkey\");\nvar depositaddress = global.get(\"depositaddress\");\nvar txhistorymainnet = global.get(\"txhistorymainnet\");\nvar testnetdepositaddress = global.get(\"testnetdepositaddress\");\nvar txhistorytestnet = global.get(\"txhistorytestnet\");\nvar searchtype = global.get(\"searchtype\");\nvar searchinput = global.get(\"searchinput\");\nvar tempfqn = global.get(\"tempfqn\");\nvar nettype = global.get(\"nettype\");\n\n\nmsg.payload = \"globals are in the in msg obj\";\nmsg.keys = keys;\nmsg.secretkey = secretkey;\nmsg.appskey = appskey;\nmsg.dataprivkey = dataprivkey;\nmsg.stxprivkey = stxprivkey;\nmsg.depositaddress = depositaddress;\nmsg.txhistorymainnet = txhistorymainnet;\nmsg.testnetdepositaddress = testnetdepositaddress;\nmsg.txhistorytestnet = txhistorytestnet;\nmsg.searchtype = searchtype;\nmsg.searchinput = searchinput;\nmsg.tempfqn = tempfqn;\nmsg.nettype = nettype;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 520,
-        "y": 700,
+        "y": 900,
         "wires": [
             [
                 "5c350943.5f5178"
@@ -4539,7 +4632,7 @@
         "to": "",
         "reg": false,
         "x": 550,
-        "y": 380,
+        "y": 460,
         "wires": [
             []
         ]
@@ -4565,7 +4658,7 @@
             "6e0ecd2a.b323d4"
         ],
         "x": 155,
-        "y": 380,
+        "y": 460,
         "wires": [
             [
                 "82ad780a.3c6158"
@@ -4585,8 +4678,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 140,
-        "y": 160,
+        "x": 660,
+        "y": 200,
         "wires": []
     },
     {
@@ -4599,7 +4692,7 @@
             "e24b569f.c73348"
         ],
         "x": 155,
-        "y": 460,
+        "y": 800,
         "wires": [
             [
                 "ba154c63.e2beb"
@@ -4626,7 +4719,7 @@
         "to": "",
         "reg": false,
         "x": 510,
-        "y": 460,
+        "y": 800,
         "wires": [
             []
         ]
@@ -4698,7 +4791,7 @@
         "finalize": "",
         "libs": [],
         "x": 170,
-        "y": 400,
+        "y": 820,
         "wires": [
             [
                 "7b8a0529.d2e7dc"
@@ -4723,8 +4816,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 110,
-        "y": 440,
+        "x": 430,
+        "y": 820,
         "wires": [
             [
                 "777be969.6a8278",
@@ -4746,8 +4839,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
-        "y": 440,
+        "x": 710,
+        "y": 840,
         "wires": [
             [
                 "c5f3e664.d8ea68"
@@ -4767,8 +4860,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 130,
-        "y": 480,
+        "x": 670,
+        "y": 880,
         "wires": []
     },
     {
@@ -4784,8 +4877,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 610,
-        "y": 440,
+        "x": 950,
+        "y": 840,
         "wires": [
             [
                 "abdd1ac0.441a18"
@@ -4800,8 +4893,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 750,
-        "y": 440,
+        "x": 1130,
+        "y": 840,
         "wires": [
             [
                 "b29c45b9.b28068",
@@ -4828,13 +4921,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 890,
-        "y": 440,
+        "x": 1310,
+        "y": 840,
         "wires": [
             [
-                "31e62cc7.08b544",
                 "d9cf5ca4.c88ce",
-                "76ca3c24.4327d4"
+                "76ca3c24.4327d4",
+                "6658b90c.ccc468"
             ]
         ]
     },
@@ -4845,15 +4938,15 @@
         "group": "cd33bbcb.590158",
         "name": "Number of Tx's",
         "order": 1,
-        "width": "13",
-        "height": "1",
-        "format": "<small><small>{{msg.testnetdepositaddress}}</small></small> has {{msg.payload.total}} Transaction(s). ",
+        "width": 6,
+        "height": 1,
+        "format": "<small><small>{{msg.testnetdepositaddress}}</small></small> has {{msg.payload.total}} Transaction(s) in Total. ",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 900,
-        "y": 400,
+        "x": 1320,
+        "y": 880,
         "wires": [
             []
         ]
@@ -4871,8 +4964,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 400,
+        "x": 1640,
+        "y": 840,
         "wires": []
     },
     {
@@ -4896,8 +4989,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 110,
-        "y": 360,
+        "x": 130,
+        "y": 760,
         "wires": [
             [
                 "7c488f20.eb82d"
@@ -5042,8 +5135,8 @@
         "links": [
             "ffd4778e.e65b28"
         ],
-        "x": 1035,
-        "y": 480,
+        "x": 1495,
+        "y": 840,
         "wires": []
     },
     {
@@ -5054,7 +5147,7 @@
         "links": [
             "64410f5b.984c5"
         ],
-        "x": 1035,
+        "x": 1475,
         "y": 160,
         "wires": []
     },
@@ -5080,7 +5173,8 @@
         "z": "53028f3b.590b5",
         "name": "Get Testnet Address History",
         "links": [
-            "76ca3c24.4327d4"
+            "76ca3c24.4327d4",
+            "b26bacd2.fa7a8"
         ],
         "x": 855,
         "y": 1320,
@@ -5501,8 +5595,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 620,
-        "y": 540,
+        "x": 960,
+        "y": 780,
         "wires": [
             [
                 "a4559142.80ae5"
@@ -5513,6 +5607,7 @@
         "id": "f56384b0.2d0ce8",
         "type": "function",
         "z": "88cec2c0.c8804",
+        "d": true,
         "name": "create msg.url (testnet memepool)",
         "func": "//var nettype = global.get(\"nettype\");\nvar nettype = \"stacks-node-api.testnet.stacks.co\";//testnet\n\nvar testnetdepositaddress = msg.testnetdepositaddress;\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/tx/mempool?address=\" + testnetdepositaddress;\nmsg.testnetdepositaddress = testnetdepositaddress; \nreturn msg;",
         "outputs": 1,
@@ -5520,8 +5615,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 540,
+        "x": 720,
+        "y": 780,
         "wires": [
             [
                 "273d1bb1.c92c64"
@@ -5532,6 +5627,7 @@
         "id": "1870731a.10f11d",
         "type": "function",
         "z": "88cec2c0.c8804",
+        "d": true,
         "name": "create msg.url (mainnet memepool)",
         "func": "//var nettype = global.get(\"nettype\");\nvar nettype = \"stacks-node-api.mainnet.stacks.co\";//mainnet\n\nvar depositaddress = msg.depositaddress;\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/tx/mempool?address=\" + depositaddress;\nmsg.depositaddress = depositaddress; \nreturn msg;",
         "outputs": 1,
@@ -5539,8 +5635,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 200,
+        "x": 700,
+        "y": 80,
         "wires": [
             [
                 "47c44b8a.021464"
@@ -5560,8 +5656,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 620,
-        "y": 200,
+        "x": 960,
+        "y": 80,
         "wires": [
             [
                 "d68a95ec.a7e598"
@@ -5576,8 +5672,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 770,
-        "y": 540,
+        "x": 1130,
+        "y": 780,
         "wires": [
             [
                 "1afa4aa9.95a465"
@@ -5592,8 +5688,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 770,
-        "y": 200,
+        "x": 1110,
+        "y": 80,
         "wires": [
             [
                 "82b073a2.33169"
@@ -5613,8 +5709,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
-        "y": 240,
+        "x": 1340,
+        "y": 80,
         "wires": []
     },
     {
@@ -5630,8 +5726,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
-        "y": 580,
+        "x": 1360,
+        "y": 780,
         "wires": []
     },
     {
@@ -6064,8 +6160,8 @@
         "delay": "0",
         "topic": "reginput",
         "topicType": "str",
-        "x": 110,
-        "y": 80,
+        "x": 90,
+        "y": 280,
         "wires": [
             [
                 "bc3ff6d0.ee84c8"
@@ -6106,8 +6202,8 @@
         "payload": "",
         "topic": "regtype",
         "topicType": "str",
-        "x": 120,
-        "y": 120,
+        "x": 80,
+        "y": 320,
         "wires": [
             [
                 "bc3ff6d0.ee84c8"
@@ -6121,7 +6217,7 @@
         "name": "Register",
         "group": "b8de1f8f.ccd29",
         "order": 4,
-        "width": "5",
+        "width": "13",
         "height": "1",
         "passthru": false,
         "label": "Register Name",
@@ -6133,10 +6229,12 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 460,
-        "y": 320,
+        "x": 100,
+        "y": 800,
         "wires": [
-            []
+            [
+                "eab25160.70c54"
+            ]
         ]
     },
     {
@@ -6148,13 +6246,13 @@
         "order": 0,
         "width": "13",
         "height": "11",
-        "format": "<h3>Name Unavailable</h3>\n<p>The Name: {{msg.fqn}}</p>\n<p>Is already owned by: {{msg.payload.address}}</p>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/AeVg4iLHlI8?controls=0&amp;start=09&amp;autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" autoplay=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture\" allowfullscreen></iframe>\n<p>Hehehehe ;)</p>\n",
+        "format": "<h3>Name Unavailable</h3>\n<p>Name: {{msg.tempfqn}}</p>\n<p>Owner: {{msg.payload.address}}</p>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 510,
-        "y": 200,
+        "x": 490,
+        "y": 400,
         "wires": [
             []
         ]
@@ -6163,15 +6261,15 @@
         "id": "98e21dbf.8bee1",
         "type": "function",
         "z": "725ce57a.a25e4c",
-        "name": "Registrar RegNo",
-        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Registrar_RegYes\"\n    ],\n    \"show\": [\n      \"Registrar_Header\",\n      \"Registrar_RegNo\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "name": "Registrar RegNo (cant)",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Registrar_RegDefault\",\n      \"Registrar_RegAttempt\",      \n      \"Registrar_RegYes\",\n      \"Registrar_RegWTF\"\n    ],\n    \"show\": [\n      \"Registrar_Header\",\n      \"Registrar_RegNo\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 490,
-        "y": 240,
+        "y": 440,
         "wires": [
             [
                 "134958a6.b78bb7"
@@ -6185,7 +6283,7 @@
         "name": "",
         "events": "all",
         "x": 700,
-        "y": 240,
+        "y": 440,
         "wires": [
             []
         ]
@@ -6194,18 +6292,19 @@
         "id": "24a39c5c.a918b4",
         "type": "function",
         "z": "725ce57a.a25e4c",
-        "name": "Registrar RegYes",
-        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Registrar_RegNo\"\n    ],\n    \"show\": [\n      \"Registrar_Header\",\n      \"Registrar_RegYes\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "name": "Registrar RegYes (can)",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Registrar_RegDefault\",\n      \"Registrar_RegAttempt\",\n      \"Registrar_RegNo\",\n      \"Registrar_RegWTF\"\n    ],\n    \"show\": [\n      \"Registrar_Header\",\n      \"Registrar_RegYes\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 490,
-        "y": 280,
+        "y": 480,
         "wires": [
             [
-                "134958a6.b78bb7"
+                "134958a6.b78bb7",
+                "5d04bf1c.6db11"
             ]
         ]
     },
@@ -6213,15 +6312,15 @@
         "id": "c6292cd.c3d33d",
         "type": "function",
         "z": "725ce57a.a25e4c",
-        "name": "get per mainnet",
-        "func": "var nettype = \"stacks-node-api.mainnet.stacks.co\"; //mainnet\nvar fqn = msg.payload; //fully qualified name\n\nmsg.url = \"https://\" + nettype + \"/v1/names/\" + fqn;\nmsg.fqn = fqn;\nreturn msg;",
+        "name": "get name (mainnet)",
+        "func": "var nettype = \"stacks-node-api.mainnet.stacks.co\"; //mainnet\nvar tempfqn = msg.payload; //fully qualified name to search\n\nmsg.url = \"https://\" + nettype + \"/v1/names/\" + tempfqn;\nmsg.tempfqn = tempfqn;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
-        "y": 120,
+        "x": 690,
+        "y": 320,
         "wires": [
             [
                 "f3fedaf8.77da78",
@@ -6249,8 +6348,8 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 280,
-        "y": 120,
+        "x": 260,
+        "y": 320,
         "wires": [
             [
                 "ec6956df.0a1538"
@@ -6261,18 +6360,19 @@
         "id": "ec6956df.0a1538",
         "type": "function",
         "z": "725ce57a.a25e4c",
-        "name": "concat to form fqn",
-        "func": "var reginput = msg.payload.reginput;\nvar regtype = msg.payload.regtype;\n\nmsg.payload = reginput + regtype;\nreturn msg;",
+        "name": "concat to form tempfqn",
+        "func": "var reginput = msg.payload.reginput;\nvar regtype = msg.payload.regtype;\n\nmsg.payload = reginput + regtype;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 120,
+        "x": 460,
+        "y": 320,
         "wires": [
             [
-                "c6292cd.c3d33d"
+                "c6292cd.c3d33d",
+                "cb2266cf.3a47e8"
             ]
         ]
     },
@@ -6289,8 +6389,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 80,
+        "x": 860,
+        "y": 280,
         "wires": []
     },
     {
@@ -6304,8 +6404,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 890,
-        "y": 120,
+        "x": 870,
+        "y": 320,
         "wires": [
             [
                 "8c6bebfc.790968"
@@ -6316,16 +6416,17 @@
         "id": "6813f2.73f46c1",
         "type": "debug",
         "z": "725ce57a.a25e4c",
-        "name": "",
+        "name": "registrar input debugger",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 60,
+        "x": 1290,
+        "y": 320,
         "wires": []
     },
     {
@@ -6336,8 +6437,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1050,
-        "y": 120,
+        "x": 1030,
+        "y": 320,
         "wires": [
             [
                 "6813f2.73f46c1",
@@ -6366,8 +6467,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 170,
-        "y": 220,
+        "x": 150,
+        "y": 400,
         "wires": [
             [
                 "98e21dbf.8bee1",
@@ -6380,5 +6481,1508 @@
                 "24a39c5c.a918b4"
             ]
         ]
+    },
+    {
+        "id": "b1cd5ce4.1ae6e",
+        "type": "link in",
+        "z": "e83b2318.6f5c6",
+        "name": "to set Global (tempfqn input)",
+        "links": [
+            "cb2266cf.3a47e8"
+        ],
+        "x": 155,
+        "y": 760,
+        "wires": [
+            [
+                "e65beffa.3c2c7"
+            ]
+        ]
+    },
+    {
+        "id": "e65beffa.3c2c7",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set tempfqn",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "tempfqn",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 760,
+        "wires": [
+            [
+                "1f533c5d.48ea54"
+            ]
+        ]
+    },
+    {
+        "id": "1f533c5d.48ea54",
+        "type": "debug",
+        "z": "e83b2318.6f5c6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "cb2266cf.3a47e8",
+        "type": "link out",
+        "z": "725ce57a.a25e4c",
+        "name": "pass to Global (tempfqn)",
+        "links": [
+            "b1cd5ce4.1ae6e"
+        ],
+        "x": 595,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "5d04bf1c.6db11",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "get Price of tempfqn (mainnet)",
+        "func": "var nettype = \"stacks-node-api.mainnet.stacks.co\"; //mainnet\n//var nettype = \"stacks-node-api.testnet.stacks.co\"; //testnet\nvar tempfqn = global.get(\"tempfqn\");\n\nmsg.url = \"https://\" + nettype + \"/v2/prices/names/\" + tempfqn;\nmsg.tempfqn = tempfqn;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 520,
+        "wires": [
+            [
+                "fdf83d9.54f0bc"
+            ]
+        ]
+    },
+    {
+        "id": "fdf83d9.54f0bc",
+        "type": "http request",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 530,
+        "y": 560,
+        "wires": [
+            [
+                "600252c7.17b18c"
+            ]
+        ]
+    },
+    {
+        "id": "600252c7.17b18c",
+        "type": "json",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 690,
+        "y": 560,
+        "wires": [
+            [
+                "2f86c1cb.0da2de",
+                "1bd39f72.eeb721",
+                "434b1ef0.6b189"
+            ]
+        ]
+    },
+    {
+        "id": "2f86c1cb.0da2de",
+        "type": "debug",
+        "z": "725ce57a.a25e4c",
+        "name": "registrar price debugger 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "1bd39f72.eeb721",
+        "type": "ui_template",
+        "z": "725ce57a.a25e4c",
+        "group": "b8de1f8f.ccd29",
+        "name": "Name Available w/ Price Quote",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<h3>Name Available</h3>\n<p>Name: {{msg.tempfqn}}</p>\n<p>Price: {{msg.payload.amount}} mSTX </p>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 990,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eab25160.70c54",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "tempfqn can register? (mainnet)",
+        "func": "const network = new stacksNetwork.StacksMainnet();\n\nconst fullyQualifiedName = global.get(\"tempfqn\");\n\nconst welp = await stacksBns.canRegisterName({ fullyQualifiedName, network});\n\nmsg.tempfqn = fullyQualifiedName;\nmsg.payload = welp;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksBns",
+                "module": "@stacks/bns"
+            }
+        ],
+        "x": 330,
+        "y": 800,
+        "wires": [
+            [
+                "e5fe8995.38a418",
+                "a3c85ec8.5d8ac"
+            ]
+        ]
+    },
+    {
+        "id": "104ad3fa.112e2c",
+        "type": "ui_toast",
+        "z": "725ce57a.a25e4c",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Yes Register",
+        "cancel": "Cancel",
+        "raw": false,
+        "topic": "",
+        "name": "",
+        "x": 950,
+        "y": 840,
+        "wires": [
+            [
+                "e26adef.00f2d2"
+            ]
+        ]
+    },
+    {
+        "id": "e26adef.00f2d2",
+        "type": "switch",
+        "z": "725ce57a.a25e4c",
+        "name": "checker",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Yes Register",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Cancel",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1120,
+        "y": 840,
+        "wires": [
+            [
+                "584ca307.dc6f4c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e5fe8995.38a418",
+        "type": "debug",
+        "z": "725ce57a.a25e4c",
+        "name": "can register? debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "a3c85ec8.5d8ac",
+        "type": "switch",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 840,
+        "wires": [
+            [
+                "3516c0fe.44a5a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3516c0fe.44a5a",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "confirm message",
+        "func": "var fqntoreg = msg.tempfqn;\n\nmsg.payload = \"Are you sure you want to Register\\n\" + fqntoreg;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 840,
+        "wires": [
+            [
+                "104ad3fa.112e2c"
+            ]
+        ]
+    },
+    {
+        "id": "fb48ad76.1f1dc",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "error catcher Registrar RegWTF (cant)",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Registrar_RegDefault\",\n      \"Registrar_RegAttempt\",\n      \"Registrar_RegYes\",\n      \"Registrar_RegNo\"\n    ],\n    \"show\": [\n      \"Registrar_Header\",\n      \"Registrar_RegWTF\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 440,
+        "wires": [
+            [
+                "b30d8328.48cf"
+            ]
+        ]
+    },
+    {
+        "id": "b30d8328.48cf",
+        "type": "ui_ui_control",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "events": "all",
+        "x": 1280,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "434b1ef0.6b189",
+        "type": "switch",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 910,
+        "y": 480,
+        "wires": [
+            [
+                "fb48ad76.1f1dc"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d6899bdb.be8ff8",
+        "type": "ui_template",
+        "z": "725ce57a.a25e4c",
+        "group": "79c53eca.29302",
+        "name": "Name Unrecognized Page",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "format": "<h3>Name Unrecognized</h3>\n<p>This name doesn't seem match a fully qualified name format.</p>\n<p>Please try a different name.</p>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1340,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb0261b0.6a851",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "Registrar RegDefault (unregistered)",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Registrar_RegAttempt\",\n      \"Registrar_RegYes\",\n      \"Registrar_RegNo\",\n      \"Registrar_RegWTF\"\n    ],\n    \"show\": [\n      \"Registrar_Header\",\n      \"Registrar_RegDefault\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 100,
+        "wires": [
+            [
+                "21d3cee1.e36bb2"
+            ]
+        ]
+    },
+    {
+        "id": "cf0ed04.25bf73",
+        "type": "ui_template",
+        "z": "725ce57a.a25e4c",
+        "group": "ffd631ab.0ac03",
+        "name": "Name Unavailable Page",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "format": "<h3>Name Not Detected</h3>\n<p>You do not appear to have yet registered a name.</p>\n<p>Search above for an available name to register.</p>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 750,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1e38e9cb.c3a026",
+        "type": "inject",
+        "z": "725ce57a.a25e4c",
+        "name": "check for name (default)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "cb0261b0.6a851"
+            ]
+        ]
+    },
+    {
+        "id": "21d3cee1.e36bb2",
+        "type": "ui_ui_control",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "events": "all",
+        "x": 800,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f9dd5ab3.7f4518",
+        "type": "comment",
+        "z": "725ce57a.a25e4c",
+        "name": "Relative to Name Detection / Default Page",
+        "info": "",
+        "x": 240,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "1759713e.73692f",
+        "type": "comment",
+        "z": "725ce57a.a25e4c",
+        "name": "Relative to Name Input and Lookup",
+        "info": "",
+        "x": 160,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "2d0cbc02.0acd54",
+        "type": "comment",
+        "z": "725ce57a.a25e4c",
+        "name": "Relative to Registeration",
+        "info": "",
+        "x": 150,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "52eb73b0.26628c",
+        "type": "comment",
+        "z": "e83b2318.6f5c6",
+        "name": "Documentation ",
+        "info": "Stacks.js Library Reference\n\nhttps://blockstack.github.io/stacks.js/index.html",
+        "x": 140,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "e5721b0.3c23ce8",
+        "type": "comment",
+        "z": "725ce57a.a25e4c",
+        "name": "buildRegisterNameTx documentation",
+        "info": "https://blockstack.github.io/stacks.js/modules/bns.html#buildregisternametx",
+        "x": 1360,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "975d279b.c8dc48",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "fqn register (Mainnet)",
+        "func": "const network = new stacksNetwork.StacksMainnet(); //or use Testnet\n\nconst name = global.get(\"tempfqn\");\nconst salt = \"example-salt\";\nconst zonefile = \"example-zonefile\";\nconst publicKey = global.get(\"depositaddress\");//or use testnetdepositaddress\n\nconst unsignedTX = await stacksBns.buildRegisterNameTX({ name, salt, zonefile, publicKey, network});\n\nmsg.payload = unsignedTX;\n//msg.blockchain = \"0x\" + unsignedTX;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksBns",
+                "module": "@stacks/bns"
+            }
+        ],
+        "x": 1380,
+        "y": 800,
+        "wires": [
+            [
+                "346e6cdd.6762f4",
+                "cc381e3c.ed83b"
+            ]
+        ]
+    },
+    {
+        "id": "346e6cdd.6762f4",
+        "type": "debug",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1610,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "cc381e3c.ed83b",
+        "type": "ui_template",
+        "z": "725ce57a.a25e4c",
+        "group": "46da4633.73efe8",
+        "name": "Name Registration Attempt",
+        "order": 0,
+        "width": "13",
+        "height": "6",
+        "format": "<h3>Name Registration</h3>\n<p>{{msg.payload}}</p>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1660,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9991487.0825e8",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set saltzero",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.wallet.accounts[0].salt",
+                "pt": "msg",
+                "to": "saltzero",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "584ca307.dc6f4c",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "Registrar RegAttempt (generic)",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Registrar_RegDefault\",\n      \"Registrar_RegYes\",\n      \"Registrar_RegNo\",\n      \"Registrar_RegWTF\"\n    ],\n    \"show\": [\n      \"Registrar_Header\",\n      \"Registrar_RegAttempt\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 760,
+        "wires": [
+            [
+                "4264957d.db1b5c"
+            ]
+        ]
+    },
+    {
+        "id": "4264957d.db1b5c",
+        "type": "ui_ui_control",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "events": "all",
+        "x": 1880,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b6a98e89.c5e68",
+        "type": "ui_dropdown",
+        "z": "88cec2c0.c8804",
+        "name": "Filter",
+        "label": "",
+        "tooltip": "",
+        "place": "Show...",
+        "group": "f086e156.9d17b",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "All",
+                "value": "all",
+                "type": "str"
+            },
+            {
+                "label": "Sent",
+                "value": "sent",
+                "type": "str"
+            },
+            {
+                "label": "Received",
+                "value": "received",
+                "type": "str"
+            },
+            {
+                "label": "Token Transfers",
+                "value": "token_transfer",
+                "type": "str"
+            },
+            {
+                "label": "Smart Contracts",
+                "value": "smart_contract",
+                "type": "str"
+            },
+            {
+                "label": "Function Calls",
+                "value": "function_call",
+                "type": "str"
+            },
+            {
+                "label": "Coinbase",
+                "value": "coinbase",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 90,
+        "y": 340,
+        "wires": [
+            [
+                "e94b6791.e147d8"
+            ]
+        ]
+    },
+    {
+        "id": "bbb12d5c.582c5",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "filter where tx_type is equal to token_transfer",
+        "func": "const obj = msg.payload;\n\nconst filtered = obj.filter(by => by.tx_type === 'token_transfer');\n\nmsg.payload = filtered;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 420,
+        "wires": [
+            [
+                "84d8c5e6.9c38d8"
+            ]
+        ]
+    },
+    {
+        "id": "9138d23.79be03",
+        "type": "switch",
+        "z": "88cec2c0.c8804",
+        "name": "show router",
+        "property": "txfilter",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "all",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sent",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "received",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "token_transfer",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "smart_contract",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "function_call",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "coinbase",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 530,
+        "y": 340,
+        "wires": [
+            [
+                "84d8c5e6.9c38d8"
+            ],
+            [
+                "4e106a61.ae8674"
+            ],
+            [
+                "c58a8101.17cc4"
+            ],
+            [
+                "bbb12d5c.582c5"
+            ],
+            [
+                "155975fe.fcdc8a"
+            ],
+            [
+                "b5c6dc09.76271"
+            ],
+            [
+                "e3ac2a86.83f9f8"
+            ]
+        ]
+    },
+    {
+        "id": "155975fe.fcdc8a",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "filter where tx_type is equal to smart_contract",
+        "func": "const obj = msg.payload;\n\nconst filtered = obj.filter(by => by.tx_type === 'smart_contract');\n\nmsg.payload = filtered;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 460,
+        "wires": [
+            [
+                "84d8c5e6.9c38d8"
+            ]
+        ]
+    },
+    {
+        "id": "b5c6dc09.76271",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "filter where tx_type is equal to function_call",
+        "func": "const obj = msg.payload;\n\nconst filtered = obj.filter(by => by.tx_type === 'function_call');\n\nmsg.payload = filtered;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 500,
+        "wires": [
+            [
+                "84d8c5e6.9c38d8"
+            ]
+        ]
+    },
+    {
+        "id": "e3ac2a86.83f9f8",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "filter where tx_type is equal to coinbase",
+        "func": "const obj = msg.payload;\n\nconst filtered = obj.filter(by => by.tx_type === 'coinbase');\n\nmsg.payload = filtered;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 540,
+        "wires": [
+            [
+                "84d8c5e6.9c38d8"
+            ]
+        ]
+    },
+    {
+        "id": "695d76aa.4b6968",
+        "type": "debug",
+        "z": "88cec2c0.c8804",
+        "name": "SHOW DEBUGGER",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e94b6791.e147d8",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "get global txhistorymainnet",
+        "func": "var txfilter = msg.payload;\n\nvar txhistorymainnet = global.get(\"txhistorymainnet\");\n//or get global 'txhistorytestnet'\n\nmsg.payload = txhistorymainnet;\nmsg.txfilter = txfilter;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 340,
+        "wires": [
+            [
+                "9138d23.79be03",
+                "695d76aa.4b6968"
+            ]
+        ]
+    },
+    {
+        "id": "d9c5c3a8.083ff",
+        "type": "link out",
+        "z": "88cec2c0.c8804",
+        "name": "to set Global (txhistorymainnet)",
+        "links": [
+            "2f692217.51829e"
+        ],
+        "x": 1475,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "2f692217.51829e",
+        "type": "link in",
+        "z": "e83b2318.6f5c6",
+        "name": "to bind Global (txhistorymainnet)",
+        "links": [
+            "d9c5c3a8.083ff"
+        ],
+        "x": 155,
+        "y": 500,
+        "wires": [
+            [
+                "2ead2d36.d08b82"
+            ]
+        ]
+    },
+    {
+        "id": "2ead2d36.d08b82",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set txhistorymainnet",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "txhistorymainnet",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e106a61.ae8674",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "filter where sender_address is equal to depositaddress  (mainnet)",
+        "func": "const obj = msg.payload;\nconst depositaddress = global.get(\"depositaddress\"); //use \"testnetdepositaddress\" for testnet\n\nconst filtered = obj.filter(by => by.sender_address === depositaddress);\n\nmsg.payload = filtered;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 340,
+        "wires": [
+            [
+                "84d8c5e6.9c38d8"
+            ]
+        ]
+    },
+    {
+        "id": "c58a8101.17cc4",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "filter where sender_address is not equal to depositaddress  (mainnet)",
+        "func": "const obj = msg.payload;\nconst depositaddress = global.get(\"depositaddress\"); //use \"testnetdepositaddress\" for testnet\n\nconst filtered = obj.filter(by => by.sender_address != depositaddress);\n\nmsg.payload = filtered;\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 380,
+        "wires": [
+            [
+                "84d8c5e6.9c38d8"
+            ]
+        ]
+    },
+    {
+        "id": "6658b90c.ccc468",
+        "type": "link out",
+        "z": "88cec2c0.c8804",
+        "name": "to set Global (txhistorytestnet)",
+        "links": [
+            "ebed3403.a592c8"
+        ],
+        "x": 1495,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "ebed3403.a592c8",
+        "type": "link in",
+        "z": "e83b2318.6f5c6",
+        "name": "to bind Global (txhistorytestnet)",
+        "links": [
+            "6658b90c.ccc468",
+            "95c1bdbc.efef9"
+        ],
+        "x": 155,
+        "y": 540,
+        "wires": [
+            [
+                "38d5a36b.a6b26c"
+            ]
+        ]
+    },
+    {
+        "id": "38d5a36b.a6b26c",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set txhistorytestnet",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "txhistorytestnet",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e23bca61.e00468",
+        "type": "ui_dropdown",
+        "z": "88cec2c0.c8804",
+        "name": "Filter",
+        "label": "",
+        "tooltip": "",
+        "place": "Show...",
+        "group": "cd33bbcb.590158",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "All",
+                "value": "all",
+                "type": "str"
+            },
+            {
+                "label": "Sent",
+                "value": "sent",
+                "type": "str"
+            },
+            {
+                "label": "Received",
+                "value": "received",
+                "type": "str"
+            },
+            {
+                "label": "Token Transfers",
+                "value": "token_transfer",
+                "type": "str"
+            },
+            {
+                "label": "Smart Contracts",
+                "value": "smart_contract",
+                "type": "str"
+            },
+            {
+                "label": "Function Calls",
+                "value": "function_call",
+                "type": "str"
+            },
+            {
+                "label": "Coinbase",
+                "value": "coinbase",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 1040,
+        "wires": [
+            [
+                "d11b4a9e.cb0af8"
+            ]
+        ]
+    },
+    {
+        "id": "37097331.10d4ac",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "filter where tx_type is equal to token_transfer",
+        "func": "const obj = msg.payload;\n\nconst filtered = obj.filter(by => by.tx_type === 'token_transfer');\n\nmsg.payload = filtered;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 1120,
+        "wires": [
+            [
+                "31e62cc7.08b544"
+            ]
+        ]
+    },
+    {
+        "id": "26a843e8.0e77fc",
+        "type": "switch",
+        "z": "88cec2c0.c8804",
+        "name": "show router",
+        "property": "txfilter",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "all",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sent",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "received",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "token_transfer",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "smart_contract",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "function_call",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "coinbase",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 550,
+        "y": 1040,
+        "wires": [
+            [
+                "31e62cc7.08b544"
+            ],
+            [
+                "8f5c30d8.39115"
+            ],
+            [
+                "2377a4fb.3e6bbc"
+            ],
+            [
+                "37097331.10d4ac"
+            ],
+            [
+                "7bbe8cd4.c3ab24"
+            ],
+            [
+                "ed88fd61.4eb08"
+            ],
+            [
+                "abf6287b.d42fa8"
+            ]
+        ]
+    },
+    {
+        "id": "7bbe8cd4.c3ab24",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "filter where tx_type is equal to smart_contract",
+        "func": "const obj = msg.payload;\n\nconst filtered = obj.filter(by => by.tx_type === 'smart_contract');\n\nmsg.payload = filtered;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 1160,
+        "wires": [
+            [
+                "31e62cc7.08b544"
+            ]
+        ]
+    },
+    {
+        "id": "ed88fd61.4eb08",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "filter where tx_type is equal to function_call",
+        "func": "const obj = msg.payload;\n\nconst filtered = obj.filter(by => by.tx_type === 'function_call');\n\nmsg.payload = filtered;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 1200,
+        "wires": [
+            [
+                "31e62cc7.08b544"
+            ]
+        ]
+    },
+    {
+        "id": "abf6287b.d42fa8",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "filter where tx_type is equal to coinbase",
+        "func": "const obj = msg.payload;\n\nconst filtered = obj.filter(by => by.tx_type === 'coinbase');\n\nmsg.payload = filtered;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1240,
+        "wires": [
+            [
+                "31e62cc7.08b544"
+            ]
+        ]
+    },
+    {
+        "id": "35a33ee8.85ee92",
+        "type": "debug",
+        "z": "88cec2c0.c8804",
+        "name": "SHOW DEBUGGER",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "d11b4a9e.cb0af8",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "get global txhistorytestnet",
+        "func": "var txfilter = msg.payload;\n\nvar txhistorytestnet = global.get(\"txhistorytestnet\");\n//or get global 'txhistorymainnet'\n\nmsg.payload = txhistorytestnet;\nmsg.txfilter = txfilter;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1040,
+        "wires": [
+            [
+                "26a843e8.0e77fc",
+                "35a33ee8.85ee92"
+            ]
+        ]
+    },
+    {
+        "id": "8f5c30d8.39115",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "filter where sender_address is equal to testnetdepositaddress (testnet)",
+        "func": "const obj = msg.payload;\nconst testnetdepositaddress = global.get(\"testnetdepositaddress\"); //use \"mainnetdepositaddress\" for testnet\n\nconst filtered = obj.filter(by => by.sender_address === testnetdepositaddress);\n\nmsg.payload = filtered;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 1040,
+        "wires": [
+            [
+                "31e62cc7.08b544"
+            ]
+        ]
+    },
+    {
+        "id": "2377a4fb.3e6bbc",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "filter where sender_address is not equal to testnetdepositaddress (testnet)",
+        "func": "const obj = msg.payload;\nconst testnetdepositaddress = global.get(\"testnetdepositaddress\"); //use \"mainnetdepositaddress\" for mainnet\n\nconst filtered = obj.filter(by => by.sender_address != testnetdepositaddress);\n\nmsg.payload = filtered;\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 1080,
+        "wires": [
+            [
+                "31e62cc7.08b544"
+            ]
+        ]
+    },
+    {
+        "id": "d7b01381.cd314",
+        "type": "comment",
+        "z": "725ce57a.a25e4c",
+        "name": "NOT DONE YET",
+        "info": "Registestration function isn't fully wired yet\nwant to capture profile information in step wizard of prompts\nto form profile.json and upload to gaia storage\nthen generate a zonefile that has the pointer to the profile.json",
+        "x": 1410,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "d7c43c5e.263f3",
+        "type": "comment",
+        "z": "88cec2c0.c8804",
+        "name": "Relative to Testnet History",
+        "info": "",
+        "x": 150,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "ac50dd15.89e43",
+        "type": "comment",
+        "z": "88cec2c0.c8804",
+        "name": "Relative to Mainnet History",
+        "info": "",
+        "x": 150,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8c1e8e7b.d05aa",
+        "type": "function",
+        "z": "4552b603.ca4548",
+        "name": "initiate storage and create test2.json",
+        "func": "const tyme = msg.payload;\n\nconst appConfig = new stacksConnect.AppConfig(['store_write', 'publish_data']);\n\nconst userSession = new stacksConnect.UserSession({ appConfig });\n\nconst storage = new stacksStorage.Storage({ userSession });\n\nlet fileName = 'test.json';\n\nlet fileData = {\n  color: 'green',\n  title: 'Hello World',\n  body: 'stuff',\n  date: tyme\n};\n\nconst options = {\n  encrypt: true\n};\n\nlet fileUrl = await storage.putFile(fileName, JSON.stringify(fileData), options).then(() => {\n  // Handle any execution after data has been saved\n});\n\nmsg.payload = fileUrl;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "stacksStorage",
+                "module": "@stacks/storage"
+            },
+            {
+                "var": "stacksConnect",
+                "module": "@stacks/connect"
+            }
+        ],
+        "x": 470,
+        "y": 560,
+        "wires": [
+            [
+                "9c9d382a.0fd598"
+            ]
+        ]
+    },
+    {
+        "id": "9c9d382a.0fd598",
+        "type": "debug",
+        "z": "4552b603.ca4548",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "322531cd.b65f2e",
+        "type": "inject",
+        "z": "4552b603.ca4548",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 560,
+        "wires": [
+            [
+                "8c1e8e7b.d05aa"
+            ]
+        ]
+    },
+    {
+        "id": "1d708d21.55b783",
+        "type": "function",
+        "z": "4552b603.ca4548",
+        "name": "Stacks Auth",
+        "func": "const appConfig = new stacksConnect.AppConfig(['store_write', 'publish_data']);\n\nconst userSession = new stacksConnect.UserSession({ appConfig });\nfunction authenticate() {\n  stacksConnect.showConnect({\n    appDetails: {\n      name: 'Dapparatus',\n      icon: window.location.origin + '/my-app-logo.svg',\n    },\n    redirectTo: '/',\n    finished: () => {\n      let userData = userSession.loadUserData();\n      // Save or otherwise utilize userData post-authentication\n    },\n    userSession: userSession,\n  });\n}\n\nmsg.payload = appConfig;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "stacksConnect",
+                "module": "@stacks/connect"
+            }
+        ],
+        "x": 390,
+        "y": 520,
+        "wires": [
+            [
+                "65176f8b.d8a24"
+            ]
+        ]
+    },
+    {
+        "id": "bdf96e19.8de9f",
+        "type": "ui_button",
+        "z": "4552b603.ca4548",
+        "name": "",
+        "group": "ae1844b2.235ae8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Sign In with Stacks",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-sign-in",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 520,
+        "wires": [
+            [
+                "1d708d21.55b783"
+            ]
+        ]
+    },
+    {
+        "id": "65176f8b.d8a24",
+        "type": "debug",
+        "z": "4552b603.ca4548",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "e9781263.43872",
+        "type": "comment",
+        "z": "4552b603.ca4548",
+        "name": "DOES NOT WORK YET",
+        "info": "",
+        "x": 450,
+        "y": 540,
+        "wires": []
     }
 ]
