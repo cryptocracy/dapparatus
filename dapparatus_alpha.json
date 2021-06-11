@@ -49,6 +49,13 @@
         "info": ""
     },
     {
+        "id": "95a1aad9.425808",
+        "type": "tab",
+        "label": "Profile",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "4552b603.ca4548",
         "type": "tab",
         "label": "Storage",
@@ -335,7 +342,7 @@
         "link": "/red",
         "icon": "fa-gears",
         "target": "newtab",
-        "order": 7
+        "order": 8
     },
     {
         "id": "b2fc7e5b.7dc7c",
@@ -601,6 +608,7 @@
         "d": true,
         "name": "Storage",
         "icon": "fa-floppy-o",
+        "order": 9,
         "disabled": false,
         "hidden": false
     },
@@ -612,6 +620,25 @@
         "order": 1,
         "disp": false,
         "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "cbe4c124.e30ea",
+        "type": "ui_tab",
+        "name": "Test",
+        "icon": "wi-moon-wax-cres",
+        "order": 7,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6f68ab5b.e72d44",
+        "type": "ui_group",
+        "name": "Test",
+        "tab": "cbe4c124.e30ea",
+        "order": 1,
+        "disp": false,
+        "width": "13",
         "collapse": false
     },
     {
@@ -667,12 +694,12 @@
         "order": 1,
         "width": "13",
         "height": "2",
-        "format": "<h4>Secret Key:</h4>\n<small>{{msg.payload.secretkey}}</small>",
+        "format": "<h4>Secret Key:</h4>\n<small><small><small>{{msg.payload}}</small></small></small>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 650,
+        "x": 490,
         "y": 620,
         "wires": [
             []
@@ -910,26 +937,6 @@
         "templateScope": "local",
         "x": 560,
         "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "97a61763.fbe7e8",
-        "type": "ui_template",
-        "z": "42c07592.8d970c",
-        "group": "e5d0847b.1daa38",
-        "name": "Profile Page Template",
-        "order": 1,
-        "width": "13",
-        "height": "8",
-        "format": "<style>\n    img {\n      border-radius: 50%;\n    }\n</style>\n<div class=\"card\">\n  <div style=\"width:150px\"><img src=\"https://raw.githubusercontent.com/cryptocracy/dapparatus/master/default-profile-image.png\" alt=\"\">\n</div>\n  <h1 class='fqn'>FQN</h1>\n  <p class=\"bio\">BIO</p>\n  <p class=\"tipjar\">STXADDRESS</p>\n  <a href=\"#\"><i class=\"fa fa-twitter\"></i></a>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 540,
-        "y": 420,
         "wires": [
             []
         ]
@@ -1768,7 +1775,8 @@
         "y": 380,
         "wires": [
             [
-                "9a974bff.85c4f8"
+                "9a974bff.85c4f8",
+                "ff4526e0.2d5308"
             ]
         ]
     },
@@ -2814,7 +2822,7 @@
         "y": 620,
         "wires": [
             [
-                "eeaf115b.296ca"
+                "c44ba5ac.c872a8"
             ]
         ]
     },
@@ -2958,7 +2966,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
+        "x": 240,
         "y": 620,
         "wires": [
             [
@@ -2980,32 +2988,9 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 650,
+        "x": 490,
         "y": 580,
         "wires": []
-    },
-    {
-        "id": "eeaf115b.296ca",
-        "type": "delay",
-        "z": "53028f3b.590b5",
-        "name": "delay",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 150,
-        "y": 620,
-        "wires": [
-            [
-                "c44ba5ac.c872a8"
-            ]
-        ]
     },
     {
         "id": "ae651374.a85b7",
@@ -7984,5 +7969,395 @@
         "x": 450,
         "y": 540,
         "wires": []
+    },
+    {
+        "id": "6bea3fdd.9c30e",
+        "type": "comment",
+        "z": "95a1aad9.425808",
+        "name": "Relative to Deruptar Profile Avatar",
+        "info": "",
+        "x": 360,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "dbfb67c6.ba18c8",
+        "type": "split",
+        "z": "95a1aad9.425808",
+        "name": "",
+        "splt": "1",
+        "spltType": "len",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 590,
+        "y": 120,
+        "wires": [
+            [
+                "80cf5ecd.707f"
+            ]
+        ]
+    },
+    {
+        "id": "b5e080fb.a63c8",
+        "type": "function",
+        "z": "95a1aad9.425808",
+        "name": "create Deruptar string",
+        "func": "var depositaddress = global.get(\"depositaddress\"); //for mainnet\n//or get global 'testnetdepositaddress' if on testnet\n\nrawaddy = depositaddress.substring(4); //Trim first 4 digits\n\na1 = rawaddy.substr(0,4); // keep next 4 digits\n\nz1 = rawaddy.substring(rawaddy.length - 4); //keep last 4 digits\n\nmsg.payload = a1+z1; // concat both and pass it along\nmsg.deruptar = a1+z1;\nmsg.depositaddress = depositaddress;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 120,
+        "wires": [
+            [
+                "dbfb67c6.ba18c8"
+            ]
+        ]
+    },
+    {
+        "id": "51f83caa.066c74",
+        "type": "inject",
+        "z": "95a1aad9.425808",
+        "name": "stx test address",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "SPSQ7777E45T7THK0CMT0MGEREPP36TZCCRY486",
+        "payloadType": "str",
+        "x": 160,
+        "y": 360,
+        "wires": [
+            [
+                "b5e080fb.a63c8"
+            ]
+        ]
+    },
+    {
+        "id": "17982304.c96ccd",
+        "type": "debug",
+        "z": "95a1aad9.425808",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d45a9509.e6a4a8",
+        "type": "debug",
+        "z": "95a1aad9.425808",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "80cf5ecd.707f",
+        "type": "join",
+        "z": "95a1aad9.425808",
+        "name": "make array",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "8",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 730,
+        "y": 120,
+        "wires": [
+            [
+                "17982304.c96ccd",
+                "8df78899.f720b8"
+            ]
+        ]
+    },
+    {
+        "id": "645a92d1.bfd96c",
+        "type": "inject",
+        "z": "95a1aad9.425808",
+        "name": "stx test address",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "10",
+        "topic": "",
+        "payload": "SP1T33SDB0Y1GE9WBN0X3G6MZ81XQG2XVNBHMRH1V",
+        "payloadType": "str",
+        "x": 160,
+        "y": 460,
+        "wires": [
+            [
+                "b5e080fb.a63c8"
+            ]
+        ]
+    },
+    {
+        "id": "2581508f.f2b01",
+        "type": "inject",
+        "z": "95a1aad9.425808",
+        "name": "stx test address",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "10",
+        "topic": "",
+        "payload": "SP3YD5XX054TRGFNYGTPB2H44JW70Y5603D7B5Y1V",
+        "payloadType": "str",
+        "x": 160,
+        "y": 500,
+        "wires": [
+            [
+                "b5e080fb.a63c8"
+            ]
+        ]
+    },
+    {
+        "id": "1b31a4b6.b95a6b",
+        "type": "inject",
+        "z": "95a1aad9.425808",
+        "name": "stx test address",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "10",
+        "topic": "",
+        "payload": "SP1TA84JTP4YRFWBK7PYKBA33H3YB60XP654RAR7M",
+        "payloadType": "str",
+        "x": 160,
+        "y": 320,
+        "wires": [
+            [
+                "b5e080fb.a63c8"
+            ]
+        ]
+    },
+    {
+        "id": "f50c16f6.5bb888",
+        "type": "inject",
+        "z": "95a1aad9.425808",
+        "name": "stx test address",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "10",
+        "topic": "",
+        "payload": "SP1ZG09W7XN7S1WH5F06YN25C5CGK2RE01ED0J28E",
+        "payloadType": "str",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "b5e080fb.a63c8"
+            ]
+        ]
+    },
+    {
+        "id": "ebcd14fc.d9c388",
+        "type": "inject",
+        "z": "95a1aad9.425808",
+        "name": "stx test address",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "10",
+        "topic": "",
+        "payload": "SP2BZ2YP68CABE7D32HE6308P6C7GMYN2ECJM8A7P",
+        "payloadType": "str",
+        "x": 160,
+        "y": 540,
+        "wires": [
+            [
+                "b5e080fb.a63c8"
+            ]
+        ]
+    },
+    {
+        "id": "e6bf11f1.157a3",
+        "type": "inject",
+        "z": "95a1aad9.425808",
+        "name": "stx test address",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "10",
+        "topic": "",
+        "payload": "SP1E645A6361NNMSXCGKCFASB936CD2ZWM2J4D0T6",
+        "payloadType": "str",
+        "x": 160,
+        "y": 400,
+        "wires": [
+            [
+                "b5e080fb.a63c8"
+            ]
+        ]
+    },
+    {
+        "id": "ff4526e0.2d5308",
+        "type": "link out",
+        "z": "42c07592.8d970c",
+        "name": "pass to Deruptar Generation (Profile Avatar)",
+        "links": [
+            "27fe2069.03f4c"
+        ],
+        "x": 275,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "27fe2069.03f4c",
+        "type": "link in",
+        "z": "95a1aad9.425808",
+        "name": "to create Deruptar String",
+        "links": [
+            "ff4526e0.2d5308"
+        ],
+        "x": 235,
+        "y": 120,
+        "wires": [
+            [
+                "b5e080fb.a63c8"
+            ]
+        ]
+    },
+    {
+        "id": "8df78899.f720b8",
+        "type": "link out",
+        "z": "95a1aad9.425808",
+        "name": "pass back to Feed",
+        "links": [
+            "b20a4bd1.6c0da8"
+        ],
+        "x": 875,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "47647f72.5b551",
+        "type": "ui_template",
+        "z": "42c07592.8d970c",
+        "group": "e5d0847b.1daa38",
+        "name": "Deruptar Profile Avatar",
+        "order": 0,
+        "width": "13",
+        "height": "10",
+        "format": "<div style=\"position: relative; width: 284px; height: 284px;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/bg/{{msg.payload[0]}}_bg.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/skin/{{msg.payload[1]}}_skin.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/eyes/{{msg.payload[2]}}_eyes.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hair/{{msg.payload[3]}}_hair.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/glasses/{{msg.payload[4]}}_glasses.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hat/{{msg.payload[5]}}_hat.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/teeth/{{msg.payload[6]}}_teeth.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/chest/{{msg.payload[7]}}_chest.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n</div>\n<p>Your Deruptar: {{msg.deruptar}}</p>\n<p>Your Deposit Address: {{msg.depositaddress}}</p>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 540,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b20a4bd1.6c0da8",
+        "type": "link in",
+        "z": "42c07592.8d970c",
+        "name": "to Deruptar Template",
+        "links": [
+            "8df78899.f720b8"
+        ],
+        "x": 395,
+        "y": 420,
+        "wires": [
+            [
+                "47647f72.5b551"
+            ]
+        ]
     }
 ]
