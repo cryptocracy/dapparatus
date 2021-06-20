@@ -11206,14 +11206,14 @@
         "id": "79453bc7.c974c4",
         "type": "function",
         "z": "53028f3b.590b5",
-        "name": "pass to Registrar Tab",
+        "name": "pass to History Tab",
         "func": "msg.payload = {\"tab\":\"History\"};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
+        "x": 1430,
         "y": 1040,
         "wires": [
             [
@@ -11295,14 +11295,14 @@
         "id": "dd28c298.ca6d6",
         "type": "function",
         "z": "53028f3b.590b5",
-        "name": "pass to Registrar Tab",
+        "name": "pass to History Tab",
         "func": "msg.payload = {\"tab\":\"History\"};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
+        "x": 1430,
         "y": 1160,
         "wires": [
             [
