@@ -227,16 +227,6 @@
         "collapse": false
     },
     {
-        "id": "9ba436be.effd28",
-        "type": "ui_group",
-        "name": "MintNFT",
-        "tab": "34217460.577dac",
-        "order": 3,
-        "disp": false,
-        "width": 13,
-        "collapse": false
-    },
-    {
         "id": "c2eb85a6.be5128",
         "type": "ui_tab",
         "name": "Assets",
@@ -671,7 +661,7 @@
         "order": 7,
         "disp": true,
         "width": "13",
-        "collapse": false
+        "collapse": true
     },
     {
         "id": "550c1706.5e1408",
@@ -727,7 +717,7 @@
         "type": "ui_group",
         "name": "MintNFT Form",
         "tab": "34217460.577dac",
-        "order": 5,
+        "order": 6,
         "disp": false,
         "width": "13",
         "collapse": false
@@ -737,7 +727,7 @@
         "type": "ui_group",
         "name": "MintNFT Trait",
         "tab": "34217460.577dac",
-        "order": 6,
+        "order": 5,
         "disp": false,
         "width": "13",
         "collapse": false
@@ -921,7 +911,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2200,
+        "x": 2280,
         "y": 600,
         "wires": [
             []
@@ -931,17 +921,17 @@
         "id": "82a2dcd7.0af3c",
         "type": "ui_template",
         "z": "613e85c9.c6210c",
-        "group": "9ba436be.effd28",
-        "name": "TX Info Upon Create Non-Fungible Token",
+        "group": "de35938.a16f97",
+        "name": "TX Info",
         "order": 2,
         "width": 0,
         "height": 0,
-        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "format": "{{msg.blockchain}}",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 820,
+        "x": 720,
         "y": 2040,
         "wires": [
             []
@@ -1179,7 +1169,7 @@
         "z": "613e85c9.c6210c",
         "name": "",
         "group": "de35938.a16f97",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -2212,7 +2202,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 150,
+        "x": 130,
         "y": 320,
         "wires": [
             [
@@ -2239,7 +2229,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 160,
+        "x": 120,
         "y": 360,
         "wires": [
             [
@@ -2280,8 +2270,8 @@
         "z": "613e85c9.c6210c",
         "name": "",
         "events": "all",
-        "x": 740,
-        "y": 160,
+        "x": 720,
+        "y": 80,
         "wires": [
             []
         ]
@@ -2298,7 +2288,7 @@
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 160,
+        "y": 80,
         "wires": [
             [
                 "9706e8dc.3274b8"
@@ -2705,7 +2695,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 170,
+        "x": 130,
         "y": 80,
         "wires": [
             [
@@ -4383,8 +4373,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
-        "y": 160,
+        "x": 890,
+        "y": 240,
         "wires": [
             [
                 "9a6d200b.74539",
@@ -4405,8 +4395,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 950,
-        "y": 160,
+        "x": 1150,
+        "y": 240,
         "wires": [
             [
                 "9e0455b9.a67188"
@@ -4421,8 +4411,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1110,
-        "y": 160,
+        "x": 1310,
+        "y": 240,
         "wires": [
             [
                 "f5938fe4.005cf",
@@ -4449,8 +4439,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1290,
-        "y": 160,
+        "x": 1490,
+        "y": 240,
         "wires": [
             [
                 "eb948104.cc071",
@@ -4473,8 +4463,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1300,
-        "y": 200,
+        "x": 1500,
+        "y": 280,
         "wires": [
             []
         ]
@@ -4492,8 +4482,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1560,
-        "y": 120,
+        "x": 1820,
+        "y": 200,
         "wires": []
     },
     {
@@ -4510,8 +4500,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1760,
-        "y": 300,
+        "x": 1860,
+        "y": 380,
         "wires": [
             []
         ]
@@ -4538,7 +4528,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 110,
-        "y": 80,
+        "y": 200,
         "wires": [
             [
                 "5c0a9600.38623c"
@@ -4558,8 +4548,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 200,
+        "x": 1140,
+        "y": 280,
         "wires": []
     },
     {
@@ -4573,8 +4563,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 150,
-        "y": 120,
+        "x": 350,
+        "y": 200,
         "wires": [
             [
                 "41dd1831.d9dd58"
@@ -4587,8 +4577,8 @@
         "z": "88cec2c0.c8804",
         "name": "sample addresses",
         "info": "MainNet Examples:\nw/ History:\nSP33XEHK2SXXH625VG6W6665WBBPX1ENQVKNEYCYY\n\nw/o History:\nSP31DA6FTSJX2WGTZ69SFY11BH51NZMB0ZW97B5P0\n\nTest Examples:\nw/ History:\n\n\nw/o History:\n",
-        "x": 370,
-        "y": 80,
+        "x": 570,
+        "y": 160,
         "wires": []
     },
     {
@@ -4605,7 +4595,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2000,
+        "x": 1940,
         "y": 1200,
         "wires": [
             []
@@ -4629,8 +4619,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 350,
-        "y": 120,
+        "x": 550,
+        "y": 200,
         "wires": [
             [
                 "d8cb6e32.2d0f9",
@@ -4797,8 +4787,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 200,
+        "x": 860,
+        "y": 280,
         "wires": []
     },
     {
@@ -5249,8 +5239,8 @@
         "links": [
             "64410f5b.984c5"
         ],
-        "x": 1475,
-        "y": 160,
+        "x": 1735,
+        "y": 240,
         "wires": []
     },
     {
@@ -5635,7 +5625,7 @@
         "proxy": "",
         "authType": "",
         "x": 1200,
-        "y": 860,
+        "y": 940,
         "wires": [
             [
                 "a4559142.80ae5"
@@ -5654,7 +5644,7 @@
         "finalize": "",
         "libs": [],
         "x": 960,
-        "y": 860,
+        "y": 940,
         "wires": [
             [
                 "273d1bb1.c92c64"
@@ -5672,8 +5662,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
-        "y": 80,
+        "x": 900,
+        "y": 160,
         "wires": [
             [
                 "47c44b8a.021464"
@@ -5693,8 +5683,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 960,
-        "y": 80,
+        "x": 1160,
+        "y": 160,
         "wires": [
             [
                 "d68a95ec.a7e598"
@@ -5710,7 +5700,7 @@
         "action": "",
         "pretty": false,
         "x": 1370,
-        "y": 860,
+        "y": 940,
         "wires": [
             [
                 "2a3c827c.45e60e"
@@ -5725,8 +5715,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1110,
-        "y": 80,
+        "x": 1310,
+        "y": 160,
         "wires": [
             [
                 "8a5e2fda.f7863"
@@ -5746,8 +5736,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2020,
-        "y": 40,
+        "x": 2280,
+        "y": 120,
         "wires": []
     },
     {
@@ -5763,8 +5753,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2280,
-        "y": 820,
+        "x": 2340,
+        "y": 900,
         "wires": []
     },
     {
@@ -7216,8 +7206,8 @@
         "payload": "",
         "topic": "topic",
         "topicType": "msg",
-        "x": 270,
-        "y": 340,
+        "x": 370,
+        "y": 420,
         "wires": [
             [
                 "e94b6791.e147d8"
@@ -7235,8 +7225,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1050,
-        "y": 420,
+        "x": 1150,
+        "y": 500,
         "wires": [
             [
                 "84d8c5e6.9c38d8"
@@ -7290,8 +7280,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 7,
-        "x": 730,
-        "y": 340,
+        "x": 830,
+        "y": 420,
         "wires": [
             [
                 "84d8c5e6.9c38d8"
@@ -7327,8 +7317,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1050,
-        "y": 460,
+        "x": 1150,
+        "y": 540,
         "wires": [
             [
                 "84d8c5e6.9c38d8"
@@ -7346,8 +7336,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1050,
-        "y": 500,
+        "x": 1150,
+        "y": 580,
         "wires": [
             [
                 "84d8c5e6.9c38d8"
@@ -7365,8 +7355,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1040,
-        "y": 540,
+        "x": 1140,
+        "y": 620,
         "wires": [
             [
                 "84d8c5e6.9c38d8"
@@ -7386,8 +7376,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 760,
-        "y": 260,
+        "x": 860,
+        "y": 340,
         "wires": []
     },
     {
@@ -7401,8 +7391,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
-        "y": 340,
+        "x": 600,
+        "y": 420,
         "wires": [
             [
                 "9138d23.79be03",
@@ -7418,8 +7408,8 @@
         "links": [
             "2f692217.51829e"
         ],
-        "x": 1475,
-        "y": 200,
+        "x": 1735,
+        "y": 280,
         "wires": []
     },
     {
@@ -7474,8 +7464,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1110,
-        "y": 340,
+        "x": 1210,
+        "y": 420,
         "wires": [
             [
                 "84d8c5e6.9c38d8"
@@ -7493,8 +7483,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1130,
-        "y": 380,
+        "x": 1230,
+        "y": 460,
         "wires": [
             [
                 "84d8c5e6.9c38d8"
@@ -7608,7 +7598,7 @@
         "payload": "",
         "topic": "topic",
         "topicType": "msg",
-        "x": 510,
+        "x": 450,
         "y": 1240,
         "wires": [
             [
@@ -7627,7 +7617,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1290,
+        "x": 1230,
         "y": 1320,
         "wires": [
             [
@@ -7682,7 +7672,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 7,
-        "x": 950,
+        "x": 890,
         "y": 1240,
         "wires": [
             [
@@ -7719,7 +7709,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1290,
+        "x": 1230,
         "y": 1360,
         "wires": [
             [
@@ -7738,7 +7728,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1290,
+        "x": 1230,
         "y": 1400,
         "wires": [
             [
@@ -7757,7 +7747,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1280,
+        "x": 1220,
         "y": 1440,
         "wires": [
             [
@@ -7778,7 +7768,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 980,
+        "x": 920,
         "y": 1160,
         "wires": []
     },
@@ -7793,7 +7783,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
+        "x": 650,
         "y": 1240,
         "wires": [
             [
@@ -7813,7 +7803,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1370,
+        "x": 1310,
         "y": 1240,
         "wires": [
             [
@@ -7832,7 +7822,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1380,
+        "x": 1320,
         "y": 1280,
         "wires": [
             [
@@ -7856,7 +7846,7 @@
         "z": "88cec2c0.c8804",
         "name": "Relative to Testnet History",
         "info": "",
-        "x": 390,
+        "x": 150,
         "y": 1000,
         "wires": []
     },
@@ -7867,7 +7857,7 @@
         "name": "Relative to Mainnet History",
         "info": "",
         "x": 150,
-        "y": 40,
+        "y": 160,
         "wires": []
     },
     {
@@ -8338,8 +8328,8 @@
         "links": [
             "4aad4ee9.9d408"
         ],
-        "x": 195,
-        "y": 640,
+        "x": 175,
+        "y": 580,
         "wires": [
             [
                 "7c488f20.eb82d",
@@ -9658,7 +9648,7 @@
         "topic": "Almost There...",
         "name": "Attempting to Create and Deploy Interface.",
         "x": 1990,
-        "y": 520,
+        "y": 600,
         "wires": []
     },
     {
@@ -9693,7 +9683,7 @@
         "topic": "Error",
         "name": "Missing: stxprivkey",
         "x": 1510,
-        "y": 660,
+        "y": 700,
         "wires": []
     },
     {
@@ -9826,7 +9816,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1100,
-        "y": 1300,
+        "y": 1160,
         "wires": []
     },
     {
@@ -9922,7 +9912,7 @@
         "type": "function",
         "z": "613e85c9.c6210c",
         "name": "deploy ft-mint to network (mainnet)",
-        "func": "const ftname = global.get(\"xftname\");// or \"sip-10-ft-standard\";//gathered from global\n\nconst claritybody = msg.payload; //gathered from the contents of the clarity contract via prior node\n\nconst senderKey = global.get('stxprivkey');\n\n// for testnet, use `StacksTestnet()`\nconst network = new stacksNetwork.StacksMainnet();\n\nconst txOptions = {\n  contractName: ftname,\n  codeBody: claritybody,\n  senderKey,\n  network,\n};\n\n\nconst transaction = await stacksTransactions.makeContractDeploy(txOptions);\n\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\n\nmsg.blockchain = broadcastTxn;\nmsg.txoptions = txOptions;\n\nreturn msg;",
+        "func": "const ftname = global.get(\"xftname\");// or \"sip-10-ft-standard\";//gathered from global\n\nconst claritybody = msg.payload; //gathered from the contents of the clarity contract via prior node\n\nconst senderKey = global.get('stxprivkey');\n\n// for testnet, use `StacksTestnet()`\nconst network = new stacksNetwork.StacksMainnet();\n\nconst txOptions = {\n  contractName: ftname,\n  codeBody: claritybody,\n  senderKey,\n  network,\n};\n\n\nconst transaction = await stacksTransactions.makeContractDeploy(txOptions);\n\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\n\nmsg.blockchain = \"0x\" + broadcastTxn; //tx id\nmsg.txoptions = txOptions;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9980,7 +9970,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2200,
+        "x": 2340,
         "y": 1260,
         "wires": []
     },
@@ -9997,7 +9987,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2190,
+        "x": 2330,
         "y": 1200,
         "wires": []
     },
@@ -10052,40 +10042,6 @@
             [
                 "58b1252b.ab5aec"
             ]
-        ]
-    },
-    {
-        "id": "5c41297d.7e27c8",
-        "type": "function",
-        "z": "613e85c9.c6210c",
-        "name": "setup clarity ft contract file (for testnet) (checkpoint)",
-        "func": "const ftnameraw = msg.payload.ftname;///\nconst ftmax = msg.payload.ftmax;///\nconst ftminter = global.get(\"depositaddress\");///set the minter as the primary address\nconst ftsymbol = msg.payload.ftsymbol;///might want to just snip and uppercase the first 3 characters of the ftname\nconst fturi = \"none\";//msg.payload.fturi;//needs additional integration with stacks storage component.\n\nconst ftnr = ftnameraw;\nconst ftname = ftnr.toLowerCase();\n\n\n//take the inputs and construct the Clarity contract file contents\nmsg.payload = \";;;; Mint Fungible Tokens via Dapparatus and send supply to minter\\n\" +\n                \"(define-constant ERR-UNAUTHORIZED u1)\\n\"+\n                \"(define-constant minter '\" + ftminter + \")\\n\" +\n                \"(define-fungible-token \" + ftname + \" u\" + ftmax + \")\\n\" +\n                \"(ft-mint? \" + ftname + \" u\" + ftmax + \" minter)\\n\" +\n                \"\\n\" +\n                \";;;;;SIP 010;;;;;\\n\" +\n                \"(impl-trait .ft-trait.ft-trait)\\n\" +\n                \"(define-trait ft-trait\\n\" +\n                \" (\\n\" +\n                \"    ;; Transfer from the caller to a new principal\\n\" +\n                \"   (define-public (transfer (amount uint) (sender principal) (recipient principal))\\n\" +\n                \"       (begin\\n\" +\n                \"           (asserts! (is-eq from tx-sender)\\n\" +\n                \"               (err ERR-UNAUTHORIZED))\\n\" +\n                \"           (ft-transfer? \" + ftname + \" amount sender recipient)))\\n\" +\n                \"\\n\" +\n                \"    ;; human readable name of the token\\n\" +\n                \"   (define-read-only (get-name) (ok \\\"\" + ftnameraw + \"\\\"))\\n\" +\n                \"\\n\" +\n                \"    ;; ticker symbol, or empty if none\\n\" +\n                \"   (define-read-only (get-symbol) (ok \\\"\" + ftsymbol + \"\\\"))\\n\" +              \n                \"\\n\" +\n                \"    ;; number of decimals used\\n\" +\n                \"   (define-read-only (get-decimals) (ok u6))\\n\" +                  \n                \"\\n\" +\n                \"    ;; balance of the passed principal\\n\" +\n                \"   (define-read-only (get-balance-of (account principal)) (ok (ft-get-balance \" + ftname + \" account)))\\n\" +\n                \"\\n\" +\n                \"    ;; max total supply\\n\" +\n                \"   (define-read-only (get-total-supply) (ok (ft-get-supply \" + ftname + \")))\\n\" +\n                \"\\n\" +\n                \"    ;; optional URI that represents metadata of this token\\n\" +\n                \"   (define-read-only (get-token-uri) (ok none)))\";\n               \nmsg.filename = ftnameraw + \".clar\"; // name the contract same as input custom token name\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 630,
-        "y": 1280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "94d4a978.c276e8",
-        "type": "function",
-        "z": "613e85c9.c6210c",
-        "name": "setup clarity ft contract file (for mainnet) ",
-        "func": "const ftname = msg.payload.ftname;///\nconst ftmax = msg.payload.ftmax;///\nconst ftminter = global.get(\"depositaddress\");///set the minter as the primary address\nconst ftsymbol = msg.payload.ftsymbol;///might want to just snip and uppercase the first 3 characters of the ftname\nconst fturi = \"none\";//msg.payload.fturi;//needs additional integration with stacks storage component.\n\n//take the inputs and construct the Clarity contract file contents\nmsg.payload = \";;;; Mint Fungible Tokens via Dapparatus and send supply to minter\\n\" +\n                \"(define-constant ERR-UNAUTHORIZED u3)\\n\"+\n                \"(define-constant minter '\" + ftminter + \")\\n\" +\n                \"(define-fungible-token \" + ftname + \" u\" + ftmax + \")\\n\" +\n                \"(ft-mint? \" + ftname + \" u\" + ftmax + \" minter)\\n\" +\n                \"\\n\" +\n                \";;;;;SIP 010;;;;;\\n\" +\n                \"(impl-trait 'SP1TA84JTP4YRFWBK7PYKBA33H3YB60XP654RAR7M.ft-trait)\\n\" +\n                \"(define-trait ft-trait\\n\" +\n                \" (\\n\" +\n                \"    ;; Transfer from the caller to a new principal\\n\" +\n                \"   (define-public (transfer (amount uint) (sender principal) (recipient principal))\\n\" +\n                \"       (begin\\n\" +\n                \"           (asserts! (is-eq from tx-sender)\\n\" +\n                \"               (err ERR-UNAUTHORIZED))\\n\" +\n                \"           (ft-transfer? \" + ftname + \" amount sender recipient)))\\n\" +\n                \"\\n\" +\n                \"    ;; human readable name of the token\\n\" +\n                \"   (define-public (get-name) (ok \\\"\" + ftname + \"\\\"))\\n\" +\n                \"\\n\" +\n                \"    ;; ticker symbol, or empty if none\\n\" +\n                \"   (define-public (get-symbol) (ok \\\"\" + ftsymbol + \"\\\"))\\n\" +              \n                \"\\n\" +\n                \"    ;; number of decimals used\\n\" +\n                \"   (define-public (get-decimals) (ok u6))\\n\" +                  \n                \"\\n\" +\n                \"    ;; balance of the passed principal\\n\" +\n                \"   (define-public (get-balance-of (user principal)) (ok (ft-get-balance \" + ftname + \" user)))\\n\" +\n                \"\\n\" +\n                \"    ;; current total supply (which does not need to be a constant)\\n\" +\n                \"   (define-public (get-total-supply) (ok u\" + ftmax + \"))\\n\" +\n                \"\\n\" +\n                \"    ;; optional URI that represents metadata of this token\\n\" +\n                \"   (define-public (get-token-uri) (ok none))))\";\n               \nmsg.filename = ftname + \".clar\"; // name the contract same as input custom token name\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 1320,
-        "wires": [
-            []
         ]
     },
     {
@@ -10452,27 +10408,6 @@
         ]
     },
     {
-        "id": "f1161ad8.88b638",
-        "type": "ui_template",
-        "z": "613e85c9.c6210c",
-        "d": true,
-        "group": "40b29c84.e02da4",
-        "name": "General Minting Output",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "format": "<h3>General Minting Output:</h3>\n<p>{{msg.payload}}</p>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 170,
-        "y": 780,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "17153ca0.6f8f03",
         "type": "debug",
         "z": "613e85c9.c6210c",
@@ -10539,7 +10474,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2140,
+        "x": 2280,
         "y": 1160,
         "wires": [
             []
@@ -10554,13 +10489,13 @@
         "order": 2,
         "width": 0,
         "height": 0,
-        "format": "<small>In order to Mint Fungible Tokens or NFT's, you'll need to deploy a relative Trait contract first.</small>\n<small>eg once a relative Trait contract is established as confirmed, you can begin Minting</small>\n<br>\n<small>Regarding Mainnet: You need 2 Trait contracts, 1 for Fungible Tokens, 1 for NFT's</small>\n<small>Regarding Testnet: You need 2 Trait contracts, 1 for Fungible Tokens, 1 for NFT's</small>",
+        "format": "<small>In order to Mint Fungible Tokens or NFT's you need to deploy a relative Trait contract first.</small>\n<small><small>(Unless you statically assign trait via Editor)</small></small>\n<br>\n<small>Once a relative Trait contract is Confirmed, you can access the relative Minting form.</small>\n<br>\n<small>Regarding Mainnet: You need 2 Trait contracts, 1 for Fungible Tokens, 1 for NFT's</small>\n<small>Regarding Testnet: You need 2 Trait contracts, 1 for Fungible Tokens, 1 for NFT's</small>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 170,
-        "y": 820,
+        "x": 1350,
+        "y": 80,
         "wires": [
             []
         ]
@@ -10706,8 +10641,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1850,
-        "y": 860,
+        "x": 1910,
+        "y": 940,
         "wires": [
             [
                 "1afa4aa9.95a465",
@@ -10735,7 +10670,7 @@
         "to": "",
         "reg": false,
         "x": 1550,
-        "y": 860,
+        "y": 940,
         "wires": [
             [
                 "cb4c5bf1.d71ae8"
@@ -10756,8 +10691,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2290,
-        "y": 860,
+        "x": 2350,
+        "y": 940,
         "wires": [
             []
         ]
@@ -10806,7 +10741,7 @@
         "z": "613e85c9.c6210c",
         "name": "",
         "events": "all",
-        "x": 2100,
+        "x": 2120,
         "y": 940,
         "wires": [
             []
@@ -11010,7 +10945,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 130,
+        "x": 150,
         "y": 240,
         "wires": [
             [
@@ -11031,7 +10966,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2240,
+        "x": 2320,
         "y": 700,
         "wires": []
     },
@@ -11048,7 +10983,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2240,
+        "x": 2320,
         "y": 640,
         "wires": []
     },
@@ -11207,8 +11142,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1630,
-        "y": 80,
+        "x": 1890,
+        "y": 160,
         "wires": [
             [
                 "2ed8f84d.a57bc8",
@@ -11235,8 +11170,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1290,
-        "y": 80,
+        "x": 1490,
+        "y": 160,
         "wires": [
             [
                 "82ecf98d.d7c048"
@@ -11257,8 +11192,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2030,
-        "y": 80,
+        "x": 2290,
+        "y": 160,
         "wires": [
             []
         ]
@@ -11387,5 +11322,32 @@
         "x": 1180,
         "y": 1080,
         "wires": []
+    },
+    {
+        "id": "b921a688.20e248",
+        "type": "comment",
+        "z": "613e85c9.c6210c",
+        "name": "Relative to Minting Nav",
+        "info": "",
+        "x": 160,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "e2ab2101.1c932",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "setup clarity ft contract file (Mainnet)",
+        "func": "const ftnameraw = msg.payload.ftname;///\nconst ftsymbol = msg.payload.ftsymbol;///might want to just snip and uppercase the first 3 characters of the ftname\nconst ftmax = msg.payload.ftmax;///\nconst ftminter = global.get(\"depositaddress\");///set the minter as the primary address\nconst fturi = msg.payload.fturi;//needs additional integration with stacks storage component.\nconst ftname = ftnameraw.toLowerCase();\n\n\n//take the inputs and construct the Clarity contract file contents\nmsg.payload =   \";;;; Define interface traits per sibling contract\\n\"+\n                \"(impl-trait .ft-trait.ft-trait)\\n\"+\n                \"\\n\"+\n                \";;;; Mint Fungible Tokens via Dapparatus and send supply to minter\\n\"+\n                \"(define-constant err-unauthorized u1)\\n\"+\n                \"(define-constant minter '\" + ftminter + \")\\n\" +\n                \"(define-fungible-token \" + ftname + \" u\" + ftmax + \")\\n\" +\n                \"(ft-mint? \" + ftname + \" u\" + ftmax + \" minter)\\n\" +\n                \"\\n\"+\n                \"(define-read-only (get-total-supply)\\n\"+\n                \"  (ok (ft-get-supply \" + ftname + \"))\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-name)\\n\"+\n                \"  (ok \\\"\" + ftname + \"\\\")\\n\" +\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-symbol)\\n\"+\n                \"  (ok \\\"\" + ftsymbol + \"\\\")\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-decimals)\\n\"+\n                \"  (ok u6)\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-balance-of (account principal))\\n\"+\n                \"  (ok (ft-get-balance \" + ftname + \" account))\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-public (transfer (amount uint) (sender principal) (recipient principal) (memo (optional (buff 34))))\\n\"+\n                \"  (if (is-eq tx-sender sender)\\n\"+\n                \"    (begin\\n\"+\n                \"      (try! (ft-transfer? \" + ftname + \" amount sender recipient))\\n\"+\n                \"      (print memo)\\n\"+\n                \"      (ok true)\\n\"+\n                \"    )\\n\"+\n                \"   (err u4)))\\n\"+\n                \"\\n\"+                \n                \"(define-read-only (get-token-uri)\\n\"+\n                \"  (ok (some u\\\"\" +  fturi + \"\\\"))\\n\"+\n                \")\\n\";\n               \nmsg.filename = ftnameraw + \".clar\"; // name the contract same as input custom token name\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1160,
+        "wires": [
+            []
+        ]
     }
 ]
