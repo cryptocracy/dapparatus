@@ -5119,7 +5119,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 1540,
+        "y": 1580,
         "wires": [
             [
                 "e4c02840.a11e78"
@@ -5142,7 +5142,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "x": 170,
-        "y": 1540,
+        "y": 1580,
         "wires": [
             [
                 "177c7cea.453623"
@@ -5171,7 +5171,7 @@
             "2a3b6832.a2bfd8"
         ],
         "x": 75,
-        "y": 1540,
+        "y": 1580,
         "wires": [
             [
                 "92252ed1.e85de"
@@ -5182,18 +5182,19 @@
         "id": "4fdb78f4.9a1728",
         "type": "ui_template",
         "z": "53028f3b.590b5",
+        "d": true,
         "group": "20a23299.1e38be",
         "name": "Transaction List (Testnet)",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
-        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>ID</th>\n        <th>Fee</th>\n        <th>Type</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://pbs.twimg.com/profile_images/1321461825758744576/4e3xAKz2_400x400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View in Explorer</a></small></small></small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td>{{obj.tx_type}}</td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "format": "<h3>Confirmed Transactions</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Type</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://pbs.twimg.com/profile_images/1321461825758744576/4e3xAKz2_400x400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View in Explorer</a></small></small></small></td>\n        <td>{{obj.tx_type}}</td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 690,
-        "y": 1660,
+        "y": 1700,
         "wires": [
             []
         ]
@@ -5202,12 +5203,13 @@
         "id": "c5dfe14b.c2cbf",
         "type": "ui_template",
         "z": "53028f3b.590b5",
+        "d": true,
         "group": "c75785b2.7363d8",
         "name": "Transaction List (Mainnet)",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
-        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>ID</th>\n        <th>Fee</th>\n        <th>Type</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://pbs.twimg.com/profile_images/1321461825758744576/4e3xAKz2_400x400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View In Explorer</a></small></small></small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td>{{obj.tx_type}}</td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "format": "<h3>Confirmed Transactions</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Type</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://pbs.twimg.com/profile_images/1321461825758744576/4e3xAKz2_400x400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View In Explorer</a></small></small></small></td>\n        <td>{{obj.tx_type}}</td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -5268,7 +5270,7 @@
             "76ca3c24.4327d4"
         ],
         "x": 435,
-        "y": 1660,
+        "y": 1700,
         "wires": [
             [
                 "4fdb78f4.9a1728"
@@ -5350,7 +5352,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 730,
-        "y": 1620,
+        "y": 1660,
         "wires": [
             [
                 "9e5990a.c851f7"
@@ -5369,7 +5371,7 @@
         "finalize": "",
         "libs": [],
         "x": 1010,
-        "y": 1620,
+        "y": 1660,
         "wires": [
             [
                 "54fc3f11.12cfe"
@@ -5390,7 +5392,7 @@
         "proxy": "",
         "authType": "",
         "x": 1320,
-        "y": 1620,
+        "y": 1660,
         "wires": [
             [
                 "fd33c59a.3d90d8"
@@ -5406,7 +5408,7 @@
         "action": "",
         "pretty": false,
         "x": 1530,
-        "y": 1640,
+        "y": 1680,
         "wires": [
             [
                 "64d280dc.e00de",
@@ -5436,7 +5438,7 @@
         "repair": false,
         "outputs": 3,
         "x": 1690,
-        "y": 1640,
+        "y": 1680,
         "wires": [
             [
                 "37360f82.9c624"
@@ -5464,7 +5466,7 @@
         "topic": "Faucet Error",
         "name": "Error",
         "x": 1870,
-        "y": 1660,
+        "y": 1700,
         "wires": [
             []
         ]
@@ -5484,7 +5486,7 @@
         "topic": "Faucet Failure",
         "name": "Failure",
         "x": 1870,
-        "y": 1620,
+        "y": 1660,
         "wires": [
             []
         ]
@@ -5504,7 +5506,7 @@
         "topic": "Faucet Success",
         "name": "Success",
         "x": 1880,
-        "y": 1580,
+        "y": 1620,
         "wires": [
             []
         ]
@@ -5523,7 +5525,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1710,
-        "y": 1560,
+        "y": 1600,
         "wires": []
     },
     {
@@ -10059,7 +10061,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 660,
-        "y": 1540,
+        "y": 1580,
         "wires": [
             []
         ]
@@ -10160,7 +10162,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 710,
-        "y": 1580,
+        "y": 1620,
         "wires": [
             [
                 "a9773270.31add"
@@ -10229,7 +10231,7 @@
         "topic": "Testnet QR Code",
         "name": "QR Code",
         "x": 1120,
-        "y": 1580,
+        "y": 1620,
         "wires": [
             []
         ]
@@ -10265,7 +10267,7 @@
         "finalize": "",
         "libs": [],
         "x": 940,
-        "y": 1580,
+        "y": 1620,
         "wires": [
             [
                 "389d4038.22603"
@@ -10646,7 +10648,8 @@
         "wires": [
             [
                 "1afa4aa9.95a465",
-                "ab72e34b.4d54d"
+                "ab72e34b.4d54d",
+                "5386b8d0.5343f8"
             ]
         ]
     },
@@ -10686,7 +10689,7 @@
         "order": 5,
         "width": 13,
         "height": "2",
-        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"View in Explorer\">{{obj.tx_id}}</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View in Explorer</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -11147,7 +11150,8 @@
         "wires": [
             [
                 "2ed8f84d.a57bc8",
-                "82b073a2.33169"
+                "82b073a2.33169",
+                "322ef057.2b9ab"
             ]
         ]
     },
@@ -11187,7 +11191,7 @@
         "order": 5,
         "width": 13,
         "height": "2",
-        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"View in Explorer\">{{obj.tx_id}}</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View in Explorer</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -11349,5 +11353,101 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "a4a5fcfc.10dc1",
+        "type": "ui_template",
+        "z": "53028f3b.590b5",
+        "group": "c75785b2.7363d8",
+        "name": "Transaction Mempool (Mainnet)",
+        "order": 1,
+        "width": 13,
+        "height": "2",
+        "format": "<h3>Pending Transactions</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View In Explorer</a></small></small></small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 670,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "be72974f.b7bde8",
+        "type": "ui_template",
+        "z": "53028f3b.590b5",
+        "group": "20a23299.1e38be",
+        "name": "Transaction Mempool (Testnet)",
+        "order": 1,
+        "width": 13,
+        "height": "2",
+        "format": "<h3>Pending Transactions</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"View in Explorer\">{{obj.tx_id}}</a></small></small></small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 670,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "322ef057.2b9ab",
+        "type": "link out",
+        "z": "88cec2c0.c8804",
+        "name": "pass pending mainnet transactions",
+        "links": [
+            "89c35f7.d92aaa"
+        ],
+        "x": 2175,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "89c35f7.d92aaa",
+        "type": "link in",
+        "z": "53028f3b.590b5",
+        "name": "get pending mainnet transactions",
+        "links": [
+            "322ef057.2b9ab"
+        ],
+        "x": 435,
+        "y": 1500,
+        "wires": [
+            [
+                "a4a5fcfc.10dc1"
+            ]
+        ]
+    },
+    {
+        "id": "79c07226.a6a36c",
+        "type": "link in",
+        "z": "53028f3b.590b5",
+        "name": "get pending testnet transactions",
+        "links": [
+            "5386b8d0.5343f8"
+        ],
+        "x": 435,
+        "y": 1740,
+        "wires": [
+            [
+                "be72974f.b7bde8"
+            ]
+        ]
+    },
+    {
+        "id": "5386b8d0.5343f8",
+        "type": "link out",
+        "z": "88cec2c0.c8804",
+        "name": "pass pending testnet transactions",
+        "links": [
+            "79c07226.a6a36c"
+        ],
+        "x": 2235,
+        "y": 980,
+        "wires": []
     }
 ]
