@@ -446,7 +446,7 @@
         "type": "ui_group",
         "name": "Mainnet Confirmed Transactions",
         "tab": "12ca92d1.ac993d",
-        "order": 3,
+        "order": 4,
         "disp": true,
         "width": "13",
         "collapse": true
@@ -832,6 +832,16 @@
         "order": 3,
         "width": 1,
         "height": 1
+    },
+    {
+        "id": "983babaa.5192c8",
+        "type": "ui_group",
+        "name": "Mainnet Pending Transactions",
+        "tab": "12ca92d1.ac993d",
+        "order": 3,
+        "disp": true,
+        "width": "13",
+        "collapse": true
     },
     {
         "id": "8ff35ce4.a1acd",
@@ -1437,7 +1447,7 @@
         "z": "53028f3b.590b5",
         "name": "ui change",
         "events": "change",
-        "x": 780,
+        "x": 1660,
         "y": 1040,
         "wires": [
             []
@@ -4248,26 +4258,9 @@
         "y": 1080,
         "wires": [
             [
-                "b2229dc1.9782"
+                "281b6ffc.c62c5"
             ]
         ]
-    },
-    {
-        "id": "b2229dc1.9782",
-        "type": "debug",
-        "z": "53028f3b.590b5",
-        "name": "mainnet send debug",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 1080,
-        "wires": []
     },
     {
         "id": "57553aff.199e04",
@@ -4499,8 +4492,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1660,
-        "y": 160,
+        "x": 1560,
+        "y": 120,
         "wires": []
     },
     {
@@ -4969,7 +4962,8 @@
         "y": 1040,
         "wires": [
             [
-                "c5f3e664.d8ea68"
+                "c5f3e664.d8ea68",
+                "144af316.1c1b2d"
             ]
         ]
     },
@@ -5209,7 +5203,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 690,
-        "y": 1680,
+        "y": 1660,
         "wires": [
             []
         ]
@@ -5229,7 +5223,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 690,
-        "y": 1480,
+        "y": 1460,
         "wires": [
             []
         ]
@@ -5366,7 +5360,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 730,
-        "y": 1640,
+        "y": 1620,
         "wires": [
             [
                 "9e5990a.c851f7"
@@ -5385,7 +5379,7 @@
         "finalize": "",
         "libs": [],
         "x": 1010,
-        "y": 1640,
+        "y": 1620,
         "wires": [
             [
                 "54fc3f11.12cfe"
@@ -5406,7 +5400,7 @@
         "proxy": "",
         "authType": "",
         "x": 1320,
-        "y": 1640,
+        "y": 1620,
         "wires": [
             [
                 "fd33c59a.3d90d8"
@@ -5570,7 +5564,7 @@
         "y": 1120,
         "wires": [
             [
-                "13cb51b2.92190e"
+                "58624acc.697034"
             ]
         ]
     },
@@ -5735,7 +5729,7 @@
         "y": 80,
         "wires": [
             [
-                "82b073a2.33169"
+                "8a5e2fda.f7863"
             ]
         ]
     },
@@ -5752,8 +5746,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1340,
-        "y": 80,
+        "x": 2020,
+        "y": 40,
         "wires": []
     },
     {
@@ -5786,7 +5780,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
+        "x": 1260,
         "y": 1120,
         "wires": []
     },
@@ -8672,8 +8666,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2320,
-        "y": 1120,
+        "x": 2440,
+        "y": 560,
         "wires": [
             []
         ]
@@ -8689,8 +8683,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1700,
-        "y": 1120,
+        "x": 1820,
+        "y": 560,
         "wires": [
             [
                 "ad375ff5.e9e08"
@@ -8708,8 +8702,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 1930,
-        "y": 1120,
+        "x": 2050,
+        "y": 560,
         "wires": [
             [
                 "cdb580e7.4f70c"
@@ -8737,8 +8731,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 1450,
-        "y": 1120,
+        "x": 1570,
+        "y": 560,
         "wires": [
             [
                 "28b4658a.cfab1a"
@@ -8749,10 +8743,10 @@
         "id": "1db87e10.b8fff2",
         "type": "comment",
         "z": "53028f3b.590b5",
-        "name": "Relative to Balance Group",
+        "name": "Relative to Mainnet Balance Group",
         "info": "",
-        "x": 1710,
-        "y": 1080,
+        "x": 1860,
+        "y": 520,
         "wires": []
     },
     {
@@ -8763,8 +8757,8 @@
         "links": [
             "ef111e21.a6a"
         ],
-        "x": 1495,
-        "y": 1020,
+        "x": 1635,
+        "y": 600,
         "wires": [
             [
                 "28b4658a.cfab1a",
@@ -8792,8 +8786,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 2110,
-        "y": 1120,
+        "x": 2230,
+        "y": 560,
         "wires": [
             [
                 "e06a50ef.09bb9",
@@ -8813,8 +8807,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2270,
-        "y": 1080,
+        "x": 2390,
+        "y": 520,
         "wires": []
     },
     {
@@ -10135,8 +10129,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 90,
-        "y": 1720,
+        "x": 400,
+        "y": 1820,
         "wires": [
             []
         ]
@@ -10585,8 +10579,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2320,
-        "y": 1220,
+        "x": 2440,
+        "y": 660,
         "wires": [
             []
         ]
@@ -10602,8 +10596,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1700,
-        "y": 1220,
+        "x": 1820,
+        "y": 660,
         "wires": [
             [
                 "342f0922.631506"
@@ -10621,8 +10615,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 1930,
-        "y": 1220,
+        "x": 2050,
+        "y": 660,
         "wires": [
             [
                 "2352195a.432c36"
@@ -10650,8 +10644,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 1450,
-        "y": 1220,
+        "x": 1570,
+        "y": 660,
         "wires": [
             [
                 "292375c2.e143ca"
@@ -10662,10 +10656,10 @@
         "id": "f74c3977.a55148",
         "type": "comment",
         "z": "53028f3b.590b5",
-        "name": "Relative to Balance Group",
+        "name": "Relative to Testnet Balance Group",
         "info": "",
-        "x": 1710,
-        "y": 1180,
+        "x": 1860,
+        "y": 620,
         "wires": []
     },
     {
@@ -10676,8 +10670,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 2110,
-        "y": 1220,
+        "x": 2230,
+        "y": 660,
         "wires": [
             [
                 "8dc78c92.ae22a",
@@ -10697,8 +10691,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2270,
-        "y": 1180,
+        "x": 2390,
+        "y": 620,
         "wires": []
     },
     {
@@ -10716,8 +10710,8 @@
         "y": 860,
         "wires": [
             [
-                "ab72e34b.4d54d",
-                "1afa4aa9.95a465"
+                "1afa4aa9.95a465",
+                "ab72e34b.4d54d"
             ]
         ]
     },
@@ -11099,6 +11093,299 @@
         "info": "",
         "x": 220,
         "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "857928f2.c5fdb8",
+        "type": "ui_toast",
+        "z": "53028f3b.590b5",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Show In History",
+        "cancel": "Send Another Transaction",
+        "raw": false,
+        "topic": "",
+        "name": "Transaction ID Popup",
+        "x": 1020,
+        "y": 1080,
+        "wires": [
+            [
+                "f47da2ef.a7faa",
+                "b2229dc1.9782"
+            ]
+        ]
+    },
+    {
+        "id": "281b6ffc.c62c5",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "txid to payload",
+        "func": "var txid = msg.blockchain;\n\nmsg.payload = txid;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1080,
+        "wires": [
+            [
+                "857928f2.c5fdb8"
+            ]
+        ]
+    },
+    {
+        "id": "58624acc.697034",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "txid to payload",
+        "func": "var txid = msg.blockchain;\n\nmsg.payload = txid;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1120,
+        "wires": [
+            [
+                "48704d74.4776c4"
+            ]
+        ]
+    },
+    {
+        "id": "48704d74.4776c4",
+        "type": "ui_toast",
+        "z": "53028f3b.590b5",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Show In History",
+        "cancel": "Send Another Transaction",
+        "raw": false,
+        "topic": "",
+        "name": "Transaction ID Popup",
+        "x": 1020,
+        "y": 1120,
+        "wires": [
+            [
+                "13cb51b2.92190e",
+                "1817ca3f.3d8d66"
+            ]
+        ]
+    },
+    {
+        "id": "b2229dc1.9782",
+        "type": "debug",
+        "z": "53028f3b.590b5",
+        "name": "mainnet send debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "82ecf98d.d7c048",
+        "type": "function",
+        "z": "88cec2c0.c8804",
+        "name": "filter where tx_status is equal to pending (mainnet)",
+        "func": "const obj = msg.payload;\nconst depositaddress = global.get(\"depositaddress\"); //use \"mainnetdepositaddress\" for testnet\n\nconst filtered = obj.filter(by => by.tx_status === \"pending\");\n\nmsg.payload = filtered;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1630,
+        "y": 80,
+        "wires": [
+            [
+                "2ed8f84d.a57bc8",
+                "82b073a2.33169"
+            ]
+        ]
+    },
+    {
+        "id": "8a5e2fda.f7863",
+        "type": "change",
+        "z": "88cec2c0.c8804",
+        "name": "move results",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.results",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1290,
+        "y": 80,
+        "wires": [
+            [
+                "82ecf98d.d7c048"
+            ]
+        ]
+    },
+    {
+        "id": "2ed8f84d.a57bc8",
+        "type": "ui_template",
+        "z": "88cec2c0.c8804",
+        "group": "983babaa.5192c8",
+        "name": "Transaction Mempool (Mainnet)",
+        "order": 5,
+        "width": 13,
+        "height": "2",
+        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"View in Explorer\">{{obj.tx_id}}</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 2030,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "79453bc7.c974c4",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "pass to Registrar Tab",
+        "func": "msg.payload = {\"tab\":\"History\"};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 1040,
+        "wires": [
+            [
+                "dbe51251.9596a"
+            ]
+        ]
+    },
+    {
+        "id": "f47da2ef.a7faa",
+        "type": "switch",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Show In History",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1210,
+        "y": 1040,
+        "wires": [
+            [
+                "79453bc7.c974c4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1817ca3f.3d8d66",
+        "type": "switch",
+        "z": "53028f3b.590b5",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Show In History",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1210,
+        "y": 1160,
+        "wires": [
+            [
+                "dd28c298.ca6d6"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c4799edb.4f29a",
+        "type": "ui_ui_control",
+        "z": "53028f3b.590b5",
+        "name": "ui change",
+        "events": "change",
+        "x": 1660,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd28c298.ca6d6",
+        "type": "function",
+        "z": "53028f3b.590b5",
+        "name": "pass to Registrar Tab",
+        "func": "msg.payload = {\"tab\":\"History\"};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 1160,
+        "wires": [
+            [
+                "c4799edb.4f29a"
+            ]
+        ]
+    },
+    {
+        "id": "144af316.1c1b2d",
+        "type": "debug",
+        "z": "88cec2c0.c8804",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "url",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 1080,
         "wires": []
     }
 ]
