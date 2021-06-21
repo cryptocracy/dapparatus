@@ -336,7 +336,7 @@ function createConsole() {
     if (conWindow) { conWindow.show(); return; }
     // Create the hidden console window
     conWindow = new BrowserWindow({
-        title: "Node-RED Console",
+        title: "Dapparatus Console",
         width: 800,
         height: 600,
         icon: path.join(__dirname, nrIcon),
@@ -372,14 +372,21 @@ function createConsole() {
 // Create the main browser window
 function createWindow() {
     mainWindow = new BrowserWindow({
-        title: "Node-RED",
-        width: 1024,
-        height: 768,
+        title: "Dapparatus",
+		width: 800,
+		height: 800,
+		maxWidth: 960,
+		minWidth: 800,
+		maxHeight: 800,
+		minHeight: 800,
+		opacity: 0.96,
+		maximizable: false,
+		resizable: true,
         icon: path.join(__dirname, nrIcon),
-        fullscreenable: true,
+        fullscreenable: false,
         autoHideMenuBar: false,
         // titleBarStyle: "hidden",
-        kiosk: kioskMode,
+        //kiosk: kioskMode,
         webPreferences: {
             nodeIntegration: false
         }
