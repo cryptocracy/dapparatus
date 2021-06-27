@@ -7,16 +7,16 @@
         "info": ""
     },
     {
-        "id": "42c07592.8d970c",
+        "id": "53028f3b.590b5",
         "type": "tab",
-        "label": "Feed",
+        "label": "Wallet",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "53028f3b.590b5",
+        "id": "42c07592.8d970c",
         "type": "tab",
-        "label": "Wallet",
+        "label": "Feed",
         "disabled": false,
         "info": ""
     },
@@ -35,18 +35,18 @@
         "info": ""
     },
     {
-        "id": "725ce57a.a25e4c",
-        "type": "tab",
-        "label": "Registrar",
-        "disabled": false,
-        "info": "Used to Register Names and Potentially Namespaces"
-    },
-    {
         "id": "88cec2c0.c8804",
         "type": "tab",
         "label": "History",
         "disabled": false,
         "info": ""
+    },
+    {
+        "id": "725ce57a.a25e4c",
+        "type": "tab",
+        "label": "Registrar",
+        "disabled": false,
+        "info": "Used to Register Names and Potentially Namespaces"
     },
     {
         "id": "95a1aad9.425808",
@@ -76,14 +76,14 @@
             "name": "theme-custom",
             "lightTheme": {
                 "default": "#0094CE",
-                "baseColor": "#121212",
+                "baseColor": "#ffffff",
                 "baseFont": "Copperplate,Copperplate Gothic Light,fantasy",
                 "edited": true,
                 "reset": false
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#f5de47",
+                "baseColor": "#000000",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
@@ -91,18 +91,18 @@
             "customTheme": {
                 "name": "Untitled Theme 1",
                 "default": "#4B7930",
-                "baseColor": "#4775ff",
+                "baseColor": "#0040ff",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "reset": false
             },
             "themeState": {
                 "base-color": {
-                    "default": "#4B7930",
-                    "value": "#4775ff",
+                    "default": "#23262f",
+                    "value": "#0040ff",
                     "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#4775ff",
+                    "value": "#0040ff",
                     "edited": false
                 },
                 "page-backgroundColor": {
@@ -114,8 +114,8 @@
                     "edited": true
                 },
                 "group-textColor": {
-                    "value": "#93aeff",
-                    "edited": false
+                    "value": "#0088ff",
+                    "edited": true
                 },
                 "group-borderColor": {
                     "value": "#000000",
@@ -130,7 +130,7 @@
                     "edited": true
                 },
                 "widget-backgroundColor": {
-                    "value": "#4775ff",
+                    "value": "#0040ff",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -142,11 +142,10 @@
                 }
             },
             "angularTheme": {
-                "primary": "teal",
-                "accents": "light-green",
-                "warn": "yellow",
-                "background": "light-green",
-                "palette": "light"
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
             }
         },
         "site": {
@@ -291,7 +290,7 @@
         "tab": "8a056a57.4af708",
         "order": 4,
         "disp": false,
-        "width": 13,
+        "width": "13",
         "collapse": false
     },
     {
@@ -596,15 +595,6 @@
         "collapse": false
     },
     {
-        "id": "6e95d98.02bd328",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "e5d0847b.1daa38",
-        "order": 2,
-        "width": 4,
-        "height": 1
-    },
-    {
         "id": "b3b6d501.7b6578",
         "type": "ui_spacer",
         "name": "spacer",
@@ -659,9 +649,9 @@
         "name": "Warning",
         "tab": "34217460.577dac",
         "order": 7,
-        "disp": true,
+        "disp": false,
         "width": "13",
-        "collapse": true
+        "collapse": false
     },
     {
         "id": "550c1706.5e1408",
@@ -834,6 +824,15 @@
         "collapse": true
     },
     {
+        "id": "35a284e7.db64dc",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "e5d0847b.1daa38",
+        "order": 2,
+        "width": "7",
+        "height": "2"
+    },
+    {
         "id": "8ff35ce4.a1acd",
         "type": "ui_form",
         "z": "53028f3b.590b5",
@@ -911,7 +910,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2280,
+        "x": 2260,
         "y": 600,
         "wires": [
             []
@@ -923,7 +922,7 @@
         "z": "613e85c9.c6210c",
         "group": "de35938.a16f97",
         "name": "TX Info",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "format": "{{msg.blockchain}}",
@@ -931,7 +930,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 720,
+        "x": 820,
         "y": 2040,
         "wires": [
             []
@@ -977,8 +976,8 @@
                 "rows": null
             },
             {
-                "label": "Image URL",
-                "value": "ftimage",
+                "label": "Token URI",
+                "value": "fturi",
                 "type": "text",
                 "required": true,
                 "rows": null
@@ -989,7 +988,7 @@
             "ftsymbol": "",
             "ftmax": "",
             "ftinfo": "",
-            "ftimage": ""
+            "fturi": ""
         },
         "payload": "",
         "submit": "Mint (Testnet)",
@@ -1173,7 +1172,7 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Deploy NFT Interface Contract",
+        "label": "Deploy NFT Interface Contract (Not Ready Yet)",
         "tooltip": "THIS IS REQUIRED ONCE (for NFT Minting)",
         "color": "",
         "bgcolor": "",
@@ -1182,7 +1181,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 190,
+        "x": 240,
         "y": 2000,
         "wires": [
             [
@@ -1913,7 +1912,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 90,
-        "y": 440,
+        "y": 480,
         "wires": [
             [
                 "ff4526e0.2d5308",
@@ -1929,7 +1928,7 @@
         "name": "Results by Name (Found)",
         "order": 3,
         "width": 13,
-        "height": 12,
+        "height": "7",
         "format": "<style>\n    img {\n      border-radius: 50%;\n    }\n</style>\n<div style=\"height: 140px;\">\n<img src=\"{{msg.payload[0].decodedToken.payload.claim.image[0].contentUrl}}\" width=\"140\"><br/>\n</div>\n<h3>{{msg.payload[0].decodedToken.payload.claim.name}}</h3>\n<p>{{msg.fqn}}</p>\n<p>{{msg.tipjar}}</p>\n<p>{{msg.payload[0].decodedToken.payload.claim.description}}</p>\n\n\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -2691,7 +2690,7 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": "2",
+        "onceDelay": "15",
         "topic": "",
         "payload": "",
         "payloadType": "date",
@@ -2908,7 +2907,6 @@
         "id": "873657ef.83d408",
         "type": "debug",
         "z": "53028f3b.590b5",
-        "d": true,
         "name": "Wallet Generate Debugger",
         "active": true,
         "tosidebar": true,
@@ -5298,7 +5296,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
+        "x": 590,
         "y": 2000,
         "wires": [
             [
@@ -5316,7 +5314,7 @@
         "chunk": false,
         "sendError": false,
         "encoding": "ascii",
-        "x": 720,
+        "x": 820,
         "y": 2000,
         "wires": [
             []
@@ -6348,12 +6346,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
+        "x": 670,
         "y": 320,
         "wires": [
             [
-                "f3fedaf8.77da78",
-                "4ee684e6.5b971c"
+                "4ee684e6.5b971c",
+                "f3fedaf8.77da78"
             ]
         ]
     },
@@ -6396,12 +6394,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
+        "x": 440,
         "y": 320,
         "wires": [
             [
-                "c6292cd.c3d33d",
-                "cb2266cf.3a47e8"
+                "cb2266cf.3a47e8",
+                "c6292cd.c3d33d"
             ]
         ]
     },
@@ -6579,8 +6577,8 @@
         "links": [
             "b1cd5ce4.1ae6e"
         ],
-        "x": 595,
-        "y": 280,
+        "x": 495,
+        "y": 260,
         "wires": []
     },
     {
@@ -6697,11 +6695,11 @@
             }
         ],
         "x": 330,
-        "y": 800,
+        "y": 840,
         "wires": [
             [
-                "e5fe8995.38a418",
-                "a3c85ec8.5d8ac"
+                "a3c85ec8.5d8ac",
+                "e5fe8995.38a418"
             ]
         ]
     },
@@ -6756,7 +6754,8 @@
         "y": 840,
         "wires": [
             [
-                "584ca307.dc6f4c"
+                "584ca307.dc6f4c",
+                "975d279b.c8dc48"
             ],
             [],
             []
@@ -6776,7 +6775,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 610,
-        "y": 780,
+        "y": 800,
         "wires": []
     },
     {
@@ -7029,7 +7028,7 @@
         "z": "725ce57a.a25e4c",
         "name": "buildRegisterNameTx documentation",
         "info": "https://blockstack.github.io/stacks.js/modules/bns.html#buildregisternametx",
-        "x": 1360,
+        "x": 1500,
         "y": 740,
         "wires": []
     },
@@ -7038,7 +7037,7 @@
         "type": "function",
         "z": "725ce57a.a25e4c",
         "name": "fqn register (Mainnet)",
-        "func": "const network = new stacksNetwork.StacksMainnet(); //or use Testnet\n\nconst name = global.get(\"tempfqn\");\nconst salt = \"example-salt\";\nconst zonefile = \"example-zonefile\";\nconst publicKey = global.get(\"depositaddress\");//or use testnetdepositaddress\n\nconst unsignedTX = await stacksBns.buildRegisterNameTX({ name, salt, zonefile, publicKey, network});\n\nmsg.payload = unsignedTX;\n//msg.blockchain = \"0x\" + unsignedTX;\n\nreturn msg;",
+        "func": "const network = new stacksNetwork.StacksMainnet(); //or use Testnet\n\nconst name = global.get(\"tempfqn\");\nconst salt = global.get(\"saltzero\");\nconst zonefile = \"\";\nconst publicKey = global.get(\"depositaddress\");//or use testnetdepositaddress\n\nconst unsignedTX = await stacksBns.buildRegisterNameTX({ name, salt, zonefile, publicKey, network});\n\nmsg.payload = unsignedTX;\n//msg.blockchain = \"0x\" + unsignedTX;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7053,12 +7052,12 @@
                 "module": "@stacks/bns"
             }
         ],
-        "x": 1380,
+        "x": 1520,
         "y": 800,
         "wires": [
             [
-                "346e6cdd.6762f4",
-                "cc381e3c.ed83b"
+                "cc381e3c.ed83b",
+                "346e6cdd.6762f4"
             ]
         ]
     },
@@ -7074,7 +7073,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1610,
+        "x": 1750,
         "y": 800,
         "wires": []
     },
@@ -7087,12 +7086,12 @@
         "order": 0,
         "width": "13",
         "height": "6",
-        "format": "<h3>Name Registration</h3>\n<p>{{msg.payload}}</p>\n",
+        "format": "<h3>Name Pending Confirmations</h3>\n<h4>{{msg.pendingfqn}}</h4>\n<p>{{msg.blockchain}}</p>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1660,
+        "x": 1800,
         "y": 840,
         "wires": [
             []
@@ -7134,7 +7133,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1670,
+        "x": 1550,
         "y": 760,
         "wires": [
             [
@@ -7148,7 +7147,7 @@
         "z": "725ce57a.a25e4c",
         "name": "",
         "events": "all",
-        "x": 1880,
+        "x": 1780,
         "y": 760,
         "wires": [
             []
@@ -7838,8 +7837,8 @@
         "z": "725ce57a.a25e4c",
         "name": "NOT DONE YET",
         "info": "Registestration function isn't fully wired yet\nwant to capture profile information in step wizard of prompts\nto form profile.json and upload to gaia storage\nthen generate a zonefile that has the pointer to the profile.json",
-        "x": 1410,
-        "y": 900,
+        "x": 1620,
+        "y": 960,
         "wires": []
     },
     {
@@ -8153,9 +8152,9 @@
         "z": "42c07592.8d970c",
         "group": "e5d0847b.1daa38",
         "name": "Deruptar Profile Avatar",
-        "order": 3,
-        "width": 13,
-        "height": 7,
+        "order": 1,
+        "width": "6",
+        "height": "6",
         "format": "<div style=\"position: relative; width: 284px; height: 284px;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/bg/{{msg.payload[0]}}_bg.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/skin/{{msg.payload[1]}}_skin.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/eyes/{{msg.payload[2]}}_eyes.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/teeth/{{msg.payload[3]}}_teeth.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hair/{{msg.payload[4]}}_hair.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/glasses/{{msg.payload[5]}}_glasses.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hat/{{msg.payload[6]}}_hat.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/chest/{{msg.payload[7]}}_chest.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n</div>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -8255,35 +8254,6 @@
         "wires": []
     },
     {
-        "id": "195bc25c.dc552e",
-        "type": "inject",
-        "z": "42c07592.8d970c",
-        "name": "true",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "30",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "2",
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 90,
-        "y": 480,
-        "wires": [
-            [
-                "50fe9d62.71ec54"
-            ]
-        ]
-    },
-    {
         "id": "9d8dbdfd.2285e",
         "type": "ui_button",
         "z": "42c07592.8d970c",
@@ -8345,10 +8315,10 @@
         "z": "42c07592.8d970c",
         "group": "e5d0847b.1daa38",
         "name": "Deruptar Profile Details",
-        "order": 1,
-        "width": 9,
-        "height": 1,
-        "format": "<small>Deruptar: {{msg.deruptar}}</small>\n<small>{{msg.depositaddress}}</small>\n",
+        "order": 3,
+        "width": "5",
+        "height": "2",
+        "format": "<small>{{msg.deruptar}}</small>\n<small><small><small>{{msg.depositaddress}}</small></small></small>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -8522,7 +8492,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 150,
+        "x": 130,
         "y": 960,
         "wires": [
             [
@@ -9070,43 +9040,14 @@
         "timer": "",
         "oldrc": false,
         "name": "",
-        "x": 600,
-        "y": 860,
+        "x": 540,
+        "y": 700,
         "wires": [
             [
                 "2ff8e49a.dda6bc"
             ],
             [],
             []
-        ]
-    },
-    {
-        "id": "1191ef0b.23a8d1",
-        "type": "inject",
-        "z": "de33bfc8.0ee0f",
-        "name": "trip static input",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "check Monolith.clar",
-        "payloadType": "str",
-        "x": 470,
-        "y": 780,
-        "wires": [
-            [
-                "89259028.7e432"
-            ]
         ]
     },
     {
@@ -9131,7 +9072,7 @@
         "type": "function",
         "z": "de33bfc8.0ee0f",
         "name": "setup cli args",
-        "func": "const ftname = msg.ftname;\n\nmsg.payload = \"check \" + ftname + \".clar\";\nreturn msg;",
+        "func": "const ftname = msg.ftname;\n\nmsg.payload = \"check \" + ftname;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9146,32 +9087,15 @@
         ]
     },
     {
-        "id": "7fca45fb.18982c",
-        "type": "function",
-        "z": "de33bfc8.0ee0f",
-        "name": "get globals",
-        "func": "msg.nettype = global.get(\"nettype\");\n//should output 0 or 128 per the set Network\n\nmsg.qrcodeinput = global.get(\"depositaddress\");\n//should output string of stx deposit address\n\nmsg.senderkey = global.get('stxprivkey');\n//get the global stx private key\n\nmsg.ftname = global.get(\"xftname\");\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 250,
-        "y": 860,
-        "wires": [
-            [
-                "42dfcd26.ec84c4"
-            ]
-        ]
-    },
-    {
         "id": "cc298fe2.ac09c",
         "type": "inject",
         "z": "de33bfc8.0ee0f",
-        "name": "trip dynamic input",
+        "name": "static input",
         "props": [
             {
-                "p": "payload"
+                "p": "ftname",
+                "v": "DERP.clar",
+                "vt": "str"
             },
             {
                 "p": "topic",
@@ -9183,13 +9107,11 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "x": 200,
-        "y": 780,
+        "y": 860,
         "wires": [
             [
-                "7fca45fb.18982c"
+                "42dfcd26.ec84c4"
             ]
         ]
     },
@@ -9283,9 +9205,7 @@
         "x": 95,
         "y": 860,
         "wires": [
-            [
-                "7fca45fb.18982c"
-            ]
+            []
         ]
     },
     {
@@ -9475,7 +9395,7 @@
         "repair": false,
         "outputs": 3,
         "x": 1700,
-        "y": 740,
+        "y": 760,
         "wires": [
             [],
             [
@@ -9610,7 +9530,7 @@
             }
         ],
         "x": 1960,
-        "y": 700,
+        "y": 720,
         "wires": [
             [
                 "13bdee36.3664b2"
@@ -9693,7 +9613,7 @@
         "type": "function",
         "z": "613e85c9.c6210c",
         "name": "setup clarity ft contract file (TESTNET)",
-        "func": "const ftnameraw = msg.payload.ftname;///\nconst ftsymbol = msg.payload.ftsymbol;///might want to just snip and uppercase the first 3 characters of the ftname\nconst ftmax = msg.payload.ftmax;///\nconst ftminter = global.get(\"testnetdepositaddress\");///set the minter as the primary address\nconst fturi = msg.payload.fturi;//needs additional integration with stacks storage component.\nconst ftname = ftnameraw.toLowerCase();\n\n\n//take the inputs and construct the Clarity contract file contents\nmsg.payload =   \";;;; Define interface traits per sibling contract\\n\"+\n                \"(impl-trait .ft-trait.ft-trait)\\n\"+\n                \"\\n\"+\n                \";;;; Mint Fungible Tokens via Dapparatus and send supply to minter\\n\"+\n                \"(define-constant err-unauthorized u1)\\n\"+\n                \"(define-constant minter '\" + ftminter + \")\\n\" +\n                \"(define-fungible-token \" + ftname + \" u\" + ftmax + \")\\n\" +\n                \"(ft-mint? \" + ftname + \" u\" + ftmax + \" minter)\\n\" +\n                \"\\n\"+\n                \"(define-read-only (get-total-supply)\\n\"+\n                \"  (ok (ft-get-supply \" + ftname + \"))\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-name)\\n\"+\n                \"  (ok \\\"\" + ftname + \"\\\")\\n\" +\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-symbol)\\n\"+\n                \"  (ok \\\"\" + ftsymbol + \"\\\")\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-decimals)\\n\"+\n                \"  (ok u6)\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-balance-of (account principal))\\n\"+\n                \"  (ok (ft-get-balance \" + ftname + \" account))\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-public (transfer (amount uint) (sender principal) (recipient principal) (memo (optional (buff 34))))\\n\"+\n                \"  (if (is-eq tx-sender sender)\\n\"+\n                \"    (begin\\n\"+\n                \"      (try! (ft-transfer? \" + ftname + \" amount sender recipient))\\n\"+\n                \"      (print memo)\\n\"+\n                \"      (ok true)\\n\"+\n                \"    )\\n\"+\n                \"   (err u4)))\\n\"+\n                \"\\n\"+                \n                \"(define-read-only (get-token-uri)\\n\"+\n                \"  (ok (some u\\\"\" +  fturi + \"\\\"))\\n\"+\n                \")\\n\";\n               \nmsg.filename = ftnameraw + \".clar\"; // name the contract same as input custom token name\n\nreturn msg;",
+        "func": "const ftname = msg.payload.ftname;///\nconst ftsymbol = msg.payload.ftsymbol;///might want to just snip and uppercase the first 3 characters of the ftname\nconst ftmax = msg.payload.ftmax;///\nconst ftminter = global.get(\"testnetdepositaddress\");///set the minter as the primary address\nconst fturi = msg.payload.fturi;//needs additional integration with stacks storage component.\n//const ftname = ftnameraw.toLowerCase();\n\n\n//take the inputs and construct the Clarity contract file contents\nmsg.payload =   \";;;; Define interface traits per sibling contract\\n\"+\n                \"(impl-trait .ft-trait.ft-trait)\\n\"+\n                \"\\n\"+\n                \";;;; Mint Fungible Tokens via Dapparatus and send supply to minter\\n\"+\n                \"(define-constant err-unauthorized u1)\\n\"+\n                \"(define-constant minter '\" + ftminter + \")\\n\" +\n                \"(define-fungible-token \" + ftname + \" u\" + ftmax + \")\\n\" +\n                \"(ft-mint? \" + ftname + \" u\" + ftmax + \" minter)\\n\" +\n                \"\\n\"+\n                \"(define-read-only (get-total-supply)\\n\"+\n                \"  (ok (ft-get-supply \" + ftname + \"))\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-name)\\n\"+\n                \"  (ok \\\"\" + ftname + \"\\\")\\n\" +\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-symbol)\\n\"+\n                \"  (ok \\\"\" + ftsymbol + \"\\\")\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-decimals)\\n\"+\n                \"  (ok u6)\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-balance-of (account principal))\\n\"+\n                \"  (ok (ft-get-balance \" + ftname + \" account))\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-public (transfer (amount uint) (sender principal) (recipient principal) (memo (optional (buff 34))))\\n\"+\n                \"  (if (is-eq tx-sender sender)\\n\"+\n                \"    (begin\\n\"+\n                \"      (try! (ft-transfer? \" + ftname + \" amount sender recipient))\\n\"+\n                \"      (print memo)\\n\"+\n                \"      (ok true)\\n\"+\n                \"    )\\n\"+\n                \"   (err u4)))\\n\"+\n                \"\\n\"+                \n                \"(define-read-only (get-token-uri)\\n\"+\n                \"  (ok (some u\\\"\" +  fturi + \"\\\"))\\n\"+\n                \")\\n\";\n               \nmsg.filename = ftname + \".clar\"; // name the contract same as input custom token name\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10468,7 +10388,7 @@
         "z": "613e85c9.c6210c",
         "group": "7e7643fd.e4b96c",
         "name": "TX Info",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "format": "{{msg.blockchain}}",
@@ -10935,7 +10855,7 @@
         "z": "613e85c9.c6210c",
         "name": "Back (NFT Form)",
         "group": "91c07e82.a5ad1",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -10969,8 +10889,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2320,
-        "y": 700,
+        "x": 2240,
+        "y": 720,
         "wires": []
     },
     {
@@ -10986,7 +10906,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2320,
+        "x": 2300,
         "y": 640,
         "wires": []
     },
@@ -11362,7 +11282,7 @@
         "name": "Transaction Mempool (Mainnet)",
         "order": 1,
         "width": 13,
-        "height": "2",
+        "height": "4",
         "format": "<h3>Pending Transactions</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View In Explorer</a></small></small></small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -11382,7 +11302,7 @@
         "name": "Transaction Mempool (Testnet)",
         "order": 1,
         "width": 13,
-        "height": "2",
+        "height": "4",
         "format": "<h3>Pending Transactions</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"View in Explorer\">{{obj.tx_id}}</a></small></small></small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -11449,5 +11369,184 @@
         "x": 2235,
         "y": 980,
         "wires": []
+    },
+    {
+        "id": "73b636fe.f823b8",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "fqn register (Testnet)",
+        "func": "const network = new stacksNetwork.StacksTestnet(); //or use Mainnet\n\nconst name = global.get(\"tempfqn\");\nconst salt = global.get(\"saltzero\");\nconst zonefile = \"\";\nconst publicKey = global.get(\"testnetdepositaddress\");//or use testnetdepositaddress\n\nconst unsignedTX = await stacksBns.buildRegisterNameTX({ name, salt, zonefile, publicKey, network});\n\nmsg.payload = unsignedTX;\nmsg.blockchain = \"0x\" + unsignedTX;\nmsg.pendingfqn = name;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksBns",
+                "module": "@stacks/bns"
+            }
+        ],
+        "x": 1520,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "914831ee.c0702",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "check for existing registered names (testnet)",
+        "func": "var nettype = \"stacks-node-api.testnet.stacks.co\"; //or testnet\nvar testnetdepositaddress = global.get(\"testnetdepositaddress\"); //or depositaddress\n\nmsg.url = \"https://\" + nettype + \"/v1/addresses/stacks/\" + testnetdepositaddress;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3b299a1.887ac8",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "tempfqn can register? (testnet)",
+        "func": "const network = new stacksNetwork.StacksTestnet();\n\nconst fullyQualifiedName = global.get(\"tempfqn\");\n\nconst welp = await stacksBns.canRegisterName({ fullyQualifiedName, network});\n\nmsg.tempfqn = fullyQualifiedName;\nmsg.payload = welp;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksBns",
+                "module": "@stacks/bns"
+            }
+        ],
+        "x": 330,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e3be3b3.5ed1",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "get name (testnet)",
+        "func": "var nettype = \"stacks-node-api.testnet.stacks.co\"; //mainnet\nvar tempfqn = msg.payload; //fully qualified name to search\n\nmsg.url = \"https://\" + nettype + \"/v1/names/\" + tempfqn;\nmsg.tempfqn = tempfqn;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b0ce17.ef0b22",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "get Price of tempfqn (testnet)",
+        "func": "var nettype = \"stacks-node-api.testnet.stacks.co\"; //mainnet\n//var nettype = \"stacks-node-api.mainnet.stacks.co\"; //mainnet\nvar tempfqn = global.get(\"tempfqn\");\n\nmsg.url = \"https://\" + nettype + \"/v2/prices/names/\" + tempfqn;\nmsg.tempfqn = tempfqn;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4bb35af9.c7ca04",
+        "type": "file",
+        "z": "725ce57a.a25e4c",
+        "name": "create local zonefile",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "ascii",
+        "x": 1440,
+        "y": 1120,
+        "wires": [
+            [
+                "a1d813e6.c1a0a"
+            ]
+        ]
+    },
+    {
+        "id": "195adc36.4612d4",
+        "type": "file in",
+        "z": "725ce57a.a25e4c",
+        "name": "get local zonefile",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 1810,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1d813e6.c1a0a",
+        "type": "delay",
+        "z": "725ce57a.a25e4c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1620,
+        "y": 1120,
+        "wires": [
+            [
+                "195adc36.4612d4"
+            ]
+        ]
+    },
+    {
+        "id": "30e9ecaf.cc85f4",
+        "type": "function",
+        "z": "725ce57a.a25e4c",
+        "name": "create zonefile.txt",
+        "func": "msg.payload =   \"(define-trait ft-trait\\n\" +\n                \"  (\\n\" +\n                \"    ;; Transfer from the caller to a new principal\\n\" +\n                \"    (transfer (uint principal principal (optional (buff 34))) (response bool uint))\\n\" +\n                \"\\n\" +\n                \"    ;; human readable name of the token\\n\" +\n                \"    (get-name () (response (string-ascii 32) uint))\\n\" +\n                \"\\n\" +\n                \"    ;; ticker symbol or empty if none\\n\" +\n                \"    (get-symbol () (response (string-ascii 32) uint))\\n\" +\n                \"\\n\" +\n                \"    ;; number of decimals used\\n\" +\n                \"    (get-decimals () (response uint uint))\\n\" +\n                \"\\n\" +\n                \"    ;; balance of the passed principal\\n\" +\n                \"    (get-balance-of (principal) (response uint uint))\\n\" +\n                \"\\n\" +\n                \"    ;; current total supply\\n\" +\n                \"    (get-total-supply () (response uint uint))\\n\" +\n                \"\\n\" +\n                \"    ;; optional URI that represents metadata of this token\\n\" +\n                \"    (get-token-uri () (response (optional (string-utf8 256)) uint))\\n\" +\n                \"  )\\n\" +\n                \")\";\n               \nmsg.filename = \"zonefile.txt\"; // name the contract same as input custom token name\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 1120,
+        "wires": [
+            [
+                "4bb35af9.c7ca04"
+            ]
+        ]
     }
 ]
