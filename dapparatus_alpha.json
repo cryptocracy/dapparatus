@@ -1076,26 +1076,6 @@
         ]
     },
     {
-        "id": "d4652e3a.22359",
-        "type": "ui_template",
-        "z": "f7442446.0c97f8",
-        "group": "2e2fb22f.78448e",
-        "name": "Tokens List",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "format": "<h3>Tokens List</h3>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 710,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "3ec0ff84.583e8",
         "type": "ui_template",
         "z": "f7442446.0c97f8",
@@ -1110,7 +1090,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 700,
-        "y": 500,
+        "y": 380,
         "wires": [
             []
         ]
@@ -2368,10 +2348,11 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 150,
-        "y": 340,
+        "y": 820,
         "wires": [
             [
-                "b6514d9a.4695c"
+                "b6514d9a.4695c",
+                "788ea147.23459"
             ]
         ]
     },
@@ -2395,7 +2376,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 140,
-        "y": 460,
+        "y": 340,
         "wires": [
             [
                 "a621f66c.a1e8e8"
@@ -2433,7 +2414,7 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 340,
+        "y": 820,
         "wires": [
             [
                 "6486e8f2.2b5ba8"
@@ -2452,7 +2433,7 @@
         "finalize": "",
         "libs": [],
         "x": 720,
-        "y": 460,
+        "y": 340,
         "wires": [
             [
                 "d0c88850.42e3f8"
@@ -2466,7 +2447,7 @@
         "name": "",
         "events": "all",
         "x": 900,
-        "y": 340,
+        "y": 820,
         "wires": [
             []
         ]
@@ -2478,7 +2459,7 @@
         "name": "",
         "events": "all",
         "x": 900,
-        "y": 460,
+        "y": 340,
         "wires": [
             []
         ]
@@ -2582,7 +2563,7 @@
             "bae8fcf5.8fe8"
         ],
         "x": 315,
-        "y": 380,
+        "y": 780,
         "wires": []
     },
     {
@@ -2594,7 +2575,7 @@
             "bae8fcf5.8fe8"
         ],
         "x": 315,
-        "y": 500,
+        "y": 380,
         "wires": []
     },
     {
@@ -2617,7 +2598,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 170,
-        "y": 380,
+        "y": 780,
         "wires": [
             [
                 "18e0b33a.b8540d"
@@ -2644,7 +2625,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 170,
-        "y": 500,
+        "y": 380,
         "wires": [
             [
                 "d3afe6ff.e83ac8"
@@ -6187,7 +6168,7 @@
         "delay": "0",
         "topic": "reginput",
         "topicType": "str",
-        "x": 90,
+        "x": 130,
         "y": 280,
         "wires": [
             [
@@ -6229,7 +6210,7 @@
         "payload": "",
         "topic": "regtype",
         "topicType": "str",
-        "x": 80,
+        "x": 120,
         "y": 320,
         "wires": [
             [
@@ -6256,8 +6237,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 100,
-        "y": 800,
+        "x": 160,
+        "y": 760,
         "wires": [
             [
                 "eab25160.70c54"
@@ -6278,8 +6259,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 490,
-        "y": 400,
+        "x": 1610,
+        "y": 240,
         "wires": [
             []
         ]
@@ -6295,8 +6276,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
-        "y": 440,
+        "x": 1610,
+        "y": 280,
         "wires": [
             [
                 "134958a6.b78bb7"
@@ -6309,8 +6290,8 @@
         "z": "725ce57a.a25e4c",
         "name": "",
         "events": "all",
-        "x": 700,
-        "y": 440,
+        "x": 1860,
+        "y": 280,
         "wires": [
             []
         ]
@@ -6326,8 +6307,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
-        "y": 480,
+        "x": 1610,
+        "y": 320,
         "wires": [
             [
                 "134958a6.b78bb7",
@@ -6346,7 +6327,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
+        "x": 710,
         "y": 320,
         "wires": [
             [
@@ -6375,7 +6356,7 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 260,
+        "x": 300,
         "y": 320,
         "wires": [
             [
@@ -6394,7 +6375,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
+        "x": 480,
         "y": 320,
         "wires": [
             [
@@ -6416,7 +6397,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
+        "x": 900,
         "y": 280,
         "wires": []
     },
@@ -6431,7 +6412,7 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 870,
+        "x": 910,
         "y": 320,
         "wires": [
             [
@@ -6452,8 +6433,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1290,
-        "y": 320,
+        "x": 1330,
+        "y": 380,
         "wires": []
     },
     {
@@ -6464,7 +6445,7 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1030,
+        "x": 1070,
         "y": 320,
         "wires": [
             [
@@ -6494,8 +6475,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 150,
-        "y": 400,
+        "x": 1330,
+        "y": 320,
         "wires": [
             [
                 "98e21dbf.8bee1",
@@ -6577,7 +6558,7 @@
         "links": [
             "b1cd5ce4.1ae6e"
         ],
-        "x": 495,
+        "x": 535,
         "y": 260,
         "wires": []
     },
@@ -6592,8 +6573,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 520,
+        "x": 1930,
+        "y": 320,
         "wires": [
             [
                 "fdf83d9.54f0bc"
@@ -6611,8 +6592,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 530,
-        "y": 560,
+        "x": 2170,
+        "y": 320,
         "wires": [
             [
                 "600252c7.17b18c"
@@ -6627,8 +6608,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 690,
-        "y": 560,
+        "x": 2330,
+        "y": 320,
         "wires": [
             [
                 "2f86c1cb.0da2de",
@@ -6650,8 +6631,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 970,
-        "y": 520,
+        "x": 2550,
+        "y": 360,
         "wires": []
     },
     {
@@ -6668,8 +6649,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 990,
-        "y": 560,
+        "x": 2570,
+        "y": 400,
         "wires": [
             []
         ]
@@ -6694,8 +6675,8 @@
                 "module": "@stacks/bns"
             }
         ],
-        "x": 330,
-        "y": 840,
+        "x": 390,
+        "y": 800,
         "wires": [
             [
                 "a3c85ec8.5d8ac",
@@ -6717,8 +6698,8 @@
         "raw": false,
         "topic": "",
         "name": "",
-        "x": 950,
-        "y": 840,
+        "x": 1010,
+        "y": 800,
         "wires": [
             [
                 "e26adef.00f2d2"
@@ -6750,8 +6731,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 1120,
-        "y": 840,
+        "x": 1180,
+        "y": 800,
         "wires": [
             [
                 "584ca307.dc6f4c",
@@ -6774,8 +6755,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 610,
-        "y": 800,
+        "x": 670,
+        "y": 760,
         "wires": []
     },
     {
@@ -6796,8 +6777,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 550,
-        "y": 840,
+        "x": 610,
+        "y": 800,
         "wires": [
             [
                 "3516c0fe.44a5a"
@@ -6816,8 +6797,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 840,
+        "x": 810,
+        "y": 800,
         "wires": [
             [
                 "104ad3fa.112e2c"
@@ -6835,8 +6816,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 440,
+        "x": 2730,
+        "y": 300,
         "wires": [
             [
                 "b30d8328.48cf"
@@ -6849,8 +6830,8 @@
         "z": "725ce57a.a25e4c",
         "name": "",
         "events": "all",
-        "x": 1280,
-        "y": 440,
+        "x": 2940,
+        "y": 240,
         "wires": [
             []
         ]
@@ -6873,8 +6854,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 910,
-        "y": 480,
+        "x": 2490,
+        "y": 320,
         "wires": [
             [
                 "fb48ad76.1f1dc"
@@ -6896,8 +6877,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1340,
-        "y": 480,
+        "x": 2820,
+        "y": 360,
         "wires": [
             []
         ]
@@ -6998,7 +6979,7 @@
         "z": "725ce57a.a25e4c",
         "name": "Relative to Name Input and Lookup",
         "info": "",
-        "x": 160,
+        "x": 200,
         "y": 240,
         "wires": []
     },
@@ -7008,8 +6989,8 @@
         "z": "725ce57a.a25e4c",
         "name": "Relative to Registeration",
         "info": "",
-        "x": 150,
-        "y": 760,
+        "x": 210,
+        "y": 720,
         "wires": []
     },
     {
@@ -7028,8 +7009,8 @@
         "z": "725ce57a.a25e4c",
         "name": "buildRegisterNameTx documentation",
         "info": "https://blockstack.github.io/stacks.js/modules/bns.html#buildregisternametx",
-        "x": 1500,
-        "y": 740,
+        "x": 1560,
+        "y": 700,
         "wires": []
     },
     {
@@ -7052,8 +7033,8 @@
                 "module": "@stacks/bns"
             }
         ],
-        "x": 1520,
-        "y": 800,
+        "x": 1440,
+        "y": 780,
         "wires": [
             [
                 "cc381e3c.ed83b",
@@ -7073,8 +7054,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1750,
-        "y": 800,
+        "x": 1670,
+        "y": 780,
         "wires": []
     },
     {
@@ -7091,8 +7072,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1800,
-        "y": 840,
+        "x": 1720,
+        "y": 820,
         "wires": [
             []
         ]
@@ -7133,8 +7114,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1550,
-        "y": 760,
+        "x": 1470,
+        "y": 740,
         "wires": [
             [
                 "4264957d.db1b5c"
@@ -7147,8 +7128,8 @@
         "z": "725ce57a.a25e4c",
         "name": "",
         "events": "all",
-        "x": 1780,
-        "y": 760,
+        "x": 1800,
+        "y": 740,
         "wires": [
             []
         ]
@@ -7837,8 +7818,8 @@
         "z": "725ce57a.a25e4c",
         "name": "NOT DONE YET",
         "info": "Registestration function isn't fully wired yet\nwant to capture profile information in step wizard of prompts\nto form profile.json and upload to gaia storage\nthen generate a zonefile that has the pointer to the profile.json",
-        "x": 1620,
-        "y": 960,
+        "x": 1680,
+        "y": 920,
         "wires": []
     },
     {
@@ -8444,8 +8425,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 690,
-        "y": 960,
+        "x": 750,
+        "y": 920,
         "wires": [
             [
                 "7d17752b.46ce8c"
@@ -8463,8 +8444,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 960,
+        "x": 490,
+        "y": 920,
         "wires": [
             [
                 "8264b039.189f4"
@@ -8492,8 +8473,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 130,
-        "y": 960,
+        "x": 190,
+        "y": 920,
         "wires": [
             [
                 "bbd8594c.51db58"
@@ -8512,8 +8493,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1230,
-        "y": 920,
+        "x": 1290,
+        "y": 880,
         "wires": []
     },
     {
@@ -8524,8 +8505,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 830,
-        "y": 960,
+        "x": 890,
+        "y": 920,
         "wires": [
             [
                 "c3edf897.c3bc58"
@@ -8550,8 +8531,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 990,
-        "y": 960,
+        "x": 1050,
+        "y": 920,
         "wires": [
             [
                 "4ad3e37f.02b2ac"
@@ -8569,8 +8550,8 @@
         "links": [
             "374e7d9b.ca0a82"
         ],
-        "x": 1175,
-        "y": 980,
+        "x": 1235,
+        "y": 940,
         "wires": []
     },
     {
@@ -9040,8 +9021,8 @@
         "timer": "",
         "oldrc": false,
         "name": "",
-        "x": 540,
-        "y": 700,
+        "x": 600,
+        "y": 860,
         "wires": [
             [
                 "2ff8e49a.dda6bc"
@@ -9063,7 +9044,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1130,
+        "x": 1210,
         "y": 960,
         "wires": []
     },
@@ -9094,7 +9075,7 @@
         "props": [
             {
                 "p": "ftname",
-                "v": "DERP.clar",
+                "v": "ft-trait.clar",
                 "vt": "str"
             },
             {
@@ -9121,8 +9102,8 @@
         "z": "de33bfc8.0ee0f",
         "name": "How to make clarity-cli work",
         "info": "You will first need to put the clarity-cli tool in the root directory of this app.\n(or where your .clar files are to be stored, default is in root)\n\nDownload this (relative to your os) and or latest version. unzip and put them all in your app root.\nhttps://github.com/blockstack/stacks-blockchain/releases/tag/2.0.11.0.0",
-        "x": 720,
-        "y": 780,
+        "x": 880,
+        "y": 760,
         "wires": []
     },
     {
@@ -9145,7 +9126,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 830,
+        "x": 910,
         "y": 840,
         "wires": [
             [
@@ -9172,7 +9153,7 @@
         "raw": false,
         "topic": "Clarity Check",
         "name": "Possible Issue with ft-trait, attempting to bypass",
-        "x": 1200,
+        "x": 1280,
         "y": 840,
         "wires": []
     },
@@ -9190,7 +9171,7 @@
         "raw": false,
         "topic": "Contracted Deployed",
         "name": "Pending Confirmation",
-        "x": 1120,
+        "x": 1200,
         "y": 800,
         "wires": []
     },
@@ -9311,7 +9292,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 790,
+        "x": 870,
         "y": 880,
         "wires": [
             [
@@ -9337,7 +9318,7 @@
         "raw": false,
         "topic": "Clarity Check",
         "name": "Unable to bypass Error",
-        "x": 1120,
+        "x": 1200,
         "y": 920,
         "wires": []
     },
@@ -9355,7 +9336,7 @@
         "raw": false,
         "topic": "Clarity Check",
         "name": "Able to bypass Error",
-        "x": 1120,
+        "x": 1200,
         "y": 880,
         "wires": []
     },
@@ -11390,8 +11371,8 @@
                 "module": "@stacks/bns"
             }
         ],
-        "x": 1520,
-        "y": 840,
+        "x": 1440,
+        "y": 820,
         "wires": [
             []
         ]
@@ -11407,8 +11388,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 920,
+        "x": 490,
+        "y": 880,
         "wires": [
             []
         ]
@@ -11433,8 +11414,8 @@
                 "module": "@stacks/bns"
             }
         ],
-        "x": 330,
-        "y": 800,
+        "x": 390,
+        "y": 760,
         "wires": [
             []
         ]
@@ -11450,7 +11431,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
+        "x": 710,
         "y": 260,
         "wires": [
             []
@@ -11467,8 +11448,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
-        "y": 600,
+        "x": 1600,
+        "y": 460,
         "wires": [
             []
         ]
@@ -11483,8 +11464,8 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "ascii",
-        "x": 1440,
-        "y": 1120,
+        "x": 1500,
+        "y": 1080,
         "wires": [
             [
                 "a1d813e6.c1a0a"
@@ -11501,8 +11482,8 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 1810,
-        "y": 1120,
+        "x": 1870,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -11522,8 +11503,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1620,
-        "y": 1120,
+        "x": 1680,
+        "y": 1080,
         "wires": [
             [
                 "195adc36.4612d4"
@@ -11541,12 +11522,466 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
-        "y": 1120,
+        "x": 1270,
+        "y": 1080,
         "wires": [
             [
                 "4bb35af9.c7ca04"
             ]
         ]
+    },
+    {
+        "id": "788ea147.23459",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "create get assets url (testnet)",
+        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use mainnet\nconst principal = global.get(\"testnetdepositaddress\"); // or use depositaddress for mainnet\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/address/\" + principal + \"/balances\";// prior was /assets\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 880,
+        "wires": [
+            [
+                "2d53e6be.0db00a"
+            ]
+        ]
+    },
+    {
+        "id": "2d53e6be.0db00a",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 590,
+        "y": 880,
+        "wires": [
+            [
+                "b7683662.ee3d28"
+            ]
+        ]
+    },
+    {
+        "id": "b7683662.ee3d28",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 750,
+        "y": 880,
+        "wires": [
+            [
+                "d8878be7.694068"
+            ]
+        ]
+    },
+    {
+        "id": "43e598a4.214098",
+        "type": "change",
+        "z": "f7442446.0c97f8",
+        "name": "move results",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.results",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 1260,
+        "wires": [
+            [
+                "539eaf86.a7d5b"
+            ]
+        ]
+    },
+    {
+        "id": "539eaf86.a7d5b",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "filter where event_type is equal to fungible_token_asset (testnet)",
+        "func": "const obj = msg.payload;\nconst testnetdepositaddress = global.get(\"testnetdepositaddress\"); //use \"depositaddress\" for mainnet\n\nconst filtered = obj.filter(by => by.event_type === \"fungible_token_asset\");\n\nmsg.payload = filtered;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 1260,
+        "wires": [
+            [
+                "bea3109e.c4aca"
+            ]
+        ]
+    },
+    {
+        "id": "bea3109e.c4aca",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token asset_id trim",
+        "func": "const obj = msg.payload;\n\nobj.asset.asset_id = obj.asset.asset_id.substring(str.indexOf(\"::\") + 2)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d8878be7.694068",
+        "type": "change",
+        "z": "f7442446.0c97f8",
+        "name": "move ft's to payload",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.fungible_tokens",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 880,
+        "wires": [
+            [
+                "c0c8e2b5.31ca7",
+                "aeeea023.6bdcf",
+                "cbf4cd7d.4a96c"
+            ]
+        ]
+    },
+    {
+        "id": "7a91e8ca.d72578",
+        "type": "inject",
+        "z": "f7442446.0c97f8",
+        "name": "sample proper array of objects (debug purposes)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"id\":\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.DERP::DERP\",\"alias\":\"DERP\",\"balance\":\"2821109907456\",\"total_sent\":\"0\",\"total_received\":\"2821109907456\"},{\"id\":\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.COOL::COOL\",\"alias\":\"COOL\",\"balance\":\"21000000\",\"total_sent\":\"0\",\"total_received\":\"21000000\"}]",
+        "payloadType": "json",
+        "x": 920,
+        "y": 1100,
+        "wires": [
+            [
+                "d4652e3a.22359"
+            ]
+        ]
+    },
+    {
+        "id": "cbf4cd7d.4a96c",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "just key names",
+        "func": "const existingArray = msg.payload;\n\nconst arrayofkeys = Object.keys(existingArray); \nconst names = arrayofkeys.map(function (z){\n    return z.split(\"::\");\n});\n\n//const combo = [].concat(existingArray, newArray);\nmsg.payload = {names};\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 940,
+        "wires": [
+            [
+                "3f1208f3.82c9b8",
+                "7e1ea271.96f09c"
+            ]
+        ]
+    },
+    {
+        "id": "c2d0d2e7.a8832",
+        "type": "inject",
+        "z": "f7442446.0c97f8",
+        "name": "sample improper object of objects",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.DERP::DERP\":{\"balance\":\"2821109907456\",\"total_sent\":\"0\",\"total_received\":\"2821109907456\"},\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.PDX::PDX\":{\"balance\":\"21000000\",\"total_sent\":\"0\",\"total_received\":\"21000000\"}}",
+        "payloadType": "json",
+        "x": 910,
+        "y": 940,
+        "wires": [
+            [
+                "c0c8e2b5.31ca7",
+                "aeeea023.6bdcf",
+                "cbf4cd7d.4a96c"
+            ]
+        ]
+    },
+    {
+        "id": "d61970de.dbfd1",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "d": true,
+        "name": "token stats debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1650,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "10b87123.4c732f",
+        "type": "inject",
+        "z": "f7442446.0c97f8",
+        "name": "sample just id and alias",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"0\":[\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.DERP\",\"DERP\"],\"1\":[\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.COOL\",\"COOL\"]}",
+        "payloadType": "json",
+        "x": 580,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e1ea271.96f09c",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "d": true,
+        "name": "token keys debugger (seperated)",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "7d039543.4ce9bc",
+        "type": "comment",
+        "z": "f7442446.0c97f8",
+        "name": "Relative to My Tokens (UNDER CONSTRUCTION)",
+        "info": "",
+        "x": 270,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "c0c8e2b5.31ca7",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "just balances",
+        "func": "const obj1 = msg.payload;\nconst balances = Object.values(obj1);\nmsg.payload = {balances};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 880,
+        "wires": [
+            [
+                "3f1208f3.82c9b8",
+                "d61970de.dbfd1"
+            ]
+        ]
+    },
+    {
+        "id": "aeeea023.6bdcf",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "just keys",
+        "func": "const obj1 = msg.payload;\nmsg.payload = Object.keys(obj1);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 1000,
+        "wires": [
+            [
+                "152c8aca.d8b895"
+            ]
+        ]
+    },
+    {
+        "id": "152c8aca.d8b895",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "d": true,
+        "name": "token keys debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1650,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "3f1208f3.82c9b8",
+        "type": "join",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1410,
+        "y": 880,
+        "wires": [
+            [
+                "2fb77993.ae23d6",
+                "bf780bed.d727c8",
+                "d4652e3a.22359"
+            ]
+        ]
+    },
+    {
+        "id": "2fb77993.ae23d6",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "name": "my tokens debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1650,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "bf780bed.d727c8",
+        "type": "ui_template",
+        "z": "f7442446.0c97f8",
+        "group": "2e2fb22f.78448e",
+        "name": "Tokens List (testnet) Max 10",
+        "order": 2,
+        "width": "13",
+        "height": "11",
+        "format": "<h3>{{msg.payload.names.length}} Fungible Token(s) Owned on Testnet</h3>\n\n<table>\n    <tr>\n        <th></th>\n        <th>Symbol</th>\n        <th>Balance</th>        \n        <th>Total Sent</th>\n        <th>Total Received</th>\n        <th></th>\n        <th></th>\n    </tr>\n\n\t<tr ng-if=\"msg.payload.names[0] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{msg.payload.names[0][1]}}</td>\n        <td>{{msg.payload.balances[0].balance}}</td>     \n        <td>{{msg.payload.balances[0].total_sent}}</td> \n        <td>{{msg.payload.balances[0].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>\n    </tr>\n\n\t<tr ng-if=\"msg.payload.names[1] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[1][1]}}</td>\n        <td>{{msg.payload.balances[1].balance}}</td>     \n        <td>{{msg.payload.balances[1].total_sent}}</td> \n        <td>{{msg.payload.balances[1].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[2] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[2][1]}}</td>\n        <td>{{msg.payload.balances[2].balance}}</td>     \n        <td>{{msg.payload.balances[2].total_sent}}</td> \n        <td>{{msg.payload.balances[2].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[3] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[3][1]}}</td>\n        <td>{{msg.payload.balances[3].balance}}</td>     \n        <td>{{msg.payload.balances[3].total_sent}}</td> \n        <td>{{msg.payload.balances[3].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[4] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[4][1]}}</td>\n        <td>{{msg.payload.balances[4].balance}}</td>     \n        <td>{{msg.payload.balances[4].total_sent}}</td> \n        <td>{{msg.payload.balances[4].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[5] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[5][1]}}</td>\n        <td>{{msg.payload.balances[5].balance}}</td>     \n        <td>{{msg.payload.balances[5].total_sent}}</td> \n        <td>{{msg.payload.balances[5].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n\n    <tr ng-if=\"msg.payload.names[6] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[6][1]}}</td>\n        <td>{{msg.payload.balances[6].balance}}</td>     \n        <td>{{msg.payload.balances[6].total_sent}}</td> \n        <td>{{msg.payload.balances[6].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[7] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[7][1]}}</td>\n        <td>{{msg.payload.balances[7].balance}}</td>     \n        <td>{{msg.payload.balances[7].total_sent}}</td> \n        <td>{{msg.payload.balances[7].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[8] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[8][1]}}</td>\n        <td>{{msg.payload.balances[8].balance}}</td>     \n        <td>{{msg.payload.balances[8].total_sent}}</td> \n        <td>{{msg.payload.balances[8].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[9] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[9][1]}}</td>\n        <td>{{msg.payload.balances[9].balance}}</td>     \n        <td>{{msg.payload.balances[9].total_sent}}</td> \n        <td>{{msg.payload.balances[9].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[10] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[10][1]}}</td>\n        <td>{{msg.payload.balances[10].balance}}</td>     \n        <td>{{msg.payload.balances[10].total_sent}}</td> \n        <td>{{msg.payload.balances[10].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>   \n    \n    <tr ng-if=\"msg.payload.names[11] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[11][1]}}</td>\n        <td>{{msg.payload.balances[11].balance}}</td>     \n        <td>{{msg.payload.balances[11].total_sent}}</td> \n        <td>{{msg.payload.balances[11].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>  \n    \n    <tr ng-if=\"msg.payload.names[12] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[12][1]}}</td>\n        <td>{{msg.payload.balances[12].balance}}</td>     \n        <td>{{msg.payload.balances[12].total_sent}}</td> \n        <td>{{msg.payload.balances[12].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>  \n    \n</table>\n\n<small><small>Disclaimer: Max 13 Tokens</small></small>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1680,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4652e3a.22359",
+        "type": "ui_template",
+        "z": "f7442446.0c97f8",
+        "d": true,
+        "group": "2e2fb22f.78448e",
+        "name": "Tokens List (testnet) (old attempt)",
+        "order": 2,
+        "width": "13",
+        "height": "6",
+        "format": "<h3>{{msg.payload.names.length}} Fungible Token(s) Owned on Testnet</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Name</th>\n        <th>Balance</th>        \n        <th>Total Sent</th>\n        <th>Total Received</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload.balances\">\n        <td><img src=\"https://derupt.io/assets/images/derupt_clear_small.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.alias}}</td>\n        <td>{{obj.balance}}</td>     \n        <td>{{obj.total_sent}}</td> \n        <td>{{obj.total_received}}</td>\n    </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1700,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "29cee1b2.92799e",
+        "type": "comment",
+        "z": "f7442446.0c97f8",
+        "name": "TRANSFER & HISTORY UNDER CONSTRUCTION",
+        "info": "",
+        "x": 1510,
+        "y": 840,
+        "wires": []
     }
 ]
