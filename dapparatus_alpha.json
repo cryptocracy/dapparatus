@@ -70,6 +70,13 @@
         "info": ""
     },
     {
+        "id": "dc0bf4e0.e49468",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "d9ba26fa.6d2b18",
         "type": "ui_base",
         "theme": {
@@ -2347,8 +2354,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 150,
-        "y": 820,
+        "x": 70,
+        "y": 980,
         "wires": [
             [
                 "b6514d9a.4695c",
@@ -2413,8 +2420,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
-        "y": 820,
+        "x": 310,
+        "y": 860,
         "wires": [
             [
                 "6486e8f2.2b5ba8"
@@ -2446,8 +2453,8 @@
         "z": "f7442446.0c97f8",
         "name": "",
         "events": "all",
-        "x": 900,
-        "y": 820,
+        "x": 540,
+        "y": 860,
         "wires": [
             []
         ]
@@ -2562,7 +2569,7 @@
         "links": [
             "bae8fcf5.8fe8"
         ],
-        "x": 315,
+        "x": 455,
         "y": 780,
         "wires": []
     },
@@ -2597,7 +2604,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 170,
+        "x": 310,
         "y": 780,
         "wires": [
             [
@@ -4661,7 +4668,7 @@
         "type": "function",
         "z": "e83b2318.6f5c6",
         "name": "get all globals",
-        "func": "var keys = global.get(\"keys\");\nvar secretkey = global.get(\"secretkey\");\nvar appskey = global.get(\"appskey\");\nvar dataprivkey = global.get(\"dataprivkey\");\nvar stxprivkey = global.get(\"stxprivkey\");\nvar saltzero = global.get(\"saltzero\");\nvar nettype = global.get(\"nettype\");\nvar depositaddress = global.get(\"depositaddress\");\nvar txhistorymainnet = global.get(\"txhistorymainnet\");\nvar testnetdepositaddress = global.get(\"testnetdepositaddress\");\nvar txhistorytestnet = global.get(\"txhistorytestnet\");\nvar searchtype = global.get(\"searchtype\");\nvar searchinput = global.get(\"searchinput\");\nvar tempfqn = global.get(\"tempfqn\");\nvar deruptarname = global.get(\"deruptarname\");\nvar xftname = global.get(\"xftname\");\n\n\nmsg.payload = \"globals are in the in msg obj\";\nmsg.keys = keys;\nmsg.secretkey = secretkey;\nmsg.appskey = appskey;\nmsg.dataprivkey = dataprivkey;\nmsg.stxprivkey = stxprivkey;\nmsg.saltzero = saltzero;\nmsg.nettype = nettype;\nmsg.depositaddress = depositaddress;\nmsg.txhistorymainnet = txhistorymainnet;\nmsg.testnetdepositaddress = testnetdepositaddress;\nmsg.txhistorytestnet = txhistorytestnet;\nmsg.searchtype = searchtype;\nmsg.searchinput = searchinput;\nmsg.tempfqn = tempfqn;\nmsg.deruptarname = deruptarname;\nmsg.xftname = xftname;\n\nreturn msg;",
+        "func": "var keys = global.get(\"keys\");\nvar secretkey = global.get(\"secretkey\");\nvar appskey = global.get(\"appskey\");\nvar dataprivkey = global.get(\"dataprivkey\");\nvar stxprivkey = global.get(\"stxprivkey\");\nvar saltzero = global.get(\"saltzero\");\nvar nettype = global.get(\"nettype\");\nvar depositaddress = global.get(\"depositaddress\");\nvar txhistorymainnet = global.get(\"txhistorymainnet\");\nvar testnetdepositaddress = global.get(\"testnetdepositaddress\");\nvar txhistorytestnet = global.get(\"txhistorytestnet\");\nvar searchtype = global.get(\"searchtype\");\nvar searchinput = global.get(\"searchinput\");\nvar tempfqn = global.get(\"tempfqn\");\nvar deruptarname = global.get(\"deruptarname\");\nvar xftname = global.get(\"xftname\");\nvar ftcontractnames = global.get(\"ftcontractnames\");\n\nmsg.payload = \"globals are in the in msg obj\";\nmsg.keys = keys;\nmsg.secretkey = secretkey;\nmsg.appskey = appskey;\nmsg.dataprivkey = dataprivkey;\nmsg.stxprivkey = stxprivkey;\nmsg.saltzero = saltzero;\nmsg.nettype = nettype;\nmsg.depositaddress = depositaddress;\nmsg.txhistorymainnet = txhistorymainnet;\nmsg.testnetdepositaddress = testnetdepositaddress;\nmsg.txhistorytestnet = txhistorytestnet;\nmsg.searchtype = searchtype;\nmsg.searchinput = searchinput;\nmsg.tempfqn = tempfqn;\nmsg.deruptarname = deruptarname;\nmsg.xftname = xftname;\nmsg.ftcontractnames = ftcontractnames;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -11534,15 +11541,15 @@
         "id": "788ea147.23459",
         "type": "function",
         "z": "f7442446.0c97f8",
-        "name": "create get assets url (testnet)",
+        "name": "get assets url (testnet)",
         "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use mainnet\nconst principal = global.get(\"testnetdepositaddress\"); // or use depositaddress for mainnet\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/address/\" + principal + \"/balances\";// prior was /assets\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 880,
+        "x": 300,
+        "y": 980,
         "wires": [
             [
                 "2d53e6be.0db00a"
@@ -11560,8 +11567,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 590,
-        "y": 880,
+        "x": 330,
+        "y": 1020,
         "wires": [
             [
                 "b7683662.ee3d28"
@@ -11576,75 +11583,12 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 750,
-        "y": 880,
+        "x": 350,
+        "y": 1060,
         "wires": [
             [
                 "d8878be7.694068"
             ]
-        ]
-    },
-    {
-        "id": "43e598a4.214098",
-        "type": "change",
-        "z": "f7442446.0c97f8",
-        "name": "move results",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.results",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 550,
-        "y": 1260,
-        "wires": [
-            [
-                "539eaf86.a7d5b"
-            ]
-        ]
-    },
-    {
-        "id": "539eaf86.a7d5b",
-        "type": "function",
-        "z": "f7442446.0c97f8",
-        "name": "filter where event_type is equal to fungible_token_asset (testnet)",
-        "func": "const obj = msg.payload;\nconst testnetdepositaddress = global.get(\"testnetdepositaddress\"); //use \"depositaddress\" for mainnet\n\nconst filtered = obj.filter(by => by.event_type === \"fungible_token_asset\");\n\nmsg.payload = filtered;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 890,
-        "y": 1260,
-        "wires": [
-            [
-                "bea3109e.c4aca"
-            ]
-        ]
-    },
-    {
-        "id": "bea3109e.c4aca",
-        "type": "function",
-        "z": "f7442446.0c97f8",
-        "name": "token asset_id trim",
-        "func": "const obj = msg.payload;\n\nobj.asset.asset_id = obj.asset.asset_id.substring(str.indexOf(\"::\") + 2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1250,
-        "y": 1260,
-        "wires": [
-            []
         ]
     },
     {
@@ -11666,12 +11610,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
-        "y": 880,
+        "x": 560,
+        "y": 1060,
         "wires": [
             [
                 "c0c8e2b5.31ca7",
-                "aeeea023.6bdcf",
                 "cbf4cd7d.4a96c"
             ]
         ]
@@ -11697,12 +11640,10 @@
         "topic": "",
         "payload": "[{\"id\":\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.DERP::DERP\",\"alias\":\"DERP\",\"balance\":\"2821109907456\",\"total_sent\":\"0\",\"total_received\":\"2821109907456\"},{\"id\":\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.COOL::COOL\",\"alias\":\"COOL\",\"balance\":\"21000000\",\"total_sent\":\"0\",\"total_received\":\"21000000\"}]",
         "payloadType": "json",
-        "x": 920,
-        "y": 1100,
+        "x": 820,
+        "y": 780,
         "wires": [
-            [
-                "d4652e3a.22359"
-            ]
+            []
         ]
     },
     {
@@ -11710,18 +11651,20 @@
         "type": "function",
         "z": "f7442446.0c97f8",
         "name": "just key names",
-        "func": "const existingArray = msg.payload;\n\nconst arrayofkeys = Object.keys(existingArray); \nconst names = arrayofkeys.map(function (z){\n    return z.split(\"::\");\n});\n\n//const combo = [].concat(existingArray, newArray);\nmsg.payload = {names};\n\n\nreturn msg;",
+        "func": "const existingArray = msg.payload;\nconst arrayofkeys = Object.keys(existingArray); \nconst names = arrayofkeys.map(function (z){\n    return z.split(\"::\");\n});\n\nmsg.payload = {names};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 940,
+        "x": 920,
+        "y": 1120,
         "wires": [
             [
                 "3f1208f3.82c9b8",
-                "7e1ea271.96f09c"
+                "605d5b01.f0ce54",
+                "7440f9a1.036a58",
+                "265f6e52.b3b642"
             ]
         ]
     },
@@ -11744,80 +11687,16 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.DERP::DERP\":{\"balance\":\"2821109907456\",\"total_sent\":\"0\",\"total_received\":\"2821109907456\"},\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.PDX::PDX\":{\"balance\":\"21000000\",\"total_sent\":\"0\",\"total_received\":\"21000000\"}}",
+        "payload": "{\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.DERP::DERP\":{\"balance\":\"2821109907456\",\"total_sent\":\"0\",\"total_received\":\"2821109907456\"},\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.PDX::PDX\":{\"balance\":\"21000000\",\"total_sent\":\"0\",\"total_received\":\"21000000\"},\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.LSD::LSD\":{\"balance\":\"42000000\",\"total_sent\":\"0\",\"total_received\":\"42000000\"}}",
         "payloadType": "json",
-        "x": 910,
-        "y": 940,
+        "x": 550,
+        "y": 1120,
         "wires": [
             [
                 "c0c8e2b5.31ca7",
-                "aeeea023.6bdcf",
                 "cbf4cd7d.4a96c"
             ]
         ]
-    },
-    {
-        "id": "d61970de.dbfd1",
-        "type": "debug",
-        "z": "f7442446.0c97f8",
-        "d": true,
-        "name": "token stats debug",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1650,
-        "y": 940,
-        "wires": []
-    },
-    {
-        "id": "10b87123.4c732f",
-        "type": "inject",
-        "z": "f7442446.0c97f8",
-        "name": "sample just id and alias",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"0\":[\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.DERP\",\"DERP\"],\"1\":[\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.COOL\",\"COOL\"]}",
-        "payloadType": "json",
-        "x": 580,
-        "y": 1060,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7e1ea271.96f09c",
-        "type": "debug",
-        "z": "f7442446.0c97f8",
-        "d": true,
-        "name": "token keys debugger (seperated)",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1700,
-        "y": 980,
-        "wires": []
     },
     {
         "id": "7d039543.4ce9bc",
@@ -11825,7 +11704,7 @@
         "z": "f7442446.0c97f8",
         "name": "Relative to My Tokens (UNDER CONSTRUCTION)",
         "info": "",
-        "x": 270,
+        "x": 410,
         "y": 740,
         "wires": []
     },
@@ -11834,57 +11713,19 @@
         "type": "function",
         "z": "f7442446.0c97f8",
         "name": "just balances",
-        "func": "const obj1 = msg.payload;\nconst balances = Object.values(obj1);\nmsg.payload = {balances};\nreturn msg;",
+        "func": "const existingArray = msg.payload;\nconst balances = Object.values(existingArray);\nmsg.payload = {balances};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
-        "y": 880,
+        "x": 910,
+        "y": 1060,
         "wires": [
             [
-                "3f1208f3.82c9b8",
-                "d61970de.dbfd1"
+                "3f1208f3.82c9b8"
             ]
         ]
-    },
-    {
-        "id": "aeeea023.6bdcf",
-        "type": "function",
-        "z": "f7442446.0c97f8",
-        "name": "just keys",
-        "func": "const obj1 = msg.payload;\nmsg.payload = Object.keys(obj1);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1200,
-        "y": 1000,
-        "wires": [
-            [
-                "152c8aca.d8b895"
-            ]
-        ]
-    },
-    {
-        "id": "152c8aca.d8b895",
-        "type": "debug",
-        "z": "f7442446.0c97f8",
-        "d": true,
-        "name": "token keys debug",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1650,
-        "y": 1040,
-        "wires": []
     },
     {
         "id": "3f1208f3.82c9b8",
@@ -11900,19 +11741,18 @@
         "joinerType": "str",
         "accumulate": false,
         "timeout": "",
-        "count": "2",
+        "count": "3",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 1410,
-        "y": 880,
+        "x": 2410,
+        "y": 1080,
         "wires": [
             [
                 "2fb77993.ae23d6",
-                "bf780bed.d727c8",
-                "d4652e3a.22359"
+                "bf780bed.d727c8"
             ]
         ]
     },
@@ -11929,8 +11769,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1650,
-        "y": 800,
+        "x": 2650,
+        "y": 1020,
         "wires": []
     },
     {
@@ -11942,34 +11782,13 @@
         "order": 2,
         "width": "13",
         "height": "11",
-        "format": "<h3>{{msg.payload.names.length}} Fungible Token(s) Owned on Testnet</h3>\n\n<table>\n    <tr>\n        <th></th>\n        <th>Symbol</th>\n        <th>Balance</th>        \n        <th>Total Sent</th>\n        <th>Total Received</th>\n        <th></th>\n        <th></th>\n    </tr>\n\n\t<tr ng-if=\"msg.payload.names[0] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{msg.payload.names[0][1]}}</td>\n        <td>{{msg.payload.balances[0].balance}}</td>     \n        <td>{{msg.payload.balances[0].total_sent}}</td> \n        <td>{{msg.payload.balances[0].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>\n    </tr>\n\n\t<tr ng-if=\"msg.payload.names[1] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[1][1]}}</td>\n        <td>{{msg.payload.balances[1].balance}}</td>     \n        <td>{{msg.payload.balances[1].total_sent}}</td> \n        <td>{{msg.payload.balances[1].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[2] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[2][1]}}</td>\n        <td>{{msg.payload.balances[2].balance}}</td>     \n        <td>{{msg.payload.balances[2].total_sent}}</td> \n        <td>{{msg.payload.balances[2].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[3] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[3][1]}}</td>\n        <td>{{msg.payload.balances[3].balance}}</td>     \n        <td>{{msg.payload.balances[3].total_sent}}</td> \n        <td>{{msg.payload.balances[3].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[4] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[4][1]}}</td>\n        <td>{{msg.payload.balances[4].balance}}</td>     \n        <td>{{msg.payload.balances[4].total_sent}}</td> \n        <td>{{msg.payload.balances[4].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[5] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[5][1]}}</td>\n        <td>{{msg.payload.balances[5].balance}}</td>     \n        <td>{{msg.payload.balances[5].total_sent}}</td> \n        <td>{{msg.payload.balances[5].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n\n    <tr ng-if=\"msg.payload.names[6] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[6][1]}}</td>\n        <td>{{msg.payload.balances[6].balance}}</td>     \n        <td>{{msg.payload.balances[6].total_sent}}</td> \n        <td>{{msg.payload.balances[6].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[7] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[7][1]}}</td>\n        <td>{{msg.payload.balances[7].balance}}</td>     \n        <td>{{msg.payload.balances[7].total_sent}}</td> \n        <td>{{msg.payload.balances[7].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[8] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[8][1]}}</td>\n        <td>{{msg.payload.balances[8].balance}}</td>     \n        <td>{{msg.payload.balances[8].total_sent}}</td> \n        <td>{{msg.payload.balances[8].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[9] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[9][1]}}</td>\n        <td>{{msg.payload.balances[9].balance}}</td>     \n        <td>{{msg.payload.balances[9].total_sent}}</td> \n        <td>{{msg.payload.balances[9].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[10] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[10][1]}}</td>\n        <td>{{msg.payload.balances[10].balance}}</td>     \n        <td>{{msg.payload.balances[10].total_sent}}</td> \n        <td>{{msg.payload.balances[10].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>   \n    \n    <tr ng-if=\"msg.payload.names[11] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[11][1]}}</td>\n        <td>{{msg.payload.balances[11].balance}}</td>     \n        <td>{{msg.payload.balances[11].total_sent}}</td> \n        <td>{{msg.payload.balances[11].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>  \n    \n    <tr ng-if=\"msg.payload.names[12] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[12][1]}}</td>\n        <td>{{msg.payload.balances[12].balance}}</td>     \n        <td>{{msg.payload.balances[12].total_sent}}</td> \n        <td>{{msg.payload.balances[12].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>  \n    \n</table>\n\n<small><small>Disclaimer: Max 13 Tokens</small></small>\n\n",
+        "format": "<h3>{{msg.payload.names.length}} Fungible Token(s) Owned on Testnet</h3>\n\n<table>\n    <tr>\n        <th></th>\n        <th>Symbol</th>\n        <th>Balance</th>        \n        <th>Total Sent</th>\n        <th>Total Received</th>\n        <th></th>\n        <th></th>\n    </tr>\n\n\t<tr ng-if=\"msg.payload.names[0] !== undefined\">\n        <td><img src=\"{{msg.payload.image0}}\" width=\"32\" height=\"32\"> </td>\n        <td>{{msg.payload.names[0][1]}}</td>\n        <td>{{msg.payload.balances[0].balance}}</td>     \n        <td>{{msg.payload.balances[0].total_sent}}</td> \n        <td>{{msg.payload.balances[0].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>\n    </tr>\n\n\t<tr ng-if=\"msg.payload.names[1] !== undefined\">\n        <td><img src=\"{{msg.payload.image1}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[1][1]}}</td>\n        <td>{{msg.payload.balances[1].balance}}</td>     \n        <td>{{msg.payload.balances[1].total_sent}}</td> \n        <td>{{msg.payload.balances[1].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[2] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[2][1]}}</td>\n        <td>{{msg.payload.balances[2].balance}}</td>     \n        <td>{{msg.payload.balances[2].total_sent}}</td> \n        <td>{{msg.payload.balances[2].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[3] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[3][1]}}</td>\n        <td>{{msg.payload.balances[3].balance}}</td>     \n        <td>{{msg.payload.balances[3].total_sent}}</td> \n        <td>{{msg.payload.balances[3].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[4] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[4][1]}}</td>\n        <td>{{msg.payload.balances[4].balance}}</td>     \n        <td>{{msg.payload.balances[4].total_sent}}</td> \n        <td>{{msg.payload.balances[4].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[5] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[5][1]}}</td>\n        <td>{{msg.payload.balances[5].balance}}</td>     \n        <td>{{msg.payload.balances[5].total_sent}}</td> \n        <td>{{msg.payload.balances[5].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n\n    <tr ng-if=\"msg.payload.names[6] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[6][1]}}</td>\n        <td>{{msg.payload.balances[6].balance}}</td>     \n        <td>{{msg.payload.balances[6].total_sent}}</td> \n        <td>{{msg.payload.balances[6].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[7] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[7][1]}}</td>\n        <td>{{msg.payload.balances[7].balance}}</td>     \n        <td>{{msg.payload.balances[7].total_sent}}</td> \n        <td>{{msg.payload.balances[7].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[8] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[8][1]}}</td>\n        <td>{{msg.payload.balances[8].balance}}</td>     \n        <td>{{msg.payload.balances[8].total_sent}}</td> \n        <td>{{msg.payload.balances[8].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[9] !== undefined\">\n        <td><img src=\"https://cryptocracy.io/assets/images/cryptocracy_clear.png\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[9][1]}}</td>\n        <td>{{msg.payload.balances[9].balance}}</td>     \n        <td>{{msg.payload.balances[9].total_sent}}</td> \n        <td>{{msg.payload.balances[9].total_received}}</td>\n        <td><md-button>Transfer</md-button></td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n\n</table>\n\n<small><small>Disclaimer: Max 10 Tokens</small></small>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1680,
-        "y": 880,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d4652e3a.22359",
-        "type": "ui_template",
-        "z": "f7442446.0c97f8",
-        "d": true,
-        "group": "2e2fb22f.78448e",
-        "name": "Tokens List (testnet) (old attempt)",
-        "order": 2,
-        "width": "13",
-        "height": "6",
-        "format": "<h3>{{msg.payload.names.length}} Fungible Token(s) Owned on Testnet</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Name</th>\n        <th>Balance</th>        \n        <th>Total Sent</th>\n        <th>Total Received</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload.balances\">\n        <td><img src=\"https://derupt.io/assets/images/derupt_clear_small.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.alias}}</td>\n        <td>{{obj.balance}}</td>     \n        <td>{{obj.total_sent}}</td> \n        <td>{{obj.total_received}}</td>\n    </tr>\n</table>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1700,
-        "y": 1100,
+        "x": 2660,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -11980,8 +11799,2374 @@
         "z": "f7442446.0c97f8",
         "name": "TRANSFER & HISTORY UNDER CONSTRUCTION",
         "info": "",
-        "x": 1510,
-        "y": 840,
+        "x": 1990,
+        "y": 520,
         "wires": []
+    },
+    {
+        "id": "359ac0fd.57a64",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "get contract 0 url (testnet)",
+        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use mainnet\nconst contract = global.get(\"ftcontractnames[0][0]\"); // or use ft1contract etc\nmsg.url = \"https://\" + nettype + \"/extended/v1/contract/\" + contract;// prior was /assets\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 1340,
+        "wires": [
+            [
+                "93bdcff4.29b0c"
+            ]
+        ]
+    },
+    {
+        "id": "e8c4dd6d.c35da",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 690,
+        "y": 1300,
+        "wires": [
+            [
+                "4cfb4c56.a44634"
+            ]
+        ]
+    },
+    {
+        "id": "4cfb4c56.a44634",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 830,
+        "y": 1300,
+        "wires": [
+            [
+                "bc9263da.b9d19"
+            ]
+        ]
+    },
+    {
+        "id": "605d5b01.f0ce54",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "name": "token debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "4262a729.05abf8",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token meta 0",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 1280,
+        "wires": [
+            [
+                "924754d4.095488"
+            ]
+        ]
+    },
+    {
+        "id": "924754d4.095488",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 1590,
+        "y": 1280,
+        "wires": [
+            [
+                "6d0bf2f3.de231c"
+            ]
+        ]
+    },
+    {
+        "id": "6d0bf2f3.de231c",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1730,
+        "y": 1280,
+        "wires": [
+            [
+                "a1d22f32.1e5c1"
+            ]
+        ]
+    },
+    {
+        "id": "a1d22f32.1e5c1",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "set image0",
+        "func": "const image0 = msg.payload.image;\nmsg.payload = {image0};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 1280,
+        "wires": [
+            [
+                "61361a6d.ebaa34",
+                "6df74dc.d526bb4"
+            ]
+        ]
+    },
+    {
+        "id": "3367e45f.cc981c",
+        "type": "function",
+        "z": "dc0bf4e0.e49468",
+        "name": "++",
+        "func": "if ( (msg.i += 1) < msg.names.length ) return msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 460,
+        "wires": [
+            [
+                "116d5bb3.ee92a4"
+            ]
+        ]
+    },
+    {
+        "id": "116d5bb3.ee92a4",
+        "type": "function",
+        "z": "dc0bf4e0.e49468",
+        "name": "for each name",
+        "func": "if( msg.i     == undefined ) msg.i = 0;\nif( msg.names == undefined ) msg.names = msg.payload;\n\nmsg.payload = msg.names[ msg.i ];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 340,
+        "wires": [
+            [
+                "3367e45f.cc981c"
+            ]
+        ]
+    },
+    {
+        "id": "4f3cb59a.07fe0c",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "get contract 1 url (testnet)",
+        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use mainnet\nconst contract = global.get(\"ftcontractnames[1][0]\"); // or use ft1contract etc\nmsg.url = \"https://\" + nettype + \"/extended/v1/contract/\" + contract;// prior was /assets\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 1440,
+        "wires": [
+            [
+                "ceaef61c.5ceab8"
+            ]
+        ]
+    },
+    {
+        "id": "33301f96.99394",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 670,
+        "y": 1400,
+        "wires": [
+            [
+                "c27d3ad5.cb2d38"
+            ]
+        ]
+    },
+    {
+        "id": "c27d3ad5.cb2d38",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 830,
+        "y": 1400,
+        "wires": [
+            [
+                "49ea32a3.82ecdc"
+            ]
+        ]
+    },
+    {
+        "id": "bc63ae9a.a182e",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token meta 1",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 1380,
+        "wires": [
+            [
+                "e8f7e32d.e998a"
+            ]
+        ]
+    },
+    {
+        "id": "e8f7e32d.e998a",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 1610,
+        "y": 1380,
+        "wires": [
+            [
+                "f295514c.0fd7c"
+            ]
+        ]
+    },
+    {
+        "id": "f295514c.0fd7c",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1750,
+        "y": 1380,
+        "wires": [
+            [
+                "59123087.880da"
+            ]
+        ]
+    },
+    {
+        "id": "59123087.880da",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "set image1",
+        "func": "const image1 = msg.payload.image;\nmsg.payload = {image1};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 1380,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "61361a6d.ebaa34",
+        "type": "join",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "10",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 2330,
+        "y": 1260,
+        "wires": [
+            [
+                "3f1208f3.82c9b8",
+                "30825d45.75b282"
+            ]
+        ]
+    },
+    {
+        "id": "7440f9a1.036a58",
+        "type": "link out",
+        "z": "f7442446.0c97f8",
+        "name": "to set global ftcontract0",
+        "links": [
+            "e3fdd2dc.9c1a4"
+        ],
+        "x": 1095,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "e3fdd2dc.9c1a4",
+        "type": "link in",
+        "z": "e83b2318.6f5c6",
+        "name": "pass to Global (set ftcontract0)",
+        "links": [
+            "7440f9a1.036a58"
+        ],
+        "x": 155,
+        "y": 1000,
+        "wires": [
+            [
+                "80760848.deb508"
+            ]
+        ]
+    },
+    {
+        "id": "80760848.deb508",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set global.ftcontractnames",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.names",
+                "pt": "msg",
+                "to": "ftcontractnames",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 1000,
+        "wires": [
+            [
+                "8c20a4b8.226fa8"
+            ]
+        ]
+    },
+    {
+        "id": "47419eab.05c3b",
+        "type": "inject",
+        "z": "f7442446.0c97f8",
+        "name": "default names of tokens",
+        "props": [
+            {
+                "p": "payload.names",
+                "v": "undefined",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 880,
+        "y": 1020,
+        "wires": [
+            [
+                "7440f9a1.036a58"
+            ]
+        ]
+    },
+    {
+        "id": "49ea32a3.82ecdc",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "pass thru unless errored",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 1400,
+        "wires": [
+            [
+                "bc63ae9a.a182e"
+            ],
+            [
+                "8ee0d8a0.bb9c78"
+            ]
+        ]
+    },
+    {
+        "id": "bc9263da.b9d19",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "pass thru unless errored",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 1300,
+        "wires": [
+            [
+                "4262a729.05abf8"
+            ],
+            [
+                "ad0c52b9.07955"
+            ]
+        ]
+    },
+    {
+        "id": "ad0c52b9.07955",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "or image0 (default)",
+        "func": "const image0 = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image0};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1930,
+        "y": 1320,
+        "wires": [
+            [
+                "61361a6d.ebaa34",
+                "6df74dc.d526bb4"
+            ]
+        ]
+    },
+    {
+        "id": "8ee0d8a0.bb9c78",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "or image1 (default)",
+        "func": "const image1 = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image1};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 1420,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "265f6e52.b3b642",
+        "type": "link out",
+        "z": "f7442446.0c97f8",
+        "name": "get images tripper",
+        "links": [
+            "4a7ebf16.a2495"
+        ],
+        "x": 1095,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "4a7ebf16.a2495",
+        "type": "link in",
+        "z": "f7442446.0c97f8",
+        "name": "get images tripper 2",
+        "links": [
+            "265f6e52.b3b642"
+        ],
+        "x": 35,
+        "y": 1780,
+        "wires": [
+            [
+                "4f3cb59a.07fe0c",
+                "359ac0fd.57a64",
+                "47341cf7.ba6a94",
+                "82787eb7.cc2f1",
+                "a83aa020.0149e",
+                "c37110ae.e291f",
+                "6e4b1773.ef7ee8",
+                "630d57ee.13de58",
+                "37febb68.bac794",
+                "b9b227ab.e939e8"
+            ]
+        ]
+    },
+    {
+        "id": "47341cf7.ba6a94",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "get contract 2 url (testnet)",
+        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use mainnet\nconst contract = global.get(\"ftcontractnames[2][0]\"); // or use ft1contract etc\nmsg.url = \"https://\" + nettype + \"/extended/v1/contract/\" + contract;// prior was /assets\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 1560,
+        "wires": [
+            [
+                "1ce38732.df7f69"
+            ]
+        ]
+    },
+    {
+        "id": "31d060a7.7758b",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 670,
+        "y": 1520,
+        "wires": [
+            [
+                "fe951b10.e42358"
+            ]
+        ]
+    },
+    {
+        "id": "fe951b10.e42358",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 830,
+        "y": 1520,
+        "wires": [
+            [
+                "cc1a8b3a.370b48"
+            ]
+        ]
+    },
+    {
+        "id": "5d68bd24.fdd954",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token meta 2",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 1500,
+        "wires": [
+            [
+                "a4202a10.179b78"
+            ]
+        ]
+    },
+    {
+        "id": "a4202a10.179b78",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 1610,
+        "y": 1500,
+        "wires": [
+            [
+                "3795fb9e.828a74"
+            ]
+        ]
+    },
+    {
+        "id": "3795fb9e.828a74",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1750,
+        "y": 1500,
+        "wires": [
+            [
+                "5920fb95.d1a6a4"
+            ]
+        ]
+    },
+    {
+        "id": "5920fb95.d1a6a4",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "set image2",
+        "func": "const image2 = msg.payload.image;\nmsg.payload = {image2};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 1500,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "cc1a8b3a.370b48",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "pass thru unless errored",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 1520,
+        "wires": [
+            [
+                "5d68bd24.fdd954"
+            ],
+            [
+                "be8368f5.8612d8"
+            ]
+        ]
+    },
+    {
+        "id": "be8368f5.8612d8",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "or image2 (default)",
+        "func": "const image2 = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image2};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 1540,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "82787eb7.cc2f1",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "get contract 3 url (testnet)",
+        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use mainnet\nconst contract = global.get(\"ftcontractnames[3][0]\"); \nmsg.url = \"https://\" + nettype + \"/extended/v1/contract/\" + contract;// prior was /assets\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 1680,
+        "wires": [
+            [
+                "f1068bdf.868c28"
+            ]
+        ]
+    },
+    {
+        "id": "74b018a.a9fd5e8",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 670,
+        "y": 1640,
+        "wires": [
+            [
+                "662ec3c6.d5cdfc"
+            ]
+        ]
+    },
+    {
+        "id": "662ec3c6.d5cdfc",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 830,
+        "y": 1640,
+        "wires": [
+            [
+                "124a5383.d2363c"
+            ]
+        ]
+    },
+    {
+        "id": "989a09f4.675c18",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token meta 3",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 1620,
+        "wires": [
+            [
+                "4995236e.f9971c"
+            ]
+        ]
+    },
+    {
+        "id": "4995236e.f9971c",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 1610,
+        "y": 1620,
+        "wires": [
+            [
+                "74bb894b.f4daf8"
+            ]
+        ]
+    },
+    {
+        "id": "74bb894b.f4daf8",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1750,
+        "y": 1620,
+        "wires": [
+            [
+                "a783f335.b30b4"
+            ]
+        ]
+    },
+    {
+        "id": "a783f335.b30b4",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "set image3",
+        "func": "const image3 = msg.payload.image;\nmsg.payload = {image3};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 1620,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "124a5383.d2363c",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "pass thru unless errored",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 1640,
+        "wires": [
+            [
+                "989a09f4.675c18"
+            ],
+            [
+                "b5a46201.258c4"
+            ]
+        ]
+    },
+    {
+        "id": "b5a46201.258c4",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "or image3 (default)",
+        "func": "const image3 = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image3};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 1660,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "a83aa020.0149e",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "get contract 4 url (testnet)",
+        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use mainnet\nconst contract = global.get(\"ftcontractnames[4][0]\"); // or use ft1contract etc\nmsg.url = \"https://\" + nettype + \"/extended/v1/contract/\" + contract;// prior was /assets\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 1780,
+        "wires": [
+            [
+                "31d44d99.a947d2"
+            ]
+        ]
+    },
+    {
+        "id": "2a473c70.8999e4",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 670,
+        "y": 1760,
+        "wires": [
+            [
+                "3269903.b361e7"
+            ]
+        ]
+    },
+    {
+        "id": "3269903.b361e7",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 810,
+        "y": 1760,
+        "wires": [
+            [
+                "a45d0f0c.2686a"
+            ]
+        ]
+    },
+    {
+        "id": "9cf9e16b.93a78",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token meta 4",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 1740,
+        "wires": [
+            [
+                "5f67735.4c8aa8c"
+            ]
+        ]
+    },
+    {
+        "id": "5f67735.4c8aa8c",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 1610,
+        "y": 1740,
+        "wires": [
+            [
+                "a9437260.f00e"
+            ]
+        ]
+    },
+    {
+        "id": "a9437260.f00e",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1750,
+        "y": 1740,
+        "wires": [
+            [
+                "88fb1c49.13a3b"
+            ]
+        ]
+    },
+    {
+        "id": "88fb1c49.13a3b",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "set image4",
+        "func": "const image4 = msg.payload.image;\nmsg.payload = {image4};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 1740,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "a45d0f0c.2686a",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "pass thru unless errored",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 1760,
+        "wires": [
+            [
+                "9cf9e16b.93a78"
+            ],
+            [
+                "307f543a.8222ac"
+            ]
+        ]
+    },
+    {
+        "id": "307f543a.8222ac",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "or image4 (default)",
+        "func": "const image4 = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image4};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 1780,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "c37110ae.e291f",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "get contract 5 url (testnet)",
+        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use mainnet\nconst contract = global.get(\"ftcontractnames[5][0]\"); // or use ft1contract etc\nmsg.url = \"https://\" + nettype + \"/extended/v1/contract/\" + contract;// prior was /assets\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 1920,
+        "wires": [
+            [
+                "493e33b7.e9649c"
+            ]
+        ]
+    },
+    {
+        "id": "33ddc782.741778",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 670,
+        "y": 1900,
+        "wires": [
+            [
+                "161db1ce.4c1fbe"
+            ]
+        ]
+    },
+    {
+        "id": "161db1ce.4c1fbe",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 810,
+        "y": 1900,
+        "wires": [
+            [
+                "94fb8f01.062f2"
+            ]
+        ]
+    },
+    {
+        "id": "4f695cd6.030794",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token meta 5",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 1880,
+        "wires": [
+            [
+                "1fcc208e.51f64f"
+            ]
+        ]
+    },
+    {
+        "id": "1fcc208e.51f64f",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 1610,
+        "y": 1880,
+        "wires": [
+            [
+                "51f44a03.5047c4"
+            ]
+        ]
+    },
+    {
+        "id": "51f44a03.5047c4",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1750,
+        "y": 1880,
+        "wires": [
+            [
+                "45425a17.aeecc4"
+            ]
+        ]
+    },
+    {
+        "id": "45425a17.aeecc4",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "set image5",
+        "func": "const image5 = msg.payload.image;\nmsg.payload = {image5};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 1880,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "94fb8f01.062f2",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "pass thru unless errored",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1010,
+        "y": 1900,
+        "wires": [
+            [
+                "4f695cd6.030794"
+            ],
+            [
+                "4063f524.742d9c"
+            ]
+        ]
+    },
+    {
+        "id": "4063f524.742d9c",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "or image5 (default)",
+        "func": "const image5 = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image5};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 1920,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "6e4b1773.ef7ee8",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "get contract 6 url (testnet)",
+        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use mainnet\nconst contract = global.get(\"ftcontractnames[6][0]\"); // or use ft1contract etc\nmsg.url = \"https://\" + nettype + \"/extended/v1/contract/\" + contract;// prior was /assets\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 2040,
+        "wires": [
+            [
+                "445c798e.dc2918"
+            ]
+        ]
+    },
+    {
+        "id": "f8a9fe02.d1481",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 670,
+        "y": 2020,
+        "wires": [
+            [
+                "b1e8ce4e.62f01"
+            ]
+        ]
+    },
+    {
+        "id": "b1e8ce4e.62f01",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 830,
+        "y": 2020,
+        "wires": [
+            [
+                "9f47697d.2467e8"
+            ]
+        ]
+    },
+    {
+        "id": "7538e879.7ec088",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token meta 6",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 2000,
+        "wires": [
+            [
+                "77ef1967.06cb28"
+            ]
+        ]
+    },
+    {
+        "id": "77ef1967.06cb28",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 1610,
+        "y": 2000,
+        "wires": [
+            [
+                "7fb4e8fb.467c38"
+            ]
+        ]
+    },
+    {
+        "id": "7fb4e8fb.467c38",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1750,
+        "y": 2000,
+        "wires": [
+            [
+                "5e9246ae.34d3b8"
+            ]
+        ]
+    },
+    {
+        "id": "5e9246ae.34d3b8",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "set image6",
+        "func": "const image6 = msg.payload.image;\nmsg.payload = {image6};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 2000,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "9f47697d.2467e8",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "pass thru unless errored",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 2020,
+        "wires": [
+            [
+                "7538e879.7ec088"
+            ],
+            [
+                "af10197.3dac0e8"
+            ]
+        ]
+    },
+    {
+        "id": "af10197.3dac0e8",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "or image6 (default)",
+        "func": "const image6 = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image6};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 2040,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "630d57ee.13de58",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "get contract 7 url (testnet)",
+        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use mainnet\nconst contract = global.get(\"ftcontractnames[7][0]\"); // or use ft1contract etc\nmsg.url = \"https://\" + nettype + \"/extended/v1/contract/\" + contract;// prior was /assets\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 2160,
+        "wires": [
+            [
+                "b5570a77.3da428"
+            ]
+        ]
+    },
+    {
+        "id": "4a5fd447.fd0ddc",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 690,
+        "y": 2140,
+        "wires": [
+            [
+                "5a02aae7.467934"
+            ]
+        ]
+    },
+    {
+        "id": "5a02aae7.467934",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 830,
+        "y": 2140,
+        "wires": [
+            [
+                "b637af44.f5efd"
+            ]
+        ]
+    },
+    {
+        "id": "5fa44ea0.92cbb",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token meta 7",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 2120,
+        "wires": [
+            [
+                "f30485ed.51c218"
+            ]
+        ]
+    },
+    {
+        "id": "f30485ed.51c218",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 1610,
+        "y": 2120,
+        "wires": [
+            [
+                "111a517c.647e6f"
+            ]
+        ]
+    },
+    {
+        "id": "111a517c.647e6f",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1750,
+        "y": 2120,
+        "wires": [
+            [
+                "57be7cf.c508b84"
+            ]
+        ]
+    },
+    {
+        "id": "57be7cf.c508b84",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "set image7",
+        "func": "const image7 = msg.payload.image;\nmsg.payload = {image7};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 2120,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "b637af44.f5efd",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "pass thru unless errored",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 2140,
+        "wires": [
+            [
+                "5fa44ea0.92cbb"
+            ],
+            [
+                "32303503.c617ca"
+            ]
+        ]
+    },
+    {
+        "id": "32303503.c617ca",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "or image7 (default)",
+        "func": "const image7 = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image7};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 2160,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "37febb68.bac794",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "get contract 8 url (testnet)",
+        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use mainnet\nconst contract = global.get(\"ftcontractnames[8][0]\"); // or use ft1contract etc\nmsg.url = \"https://\" + nettype + \"/extended/v1/contract/\" + contract;// prior was /assets\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 2260,
+        "wires": [
+            [
+                "b415f6ad.f383c8"
+            ]
+        ]
+    },
+    {
+        "id": "94ea7f22.b4fcd",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 690,
+        "y": 2240,
+        "wires": [
+            [
+                "bca2f03f.b028b"
+            ]
+        ]
+    },
+    {
+        "id": "bca2f03f.b028b",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 830,
+        "y": 2240,
+        "wires": [
+            [
+                "e5b2b671.96d008"
+            ]
+        ]
+    },
+    {
+        "id": "54b396fa.a16838",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token meta 8",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 2220,
+        "wires": [
+            [
+                "90f23ef2.35661"
+            ]
+        ]
+    },
+    {
+        "id": "90f23ef2.35661",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 1590,
+        "y": 2220,
+        "wires": [
+            [
+                "52b7af2e.9a129"
+            ]
+        ]
+    },
+    {
+        "id": "52b7af2e.9a129",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1750,
+        "y": 2220,
+        "wires": [
+            [
+                "8fbb369c.6dd1a8"
+            ]
+        ]
+    },
+    {
+        "id": "8fbb369c.6dd1a8",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "set image8",
+        "func": "const image8 = msg.payload.image;\nmsg.payload = {image8};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 2220,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "e5b2b671.96d008",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "pass thru unless errored",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 2240,
+        "wires": [
+            [
+                "54b396fa.a16838"
+            ],
+            [
+                "89d1d1c8.26f65"
+            ]
+        ]
+    },
+    {
+        "id": "89d1d1c8.26f65",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "or image8 (default)",
+        "func": "const image8 = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image8};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1930,
+        "y": 2260,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "b9b227ab.e939e8",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "get contract 9 url (testnet)",
+        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use mainnet\nconst contract = global.get(\"ftcontractnames[9][0]\"); // or use ft1contract etc\nmsg.url = \"https://\" + nettype + \"/extended/v1/contract/\" + contract;// prior was /assets\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 2360,
+        "wires": [
+            [
+                "4b06dd42.f51734"
+            ]
+        ]
+    },
+    {
+        "id": "d35647b.9fdeab8",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 690,
+        "y": 2340,
+        "wires": [
+            [
+                "1ccad6b.959d429"
+            ]
+        ]
+    },
+    {
+        "id": "1ccad6b.959d429",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 830,
+        "y": 2340,
+        "wires": [
+            [
+                "654fa05e.5d9e9"
+            ]
+        ]
+    },
+    {
+        "id": "80e53f18.b8fba",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token meta 9",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 2320,
+        "wires": [
+            [
+                "e56bd4c.37aa328"
+            ]
+        ]
+    },
+    {
+        "id": "e56bd4c.37aa328",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 1590,
+        "y": 2320,
+        "wires": [
+            [
+                "9915242f.8e9b98"
+            ]
+        ]
+    },
+    {
+        "id": "9915242f.8e9b98",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1750,
+        "y": 2320,
+        "wires": [
+            [
+                "d2bbd68c.1d4cf8"
+            ]
+        ]
+    },
+    {
+        "id": "d2bbd68c.1d4cf8",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "set image9",
+        "func": "const image9 = msg.payload.image;\nmsg.payload = {image9};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 2320,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "654fa05e.5d9e9",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "pass thru unless errored",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 2340,
+        "wires": [
+            [
+                "80e53f18.b8fba"
+            ],
+            [
+                "3f17a712.87fc98"
+            ]
+        ]
+    },
+    {
+        "id": "3f17a712.87fc98",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "or image9 (default)",
+        "func": "const image9 = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image9};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1930,
+        "y": 2380,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "8c20a4b8.226fa8",
+        "type": "debug",
+        "z": "e83b2318.6f5c6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "30825d45.75b282",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "name": "join images debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2520,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "6df74dc.d526bb4",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "name": "image0 debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2170,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "46ecd87f.4f44b8",
+        "type": "inject",
+        "z": "f7442446.0c97f8",
+        "name": "get images",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 900,
+        "y": 960,
+        "wires": [
+            [
+                "265f6e52.b3b642"
+            ]
+        ]
+    },
+    {
+        "id": "93bdcff4.29b0c",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "error if undefined",
+        "property": "url",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "cont",
+                "v": "/contract/undefined",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 490,
+        "y": 1340,
+        "wires": [
+            [
+                "e8c4dd6d.c35da",
+                "ec431e72.dc554"
+            ],
+            [
+                "ad0c52b9.07955"
+            ]
+        ]
+    },
+    {
+        "id": "ec431e72.dc554",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "ceaef61c.5ceab8",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "error if undefined",
+        "property": "url",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "cont",
+                "v": "/contract/undefined",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 1440,
+        "wires": [
+            [
+                "33301f96.99394"
+            ],
+            [
+                "8ee0d8a0.bb9c78"
+            ]
+        ]
+    },
+    {
+        "id": "1ce38732.df7f69",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "error if undefined",
+        "property": "url",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "cont",
+                "v": "/contract/undefined",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 1560,
+        "wires": [
+            [
+                "31d060a7.7758b"
+            ],
+            [
+                "be8368f5.8612d8"
+            ]
+        ]
+    },
+    {
+        "id": "f1068bdf.868c28",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "error if undefined",
+        "property": "url",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "cont",
+                "v": "/contract/undefined",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 1680,
+        "wires": [
+            [
+                "74b018a.a9fd5e8"
+            ],
+            [
+                "b5a46201.258c4"
+            ]
+        ]
+    },
+    {
+        "id": "31d44d99.a947d2",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "error if undefined",
+        "property": "url",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "cont",
+                "v": "/contract/undefined",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 1780,
+        "wires": [
+            [
+                "2a473c70.8999e4"
+            ],
+            [
+                "307f543a.8222ac"
+            ]
+        ]
+    },
+    {
+        "id": "493e33b7.e9649c",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "error if undefined",
+        "property": "url",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "cont",
+                "v": "/contract/undefined",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 1920,
+        "wires": [
+            [
+                "33ddc782.741778"
+            ],
+            [
+                "4063f524.742d9c"
+            ]
+        ]
+    },
+    {
+        "id": "445c798e.dc2918",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "error if undefined",
+        "property": "url",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "cont",
+                "v": "/contract/undefined",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 2040,
+        "wires": [
+            [
+                "f8a9fe02.d1481"
+            ],
+            [
+                "af10197.3dac0e8"
+            ]
+        ]
+    },
+    {
+        "id": "b5570a77.3da428",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "error if undefined",
+        "property": "url",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "cont",
+                "v": "/contract/undefined",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 2160,
+        "wires": [
+            [
+                "4a5fd447.fd0ddc"
+            ],
+            [
+                "32303503.c617ca"
+            ]
+        ]
+    },
+    {
+        "id": "b415f6ad.f383c8",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "error if undefined",
+        "property": "url",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "cont",
+                "v": "/contract/undefined",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 2260,
+        "wires": [
+            [
+                "94ea7f22.b4fcd"
+            ],
+            [
+                "89d1d1c8.26f65"
+            ]
+        ]
+    },
+    {
+        "id": "4b06dd42.f51734",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "error if undefined",
+        "property": "url",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "cont",
+                "v": "/contract/undefined",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 2360,
+        "wires": [
+            [
+                "d35647b.9fdeab8"
+            ],
+            [
+                "3f17a712.87fc98"
+            ]
+        ]
     }
 ]
