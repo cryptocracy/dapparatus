@@ -130,7 +130,7 @@
         "order": 0,
         "width": "6",
         "height": "5",
-        "format": "<h3>Import Version</h3>\nStep 1) Ctrl + Shift + E to open the Editor\n<br>\nStep 2) Import the dapparatus_alpha.json\n<br>\nStep 3) Use & Extend & Buidl",
+        "format": "<h3>Import Version</h3>\nStep 1) Ctrl + Shift + E to open the Editor\n<br>\nStep 2) Import the dapparatus_beta.json\n<br>\nStep 3) Use & Extend & Buidl",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
