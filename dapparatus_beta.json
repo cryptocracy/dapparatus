@@ -593,15 +593,6 @@
         "collapse": false
     },
     {
-        "id": "b3b6d501.7b6578",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "be1bffc8.e254c",
-        "order": 2,
-        "width": 11,
-        "height": 1
-    },
-    {
         "id": "13304427.8cb59c",
         "type": "ui_spacer",
         "name": "spacer",
@@ -822,15 +813,6 @@
         "collapse": true
     },
     {
-        "id": "35a284e7.db64dc",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "e5d0847b.1daa38",
-        "order": 2,
-        "width": "7",
-        "height": "2"
-    },
-    {
         "id": "93894c51.e61b",
         "type": "ui_group",
         "name": "Send",
@@ -847,6 +829,33 @@
         "icon": "fa-fire",
         "disabled": false,
         "hidden": true
+    },
+    {
+        "id": "17428c06.60ee94",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "be1bffc8.e254c",
+        "order": 1,
+        "width": "13",
+        "height": "2"
+    },
+    {
+        "id": "f694fb51.052ac8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "e5d0847b.1daa38",
+        "order": 2,
+        "width": "7",
+        "height": "2"
+    },
+    {
+        "id": "895cda92.de6dd8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "de35938.a16f97",
+        "order": 3,
+        "width": 1,
+        "height": 1
     },
     {
         "id": "8ff35ce4.a1acd",
@@ -938,7 +947,7 @@
         "z": "613e85c9.c6210c",
         "group": "de35938.a16f97",
         "name": "TX Info",
-        "order": 3,
+        "order": 5,
         "width": 0,
         "height": 0,
         "format": "{{msg.blockchain}}",
@@ -946,8 +955,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 820,
-        "y": 2040,
+        "x": 2400,
+        "y": 1940,
         "wires": [
             []
         ]
@@ -1026,9 +1035,9 @@
         "type": "ui_form",
         "z": "613e85c9.c6210c",
         "name": "",
-        "label": "Mint NFT Form",
+        "label": "Mint NFT Form (testnet)",
         "group": "91c07e82.a5ad1",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "options": [
@@ -1047,8 +1056,8 @@
                 "rows": null
             },
             {
-                "label": "NFT Image URL",
-                "value": "nftimage",
+                "label": "NFT URI",
+                "value": "nfturi",
                 "type": "text",
                 "required": true,
                 "rows": null
@@ -1057,7 +1066,7 @@
         "formValue": {
             "nftname": "",
             "nftinfo": "",
-            "nftimage": ""
+            "nfturi": ""
         },
         "payload": "",
         "submit": "Mint",
@@ -1065,10 +1074,12 @@
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
-        "x": 140,
-        "y": 2040,
+        "x": 170,
+        "y": 2660,
         "wires": [
-            []
+            [
+                "dc7aeb7a.41c8d8"
+            ]
         ]
     },
     {
@@ -1142,7 +1153,7 @@
         "width": "6",
         "height": "1",
         "passthru": false,
-        "label": "Deploy Token Interface Contract",
+        "label": "Deploy FT Interface Contract (testnet)",
         "tooltip": "THIS IS REQUIRED ONCE (for Fungible Tokens Minting)",
         "color": "",
         "bgcolor": "",
@@ -1151,7 +1162,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 190,
+        "x": 210,
         "y": 660,
         "wires": [
             [
@@ -1166,10 +1177,10 @@
         "name": "",
         "group": "de35938.a16f97",
         "order": 2,
-        "width": 0,
-        "height": 0,
+        "width": "6",
+        "height": "1",
         "passthru": false,
-        "label": "Deploy NFT Interface Contract (Not Ready Yet)",
+        "label": "Deploy NFT Interface Contract (testnet)",
         "tooltip": "THIS IS REQUIRED ONCE (for NFT Minting)",
         "color": "",
         "bgcolor": "",
@@ -1178,7 +1189,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 240,
+        "x": 220,
         "y": 2000,
         "wires": [
             [
@@ -1922,16 +1933,16 @@
         "type": "ui_template",
         "z": "42c07592.8d970c",
         "group": "be1bffc8.e254c",
-        "name": "Results by Name (Found)",
+        "name": "Results by Name (Found) Info",
         "order": 3,
-        "width": 13,
-        "height": "7",
-        "format": "<style>\n    img {\n      border-radius: 50%;\n    }\n</style>\n<div style=\"height: 140px;\">\n<img src=\"{{msg.payload[0].decodedToken.payload.claim.image[0].contentUrl}}\" width=\"140\"><br/>\n</div>\n<h3>{{msg.payload[0].decodedToken.payload.claim.name}}</h3>\n<p>{{msg.fqn}}</p>\n<p>{{msg.tipjar}}</p>\n<p>{{msg.payload[0].decodedToken.payload.claim.description}}</p>\n\n\n\n",
+        "width": "7",
+        "height": "6",
+        "format": "<h3>{{msg.payload[0].decodedToken.payload.claim.name}}</h3>\n<p>@ {{msg.fqn}}</p>\n<small>{{msg.tipjar}}</small>\n<p>Bio: {{msg.payload[0].decodedToken.payload.claim.description}}</p>\n\n\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1710,
+        "x": 1730,
         "y": 1420,
         "wires": [
             []
@@ -3704,7 +3715,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1650,
-        "y": 1380,
+        "y": 1320,
         "wires": []
     },
     {
@@ -3720,7 +3731,8 @@
         "wires": [
             [
                 "bf9d3dbc.510e8",
-                "4441efbe.eecb4"
+                "4441efbe.eecb4",
+                "32ccff.f8ff1302"
             ]
         ]
     },
@@ -5300,24 +5312,9 @@
         "y": 2000,
         "wires": [
             [
-                "4114412e.e4154"
+                "140f3230.5c18ae",
+                "9d9f09c0.f80998"
             ]
-        ]
-    },
-    {
-        "id": "4114412e.e4154",
-        "type": "file in",
-        "z": "613e85c9.c6210c",
-        "name": "",
-        "filename": "write file",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "ascii",
-        "x": 820,
-        "y": 2000,
-        "wires": [
-            []
         ]
     },
     {
@@ -6119,7 +6116,7 @@
         "label": "Follow: ",
         "tooltip": "",
         "group": "be1bffc8.e254c",
-        "order": 1,
+        "order": 4,
         "width": 2,
         "height": 1,
         "passthru": true,
@@ -6137,7 +6134,7 @@
         "offcolor": "White",
         "animate": true,
         "x": 1680,
-        "y": 1320,
+        "y": 1260,
         "wires": [
             []
         ]
@@ -6164,7 +6161,7 @@
         "payload": "false",
         "payloadType": "bool",
         "x": 1530,
-        "y": 1320,
+        "y": 1260,
         "wires": [
             [
                 "840717c1.bd7348"
@@ -8155,7 +8152,7 @@
         "order": 1,
         "width": "6",
         "height": "6",
-        "format": "<div style=\"position: relative; width: 284px; height: 284px;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/bg/{{msg.payload[0]}}_bg.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/skin/{{msg.payload[1]}}_skin.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/eyes/{{msg.payload[2]}}_eyes.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/teeth/{{msg.payload[3]}}_teeth.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hair/{{msg.payload[4]}}_hair.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/glasses/{{msg.payload[5]}}_glasses.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hat/{{msg.payload[6]}}_hat.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/chest/{{msg.payload[7]}}_chest.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n</div>\n\n",
+        "format": "<div style=\"position: relative; width: 284px; height: 284px;\" align=\"center\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/bg/{{msg.payload[0]}}_bg.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/skin/{{msg.payload[1]}}_skin.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/eyes/{{msg.payload[2]}}_eyes.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/teeth/{{msg.payload[3]}}_teeth.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hair/{{msg.payload[4]}}_hair.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/glasses/{{msg.payload[5]}}_glasses.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hat/{{msg.payload[6]}}_hat.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n<img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/chest/{{msg.payload[7]}}_chest.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n</div>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -8316,9 +8313,9 @@
         "group": "e5d0847b.1daa38",
         "name": "Deruptar Profile Details",
         "order": 3,
-        "width": "5",
-        "height": "2",
-        "format": "<small>{{msg.deruptar}}</small>\n<small><small><small>{{msg.depositaddress}}</small></small></small>\n",
+        "width": "7",
+        "height": "6",
+        "format": "<h3>{{msg.name}}</h3>\n<p>@ {{msg.fqn}}</p>\n<small>{{msg.depositaddress}}</small>\n<p>Bio: {{msg.deruptar}}</p>\n\n\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -9396,8 +9393,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 1700,
-        "y": 760,
+        "x": 1780,
+        "y": 720,
         "wires": [
             [],
             [
@@ -9531,7 +9528,7 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 1960,
+        "x": 2040,
         "y": 720,
         "wires": [
             [
@@ -9553,7 +9550,7 @@
         "raw": false,
         "topic": "Error",
         "name": "Missing: nettype",
-        "x": 1900,
+        "x": 1980,
         "y": 760,
         "wires": []
     },
@@ -9607,7 +9604,7 @@
         "topic": "Error",
         "name": "Missing: stxprivkey",
         "x": 1510,
-        "y": 700,
+        "y": 720,
         "wires": []
     },
     {
@@ -9859,7 +9856,8 @@
         "y": 1260,
         "wires": [
             [
-                "92c2ae63.edf91"
+                "92c2ae63.edf91",
+                "4cd59253.d496fc"
             ]
         ]
     },
@@ -9885,7 +9883,7 @@
         "id": "92c2ae63.edf91",
         "type": "debug",
         "z": "613e85c9.c6210c",
-        "name": "debug mainnet mint form",
+        "name": "debug mainnet mint ft form",
         "active": true,
         "tosidebar": true,
         "console": true,
@@ -9902,7 +9900,7 @@
         "id": "19dc5a23.6b0be6",
         "type": "debug",
         "z": "613e85c9.c6210c",
-        "name": "debug testnet mint form",
+        "name": "debug testnet mint ft form",
         "active": true,
         "tosidebar": true,
         "console": true,
@@ -9911,7 +9909,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2330,
+        "x": 2340,
         "y": 1200,
         "wires": []
     },
@@ -10325,7 +10323,7 @@
         "type": "function",
         "z": "613e85c9.c6210c",
         "name": "url to call to check if ft-trait exists (testnet)",
-        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use testnet\nconst depositaddress = global.get(\"testnetdepositaddress\");\nconst ftname = \"ft-trait\";//global.get(\"xftname\");\n/// get with global xftname or with \"ft-trait\"\n\nmsg.url = \"https://\" + nettype + \"/v2/contracts/interface/\" + depositaddress + \"/\" + ftname;\n\nmsg.stx = depositaddress; \nreturn msg;",
+        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use testnet\nconst testnetdepositaddress = global.get(\"testnetdepositaddress\");\nconst ftname = \"ft-trait\";//global.get(\"xftname\");\n/// get with global xftname or with \"ft-trait\"\n\nmsg.url = \"https://\" + nettype + \"/v2/contracts/interface/\" + testnetdepositaddress + \"/\" + ftname;\n\nmsg.stx = testnetdepositaddress; \nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10362,7 +10360,7 @@
         "type": "ui_template",
         "z": "613e85c9.c6210c",
         "group": "7e7643fd.e4b96c",
-        "name": "TX Info",
+        "name": "TX Info (testnet)",
         "order": 3,
         "width": 0,
         "height": 0,
@@ -10371,7 +10369,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2280,
+        "x": 2300,
         "y": 1160,
         "wires": [
             []
@@ -10711,8 +10709,8 @@
         "width": "6",
         "height": "1",
         "passthru": false,
-        "label": "Check for FT Trait Contract",
-        "tooltip": "Manually check to see if you Trait Contract exists and is confirmed.",
+        "label": "Check for FT Trait Contract (testnet)",
+        "tooltip": "Manually check to see if you FT Trait Contract exists and is confirmed.",
         "color": "",
         "bgcolor": "",
         "icon": "fa-refresh",
@@ -10720,7 +10718,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 180,
+        "x": 210,
         "y": 960,
         "wires": [
             [
@@ -10830,7 +10828,7 @@
         "z": "613e85c9.c6210c",
         "name": "Back (NFT Form)",
         "group": "91c07e82.a5ad1",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -10864,7 +10862,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2240,
+        "x": 2320,
         "y": 720,
         "wires": []
     },
@@ -14517,6 +14515,1033 @@
         "y": 440,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "32ccff.f8ff1302",
+        "type": "ui_template",
+        "z": "42c07592.8d970c",
+        "group": "be1bffc8.e254c",
+        "name": "Results by Name (Found) Avatar",
+        "order": 2,
+        "width": "6",
+        "height": "6",
+        "format": "<style>\n    img {\n      border-radius: 50%;\n    }\n</style>\n<div style=\"height: 140px;\" align=\"center\">\n<img src=\"{{msg.payload[0].decodedToken.payload.claim.image[0].contentUrl}}\" width=\"140\"><br/>\n</div>\n\n\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1730,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "140f3230.5c18ae",
+        "type": "debug",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "c89ec016.dea9a",
+        "type": "file in",
+        "z": "613e85c9.c6210c",
+        "name": "Get Local Clarity Contract",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 1230,
+        "y": 2000,
+        "wires": [
+            [
+                "6830e8ef.6ff088"
+            ]
+        ]
+    },
+    {
+        "id": "6830e8ef.6ff088",
+        "type": "switch",
+        "z": "613e85c9.c6210c",
+        "name": "if stxprivkey is empty error",
+        "property": "stxprivkey",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "nempty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1510,
+        "y": 2000,
+        "wires": [
+            [
+                "1ba46fb1.2d646",
+                "41ca1f9a.a55ae"
+            ],
+            [
+                "9a5dfc76.4cab8"
+            ]
+        ]
+    },
+    {
+        "id": "9a5dfc76.4cab8",
+        "type": "ui_toast",
+        "z": "613e85c9.c6210c",
+        "position": "top left",
+        "displayTime": "3",
+        "highlight": "red",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "Mainnet",
+        "cancel": "Testnet",
+        "raw": false,
+        "topic": "Error",
+        "name": "Missing: stxprivkey",
+        "x": 1530,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "aef264b9.8f1ff8",
+        "type": "delay",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1020,
+        "y": 2000,
+        "wires": [
+            [
+                "c89ec016.dea9a"
+            ]
+        ]
+    },
+    {
+        "id": "4cd59253.d496fc",
+        "type": "ui_template",
+        "z": "613e85c9.c6210c",
+        "group": "7e7643fd.e4b96c",
+        "name": "TX Info (mainnet)",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "format": "<a href=\"https://explorer.stacks.co/txid/{{msg.blockchain}}?chain=mainnet\" target=\"_blank\">{{msg.blockchain}}</a>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 2310,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f55186f.617848",
+        "type": "switch",
+        "z": "613e85c9.c6210c",
+        "name": "nettype switch",
+        "property": "nettype",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "testnet",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "mainnet",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1800,
+        "y": 2060,
+        "wires": [
+            [],
+            [
+                "ca9d3abd.0d70f8"
+            ],
+            [
+                "47a4f12d.f3f42"
+            ]
+        ]
+    },
+    {
+        "id": "1ba46fb1.2d646",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "deploy nft-trait to network (testnet)",
+        "func": "const nftname = \"nft-trait\";\n\nconst claritybody = msg.payload; //gathered from the contents of the clarity contract via prior node\n\nconst senderKey = global.get('stxprivkey');\n\n// for testnet, use `StacksTestnet()`\nconst network = new stacksNetwork.StacksTestnet();\n\nconst txOptions = {\n  contractName: nftname,\n  codeBody: claritybody,\n  senderKey,\n  network,\n};\n\n\nconst transaction = await stacksTransactions.makeContractDeploy(txOptions);\n\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\n\nmsg.blockchain = \"0x\" + broadcastTxn;\nmsg.txoptions = txOptions;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            }
+        ],
+        "x": 2100,
+        "y": 1980,
+        "wires": [
+            [
+                "d10341b1.5e999",
+                "82a2dcd7.0af3c"
+            ]
+        ]
+    },
+    {
+        "id": "ca9d3abd.0d70f8",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "deploy nft-trait to network (mainnet)",
+        "func": "const nftname = \"nft-trait\";\n\nconst claritybody = msg.payload; //gathered from the contents of the clarity contract via prior node\n\nconst senderKey = global.get('stxprivkey');\n\n// for testnet, use `StacksTestnet()`\nconst network = new stacksNetwork.StacksMainnet();\n\nconst txOptions = {\n  contractName: nftname,\n  codeBody: claritybody,\n  senderKey,\n  network,\n};\n\n\nconst transaction = await stacksTransactions.makeContractDeploy(txOptions);\n\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\n\nmsg.blockchain = \"0x\" + broadcastTxn;\nmsg.txoptions = txOptions;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            }
+        ],
+        "x": 2100,
+        "y": 2060,
+        "wires": [
+            [
+                "485e949d.18937c"
+            ]
+        ]
+    },
+    {
+        "id": "47a4f12d.f3f42",
+        "type": "ui_toast",
+        "z": "613e85c9.c6210c",
+        "position": "top left",
+        "displayTime": "3",
+        "highlight": "red",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "Mainnet",
+        "cancel": "Testnet",
+        "raw": false,
+        "topic": "Error",
+        "name": "Missing: nettype",
+        "x": 2040,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "41ca1f9a.a55ae",
+        "type": "ui_toast",
+        "z": "613e85c9.c6210c",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "green",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "Almost There...",
+        "name": "Attempting to Create and Deploy Interface.",
+        "x": 2130,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "485e949d.18937c",
+        "type": "debug",
+        "z": "613e85c9.c6210c",
+        "name": "debug mainnet trait",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2380,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "d10341b1.5e999",
+        "type": "debug",
+        "z": "613e85c9.c6210c",
+        "name": "debug testnet trait",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2440,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "12e0a8e6.69a7a7",
+        "type": "ui_template",
+        "z": "613e85c9.c6210c",
+        "group": "91c07e82.a5ad1",
+        "name": "TX Info (testnet)",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<a href=\"https://explorer.stacks.co/txid/{{msg.blockchain}}?chain=testnet\" target=\"_blank\">{{msg.blockchain}}</a>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 2180,
+        "y": 2620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f4d0ce35.ce184",
+        "type": "ui_template",
+        "z": "613e85c9.c6210c",
+        "group": "91c07e82.a5ad1",
+        "name": "TX Info (mainnet)",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<a href=\"https://explorer.stacks.co/txid/{{msg.blockchain}}?chain=mainnet\" target=\"_blank\">{{msg.blockchain}}</a>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 2190,
+        "y": 2800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dc7aeb7a.41c8d8",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "setup clarity nft contract file (TESTNET)",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 2660,
+        "wires": [
+            [
+                "cb1012de.505c1"
+            ]
+        ]
+    },
+    {
+        "id": "269f01d.fc031fe",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "setup clarity nft contract file (Mainnet)",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 2620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb1012de.505c1",
+        "type": "file",
+        "z": "613e85c9.c6210c",
+        "name": "create local .clar",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "ascii",
+        "x": 760,
+        "y": 2660,
+        "wires": [
+            [
+                "f683ed5e.7a351",
+                "92ab9000.0caf1"
+            ]
+        ]
+    },
+    {
+        "id": "92ab9000.0caf1",
+        "type": "delay",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 980,
+        "y": 2660,
+        "wires": [
+            [
+                "129bfeee.54c0c1"
+            ]
+        ]
+    },
+    {
+        "id": "f683ed5e.7a351",
+        "type": "debug",
+        "z": "613e85c9.c6210c",
+        "name": "debug contract write",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 2620,
+        "wires": []
+    },
+    {
+        "id": "129bfeee.54c0c1",
+        "type": "file in",
+        "z": "613e85c9.c6210c",
+        "name": "Get Local Clarity Contract",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 1330,
+        "y": 2660,
+        "wires": [
+            [
+                "988740f2.dcd"
+            ]
+        ]
+    },
+    {
+        "id": "988740f2.dcd",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "deploy nft-mint to network (testnet)",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1820,
+        "y": 2660,
+        "wires": [
+            [
+                "98b6dd2b.bb668",
+                "12e0a8e6.69a7a7"
+            ]
+        ]
+    },
+    {
+        "id": "1298ff7b.9bca51",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "deploy nft-mint to network (mainnet)",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1820,
+        "y": 2760,
+        "wires": [
+            [
+                "f4d0ce35.ce184",
+                "cc65e099.1d8df"
+            ]
+        ]
+    },
+    {
+        "id": "41686cf5.bf7394",
+        "type": "switch",
+        "z": "613e85c9.c6210c",
+        "name": "nettype switch",
+        "property": "nettype",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "testnet",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "mainnet",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1540,
+        "y": 2760,
+        "wires": [
+            [
+                "1298ff7b.9bca51"
+            ],
+            [],
+            [
+                "c17935ba.43e018"
+            ]
+        ]
+    },
+    {
+        "id": "c17935ba.43e018",
+        "type": "ui_toast",
+        "z": "613e85c9.c6210c",
+        "position": "top left",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "Mainnet",
+        "cancel": "Testnet",
+        "raw": false,
+        "topic": "Missing: nettype",
+        "name": "Net Type Not Set",
+        "x": 1770,
+        "y": 2820,
+        "wires": []
+    },
+    {
+        "id": "cc65e099.1d8df",
+        "type": "debug",
+        "z": "613e85c9.c6210c",
+        "name": "debug mainnet mint nft form",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2230,
+        "y": 2760,
+        "wires": []
+    },
+    {
+        "id": "98b6dd2b.bb668",
+        "type": "debug",
+        "z": "613e85c9.c6210c",
+        "name": "debug testnet mint nft form",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2220,
+        "y": 2660,
+        "wires": []
+    },
+    {
+        "id": "5f87b0d3.057bc",
+        "type": "comment",
+        "z": "613e85c9.c6210c",
+        "name": "NEEDS WRITTEN STILL",
+        "info": "",
+        "x": 1790,
+        "y": 2620,
+        "wires": []
+    },
+    {
+        "id": "2dd12a2e.df7c36",
+        "type": "comment",
+        "z": "613e85c9.c6210c",
+        "name": "NEEDS WRITTEN STILL",
+        "info": "",
+        "x": 410,
+        "y": 2560,
+        "wires": []
+    },
+    {
+        "id": "76afe9bf.d0a898",
+        "type": "debug",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "url",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "fdb02834.ff6838",
+        "type": "json",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1150,
+        "y": 2300,
+        "wires": [
+            [
+                "4df1ef8e.8ee57",
+                "9676473a.e1d848"
+            ]
+        ]
+    },
+    {
+        "id": "4df1ef8e.8ee57",
+        "type": "switch",
+        "z": "613e85c9.c6210c",
+        "name": "switch 2",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "object",
+                "vt": "object"
+            },
+            {
+                "t": "istype",
+                "v": "string",
+                "vt": "string"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1320,
+        "y": 2300,
+        "wires": [
+            [
+                "1ebd675e.db3439"
+            ],
+            [
+                "15f7028e.6150ed"
+            ]
+        ]
+    },
+    {
+        "id": "1ebd675e.db3439",
+        "type": "change",
+        "z": "613e85c9.c6210c",
+        "name": "enable form",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Interface Contract Detected, Proceed to Minting",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1510,
+        "y": 2280,
+        "wires": [
+            [
+                "403d616b.ff861"
+            ]
+        ]
+    },
+    {
+        "id": "15f7028e.6150ed",
+        "type": "change",
+        "z": "613e85c9.c6210c",
+        "name": "disable form ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Please Wait for Interface Confirmation",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1510,
+        "y": 2320,
+        "wires": [
+            [
+                "24415682.cae87a"
+            ]
+        ]
+    },
+    {
+        "id": "9676473a.e1d848",
+        "type": "debug",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1310,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "c0339c87.a4fe",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "url to call to check if nft-trait exists (testnet)",
+        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use testnet\nconst testnetdepositaddress = global.get(\"testnetdepositaddress\");\nconst nftname = \"nft-trait\";//global.get(\"xnftname\");\n/// get with global xnftname or with \"nft-trait\"\n\nmsg.url = \"https://\" + nettype + \"/v2/contracts/interface/\" + testnetdepositaddress + \"/\" + nftname;\n\nmsg.stx = testnetdepositaddress; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 2300,
+        "wires": [
+            [
+                "76afe9bf.d0a898",
+                "87667ca4.49726"
+            ]
+        ]
+    },
+    {
+        "id": "fb19d75a.bd3608",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "url to call to check if nft-trait exists (mainnet)",
+        "func": "const nettype = \"stacks-node-api.mainnet.stacks.co\"; // or use testnet\nconst depositaddress = global.get(\"depositaddress\");\nconst nftname = \"nft-trait\";//global.get(\"xnftname\");\n/// get with global xnftname or with \"nft-trait\"\n\nmsg.url = \"https://\" + nettype + \"/v2/contracts/interface/\" + depositaddress + \"/\" + nftname;\nmsg.stx = depositaddress; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 2260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "238dce32.2ba2b2",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "show Mint NFT Form",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Minting_MintNav\",\n      \"Minting_MintNFT\",\n      \"Minting_MintNFT_Trait\",\n      \"Minting_MintFT_Form\",\n      \"Minting_MintFT_Trait\"\n    ],\n    \"show\": [\n      \"Minting_MintNFT_Form\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1980,
+        "y": 2280,
+        "wires": [
+            [
+                "d1296b43.1d1f48"
+            ]
+        ]
+    },
+    {
+        "id": "53d3b917.3bc4b8",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "show Mint NFT Trait",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Minting_MintNav\",\n      \"Minting_MintNFT\",\n      \"Minting_MintFT_Trait\",\n      \"Minting_MintNFT_Form\",\n      \"Minting_MintFT_Form\"\n    ],\n    \"show\": [\n      \"Minting_MintNFT_Trait\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1980,
+        "y": 2360,
+        "wires": [
+            [
+                "248b914d.bd790e"
+            ]
+        ]
+    },
+    {
+        "id": "d1296b43.1d1f48",
+        "type": "ui_ui_control",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "events": "all",
+        "x": 2160,
+        "y": 2280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "248b914d.bd790e",
+        "type": "ui_ui_control",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "events": "all",
+        "x": 2160,
+        "y": 2360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "403d616b.ff861",
+        "type": "ui_toast",
+        "z": "613e85c9.c6210c",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "",
+        "name": "",
+        "x": 1770,
+        "y": 2280,
+        "wires": [
+            [
+                "238dce32.2ba2b2"
+            ]
+        ]
+    },
+    {
+        "id": "24415682.cae87a",
+        "type": "ui_toast",
+        "z": "613e85c9.c6210c",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "",
+        "name": "",
+        "x": 1770,
+        "y": 2360,
+        "wires": [
+            [
+                "53d3b917.3bc4b8"
+            ]
+        ]
+    },
+    {
+        "id": "f2cf2d2d.7382b",
+        "type": "ui_button",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "group": "de35938.a16f97",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": "Check for NFT Trait Contract (testnet)",
+        "tooltip": "Manually check to see if your NFT Trait Contract exists and is confirmed.",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-refresh",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 2300,
+        "wires": [
+            [
+                "c0339c87.a4fe"
+            ]
+        ]
+    },
+    {
+        "id": "87667ca4.49726",
+        "type": "http request",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 850,
+        "y": 2300,
+        "wires": [
+            [
+                "3b0f7e9e.111c42",
+                "da8b7a.66d46488"
+            ]
+        ]
+    },
+    {
+        "id": "3b0f7e9e.111c42",
+        "type": "debug",
+        "z": "613e85c9.c6210c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "da8b7a.66d46488",
+        "type": "switch",
+        "z": "613e85c9.c6210c",
+        "name": "switch 1",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "eq",
+                "v": "No contract interface data found",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1020,
+        "y": 2360,
+        "wires": [
+            [
+                "fdb02834.ff6838"
+            ],
+            [
+                "24415682.cae87a"
+            ]
+        ]
+    },
+    {
+        "id": "9d9f09c0.f80998",
+        "type": "file",
+        "z": "613e85c9.c6210c",
+        "name": "create local .clar",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "ascii",
+        "x": 840,
+        "y": 2000,
+        "wires": [
+            [
+                "aef264b9.8f1ff8"
+            ]
         ]
     }
 ]
