@@ -51,7 +51,7 @@ However - there may be some errors. If so they are usually fairly self explanato
 and may just require installation of another **npm** or **brew** or **apt** package,
 then retry the command.
 
-Runtimes are created in the `dist` directory under the `electron-node-red` project.
+Runtimes are created in the `dist` directory under the project directory.
 
 ### Building for other platforms
 
@@ -88,7 +88,7 @@ yarn start
 from within the project folder.
 
 The initial flow file is named `electronflow.json` along with it's credentials file
-`electronflow_cred.json`. Just copy your existing flow in instead.
+`electronflow_cred.json`. Just Import/Overwrite with the existing `dapparatus_beta.json` flow in instead.
 
 The default is to start on the dashboard page - as this is intended to be just an application - without the Node-RED editor exposed to the end user, but there are some simple flags to to configure this within the package.json or at the top of main.js.
 
