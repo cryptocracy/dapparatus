@@ -4493,7 +4493,7 @@
         "order": 5,
         "width": 13,
         "height": "4",
-        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>        \n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">Show In Explorer</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/dapparatus/master/stx-logo-blue-round-small.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>        \n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View in Explorer</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -4588,7 +4588,7 @@
         "order": 5,
         "width": 13,
         "height": "4",
-        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"View in Explorer\">{{obj.tx_id}}</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/dapparatus/master/stx-logo-blue-round-small.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"View in Explorer\">View in Explorer</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -7037,7 +7037,7 @@
         "type": "function",
         "z": "725ce57a.a25e4c",
         "name": "fqn register (Mainnet)",
-        "func": "const network = new stacksNetwork.StacksMainnet(); //or use Testnet\n\nconst name = global.get(\"tempfqn\");\nconst salt = global.get(\"saltzero\");\nconst zonefile = \"\";\nconst publicKey = global.get(\"depositaddress\");//or use testnetdepositaddress\n\nconst unsignedTX = await stacksBns.buildRegisterNameTX({ name, salt, zonefile, publicKey, network});\n\nmsg.payload = unsignedTX;\n//msg.blockchain = \"0x\" + unsignedTX;\n\nreturn msg;",
+        "func": "const network = new stacksNetwork.StacksMainnet(); //or use Testnet\n\nconst name = global.get(\"tempfqn\");\nconst salt = global.get(\"saltzero\");\nconst zonefile = \"yo\";//need to give user option to plug in their zonefile during reg process if so desired.\nconst publicKey = global.get(\"depositaddress\");//or use testnetdepositaddress\n\nconst unsignedTX = await stacksBns.buildRegisterNameTX({ name, salt, zonefile, publicKey, network});\n\nmsg.payload = unsignedTX;\n//msg.blockchain = \"0x\" + unsignedTX;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9621,7 +9621,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
+        "x": 530,
         "y": 1200,
         "wires": [
             [
@@ -9948,7 +9948,7 @@
         "links": [
             "67d97386.ffb9fc"
         ],
-        "x": 455,
+        "x": 395,
         "y": 1240,
         "wires": []
     },
@@ -10584,7 +10584,7 @@
         "order": 5,
         "width": 13,
         "height": "2",
-        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View in Explorer</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/dapparatus/master/stx-logo-blue-round-small.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View in Explorer</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -11086,7 +11086,7 @@
         "order": 5,
         "width": 13,
         "height": "2",
-        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View in Explorer</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "format": "<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Status</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/dapparatus/master/stx-logo-blue-round-small.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View in Explorer</a></small></small></small></td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -11243,7 +11243,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
+        "x": 530,
         "y": 1160,
         "wires": [
             []
@@ -11258,7 +11258,7 @@
         "order": 1,
         "width": 13,
         "height": "4",
-        "format": "<h3>Pending Transactions</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View In Explorer</a></small></small></small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "format": "<h3>Pending Transactions</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/dapparatus/master/stx-logo-blue-round-small.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View In Explorer</a></small></small></small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -11278,7 +11278,7 @@
         "order": 1,
         "width": 13,
         "height": "4",
-        "format": "<h3>Pending Transactions</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/stx400.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"View in Explorer\">{{obj.tx_id}}</a></small></small></small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
+        "format": "<h3>Pending Transactions</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Amount</th>\n        <th>Status</th>\n        <th>Fee</th>        \n        <th>Explorer</th>\n        <th>Date</th>\n    </tr>\n    <tr ng-repeat=\"obj in msg.payload\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/dapparatus/master/stx-logo-blue-round-small.png\" width=\"32\" height=\"32\"> </td>\n        <td>{{obj.token_transfer.amount}}</td>\n        <td><small>{{obj.tx_status}}</small></td>\n        <td>{{obj.fee_rate}}</td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=testnet\" target=\"_blank\" title=\"View in Explorer\">View in Explorer</a></small></small></small></td>\n        <td><small><small>{{obj.receipt_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -11350,7 +11350,7 @@
         "type": "function",
         "z": "725ce57a.a25e4c",
         "name": "fqn register (Testnet)",
-        "func": "const network = new stacksNetwork.StacksTestnet(); //or use Mainnet\n\nconst name = global.get(\"tempfqn\");\nconst salt = global.get(\"saltzero\");\nconst zonefile = \"\";\nconst publicKey = global.get(\"testnetdepositaddress\");//or use testnetdepositaddress\n\nconst unsignedTX = await stacksBns.buildRegisterNameTX({ name, salt, zonefile, publicKey, network});\n\nmsg.payload = unsignedTX;\nmsg.blockchain = \"0x\" + unsignedTX;\nmsg.pendingfqn = name;\n\nreturn msg;",
+        "func": "const network = new stacksNetwork.StacksTestnet(); //or use Mainnet\n\nconst name = global.get(\"tempfqn\");\nconst salt = global.get(\"saltzero\");\nconst zonefile = \"yo\";//need to give user option to plug in their zonefile during reg process if so desired.\nconst publicKey = global.get(\"testnetdepositaddress\");//or use testnetdepositaddress\n\nconst unsignedTX = await stacksBns.buildRegisterNameTX({ name, salt, zonefile, publicKey, network});\n\nmsg.payload = unsignedTX;\nmsg.blockchain = \"0x\" + unsignedTX;\nmsg.pendingfqn = name;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -11706,7 +11706,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
+        "x": 930,
         "y": 1060,
         "wires": [
             [
@@ -11862,8 +11862,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1280,
-        "y": 1120,
+        "x": 1320,
+        "y": 1140,
         "wires": []
     },
     {
@@ -12104,8 +12104,8 @@
         "links": [
             "e3fdd2dc.9c1a4"
         ],
-        "x": 1095,
-        "y": 940,
+        "x": 1275,
+        "y": 1020,
         "wires": []
     },
     {
@@ -12172,7 +12172,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 880,
+        "x": 900,
         "y": 1020,
         "wires": [
             [
@@ -12285,8 +12285,8 @@
         "links": [
             "4a7ebf16.a2495"
         ],
-        "x": 1095,
-        "y": 980,
+        "x": 1275,
+        "y": 960,
         "wires": []
     },
     {
@@ -13786,7 +13786,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 900,
+        "x": 940,
         "y": 960,
         "wires": [
             [
