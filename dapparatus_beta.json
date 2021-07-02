@@ -63,6 +63,13 @@
         "info": ""
     },
     {
+        "id": "de33bfc8.0ee0f",
+        "type": "tab",
+        "label": "Clarity Debug",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "4552b603.ca4548",
         "type": "tab",
         "label": "Storage",
@@ -70,10 +77,10 @@
         "info": ""
     },
     {
-        "id": "de33bfc8.0ee0f",
+        "id": "b6c0f7b2.b0adb8",
         "type": "tab",
-        "label": "Clarity Debug",
-        "disabled": false,
+        "label": "ThreeJS",
+        "disabled": true,
         "info": ""
     },
     {
@@ -347,7 +354,7 @@
         "link": "/red",
         "icon": "fa-gears",
         "target": "newtab",
-        "order": 8
+        "order": 9
     },
     {
         "id": "b2fc7e5b.7dc7c",
@@ -453,7 +460,7 @@
         "type": "ui_tab",
         "name": "History",
         "icon": "fa-history",
-        "order": 6,
+        "order": 7,
         "disabled": false,
         "hidden": false
     },
@@ -462,7 +469,7 @@
         "type": "ui_tab",
         "name": "Registrar",
         "icon": "mi-verified_user",
-        "order": 5,
+        "order": 6,
         "disabled": false,
         "hidden": true
     },
@@ -568,7 +575,7 @@
         "d": true,
         "name": "Storage",
         "icon": "fa-floppy-o",
-        "order": 9,
+        "order": 10,
         "disabled": false,
         "hidden": false
     },
@@ -614,8 +621,9 @@
     {
         "id": "e0b012ff.56ab7",
         "type": "ui_group",
+        "d": true,
         "name": "Send Tokens",
-        "tab": "550c1706.5e1408",
+        "tab": "",
         "order": 3,
         "disp": true,
         "width": "14",
@@ -626,7 +634,7 @@
         "type": "ui_group",
         "d": true,
         "name": "Mint Token",
-        "tab": "490a912d.92cb",
+        "tab": "",
         "order": 3,
         "disp": true,
         "width": "10",
@@ -641,25 +649,6 @@
         "disp": false,
         "width": "13",
         "collapse": false
-    },
-    {
-        "id": "550c1706.5e1408",
-        "type": "ui_tab",
-        "name": "Send",
-        "icon": "fa-arrow-circle-up",
-        "order": 6,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "490a912d.92cb",
-        "type": "ui_tab",
-        "d": true,
-        "name": "Minting",
-        "icon": "fa-plus-circle",
-        "order": 8,
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "c75785b2.7363d8",
@@ -827,6 +816,7 @@
         "type": "ui_tab",
         "name": "FungibleTokens",
         "icon": "fa-fire",
+        "order": 5,
         "disabled": false,
         "hidden": true
     },
@@ -856,6 +846,28 @@
         "order": 3,
         "width": 1,
         "height": 1
+    },
+    {
+        "id": "cc415ff6.77933",
+        "type": "ui_link",
+        "d": true,
+        "name": "XR",
+        "link": "/cube",
+        "icon": "mi-3d_rotation",
+        "target": "newtab",
+        "order": 8
+    },
+    {
+        "id": "c6bb1eb5.edd3d",
+        "type": "websocket-listener",
+        "path": "/ws/publish",
+        "wholemsg": "true"
+    },
+    {
+        "id": "a5db9e65.7dd36",
+        "type": "websocket-listener",
+        "path": "/ws/receive",
+        "wholemsg": "true"
     },
     {
         "id": "8ff35ce4.a1acd",
@@ -4692,7 +4704,7 @@
         "type": "function",
         "z": "e83b2318.6f5c6",
         "name": "get all globals",
-        "func": "var keys = global.get(\"keys\");\nvar secretkey = global.get(\"secretkey\");\nvar appskey = global.get(\"appskey\");\nvar dataprivkey = global.get(\"dataprivkey\");\nvar stxprivkey = global.get(\"stxprivkey\");\nvar saltzero = global.get(\"saltzero\");\nvar nettype = global.get(\"nettype\");\nvar depositaddress = global.get(\"depositaddress\");\nvar txhistorymainnet = global.get(\"txhistorymainnet\");\nvar testnetdepositaddress = global.get(\"testnetdepositaddress\");\nvar txhistorytestnet = global.get(\"txhistorytestnet\");\nvar searchtype = global.get(\"searchtype\");\nvar searchinput = global.get(\"searchinput\");\nvar tempfqn = global.get(\"tempfqn\");\nvar deruptarname = global.get(\"deruptarname\");\nvar xftname = global.get(\"xftname\");\nvar ftcontractnames = global.get(\"ftcontractnames\");\n\nmsg.payload = \"globals are in the in msg obj\";\nmsg.keys = keys;\nmsg.secretkey = secretkey;\nmsg.appskey = appskey;\nmsg.dataprivkey = dataprivkey;\nmsg.stxprivkey = stxprivkey;\nmsg.saltzero = saltzero;\nmsg.nettype = nettype;\nmsg.depositaddress = depositaddress;\nmsg.txhistorymainnet = txhistorymainnet;\nmsg.testnetdepositaddress = testnetdepositaddress;\nmsg.txhistorytestnet = txhistorytestnet;\nmsg.searchtype = searchtype;\nmsg.searchinput = searchinput;\nmsg.tempfqn = tempfqn;\nmsg.deruptarname = deruptarname;\nmsg.xftname = xftname;\nmsg.ftcontractnames = ftcontractnames;\n\nreturn msg;",
+        "func": "var keys = global.get(\"keys\");\nvar secretkey = global.get(\"secretkey\");\nvar appskey = global.get(\"appskey\");\nvar dataprivkey = global.get(\"dataprivkey\");\nvar stxprivkey = global.get(\"stxprivkey\");\nvar saltzero = global.get(\"saltzero\");\nvar nettype = global.get(\"nettype\");\nvar depositaddress = global.get(\"depositaddress\");\nvar txhistorymainnet = global.get(\"txhistorymainnet\");\nvar testnetdepositaddress = global.get(\"testnetdepositaddress\");\nvar txhistorytestnet = global.get(\"txhistorytestnet\");\nvar searchtype = global.get(\"searchtype\");\nvar searchinput = global.get(\"searchinput\");\nvar tempfqn = global.get(\"tempfqn\");\nvar deruptarname = global.get(\"deruptarname\");\nvar xftname = global.get(\"xftname\");\nvar ftcontractnames = global.get(\"ftcontractnames\");\nvar tempcontractid = global.get(\"tempcontractid\");\n\n\nmsg.payload = \"globals are in the in msg obj\";\nmsg.keys = keys;\nmsg.secretkey = secretkey;\nmsg.appskey = appskey;\nmsg.dataprivkey = dataprivkey;\nmsg.stxprivkey = stxprivkey;\nmsg.saltzero = saltzero;\nmsg.nettype = nettype;\nmsg.depositaddress = depositaddress;\nmsg.txhistorymainnet = txhistorymainnet;\nmsg.testnetdepositaddress = testnetdepositaddress;\nmsg.txhistorytestnet = txhistorytestnet;\nmsg.searchtype = searchtype;\nmsg.searchinput = searchinput;\nmsg.tempfqn = tempfqn;\nmsg.deruptarname = deruptarname;\nmsg.xftname = xftname;\nmsg.ftcontractnames = ftcontractnames;\nmsg.tempcontractid = tempcontractid;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8794,7 +8806,7 @@
         "d": true,
         "name": "Send Fungible Tokens Form",
         "label": "",
-        "group": "e0b012ff.56ab7",
+        "group": "93894c51.e61b",
         "order": 0,
         "width": 0,
         "height": 0,
@@ -8832,8 +8844,8 @@
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
-        "x": 2300,
-        "y": 880,
+        "x": 2240,
+        "y": 900,
         "wires": [
             [
                 "a5bfdeab.070ba"
@@ -8952,7 +8964,7 @@
         "id": "17da8b0a.430c35",
         "type": "function",
         "z": "de33bfc8.0ee0f",
-        "name": "deploy ft-transfer to network (NEEDS Fixed)",
+        "name": "call ft-transfer to network (NEEDS Fixed)",
         "func": "//This function assumes a few things.\n//1) Assumes that the qrcodeinput address currently owns the token in question,\n//reference https://www.npmjs.com/package/@stacks/transactions\n//Smart Contract Function Call\nconst ftname = msg.payload.ftname; //name of the fungible token to interface with\nconst ftminter = global.get(\"depositaddress\"); //assumes ownership of said tokens as defined by ftname\nconst ftcontract = ftminter + \"\\.\" + ftname; //contract address\n\nconst principal = msg.payload.ftrecipient;\nconst amount = msg.payload.ftamount;\nconst prime = principal + \" \" + amount; //concat recipient a literal space and the amount\nconst buffz = [bufferCVFromString(prime)];// make a buffer of the to and amount concat\n\nconst senderKey = global.get('stxprivkey');\n\n// for mainnet, use `StacksMainnet()`\nconst network = new stacksNetwork.StacksTestnet();\n\nconst txOptions = {\n  contractAddress: ftcontract,\n  contractName: ftname,\n  functionName: 'transfer',\n  functionArgs: buffz,\n  senderKey,\n  network,\n};\n\n\nconst transaction = await stacksTransactions.makeContractCall(txOptions);\n\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\n\nmsg.blockchain = broadcastTxn;\nmsg.txoptions = txOptions;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
@@ -8976,55 +8988,11 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 2610,
-        "y": 920,
+        "x": 2380,
+        "y": 960,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "29922b99.3a2124",
-        "type": "inject",
-        "z": "de33bfc8.0ee0f",
-        "name": "create ft-trait",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 210,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f032371a.6ce438",
-        "type": "debug",
-        "z": "de33bfc8.0ee0f",
-        "name": "debug obj",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1910,
-        "y": 220,
-        "wires": []
     },
     {
         "id": "89259028.7e432",
@@ -9227,34 +9195,6 @@
         ]
     },
     {
-        "id": "80b343df.cdd0d",
-        "type": "inject",
-        "z": "de33bfc8.0ee0f",
-        "d": true,
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "15",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 210,
-        "y": 1540,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "e1125778.5bd048",
         "type": "comment",
         "z": "de33bfc8.0ee0f",
@@ -9263,32 +9203,6 @@
         "x": 1520,
         "y": 1900,
         "wires": []
-    },
-    {
-        "id": "5e7e1cd3.761924",
-        "type": "ui_button",
-        "z": "de33bfc8.0ee0f",
-        "d": true,
-        "name": "",
-        "group": "52184b74.f1cb04",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Mint Fungible Token",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "{{myicon}}",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 1800,
-        "y": 1460,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "13b3d37f.86446d",
@@ -9364,8 +9278,8 @@
         "z": "de33bfc8.0ee0f",
         "name": "",
         "info": "ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H.Monolith",
-        "x": 350,
-        "y": 1460,
+        "x": 470,
+        "y": 1120,
         "wires": []
     },
     {
@@ -9933,7 +9847,7 @@
         "to": "",
         "reg": false,
         "x": 530,
-        "y": 920,
+        "y": 880,
         "wires": [
             []
         ]
@@ -9959,7 +9873,7 @@
             "de6ca16a.965d9"
         ],
         "x": 155,
-        "y": 920,
+        "y": 880,
         "wires": [
             [
                 "58b1252b.ab5aec"
@@ -12115,7 +12029,7 @@
             "7440f9a1.036a58"
         ],
         "x": 155,
-        "y": 1000,
+        "y": 940,
         "wires": [
             [
                 "80760848.deb508"
@@ -12142,7 +12056,7 @@
         "to": "",
         "reg": false,
         "x": 550,
-        "y": 1000,
+        "y": 940,
         "wires": [
             [
                 "8c20a4b8.226fa8"
@@ -13726,7 +13640,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 770,
-        "y": 1000,
+        "y": 940,
         "wires": []
     },
     {
@@ -14199,7 +14113,7 @@
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
-        "x": 860,
+        "x": 620,
         "y": 360,
         "wires": [
             []
@@ -14211,8 +14125,8 @@
         "z": "354f3ac2.1ff636",
         "name": "Relative to Send Fungible Tokens",
         "info": "",
-        "x": 210,
-        "y": 340,
+        "x": 310,
+        "y": 280,
         "wires": []
     },
     {
@@ -14344,7 +14258,8 @@
         "wires": [
             [
                 "f52099d4.4ac718",
-                "2f3e9dc4.9bbfe2"
+                "2f3e9dc4.9bbfe2",
+                "c35cef52.20fb7"
             ]
         ]
     },
@@ -15543,5 +15458,344 @@
                 "aef264b9.8f1ff8"
             ]
         ]
+    },
+    {
+        "id": "ab7c01a5.083eb",
+        "type": "function",
+        "z": "354f3ac2.1ff636",
+        "name": "call ft-transfer to network (UNDER CONSTRUCTION) (testnet)",
+        "func": "//reference https://www.npmjs.com/package/@stacks/transactions\n\nconst tempcontractid = global.get(\"tempcontractid\");\nconst ftname = tempcontractid.split(\".\")[1]; //remove everything prior and including \".\"\nconst ftaddress = tempcontractid.split(\".\")[0]; //remove everything after and including \".\"\nconst ftminter = global.get(\"testnetdepositaddress\"); //or use depositaddress for mainnet\n\nconst principal = msg.payload.ftdestination;\nconst amount = msg.payload.ftamount;\nconst prime = principal + \" \" + amount; //concat recipient a literal space and the amount\nconst buffz = [bufferCVFromString(prime)];// make a buffer of the to and amount concat\n\nconst senderKey = global.get('stxprivkey');\n\n// for mainnet, use `StacksMainnet()`\nconst network = new stacksNetwork.StacksTestnet();\n\nconst txOptions = {\n  contractAddress: ftaddress,\n  contractName: ftname,\n  functionName: 'transfer',\n  functionArgs: buffz,\n  senderKey,\n  network,\n};\n\n\nconst transaction = await stacksTransactions.makeContractCall(txOptions);\n\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\n\nmsg.blockchain = broadcastTxn;\nmsg.txoptions = txOptions;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            },
+            {
+                "var": "BufferCV",
+                "module": "@stacks/transactions"
+            }
+        ],
+        "x": 1170,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c35cef52.20fb7",
+        "type": "link out",
+        "z": "354f3ac2.1ff636",
+        "name": "to set Global (tempcontractid)",
+        "links": [
+            "b1b2b358.b4efb"
+        ],
+        "x": 195,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c19862aa.75779",
+        "type": "change",
+        "z": "e83b2318.6f5c6",
+        "name": "set global.tempcontractid",
+        "rules": [
+            {
+                "t": "move",
+                "p": "contractid",
+                "pt": "msg",
+                "to": "tempcontractid",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 1000,
+        "wires": [
+            [
+                "e7faf126.a4c6d"
+            ]
+        ]
+    },
+    {
+        "id": "b1b2b358.b4efb",
+        "type": "link in",
+        "z": "e83b2318.6f5c6",
+        "name": "to bind Global (tempcontractid)",
+        "links": [
+            "c35cef52.20fb7"
+        ],
+        "x": 155,
+        "y": 1000,
+        "wires": [
+            [
+                "c19862aa.75779"
+            ]
+        ]
+    },
+    {
+        "id": "e7faf126.a4c6d",
+        "type": "debug",
+        "z": "e83b2318.6f5c6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "82bc22cb.914be",
+        "type": "http in",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "",
+        "url": "/cube",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 120,
+        "wires": [
+            [
+                "ab9b0e5e.f8f8b"
+            ]
+        ]
+    },
+    {
+        "id": "6752712.7f98a9",
+        "type": "http response",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 625,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ab9b0e5e.f8f8b",
+        "type": "template",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "three.js",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n<head>\n\n    <title>Dapparatus: XR</title>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\"></script>\n    <style>\n        body {margin: 0;}\n        canvas {width:100%;height:100%;}\n    </style>\n<script>\nvar server = window.location.href.split(\"http://\")[1].split(\"/\")[0]\nconsole.log(\"Page location is \" + server)\n\nvar socket1 = new  WebSocket(\"ws://\" + server + \"/ws/receive\");\nvar socket2 = new  WebSocket(\"ws://\" + server + \"/ws/publish\");\nvar cubeRotationSpeed = 0.2;\nlet cubeColor = \"blue\"\nvar socket1Opened = false\n\nsocket1.onopen = function() {\n    socket1Opened = true\n  var message = {\n    'payload': 'Client connected'\n  };\n  socket1.send(JSON.stringify(message));\n};\n\nsocket2.onopen = function() {\n  var message = {\n    'payload': 'Client connected'\n  };\n  socket1.send(JSON.stringify(message));\n};\n\nsocket2.onclose = function(){\n  console.log('Connection closed');\n};\n\nsocket2.onerror = function(error) {\n  console.log('Error detected: ' + JSON.stringify(error));\n};\n\nsocket2.onmessage = function(e) {\n  var server_message = e.data;\n  responseObject = JSON.parse(server_message);\n\n  //alert(JSON.stringify(responseObject));\n  //Do the required stuff\n  console.log(responseObject.payload)\n  if (responseObject.payload.cubeRotationSpeed){\n      cubeRotationSpeed = responseObject.payload.cubeRotationSpeed\n  }else if(responseObject.payload.cubeColor){\n      cubeColor = responseObject.payload.cubeColor\n  }\n}\n\nvar scene = new THREE.Scene();\n\n// Make highly-transparent plane\nvar fadeMaterial = new THREE.MeshBasicMaterial({\n    color: 0x000000,\n    transparent: true,\n    opacity: 0.02\n});\nvar fadePlane = new THREE.PlaneBufferGeometry(1, 1);\nvar fadeMesh = new THREE.Mesh(fadePlane, fadeMaterial);\n\n// Create Object3D to hold camera and transparent plane\nvar camGroup = new THREE.Object3D();\nvar camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);\ncamGroup.add(camera);\ncamGroup.add(fadeMesh);\n\n// Put plane in front of camera\nfadeMesh.position.z = -0.1;\n\n// Make plane render before particles\nfadeMesh.renderOrder = -1;\n\n// Add camGroup to scene\nscene.add(camGroup);\n\n\nrenderer = new THREE.WebGLRenderer( { preserveDrawingBuffer: true, antialias: true } );\nrenderer.autoClearColor = false;\nrenderer.setSize(window.innerWidth, window.innerHeight);\n\ndocument.addEventListener('DOMContentLoaded', function () {   \n    document.body.appendChild(renderer.domElement);\n});\n\nvar geometry = new THREE.BoxGeometry(1,1,1);\n//var color = new THREE.Color(0xff0000)\nvar material = new THREE.MeshBasicMaterial({color: \"blue\"});\nvar cube = new THREE.Mesh(geometry, material);\nscene.add(cube);\n\ncube.position.z = -5;\n\nvar step = .03;\nfunction animate(){\n\n    cube.rotation.x += cubeRotationSpeed;\n    cube.rotation.y += 0.02;\n    cube.position.x += step;\n    cube.material.color = new THREE.Color(cubeColor);\n    if(Math.abs(cube.position.x) > 5.0)\n    {\n        step = -step;\n        if (socket1Opened){\n            socket1.send(\"ping\");\n        }\n    }\n    renderer.render(scene, camera);\n\n    requestAnimationFrame(animate);\n}\n\nanimate();\n\n</script>\n\n\n",
+        "output": "str",
+        "x": 290,
+        "y": 120,
+        "wires": [
+            [
+                "f195cd.89a76a3"
+            ]
+        ]
+    },
+    {
+        "id": "f8262338.541b2",
+        "type": "websocket out",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "",
+        "server": "c6bb1eb5.edd3d",
+        "client": "",
+        "x": 820,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1f953c53.234544",
+        "type": "inject",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "Spin slow",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"cubeRotationSpeed\":0.02}",
+        "payloadType": "json",
+        "x": 425,
+        "y": 240,
+        "wires": [
+            [
+                "f8262338.541b2"
+            ]
+        ]
+    },
+    {
+        "id": "ae4b9f83.855ed",
+        "type": "inject",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "Spin fast",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"cubeRotationSpeed\":0.1}",
+        "payloadType": "json",
+        "x": 425,
+        "y": 285,
+        "wires": [
+            [
+                "f8262338.541b2"
+            ]
+        ]
+    },
+    {
+        "id": "f195cd.89a76a3",
+        "type": "change",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/html",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.Access-Control-Allow-Origin",
+                "pt": "msg",
+                "to": "*",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 120,
+        "wires": [
+            [
+                "6752712.7f98a9"
+            ]
+        ]
+    },
+    {
+        "id": "eba548fa.e65d98",
+        "type": "change",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "_session",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 615,
+        "y": 180,
+        "wires": [
+            [
+                "f8262338.541b2"
+            ]
+        ]
+    },
+    {
+        "id": "c1fc2e6e.bd70e",
+        "type": "websocket in",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "",
+        "server": "a5db9e65.7dd36",
+        "client": "",
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [
+                "22fc2d8b.025e32"
+            ]
+        ]
+    },
+    {
+        "id": "22fc2d8b.025e32",
+        "type": "switch",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ping",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 265,
+        "y": 180,
+        "wires": [
+            [
+                "eaae5e3a.3f284"
+            ]
+        ]
+    },
+    {
+        "id": "eaae5e3a.3f284",
+        "type": "function",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "change color",
+        "func": "let colors = [\"white\",\"red\",0x00ff00,0x0000ff] //both hex or string are fine\nmsg.payload =  {\"cubeColor\": colors[Math.floor(Math.random()*colors.length)]}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 180,
+        "wires": [
+            [
+                "eba548fa.e65d98"
+            ]
+        ]
+    },
+    {
+        "id": "94b2919c.8d227",
+        "type": "comment",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "Three.js example with websockets",
+        "info": "",
+        "x": 160,
+        "y": 60,
+        "wires": []
     }
 ]
