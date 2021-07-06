@@ -80,7 +80,7 @@
         "id": "b6c0f7b2.b0adb8",
         "type": "tab",
         "label": "ThreeJS",
-        "disabled": true,
+        "disabled": false,
         "info": ""
     },
     {
@@ -619,28 +619,6 @@
         "collapse": false
     },
     {
-        "id": "e0b012ff.56ab7",
-        "type": "ui_group",
-        "d": true,
-        "name": "Send Tokens",
-        "tab": "",
-        "order": 3,
-        "disp": true,
-        "width": "14",
-        "collapse": true
-    },
-    {
-        "id": "52184b74.f1cb04",
-        "type": "ui_group",
-        "d": true,
-        "name": "Mint Token",
-        "tab": "",
-        "order": 3,
-        "disp": true,
-        "width": "10",
-        "collapse": true
-    },
-    {
         "id": "40b29c84.e02da4",
         "type": "ui_group",
         "name": "Warning",
@@ -850,9 +828,8 @@
     {
         "id": "cc415ff6.77933",
         "type": "ui_link",
-        "d": true,
         "name": "XR",
-        "link": "/cube",
+        "link": "/xr",
         "icon": "mi-3d_rotation",
         "target": "newtab",
         "order": 8
@@ -4674,7 +4651,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 150,
+        "x": 250,
         "y": 1080,
         "wires": [
             [
@@ -14113,10 +14090,12 @@
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
-        "x": 620,
+        "x": 760,
         "y": 360,
         "wires": [
-            []
+            [
+                "ab7c01a5.083eb"
+            ]
         ]
     },
     {
@@ -14124,7 +14103,7 @@
         "type": "comment",
         "z": "354f3ac2.1ff636",
         "name": "Relative to Send Fungible Tokens",
-        "info": "",
+        "info": "String in the format `{principaladdress}.{contractName}::{assetName}`",
         "x": 310,
         "y": 280,
         "wires": []
@@ -14345,13 +14324,14 @@
         "name": "",
         "active": true,
         "tosidebar": true,
-        "console": false,
+        "console": true,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1450,
-        "y": 580,
+        "x": 1570,
+        "y": 360,
         "wires": []
     },
     {
@@ -15463,8 +15443,8 @@
         "id": "ab7c01a5.083eb",
         "type": "function",
         "z": "354f3ac2.1ff636",
-        "name": "call ft-transfer to network (UNDER CONSTRUCTION) (testnet)",
-        "func": "//reference https://www.npmjs.com/package/@stacks/transactions\n\nconst tempcontractid = global.get(\"tempcontractid\");\nconst ftname = tempcontractid.split(\".\")[1]; //remove everything prior and including \".\"\nconst ftaddress = tempcontractid.split(\".\")[0]; //remove everything after and including \".\"\nconst ftminter = global.get(\"testnetdepositaddress\"); //or use depositaddress for mainnet\n\nconst principal = msg.payload.ftdestination;\nconst amount = msg.payload.ftamount;\nconst prime = principal + \" \" + amount; //concat recipient a literal space and the amount\nconst buffz = [bufferCVFromString(prime)];// make a buffer of the to and amount concat\n\nconst senderKey = global.get('stxprivkey');\n\n// for mainnet, use `StacksMainnet()`\nconst network = new stacksNetwork.StacksTestnet();\n\nconst txOptions = {\n  contractAddress: ftaddress,\n  contractName: ftname,\n  functionName: 'transfer',\n  functionArgs: buffz,\n  senderKey,\n  network,\n};\n\n\nconst transaction = await stacksTransactions.makeContractCall(txOptions);\n\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\n\nmsg.blockchain = broadcastTxn;\nmsg.txoptions = txOptions;\n\nreturn msg;",
+        "name": "call ft-transfer to network (testnet) (STILL UNDERCONSTRUCTION)",
+        "func": "//reference https://www.npmjs.com/package/@stacks/transactions\n\n//Network\nconst network = new stacksNetwork.StacksTestnet(); // or for mainnet, use `StacksMainnet()`\n\n//Contract Asset Info\nconst tempcontractid = global.get('tempcontractid'); //get the temporarily contract id\nconst ftname = tempcontractid.split(\".\")[1]; //remove everything prior and including \".\"\nconst ftaddress = tempcontractid.split(\".\")[0]; //remove everything after and including \".\"\nconst ftinfo = stacksTransactions.createAssetInfo(ftaddress, ftname, ftname); //set AssetInfo for type property\n\n//Sender\nconst senderkey = global.get('stxprivkey'); //get private key\nconst ftsender = global.get('testnetdepositaddress'); //or use depositaddress for mainnet\n\n//Amount, Destination, and Memo\nconst ftamount = msg.payload.ftamount; //pass in amount to send\nconst ftdestination = msg.payload.ftdestination; //pass in destination address\nconst ftmemo = msg.payload.ftmemo;//pass in the memo\n\n//Post Conditions for safety\nconst postConditionAddress = ftsender;\nconst postConditionCode = stacksTransactions.FungibleConditionCode.Equal;\nconst postConditionAmount = new BigNum(ftamount); //requires BigNum\nconst postConditionAssetInfo = ftinfo;//Problem like something to do with thi postConditionAssetInfo\n\nconst postConditions = [\n  stacksTransactions.makeStandardFungiblePostCondition(postConditionAddress, postConditionCode, postConditionAmount, postConditionAssetInfo),\n];\n\n//Transaction Options -the memo still needs encoded correctly\nconst txOptions = {\n  contractAddress: ftaddress,\n  contractName: ftname,\n  functionName: 'transfer',\n  functionArgs: [\n      stacksTransactions.uintCV(ftamount),\n      stacksTransactions.standardPrincipalCV(ftsender),\n      stacksTransactions.standardPrincipalCV(ftdestination),\n      stacksTransactions.noneCV(ftmemo)\n      ],\n  senderKey: senderkey,\n  validateWithAbi: true,\n  network,\n  postConditions,\n  anchorMode: stacksTransactions.AnchorMode.Any,\n};\n\n//Transaction Broadcast to Network\nconst transaction = await stacksTransactions.makeContractCall(txOptions);\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\n//Passed along Outputs for UI\nmsg.payload = transaction;\nmsg.blockchain = \"0x\" + broadcastTxn;//the transaction id\nmsg.txoptions = txOptions;//the tx options\nmsg.ftcontractid = tempcontractid;//full contract id\nmsg.ftinfo = ftinfo;\nmsg.ftname = ftname;//contract name\nmsg.ftaddress = ftaddress;//contract address\nmsg.ftsender = ftsender; //contract caller\nmsg.ftamount = ftamount; //amount to send\nmsg.ftdestination = ftdestination; //where to send\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -15487,10 +15467,14 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 1170,
+        "x": 1190,
         "y": 360,
         "wires": [
-            []
+            [
+                "1a54b8d8.b10777",
+                "aedcd473.b0f298",
+                "52f29bb6.d47464"
+            ]
         ]
     },
     {
@@ -15566,65 +15550,73 @@
         "wires": []
     },
     {
-        "id": "82bc22cb.914be",
+        "id": "94b2919c.8d227",
+        "type": "comment",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "Three.js example with websockets",
+        "info": "",
+        "x": 300,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "46ec70a1.633d2",
         "type": "http in",
         "z": "b6c0f7b2.b0adb8",
         "name": "",
-        "url": "/cube",
+        "url": "/xr",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 80,
-        "y": 120,
+        "x": 70,
+        "y": 160,
         "wires": [
             [
-                "ab9b0e5e.f8f8b"
+                "5271d8e9.058678"
             ]
         ]
     },
     {
-        "id": "6752712.7f98a9",
+        "id": "eabf70d7.4e2a6",
         "type": "http response",
         "z": "b6c0f7b2.b0adb8",
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 625,
-        "y": 120,
+        "x": 730,
+        "y": 160,
         "wires": []
     },
     {
-        "id": "ab9b0e5e.f8f8b",
+        "id": "10100179.769e2f",
         "type": "template",
         "z": "b6c0f7b2.b0adb8",
-        "name": "three.js",
+        "name": "basic three.js cube with websockets",
         "field": "payload",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<html>\n<head>\n\n    <title>Dapparatus: XR</title>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\"></script>\n    <style>\n        body {margin: 0;}\n        canvas {width:100%;height:100%;}\n    </style>\n<script>\nvar server = window.location.href.split(\"http://\")[1].split(\"/\")[0]\nconsole.log(\"Page location is \" + server)\n\nvar socket1 = new  WebSocket(\"ws://\" + server + \"/ws/receive\");\nvar socket2 = new  WebSocket(\"ws://\" + server + \"/ws/publish\");\nvar cubeRotationSpeed = 0.2;\nlet cubeColor = \"blue\"\nvar socket1Opened = false\n\nsocket1.onopen = function() {\n    socket1Opened = true\n  var message = {\n    'payload': 'Client connected'\n  };\n  socket1.send(JSON.stringify(message));\n};\n\nsocket2.onopen = function() {\n  var message = {\n    'payload': 'Client connected'\n  };\n  socket1.send(JSON.stringify(message));\n};\n\nsocket2.onclose = function(){\n  console.log('Connection closed');\n};\n\nsocket2.onerror = function(error) {\n  console.log('Error detected: ' + JSON.stringify(error));\n};\n\nsocket2.onmessage = function(e) {\n  var server_message = e.data;\n  responseObject = JSON.parse(server_message);\n\n  //alert(JSON.stringify(responseObject));\n  //Do the required stuff\n  console.log(responseObject.payload)\n  if (responseObject.payload.cubeRotationSpeed){\n      cubeRotationSpeed = responseObject.payload.cubeRotationSpeed\n  }else if(responseObject.payload.cubeColor){\n      cubeColor = responseObject.payload.cubeColor\n  }\n}\n\nvar scene = new THREE.Scene();\n\n// Make highly-transparent plane\nvar fadeMaterial = new THREE.MeshBasicMaterial({\n    color: 0x000000,\n    transparent: true,\n    opacity: 0.02\n});\nvar fadePlane = new THREE.PlaneBufferGeometry(1, 1);\nvar fadeMesh = new THREE.Mesh(fadePlane, fadeMaterial);\n\n// Create Object3D to hold camera and transparent plane\nvar camGroup = new THREE.Object3D();\nvar camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);\ncamGroup.add(camera);\ncamGroup.add(fadeMesh);\n\n// Put plane in front of camera\nfadeMesh.position.z = -0.1;\n\n// Make plane render before particles\nfadeMesh.renderOrder = -1;\n\n// Add camGroup to scene\nscene.add(camGroup);\n\n\nrenderer = new THREE.WebGLRenderer( { preserveDrawingBuffer: true, antialias: true } );\nrenderer.autoClearColor = false;\nrenderer.setSize(window.innerWidth, window.innerHeight);\n\ndocument.addEventListener('DOMContentLoaded', function () {   \n    document.body.appendChild(renderer.domElement);\n});\n\nvar geometry = new THREE.BoxGeometry(1,1,1);\n//var color = new THREE.Color(0xff0000)\nvar material = new THREE.MeshBasicMaterial({color: \"blue\"});\nvar cube = new THREE.Mesh(geometry, material);\nscene.add(cube);\n\ncube.position.z = -5;\n\nvar step = .03;\nfunction animate(){\n\n    cube.rotation.x += cubeRotationSpeed;\n    cube.rotation.y += 0.02;\n    cube.position.x += step;\n    cube.material.color = new THREE.Color(cubeColor);\n    if(Math.abs(cube.position.x) > 5.0)\n    {\n        step = -step;\n        if (socket1Opened){\n            socket1.send(\"ping\");\n        }\n    }\n    renderer.render(scene, camera);\n\n    requestAnimationFrame(animate);\n}\n\nanimate();\n\n</script>\n\n\n",
+        "template": "<html>\n<head>\n    <title>Dapparatus: XR</title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\">\n\t</script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\">\n\t</script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\">\n\t</script>\n    <style>\n        body{margin: 0;}\n        canvas{width:100%;height:100%;}\n    </style>\n\t<script>\n\t\tvar server = window.location.href.split(\"http://\")[1].split(\"/\")[0]\n\t\tconsole.log(\"Page location is \" + server)\n\n\t\tvar socket1 = new  WebSocket(\"ws://\" + server + \"/ws/receive\");\n\t\tvar socket2 = new  WebSocket(\"ws://\" + server + \"/ws/publish\");\n\t\tvar cubeRotationSpeed = 0.02;\n\t\tlet cubeColor = \"blue\"\n\t\tvar socket1Opened = false\n\n\t\tsocket1.onopen = function() {\n\t\t\tsocket1Opened = true\n\t\t  var message = {\n\t\t\t'payload': 'Client connected'\n\t\t  };\n\t\t  socket1.send(JSON.stringify(message));\n\t\t};\n\n\t\tsocket2.onopen = function() {\n\t\t  var message = {\n\t\t\t'payload': 'Client connected'\n\t\t  };\n\t\t  socket1.send(JSON.stringify(message));\n\t\t};\n\n\t\tsocket2.onclose = function(){\n\t\t  console.log('Connection closed');\n\t\t};\n\n\t\tsocket2.onerror = function(error) {\n\t\t  console.log('Error detected: ' + JSON.stringify(error));\n\t\t};\n\n\t\tsocket2.onmessage = function(e) {\n\t\t  var server_message = e.data;\n\t\t  responseObject = JSON.parse(server_message);\n\n\t\t  //alert(JSON.stringify(responseObject));\n\t\t  //Do the required stuff\n\t\t  console.log(responseObject.payload)\n\t\t  if (responseObject.payload.cubeRotationSpeed){\n\t\t\t  cubeRotationSpeed = responseObject.payload.cubeRotationSpeed\n\t\t  }else if(responseObject.payload.cubeColor){\n\t\t\t  cubeColor = responseObject.payload.cubeColor\n\t\t  }\n\t\t}\n\n\t\tvar scene = new THREE.Scene();\n\n\t\t// Make highly-transparent plane\n\t\tvar fadeMaterial = new THREE.MeshBasicMaterial({\n\t\t\tcolor: 0x000000,\n\t\t\ttransparent: true,\n\t\t\topacity: 0.45\n\t\t});\n\t\tvar fadePlane = new THREE.PlaneBufferGeometry(1, 1);\n\t\tvar fadeMesh = new THREE.Mesh(fadePlane, fadeMaterial);\n\n\t\t// Create Object3D to hold camera and transparent plane\n\t\tvar camGroup = new THREE.Object3D();\n\t\tvar camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);\n\t\tcamGroup.add(camera);\n\t\tcamGroup.add(fadeMesh);\n\n\t\t// Put plane in front of camera\n\t\tfadeMesh.position.z = -0.1;\n\n\t\t// Make plane render before particles\n\t\tfadeMesh.renderOrder = -1;\n\n\t\t// Add camGroup to scene\n\t\tscene.add(camGroup);\n\n\n\t\trenderer = new THREE.WebGLRenderer( { preserveDrawingBuffer: true, antialias: true } );\n\t\trenderer.autoClearColor = false;\n\t\trenderer.setSize(window.innerWidth, window.innerHeight);\n\n\t\tdocument.addEventListener('DOMContentLoaded', function () {   \n\t\t\tdocument.body.appendChild(renderer.domElement);\n\t\t});\n\n\t\tvar geometry = new THREE.BoxGeometry(1,1,1);\n\t\t//var color = new THREE.Color(0xff0000)\n\t\tvar material = new THREE.MeshNormalMaterial({color: \"blue\"});\n\t\tvar cube = new THREE.Mesh(geometry, material);\n\t\tscene.add(cube);\n\n\t\tcube.position.z = -5;\n\n\t\tvar step = .03;\n\t\tfunction animate(){\n\n\t\tcube.rotation.x += cubeRotationSpeed;\n\t\tcube.rotation.y += 0.02;\n\t\tcube.position.x += step;\n\t\tcube.material.color = new THREE.Color(cubeColor);\n\t\tif(Math.abs(cube.position.x) > 5.0)\n\t\t{\n\t\t\tstep = -step;\n\t\t\tif (socket1Opened){\n\t\t\t\tsocket1.send(\"ping\");\n\t\t\t}\n\t\t}\n\t\trenderer.render(scene, camera);\n\n\t\trequestAnimationFrame(animate);\n\t}\n\n\tanimate();\n\t</script>\n\n\n",
         "output": "str",
-        "x": 290,
-        "y": 120,
+        "x": 300,
+        "y": 220,
         "wires": [
-            [
-                "f195cd.89a76a3"
-            ]
+            []
         ]
     },
     {
-        "id": "f8262338.541b2",
+        "id": "ec30902d.53091",
         "type": "websocket out",
         "z": "b6c0f7b2.b0adb8",
         "name": "",
         "server": "c6bb1eb5.edd3d",
         "client": "",
-        "x": 820,
-        "y": 240,
+        "x": 900,
+        "y": 320,
         "wires": []
     },
     {
-        "id": "1f953c53.234544",
+        "id": "7f5a6907.75b288",
         "type": "inject",
         "z": "b6c0f7b2.b0adb8",
         "name": "Spin slow",
@@ -15636,15 +15628,15 @@
         "payload": "{\"cubeRotationSpeed\":0.02}",
         "payloadType": "json",
         "x": 425,
-        "y": 240,
+        "y": 380,
         "wires": [
             [
-                "f8262338.541b2"
+                "ec30902d.53091"
             ]
         ]
     },
     {
-        "id": "ae4b9f83.855ed",
+        "id": "3fa0475a.564f68",
         "type": "inject",
         "z": "b6c0f7b2.b0adb8",
         "name": "Spin fast",
@@ -15656,15 +15648,15 @@
         "payload": "{\"cubeRotationSpeed\":0.1}",
         "payloadType": "json",
         "x": 425,
-        "y": 285,
+        "y": 425,
         "wires": [
             [
-                "f8262338.541b2"
+                "ec30902d.53091"
             ]
         ]
     },
     {
-        "id": "f195cd.89a76a3",
+        "id": "422b3c06.603914",
         "type": "change",
         "z": "b6c0f7b2.b0adb8",
         "name": "Set Headers",
@@ -15696,16 +15688,16 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 450,
-        "y": 120,
+        "x": 555,
+        "y": 160,
         "wires": [
             [
-                "6752712.7f98a9"
+                "eabf70d7.4e2a6"
             ]
         ]
     },
     {
-        "id": "eba548fa.e65d98",
+        "id": "a2d0c5bf.142f98",
         "type": "change",
         "z": "b6c0f7b2.b0adb8",
         "name": "",
@@ -15722,30 +15714,30 @@
         "to": "",
         "reg": false,
         "x": 615,
-        "y": 180,
+        "y": 320,
         "wires": [
             [
-                "f8262338.541b2"
+                "ec30902d.53091"
             ]
         ]
     },
     {
-        "id": "c1fc2e6e.bd70e",
+        "id": "8f54d8df.cf4d88",
         "type": "websocket in",
         "z": "b6c0f7b2.b0adb8",
         "name": "",
         "server": "a5db9e65.7dd36",
         "client": "",
         "x": 100,
-        "y": 180,
+        "y": 320,
         "wires": [
             [
-                "22fc2d8b.025e32"
+                "e40e2193.3046"
             ]
         ]
     },
     {
-        "id": "22fc2d8b.025e32",
+        "id": "e40e2193.3046",
         "type": "switch",
         "z": "b6c0f7b2.b0adb8",
         "name": "",
@@ -15762,15 +15754,15 @@
         "repair": false,
         "outputs": 1,
         "x": 265,
-        "y": 180,
+        "y": 320,
         "wires": [
             [
-                "eaae5e3a.3f284"
+                "8a9545c4.147ce8"
             ]
         ]
     },
     {
-        "id": "eaae5e3a.3f284",
+        "id": "8a9545c4.147ce8",
         "type": "function",
         "z": "b6c0f7b2.b0adb8",
         "name": "change color",
@@ -15781,21 +15773,159 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 180,
+        "y": 320,
         "wires": [
             [
-                "eba548fa.e65d98"
+                "a2d0c5bf.142f98"
             ]
         ]
     },
     {
-        "id": "94b2919c.8d227",
+        "id": "dbe5c2f.795694",
+        "type": "template",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "advanced three.js vr (needs fixed still)",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n    <title>Dapparatus: XR</title>\n    <meta charset=\"utf-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\">\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\">\n\t</script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\">\n\t</script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\">\n\t</script>\n    <style>\n        body{margin: 0;}\n        canvas{width:100%;height:100%;}\n    </style>\n\t<link type=\"text/css\" rel=\"stylesheet\" href=\"main.css\">\n\t</head>\n\t<body>\n\n\t\t<div id=\"info\">\n\t\t\t<a href=\"https://dapparatus.io\" target=\"_blank\" rel=\"noopener\">Dapparatus</a> vr - interactive cubes\n\t\t</div>\n\n\t\t<script type=\"module\">\n\n\t\t\timport * as THREE from '../build/three.module.js';\n\n\t\t\timport { BoxLineGeometry } from './jsm/geometries/BoxLineGeometry.js';\n\t\t\timport { VRButton } from './jsm/webxr/VRButton.js';\n\t\t\timport { XRControllerModelFactory } from './jsm/webxr/XRControllerModelFactory.js';\n\n\t\t\tconst clock = new THREE.Clock();\n\n\t\t\tlet container;\n\t\t\tlet camera, scene, raycaster, renderer;\n\n\t\t\tlet room;\n\n\t\t\tlet controller, controllerGrip;\n\t\t\tlet INTERSECTED;\n\t\t\tconst tempMatrix = new THREE.Matrix4();\n\n\t\t\tinit();\n\t\t\tanimate();\n\n\t\t\tfunction init() {\n\n\t\t\t\tcontainer = document.createElement( 'div' );\n\t\t\t\tdocument.body.appendChild( container );\n\n\t\t\t\tscene = new THREE.Scene();\n\t\t\t\tscene.background = new THREE.Color( 0x505050 );\n\n\t\t\t\tcamera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 10 );\n\t\t\t\tcamera.position.set( 0, 1.6, 3 );\n\t\t\t\tscene.add( camera );\n\n\t\t\t\troom = new THREE.LineSegments(\n\t\t\t\t\tnew BoxLineGeometry( 6, 6, 6, 10, 10, 10 ).translate( 0, 3, 0 ),\n\t\t\t\t\tnew THREE.LineBasicMaterial( { color: 0x808080 } )\n\t\t\t\t);\n\t\t\t\tscene.add( room );\n\n\t\t\t\tscene.add( new THREE.HemisphereLight( 0x606060, 0x404040 ) );\n\n\t\t\t\tconst light = new THREE.DirectionalLight( 0xffffff );\n\t\t\t\tlight.position.set( 1, 1, 1 ).normalize();\n\t\t\t\tscene.add( light );\n\n\t\t\t\tconst geometry = new THREE.BoxGeometry( 0.15, 0.15, 0.15 );\n\n\t\t\t\tfor ( let i = 0; i < 200; i ++ ) {\n\n\t\t\t\t\tconst object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } ) );\n\n\t\t\t\t\tobject.position.x = Math.random() * 4 - 2;\n\t\t\t\t\tobject.position.y = Math.random() * 4;\n\t\t\t\t\tobject.position.z = Math.random() * 4 - 2;\n\n\t\t\t\t\tobject.rotation.x = Math.random() * 2 * Math.PI;\n\t\t\t\t\tobject.rotation.y = Math.random() * 2 * Math.PI;\n\t\t\t\t\tobject.rotation.z = Math.random() * 2 * Math.PI;\n\n\t\t\t\t\tobject.scale.x = Math.random() + 0.5;\n\t\t\t\t\tobject.scale.y = Math.random() + 0.5;\n\t\t\t\t\tobject.scale.z = Math.random() + 0.5;\n\n\t\t\t\t\tobject.userData.velocity = new THREE.Vector3();\n\t\t\t\t\tobject.userData.velocity.x = Math.random() * 0.01 - 0.005;\n\t\t\t\t\tobject.userData.velocity.y = Math.random() * 0.01 - 0.005;\n\t\t\t\t\tobject.userData.velocity.z = Math.random() * 0.01 - 0.005;\n\n\t\t\t\t\troom.add( object );\n\n\t\t\t\t}\n\n\t\t\t\traycaster = new THREE.Raycaster();\n\n\t\t\t\trenderer = new THREE.WebGLRenderer( { antialias: true } );\n\t\t\t\trenderer.setPixelRatio( window.devicePixelRatio );\n\t\t\t\trenderer.setSize( window.innerWidth, window.innerHeight );\n\t\t\t\trenderer.outputEncoding = THREE.sRGBEncoding;\n\t\t\t\trenderer.xr.enabled = true;\n\t\t\t\tcontainer.appendChild( renderer.domElement );\n\n\t\t\t\t//\n\n\t\t\t\tfunction onSelectStart() {\n\n\t\t\t\t\tthis.userData.isSelecting = true;\n\n\t\t\t\t}\n\n\t\t\t\tfunction onSelectEnd() {\n\n\t\t\t\t\tthis.userData.isSelecting = false;\n\n\t\t\t\t}\n\n\t\t\t\tcontroller = renderer.xr.getController( 0 );\n\t\t\t\tcontroller.addEventListener( 'selectstart', onSelectStart );\n\t\t\t\tcontroller.addEventListener( 'selectend', onSelectEnd );\n\t\t\t\tcontroller.addEventListener( 'connected', function ( event ) {\n\n\t\t\t\t\tthis.add( buildController( event.data ) );\n\n\t\t\t\t} );\n\t\t\t\tcontroller.addEventListener( 'disconnected', function () {\n\n\t\t\t\t\tthis.remove( this.children[ 0 ] );\n\n\t\t\t\t} );\n\t\t\t\tscene.add( controller );\n\n\t\t\t\tconst controllerModelFactory = new XRControllerModelFactory();\n\n\t\t\t\tcontrollerGrip = renderer.xr.getControllerGrip( 0 );\n\t\t\t\tcontrollerGrip.add( controllerModelFactory.createControllerModel( controllerGrip ) );\n\t\t\t\tscene.add( controllerGrip );\n\n\t\t\t\twindow.addEventListener( 'resize', onWindowResize );\n\n\t\t\t\t//\n\n\t\t\t\tdocument.body.appendChild( VRButton.createButton( renderer ) );\n\n\t\t\t}\n\n\t\t\tfunction buildController( data ) {\n\n\t\t\t\tlet geometry, material;\n\n\t\t\t\tswitch ( data.targetRayMode ) {\n\n\t\t\t\t\tcase 'tracked-pointer':\n\n\t\t\t\t\t\tgeometry = new THREE.BufferGeometry();\n\t\t\t\t\t\tgeometry.setAttribute( 'position', new THREE.Float32BufferAttribute( [ 0, 0, 0, 0, 0, - 1 ], 3 ) );\n\t\t\t\t\t\tgeometry.setAttribute( 'color', new THREE.Float32BufferAttribute( [ 0.5, 0.5, 0.5, 0, 0, 0 ], 3 ) );\n\n\t\t\t\t\t\tmaterial = new THREE.LineBasicMaterial( { vertexColors: true, blending: THREE.AdditiveBlending } );\n\n\t\t\t\t\t\treturn new THREE.Line( geometry, material );\n\n\t\t\t\t\tcase 'gaze':\n\n\t\t\t\t\t\tgeometry = new THREE.RingGeometry( 0.02, 0.04, 32 ).translate( 0, 0, - 1 );\n\t\t\t\t\t\tmaterial = new THREE.MeshBasicMaterial( { opacity: 0.5, transparent: true } );\n\t\t\t\t\t\treturn new THREE.Mesh( geometry, material );\n\n\t\t\t\t}\n\n\t\t\t}\n\n\t\t\tfunction onWindowResize() {\n\n\t\t\t\tcamera.aspect = window.innerWidth / window.innerHeight;\n\t\t\t\tcamera.updateProjectionMatrix();\n\n\t\t\t\trenderer.setSize( window.innerWidth, window.innerHeight );\n\n\t\t\t}\n\n\t\t\t//\n\n\t\t\tfunction animate() {\n\n\t\t\t\trenderer.setAnimationLoop( render );\n\n\t\t\t}\n\n\t\t\tfunction render() {\n\n\t\t\t\tconst delta = clock.getDelta() * 60;\n\n\t\t\t\tif ( controller.userData.isSelecting === true ) {\n\n\t\t\t\t\tconst cube = room.children[ 0 ];\n\t\t\t\t\troom.remove( cube );\n\n\t\t\t\t\tcube.position.copy( controller.position );\n\t\t\t\t\tcube.userData.velocity.x = ( Math.random() - 0.5 ) * 0.02 * delta;\n\t\t\t\t\tcube.userData.velocity.y = ( Math.random() - 0.5 ) * 0.02 * delta;\n\t\t\t\t\tcube.userData.velocity.z = ( Math.random() * 0.01 - 0.05 ) * delta;\n\t\t\t\t\tcube.userData.velocity.applyQuaternion( controller.quaternion );\n\t\t\t\t\troom.add( cube );\n\n\t\t\t\t}\n\n\t\t\t\t// find intersections\n\n\t\t\t\ttempMatrix.identity().extractRotation( controller.matrixWorld );\n\n\t\t\t\traycaster.ray.origin.setFromMatrixPosition( controller.matrixWorld );\n\t\t\t\traycaster.ray.direction.set( 0, 0, - 1 ).applyMatrix4( tempMatrix );\n\n\t\t\t\tconst intersects = raycaster.intersectObjects( room.children );\n\n\t\t\t\tif ( intersects.length > 0 ) {\n\n\t\t\t\t\tif ( INTERSECTED != intersects[ 0 ].object ) {\n\n\t\t\t\t\t\tif ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );\n\n\t\t\t\t\t\tINTERSECTED = intersects[ 0 ].object;\n\t\t\t\t\t\tINTERSECTED.currentHex = INTERSECTED.material.emissive.getHex();\n\t\t\t\t\t\tINTERSECTED.material.emissive.setHex( 0xff0000 );\n\n\t\t\t\t\t}\n\n\t\t\t\t} else {\n\n\t\t\t\t\tif ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );\n\n\t\t\t\t\tINTERSECTED = undefined;\n\n\t\t\t\t}\n\n\t\t\t\t// Keep cubes inside room\n\n\t\t\t\tfor ( let i = 0; i < room.children.length; i ++ ) {\n\n\t\t\t\t\tconst cube = room.children[ i ];\n\n\t\t\t\t\tcube.userData.velocity.multiplyScalar( 1 - ( 0.001 * delta ) );\n\n\t\t\t\t\tcube.position.add( cube.userData.velocity );\n\n\t\t\t\t\tif ( cube.position.x < - 3 || cube.position.x > 3 ) {\n\n\t\t\t\t\t\tcube.position.x = THREE.MathUtils.clamp( cube.position.x, - 3, 3 );\n\t\t\t\t\t\tcube.userData.velocity.x = - cube.userData.velocity.x;\n\n\t\t\t\t\t}\n\n\t\t\t\t\tif ( cube.position.y < 0 || cube.position.y > 6 ) {\n\n\t\t\t\t\t\tcube.position.y = THREE.MathUtils.clamp( cube.position.y, 0, 6 );\n\t\t\t\t\t\tcube.userData.velocity.y = - cube.userData.velocity.y;\n\n\t\t\t\t\t}\n\n\t\t\t\t\tif ( cube.position.z < - 3 || cube.position.z > 3 ) {\n\n\t\t\t\t\t\tcube.position.z = THREE.MathUtils.clamp( cube.position.z, - 3, 3 );\n\t\t\t\t\t\tcube.userData.velocity.z = - cube.userData.velocity.z;\n\n\t\t\t\t\t}\n\n\t\t\t\t\tcube.rotation.x += cube.userData.velocity.x * 2 * delta;\n\t\t\t\t\tcube.rotation.y += cube.userData.velocity.y * 2 * delta;\n\t\t\t\t\tcube.rotation.z += cube.userData.velocity.z * 2 * delta;\n\n\t\t\t\t}\n\n\t\t\t\trenderer.render( scene, camera );\n\n\t\t\t}\n\n\t\t</script>\n\t</body>\n</html>",
+        "output": "str",
+        "x": 310,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5271d8e9.058678",
+        "type": "template",
+        "z": "b6c0f7b2.b0adb8",
+        "name": "basic three.js cube with text",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<title>Dapparatus: XR</title>\n\t\t<style>\n\t\t\tbody { margin: 0; }\n\t\t\tinfo {\n            \tposition: absolute;\n            \ttop: 10px;\n            \twidth: 100%;\n            \ttext-align: center;\n            \tz-index: 100;\n            \tdisplay:block;\n            }\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\"></script>\n\t\t<script>\n\t\t\tconst scene = new THREE.Scene();\n\t\t\tconst camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );\n\n\t\t\tconst renderer = new THREE.WebGLRenderer();\n\t\t\trenderer.setSize( window.innerWidth, window.innerHeight );\n\t\t\tdocument.body.appendChild( renderer.domElement );\n\n\t\t\tconst geometry = new THREE.BoxGeometry();\n\t\t\tconst material = new THREE.MeshNormalMaterial( { color: 0x00ff00 } );\n\t\t\tconst cube = new THREE.Mesh( geometry, material );\n\t\t\tscene.add( cube );\n\n\t\t\tcamera.position.z = 5;\n\n\t\t\tconst animate = function () {\n\t\t\t\trequestAnimationFrame( animate );\n\n\t\t\t\tcube.rotation.x += 0.01;\n\t\t\t\tcube.rotation.y += 0.01;\n\n\t\t\t\trenderer.render( scene, camera );\n\t\t\t};\n\n\t\t\tanimate();\n\t\t</script>\n\t\t<div class=\"info\">Dapparatus</div>\n\t</body>\n</html>",
+        "output": "str",
+        "x": 280,
+        "y": 160,
+        "wires": [
+            [
+                "422b3c06.603914"
+            ]
+        ]
+    },
+    {
+        "id": "5946ccb9.38e774",
         "type": "comment",
         "z": "b6c0f7b2.b0adb8",
-        "name": "Three.js example with websockets",
+        "name": "Three.js example",
         "info": "",
-        "x": 160,
-        "y": 60,
+        "x": 240,
+        "y": 120,
         "wires": []
+    },
+    {
+        "id": "8bd31a2c.72f948",
+        "type": "comment",
+        "z": "354f3ac2.1ff636",
+        "name": "Post-Conditions Explained",
+        "info": "# Transaction Post-Conditions\nA key use-case of smart contracts is to allow programmatic control over the assets in one or more accounts. However, where there is programmatic control, there are bound to be bugs. \nIn the world of smart contract programming, bugs (intentional or not) can have severe consequences to the user's well-being. In particular, bugs can destroy a user's assets and cause them to lose wealth. \nTransaction post-conditions are a feature meant to limit the damage a bug can do in terms of destroying a user's assets.\n\n**Post-conditions are intended to be used to force a transaction to abort if the transaction would cause a principal to send an asset in a way that is not to the user's liking.** \n### Example A: \nA user may append a post-condition saying that upon successful execution, their account's STX balance should have decreased by no more than 1 STX (excluding the fee). \nIf this is not the case, then the transaction would abort and the account would only pay the transaction fee of processing it. \n### Example B:\nA user purchasing a BNS name may append a post-condition saying that upon successful execution, the seller will have sent the BNS name. \nIf it did not, then the transaction aborts, the account is not billed for the name, and the selling account receives no payment.\n\nEach transaction includes a field that describes zero or more **post-conditions that must _ALL_ be true when the transaction finishes running.** Each post-condition is a quad that encodes the following information:\n\n * The **principal** that sent the asset. It can be a standard or contract address.\n * The **asset name**, i.e., the name of one of the assets in the originating account's asset map.\n * The **comparator**, (described below).\n * The **literal**, an integer or boolean value used to compare instances of the asset against via the condition. The type of literal depends on both the type of asset (fungible or non-fungible) and the comparator.\n\nThe Stacks blockchain supports the following two types of comparators:\n\n**Fungible asset changes** -- that is, a question of how much of a fungible asset was sent by a given account when the transaction ran. \nThe post-condition can assert that the quantity of tokens increased, decreased, or stayed the same.\n\n**Non-fungible asset state** -- that is, a question of whether or not an account sent a non-fungible asset when the transaction ran.\n\nIn addition, the Stacks blockchain supports an \"**allow**\" or \"**deny**\" mode for evaluating post-conditions: \nin \"**allow**\" mode, other asset transfers not covered by the post-conditions are permitted, \nbut in \"**deny**\" mode, no other asset transfers are permitted besides those named in the post-conditions.\n\n**Post-conditions are meant to be added by the user (or by the user's wallet software) at the moment they sign with their origin account. \nBecause the user defines the post-conditions, the user has the power to protect themselves from buggy or malicious smart contracts proactively, so even undiscovered bugs cannot steal or destroy their assets if they are guarded with post-conditions.**\n\nWell-designed wallets would provide an intuitive user interface for encoding post-conditions, as well as provide a set of recommended mitigations based on whether or not the transaction would interact with a known-buggy smart contract.\n\nPost-conditions may be used in conjunction with only contract-calls and smart contract instantiation transaction payloads.\n\n## **Post-Condition Limitations**\nPost-conditions do not consider who _currently_ owns an asset when the transaction finishes, nor do they consider the _sequence_ of owners an asset had during its execution. \nIt only encodes _who sent_ an asset, and _how much_. \n\nThis information is much cheaper to track, and requires no I/O to process (processing time is O(n) in the number of post-conditions). \n\nUsers who want richer post-conditions are encouraged to deploy their own proxy contracts for making such queries.",
+        "x": 730,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3020941e.39f2dc",
+        "type": "function",
+        "z": "354f3ac2.1ff636",
+        "name": "pass to History Tab",
+        "func": "const ftxid = msg.blockchain;\n\n\nmsg.ftxid = ftxid;\nmsg.payload = {\"tab\":\"History\"};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1790,
+        "y": 480,
+        "wires": [
+            [
+                "49d8750f.46997c"
+            ]
+        ]
+    },
+    {
+        "id": "49d8750f.46997c",
+        "type": "ui_ui_control",
+        "z": "354f3ac2.1ff636",
+        "name": "ui change",
+        "events": "change",
+        "x": 2080,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aedcd473.b0f298",
+        "type": "ui_template",
+        "z": "354f3ac2.1ff636",
+        "group": "93894c51.e61b",
+        "name": "Fungible Token TX ID",
+        "order": 4,
+        "width": "13",
+        "height": "1",
+        "format": "Most Recent TX: {{msg.blockchain}}",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1620,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "48af1254.6c5ddc",
+        "type": "ui_toast",
+        "z": "354f3ac2.1ff636",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Acknowledged",
+        "cancel": "",
+        "raw": true,
+        "topic": "Pending",
+        "name": "",
+        "x": 1590,
+        "y": 480,
+        "wires": [
+            [
+                "3020941e.39f2dc"
+            ]
+        ]
+    },
+    {
+        "id": "52f29bb6.d47464",
+        "type": "function",
+        "z": "354f3ac2.1ff636",
+        "name": "popup format",
+        "func": "var ftname = msg.ftname;\nvar ftamount = msg.ftamount;\nvar ftdestination = msg.ftdestination;\nmsg.payload = ftamount + \" of \" + ftname + \" to \" + \"<br><small><small>\" + ftdestination + \"</small></small>\"; \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 480,
+        "wires": [
+            [
+                "48af1254.6c5ddc"
+            ]
+        ]
     }
 ]
