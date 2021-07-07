@@ -11491,7 +11491,8 @@
         "wires": [
             [
                 "c0c8e2b5.31ca7",
-                "cbf4cd7d.4a96c"
+                "cbf4cd7d.4a96c",
+                "49a99107.00da3"
             ]
         ]
     },
@@ -11599,7 +11600,8 @@
         "y": 1060,
         "wires": [
             [
-                "3f1208f3.82c9b8"
+                "3f1208f3.82c9b8",
+                "ec431e72.dc554"
             ]
         ]
     },
@@ -11615,9 +11617,9 @@
         "key": "payload",
         "joiner": "\\n",
         "joinerType": "str",
-        "accumulate": false,
+        "accumulate": true,
         "timeout": "",
-        "count": "3",
+        "count": "1",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
@@ -11636,6 +11638,7 @@
         "id": "2fb77993.ae23d6",
         "type": "debug",
         "z": "f7442446.0c97f8",
+        "d": true,
         "name": "my tokens debug",
         "active": true,
         "tosidebar": true,
@@ -11658,7 +11661,7 @@
         "order": 2,
         "width": "13",
         "height": "11",
-        "format": "<h3>{{msg.payload.names.length}} Fungible Token(s) Owned on Testnet</h3>\n\n<table>\n    <tr>\n        <th></th>\n        <th>Symbol</th>\n        <th>Balance</th>        \n        <th>Total Sent</th>\n        <th>Total Received</th>\n        <th></th>\n        <th></th>\n    </tr>\n\n\t<tr ng-if=\"msg.payload.names[0] !== undefined\">\n        <td><img src=\"{{msg.payload.image0}}\" width=\"32\" height=\"32\"> </td>\n        <td>{{msg.payload.names[0][1]}}</td>\n        <td>{{msg.payload.balances[0].balance}}</td>     \n        <td>{{msg.payload.balances[0].total_sent}}</td> \n        <td>{{msg.payload.balances[0].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[0][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>\n    </tr>\n\n\t<tr ng-if=\"msg.payload.names[1] !== undefined\">\n        <td><img src=\"{{msg.payload.image1}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[1][1]}}</td>\n        <td>{{msg.payload.balances[1].balance}}</td>     \n        <td>{{msg.payload.balances[1].total_sent}}</td> \n        <td>{{msg.payload.balances[1].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[1][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[2] !== undefined\">\n        <td><img src=\"{{msg.payload.image2}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[2][1]}}</td>\n        <td>{{msg.payload.balances[2].balance}}</td>     \n        <td>{{msg.payload.balances[2].total_sent}}</td> \n        <td>{{msg.payload.balances[2].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[2][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[3] !== undefined\">\n        <td><img src=\"{{msg.payload.image3}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[3][1]}}</td>\n        <td>{{msg.payload.balances[3].balance}}</td>     \n        <td>{{msg.payload.balances[3].total_sent}}</td> \n        <td>{{msg.payload.balances[3].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[3][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[4] !== undefined\">\n        <td><img src=\"{{msg.payload.image4}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[4][1]}}</td>\n        <td>{{msg.payload.balances[4].balance}}</td>     \n        <td>{{msg.payload.balances[4].total_sent}}</td> \n        <td>{{msg.payload.balances[4].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[4][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[5] !== undefined\">\n        <td><img src=\"{{msg.payload.image5}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[5][1]}}</td>\n        <td>{{msg.payload.balances[5].balance}}</td>     \n        <td>{{msg.payload.balances[5].total_sent}}</td> \n        <td>{{msg.payload.balances[5].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[5][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n\n    <tr ng-if=\"msg.payload.names[6] !== undefined\">\n        <td><img src=\"{{msg.payload.image6}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[6][1]}}</td>\n        <td>{{msg.payload.balances[6].balance}}</td>     \n        <td>{{msg.payload.balances[6].total_sent}}</td> \n        <td>{{msg.payload.balances[6].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[6][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[7] !== undefined\">\n        <td><img src=\"{{msg.payload.image7}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[7][1]}}</td>\n        <td>{{msg.payload.balances[7].balance}}</td>     \n        <td>{{msg.payload.balances[7].total_sent}}</td> \n        <td>{{msg.payload.balances[7].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[7][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[8] !== undefined\">\n        <td><img src=\"{{msg.payload.image8}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[8][1]}}</td>\n        <td>{{msg.payload.balances[8].balance}}</td>     \n        <td>{{msg.payload.balances[8].total_sent}}</td> \n        <td>{{msg.payload.balances[8].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[8][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[9] !== undefined\">\n        <td><img src=\"{{msg.payload.image9}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[9][1]}}</td>\n        <td>{{msg.payload.balances[9].balance}}</td>     \n        <td>{{msg.payload.balances[9].total_sent}}</td> \n        <td>{{msg.payload.balances[9].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[9][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n\n</table>\n\n<small><small>Disclaimer: Max 10 Tokens</small></small>\n\n\n\n",
+        "format": "<h3>{{msg.payload.names.length}} Fungible Token(s) Owned on Testnet.</h3>\n\n<table>\n    <tr>\n        <th></th>\n        <th>Symbol</th>\n        <th>Balance</th>        \n        <th>Total Sent</th>\n        <th>Total Received</th>\n        <th></th>\n        <th></th>\n    </tr>\n\n\t<tr ng-if=\"msg.payload.names[0] !== undefined\">\n        <td><img src=\"{{msg.payload.image0}}\" width=\"32\" height=\"32\"> </td>\n        <td>{{msg.payload.names[0][1]}}</td>\n        <td>{{msg.payload.balances[0].balance}}</td>     \n        <td>{{msg.payload.balances[0].total_sent}}</td> \n        <td>{{msg.payload.balances[0].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[0][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>\n    </tr>\n\n\t<tr ng-if=\"msg.payload.names[1] !== undefined\">\n        <td><img src=\"{{msg.payload.image1}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[1][1]}}</td>\n        <td>{{msg.payload.balances[1].balance}}</td>     \n        <td>{{msg.payload.balances[1].total_sent}}</td> \n        <td>{{msg.payload.balances[1].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[1][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[2] !== undefined\">\n        <td><img src=\"{{msg.payload.image2}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[2][1]}}</td>\n        <td>{{msg.payload.balances[2].balance}}</td>     \n        <td>{{msg.payload.balances[2].total_sent}}</td> \n        <td>{{msg.payload.balances[2].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[2][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[3] !== undefined\">\n        <td><img src=\"{{msg.payload.image3}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[3][1]}}</td>\n        <td>{{msg.payload.balances[3].balance}}</td>     \n        <td>{{msg.payload.balances[3].total_sent}}</td> \n        <td>{{msg.payload.balances[3].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[3][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[4] !== undefined\">\n        <td><img src=\"{{msg.payload.image4}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[4][1]}}</td>\n        <td>{{msg.payload.balances[4].balance}}</td>     \n        <td>{{msg.payload.balances[4].total_sent}}</td> \n        <td>{{msg.payload.balances[4].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[4][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.names[5] !== undefined\">\n        <td><img src=\"{{msg.payload.image5}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[5][1]}}</td>\n        <td>{{msg.payload.balances[5].balance}}</td>     \n        <td>{{msg.payload.balances[5].total_sent}}</td> \n        <td>{{msg.payload.balances[5].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[5][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n\n    <tr ng-if=\"msg.payload.names[6] !== undefined\">\n        <td><img src=\"{{msg.payload.image6}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[6][1]}}</td>\n        <td>{{msg.payload.balances[6].balance}}</td>     \n        <td>{{msg.payload.balances[6].total_sent}}</td> \n        <td>{{msg.payload.balances[6].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[6][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[7] !== undefined\">\n        <td><img src=\"{{msg.payload.image7}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[7][1]}}</td>\n        <td>{{msg.payload.balances[7].balance}}</td>     \n        <td>{{msg.payload.balances[7].total_sent}}</td> \n        <td>{{msg.payload.balances[7].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[7][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[8] !== undefined\">\n        <td><img src=\"{{msg.payload.image8}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[8][1]}}</td>\n        <td>{{msg.payload.balances[8].balance}}</td>     \n        <td>{{msg.payload.balances[8].total_sent}}</td> \n        <td>{{msg.payload.balances[8].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[8][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n    <tr ng-if=\"msg.payload.names[9] !== undefined\">\n        <td><img src=\"{{msg.payload.image9}}\" width=\"32\" height=\"32\"></td>\n        <td>{{msg.payload.names[9][1]}}</td>\n        <td>{{msg.payload.balances[9].balance}}</td>     \n        <td>{{msg.payload.balances[9].total_sent}}</td> \n        <td>{{msg.payload.balances[9].total_received}}</td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.names[9][0]})\">Transfer\n            </md-button>\n        </td>\n        <td><md-button>History</md-button></td>        \n    </tr>\n\n</table>\n\n<small><small>Disclaimer: Max 10 Tokens</small></small>\n\n\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -11693,8 +11696,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 1340,
+        "x": 330,
+        "y": 1640,
         "wires": [
             [
                 "93bdcff4.29b0c"
@@ -11714,8 +11717,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 690,
-        "y": 1300,
+        "x": 810,
+        "y": 1600,
         "wires": [
             [
                 "4cfb4c56.a44634"
@@ -11730,8 +11733,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 830,
-        "y": 1300,
+        "x": 950,
+        "y": 1600,
         "wires": [
             [
                 "bc9263da.b9d19"
@@ -11742,6 +11745,7 @@
         "id": "605d5b01.f0ce54",
         "type": "debug",
         "z": "f7442446.0c97f8",
+        "d": true,
         "name": "token debugger",
         "active": true,
         "tosidebar": true,
@@ -11759,6 +11763,7 @@
         "id": "4262a729.05abf8",
         "type": "function",
         "z": "f7442446.0c97f8",
+        "d": true,
         "name": "token meta 0",
         "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
         "outputs": 1,
@@ -11766,8 +11771,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 1280,
+        "x": 1270,
+        "y": 1220,
         "wires": [
             [
                 "924754d4.095488"
@@ -11778,15 +11783,18 @@
         "id": "924754d4.095488",
         "type": "http request",
         "z": "f7442446.0c97f8",
+        "d": true,
         "name": "",
         "method": "GET",
         "ret": "txt",
-        "paytoqs": false,
+        "paytoqs": "ignore",
         "url": "",
+        "tls": "",
         "persist": false,
+        "proxy": "",
         "authType": "",
-        "x": 1590,
-        "y": 1280,
+        "x": 1470,
+        "y": 1220,
         "wires": [
             [
                 "6d0bf2f3.de231c"
@@ -11797,12 +11805,13 @@
         "id": "6d0bf2f3.de231c",
         "type": "json",
         "z": "f7442446.0c97f8",
+        "d": true,
         "name": "",
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1730,
-        "y": 1280,
+        "x": 1650,
+        "y": 1220,
         "wires": [
             [
                 "a1d22f32.1e5c1"
@@ -11813,6 +11822,7 @@
         "id": "a1d22f32.1e5c1",
         "type": "function",
         "z": "f7442446.0c97f8",
+        "d": true,
         "name": "set image0",
         "func": "const image0 = msg.payload.image;\nmsg.payload = {image0};\nreturn msg;",
         "outputs": 1,
@@ -11820,12 +11830,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1910,
-        "y": 1280,
+        "x": 1810,
+        "y": 1220,
         "wires": [
             [
-                "61361a6d.ebaa34",
-                "6df74dc.d526bb4"
+                "61361a6d.ebaa34"
             ]
         ]
     },
@@ -11840,8 +11849,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 1440,
+        "x": 330,
+        "y": 1760,
         "wires": [
             [
                 "ceaef61c.5ceab8"
@@ -11859,8 +11868,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 670,
-        "y": 1400,
+        "x": 810,
+        "y": 1720,
         "wires": [
             [
                 "c27d3ad5.cb2d38"
@@ -11875,8 +11884,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 830,
-        "y": 1400,
+        "x": 950,
+        "y": 1720,
         "wires": [
             [
                 "49ea32a3.82ecdc"
@@ -11887,6 +11896,7 @@
         "id": "bc63ae9a.a182e",
         "type": "function",
         "z": "f7442446.0c97f8",
+        "d": true,
         "name": "token meta 1",
         "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
         "outputs": 1,
@@ -11894,8 +11904,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 1380,
+        "x": 1270,
+        "y": 1260,
         "wires": [
             [
                 "e8f7e32d.e998a"
@@ -11906,15 +11916,18 @@
         "id": "e8f7e32d.e998a",
         "type": "http request",
         "z": "f7442446.0c97f8",
+        "d": true,
         "name": "",
         "method": "GET",
         "ret": "txt",
-        "paytoqs": false,
+        "paytoqs": "ignore",
         "url": "",
+        "tls": "",
         "persist": false,
+        "proxy": "",
         "authType": "",
-        "x": 1610,
-        "y": 1380,
+        "x": 1470,
+        "y": 1260,
         "wires": [
             [
                 "f295514c.0fd7c"
@@ -11925,12 +11938,13 @@
         "id": "f295514c.0fd7c",
         "type": "json",
         "z": "f7442446.0c97f8",
+        "d": true,
         "name": "",
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1750,
-        "y": 1380,
+        "x": 1650,
+        "y": 1260,
         "wires": [
             [
                 "59123087.880da"
@@ -11941,6 +11955,7 @@
         "id": "59123087.880da",
         "type": "function",
         "z": "f7442446.0c97f8",
+        "d": true,
         "name": "set image1",
         "func": "const image1 = msg.payload.image;\nmsg.payload = {image1};\nreturn msg;",
         "outputs": 1,
@@ -11948,8 +11963,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1890,
-        "y": 1380,
+        "x": 1810,
+        "y": 1260,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -11976,12 +11991,11 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 2330,
-        "y": 1260,
+        "x": 3090,
+        "y": 1580,
         "wires": [
             [
-                "3f1208f3.82c9b8",
-                "30825d45.75b282"
+                "3f1208f3.82c9b8"
             ]
         ]
     },
@@ -12061,7 +12075,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 900,
+        "x": 740,
         "y": 1020,
         "wires": [
             [
@@ -12087,14 +12101,16 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1030,
-        "y": 1400,
+        "x": 1130,
+        "y": 1720,
         "wires": [
             [
-                "bc63ae9a.a182e"
+                "bc63ae9a.a182e",
+                "8052aca3.fec73"
             ],
             [
-                "8ee0d8a0.bb9c78"
+                "8ee0d8a0.bb9c78",
+                "d1516889.068bc8"
             ]
         ]
     },
@@ -12116,14 +12132,16 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1030,
-        "y": 1300,
+        "x": 1130,
+        "y": 1600,
         "wires": [
             [
-                "4262a729.05abf8"
+                "4262a729.05abf8",
+                "69801746.039c78"
             ],
             [
-                "ad0c52b9.07955"
+                "ad0c52b9.07955",
+                "1a60cd26.d74763"
             ]
         ]
     },
@@ -12131,19 +12149,19 @@
         "id": "ad0c52b9.07955",
         "type": "function",
         "z": "f7442446.0c97f8",
-        "name": "or image0 (default)",
+        "d": true,
+        "name": "or set image0 (default)",
         "func": "const image0 = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image0};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1930,
-        "y": 1320,
+        "x": 2040,
+        "y": 1220,
         "wires": [
             [
-                "61361a6d.ebaa34",
-                "6df74dc.d526bb4"
+                "61361a6d.ebaa34"
             ]
         ]
     },
@@ -12151,6 +12169,7 @@
         "id": "8ee0d8a0.bb9c78",
         "type": "function",
         "z": "f7442446.0c97f8",
+        "d": true,
         "name": "or image1 (default)",
         "func": "const image1 = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image1};\nreturn msg;",
         "outputs": 1,
@@ -12158,8 +12177,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1910,
-        "y": 1420,
+        "x": 2030,
+        "y": 1260,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -12187,7 +12206,7 @@
             "265f6e52.b3b642"
         ],
         "x": 35,
-        "y": 1780,
+        "y": 2100,
         "wires": [
             [
                 "4f3cb59a.07fe0c",
@@ -12214,8 +12233,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 1560,
+        "x": 330,
+        "y": 1880,
         "wires": [
             [
                 "1ce38732.df7f69"
@@ -12233,8 +12252,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 670,
-        "y": 1520,
+        "x": 810,
+        "y": 1840,
         "wires": [
             [
                 "fe951b10.e42358"
@@ -12249,8 +12268,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 830,
-        "y": 1520,
+        "x": 950,
+        "y": 1840,
         "wires": [
             [
                 "cc1a8b3a.370b48"
@@ -12268,8 +12287,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 1500,
+        "x": 1690,
+        "y": 1800,
         "wires": [
             [
                 "a4202a10.179b78"
@@ -12287,8 +12306,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 1610,
-        "y": 1500,
+        "x": 1850,
+        "y": 1800,
         "wires": [
             [
                 "3795fb9e.828a74"
@@ -12303,8 +12322,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1750,
-        "y": 1500,
+        "x": 2030,
+        "y": 1800,
         "wires": [
             [
                 "5920fb95.d1a6a4"
@@ -12322,8 +12341,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1890,
-        "y": 1500,
+        "x": 2190,
+        "y": 1800,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -12348,11 +12367,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1030,
-        "y": 1520,
+        "x": 1130,
+        "y": 1840,
         "wires": [
             [
-                "5d68bd24.fdd954"
+                "2a8e7b97.61ab04"
             ],
             [
                 "be8368f5.8612d8"
@@ -12370,8 +12389,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1910,
-        "y": 1540,
+        "x": 2210,
+        "y": 1860,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -12389,8 +12408,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 1680,
+        "x": 330,
+        "y": 2000,
         "wires": [
             [
                 "f1068bdf.868c28"
@@ -12408,8 +12427,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 670,
-        "y": 1640,
+        "x": 810,
+        "y": 1960,
         "wires": [
             [
                 "662ec3c6.d5cdfc"
@@ -12424,8 +12443,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 830,
-        "y": 1640,
+        "x": 950,
+        "y": 1960,
         "wires": [
             [
                 "124a5383.d2363c"
@@ -12443,8 +12462,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 1620,
+        "x": 1690,
+        "y": 1920,
         "wires": [
             [
                 "4995236e.f9971c"
@@ -12462,8 +12481,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 1610,
-        "y": 1620,
+        "x": 1850,
+        "y": 1920,
         "wires": [
             [
                 "74bb894b.f4daf8"
@@ -12478,8 +12497,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1750,
-        "y": 1620,
+        "x": 2030,
+        "y": 1920,
         "wires": [
             [
                 "a783f335.b30b4"
@@ -12497,8 +12516,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1890,
-        "y": 1620,
+        "x": 2190,
+        "y": 1920,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -12523,11 +12542,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1030,
-        "y": 1640,
+        "x": 1130,
+        "y": 1960,
         "wires": [
             [
-                "989a09f4.675c18"
+                "57c27740.ce7d48"
             ],
             [
                 "b5a46201.258c4"
@@ -12545,8 +12564,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1910,
-        "y": 1660,
+        "x": 2210,
+        "y": 1980,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -12564,8 +12583,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 1780,
+        "x": 330,
+        "y": 2100,
         "wires": [
             [
                 "31d44d99.a947d2"
@@ -12583,8 +12602,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 670,
-        "y": 1760,
+        "x": 810,
+        "y": 2060,
         "wires": [
             [
                 "3269903.b361e7"
@@ -12599,8 +12618,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 810,
-        "y": 1760,
+        "x": 950,
+        "y": 2060,
         "wires": [
             [
                 "a45d0f0c.2686a"
@@ -12618,8 +12637,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 1740,
+        "x": 1670,
+        "y": 2020,
         "wires": [
             [
                 "5f67735.4c8aa8c"
@@ -12637,8 +12656,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 1610,
-        "y": 1740,
+        "x": 1850,
+        "y": 2020,
         "wires": [
             [
                 "a9437260.f00e"
@@ -12653,8 +12672,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1750,
-        "y": 1740,
+        "x": 2030,
+        "y": 2020,
         "wires": [
             [
                 "88fb1c49.13a3b"
@@ -12672,8 +12691,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1890,
-        "y": 1740,
+        "x": 2190,
+        "y": 2020,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -12698,11 +12717,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1030,
-        "y": 1760,
+        "x": 1130,
+        "y": 2060,
         "wires": [
             [
-                "9cf9e16b.93a78"
+                "d8bc754f.50dd28"
             ],
             [
                 "307f543a.8222ac"
@@ -12720,8 +12739,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1910,
-        "y": 1780,
+        "x": 2210,
+        "y": 2100,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -12739,8 +12758,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 1920,
+        "x": 330,
+        "y": 2240,
         "wires": [
             [
                 "493e33b7.e9649c"
@@ -12758,8 +12777,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 670,
-        "y": 1900,
+        "x": 810,
+        "y": 2220,
         "wires": [
             [
                 "161db1ce.4c1fbe"
@@ -12774,8 +12793,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 810,
-        "y": 1900,
+        "x": 950,
+        "y": 2220,
         "wires": [
             [
                 "94fb8f01.062f2"
@@ -12793,8 +12812,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 1880,
+        "x": 1670,
+        "y": 2160,
         "wires": [
             [
                 "1fcc208e.51f64f"
@@ -12812,8 +12831,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 1610,
-        "y": 1880,
+        "x": 1850,
+        "y": 2160,
         "wires": [
             [
                 "51f44a03.5047c4"
@@ -12828,8 +12847,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1750,
-        "y": 1880,
+        "x": 2030,
+        "y": 2160,
         "wires": [
             [
                 "45425a17.aeecc4"
@@ -12847,8 +12866,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1890,
-        "y": 1880,
+        "x": 2190,
+        "y": 2160,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -12873,11 +12892,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1010,
-        "y": 1900,
+        "x": 1130,
+        "y": 2220,
         "wires": [
             [
-                "4f695cd6.030794"
+                "d4f6ab82.c39208"
             ],
             [
                 "4063f524.742d9c"
@@ -12895,8 +12914,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1910,
-        "y": 1920,
+        "x": 2210,
+        "y": 2240,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -12914,8 +12933,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 2040,
+        "x": 330,
+        "y": 2360,
         "wires": [
             [
                 "445c798e.dc2918"
@@ -12933,8 +12952,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 670,
-        "y": 2020,
+        "x": 810,
+        "y": 2320,
         "wires": [
             [
                 "b1e8ce4e.62f01"
@@ -12949,8 +12968,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 830,
-        "y": 2020,
+        "x": 950,
+        "y": 2320,
         "wires": [
             [
                 "9f47697d.2467e8"
@@ -12968,8 +12987,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 2000,
+        "x": 1670,
+        "y": 2280,
         "wires": [
             [
                 "77ef1967.06cb28"
@@ -12987,8 +13006,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 1610,
-        "y": 2000,
+        "x": 1850,
+        "y": 2280,
         "wires": [
             [
                 "7fb4e8fb.467c38"
@@ -13003,8 +13022,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1750,
-        "y": 2000,
+        "x": 2030,
+        "y": 2280,
         "wires": [
             [
                 "5e9246ae.34d3b8"
@@ -13022,8 +13041,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1890,
-        "y": 2000,
+        "x": 2190,
+        "y": 2280,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -13048,11 +13067,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1030,
-        "y": 2020,
+        "x": 1130,
+        "y": 2320,
         "wires": [
             [
-                "7538e879.7ec088"
+                "4de52a5.6f4c2d4"
             ],
             [
                 "af10197.3dac0e8"
@@ -13070,8 +13089,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1910,
-        "y": 2040,
+        "x": 2210,
+        "y": 2360,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -13089,8 +13108,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 2160,
+        "x": 330,
+        "y": 2480,
         "wires": [
             [
                 "b5570a77.3da428"
@@ -13108,8 +13127,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 690,
-        "y": 2140,
+        "x": 810,
+        "y": 2440,
         "wires": [
             [
                 "5a02aae7.467934"
@@ -13124,8 +13143,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 830,
-        "y": 2140,
+        "x": 950,
+        "y": 2440,
         "wires": [
             [
                 "b637af44.f5efd"
@@ -13143,8 +13162,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 2120,
+        "x": 1670,
+        "y": 2400,
         "wires": [
             [
                 "f30485ed.51c218"
@@ -13162,8 +13181,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 1610,
-        "y": 2120,
+        "x": 1830,
+        "y": 2400,
         "wires": [
             [
                 "111a517c.647e6f"
@@ -13178,8 +13197,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1750,
-        "y": 2120,
+        "x": 2030,
+        "y": 2400,
         "wires": [
             [
                 "57be7cf.c508b84"
@@ -13197,8 +13216,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1890,
-        "y": 2120,
+        "x": 2190,
+        "y": 2400,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -13223,11 +13242,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1030,
-        "y": 2140,
+        "x": 1130,
+        "y": 2440,
         "wires": [
             [
-                "5fa44ea0.92cbb"
+                "b5c1fab6.2374c8"
             ],
             [
                 "32303503.c617ca"
@@ -13245,8 +13264,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1910,
-        "y": 2160,
+        "x": 2210,
+        "y": 2480,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -13264,8 +13283,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 2260,
+        "x": 330,
+        "y": 2600,
         "wires": [
             [
                 "b415f6ad.f383c8"
@@ -13283,8 +13302,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 690,
-        "y": 2240,
+        "x": 810,
+        "y": 2560,
         "wires": [
             [
                 "bca2f03f.b028b"
@@ -13299,8 +13318,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 830,
-        "y": 2240,
+        "x": 950,
+        "y": 2560,
         "wires": [
             [
                 "e5b2b671.96d008"
@@ -13318,8 +13337,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 2220,
+        "x": 1670,
+        "y": 2520,
         "wires": [
             [
                 "90f23ef2.35661"
@@ -13337,8 +13356,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 1590,
-        "y": 2220,
+        "x": 1830,
+        "y": 2520,
         "wires": [
             [
                 "52b7af2e.9a129"
@@ -13353,8 +13372,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1750,
-        "y": 2220,
+        "x": 2030,
+        "y": 2520,
         "wires": [
             [
                 "8fbb369c.6dd1a8"
@@ -13372,8 +13391,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1910,
-        "y": 2220,
+        "x": 2190,
+        "y": 2520,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -13398,11 +13417,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1030,
-        "y": 2240,
+        "x": 1130,
+        "y": 2560,
         "wires": [
             [
-                "54b396fa.a16838"
+                "b47f691c.cd7ef8"
             ],
             [
                 "89d1d1c8.26f65"
@@ -13420,8 +13439,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1930,
-        "y": 2260,
+        "x": 2210,
+        "y": 2580,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -13439,8 +13458,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 2360,
+        "x": 330,
+        "y": 2720,
         "wires": [
             [
                 "4b06dd42.f51734"
@@ -13458,8 +13477,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 690,
-        "y": 2340,
+        "x": 810,
+        "y": 2680,
         "wires": [
             [
                 "1ccad6b.959d429"
@@ -13474,8 +13493,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 830,
-        "y": 2340,
+        "x": 950,
+        "y": 2680,
         "wires": [
             [
                 "654fa05e.5d9e9"
@@ -13493,8 +13512,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 2320,
+        "x": 1670,
+        "y": 2640,
         "wires": [
             [
                 "e56bd4c.37aa328"
@@ -13512,8 +13531,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 1590,
-        "y": 2320,
+        "x": 1830,
+        "y": 2640,
         "wires": [
             [
                 "9915242f.8e9b98"
@@ -13528,8 +13547,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1750,
-        "y": 2320,
+        "x": 2030,
+        "y": 2640,
         "wires": [
             [
                 "d2bbd68c.1d4cf8"
@@ -13547,8 +13566,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1910,
-        "y": 2320,
+        "x": 2190,
+        "y": 2640,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -13573,11 +13592,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1030,
-        "y": 2340,
+        "x": 1130,
+        "y": 2680,
         "wires": [
             [
-                "80e53f18.b8fba"
+                "1274a026.8ee01"
             ],
             [
                 "3f17a712.87fc98"
@@ -13595,8 +13614,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1930,
-        "y": 2380,
+        "x": 2210,
+        "y": 2720,
         "wires": [
             [
                 "61361a6d.ebaa34"
@@ -13633,25 +13652,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2520,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "6df74dc.d526bb4",
-        "type": "debug",
-        "z": "f7442446.0c97f8",
-        "name": "image0 debugger",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2170,
-        "y": 1180,
+        "x": 3300,
+        "y": 1580,
         "wires": []
     },
     {
@@ -13703,14 +13705,15 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 490,
-        "y": 1340,
+        "x": 590,
+        "y": 1640,
         "wires": [
             [
                 "e8c4dd6d.c35da"
             ],
             [
-                "ad0c52b9.07955"
+                "ad0c52b9.07955",
+                "1a60cd26.d74763"
             ]
         ]
     },
@@ -13718,16 +13721,18 @@
         "id": "ec431e72.dc554",
         "type": "debug",
         "z": "f7442446.0c97f8",
-        "name": "",
+        "d": true,
+        "name": "balance debugger",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 1220,
+        "x": 1330,
+        "y": 1080,
         "wires": []
     },
     {
@@ -13750,14 +13755,15 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 470,
-        "y": 1440,
+        "x": 590,
+        "y": 1760,
         "wires": [
             [
                 "33301f96.99394"
             ],
             [
-                "8ee0d8a0.bb9c78"
+                "8ee0d8a0.bb9c78",
+                "d1516889.068bc8"
             ]
         ]
     },
@@ -13781,8 +13787,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 470,
-        "y": 1560,
+        "x": 590,
+        "y": 1880,
         "wires": [
             [
                 "31d060a7.7758b"
@@ -13812,8 +13818,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 470,
-        "y": 1680,
+        "x": 590,
+        "y": 2000,
         "wires": [
             [
                 "74b018a.a9fd5e8"
@@ -13843,8 +13849,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 470,
-        "y": 1780,
+        "x": 590,
+        "y": 2100,
         "wires": [
             [
                 "2a473c70.8999e4"
@@ -13874,16 +13880,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 470,
-        "y": 1920,
+        "x": 590,
+        "y": 2240,
         "wires": [
             [
-                "33ddc782.741778",
-                "ec431e72.dc554"
+                "33ddc782.741778"
             ],
             [
-                "4063f524.742d9c",
-                "ec431e72.dc554"
+                "4063f524.742d9c"
             ]
         ]
     },
@@ -13907,8 +13911,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 470,
-        "y": 2040,
+        "x": 590,
+        "y": 2360,
         "wires": [
             [
                 "f8a9fe02.d1481"
@@ -13938,8 +13942,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 470,
-        "y": 2160,
+        "x": 590,
+        "y": 2480,
         "wires": [
             [
                 "4a5fd447.fd0ddc"
@@ -13969,8 +13973,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 470,
-        "y": 2260,
+        "x": 590,
+        "y": 2600,
         "wires": [
             [
                 "94ea7f22.b4fcd"
@@ -14000,8 +14004,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 470,
-        "y": 2360,
+        "x": 590,
+        "y": 2720,
         "wires": [
             [
                 "d35647b.9fdeab8"
@@ -14164,6 +14168,7 @@
         "id": "3dc05ac5.d24776",
         "type": "debug",
         "z": "f7442446.0c97f8",
+        "d": true,
         "name": "Token Transfer Debug",
         "active": true,
         "tosidebar": true,
@@ -14272,7 +14277,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 240,
+        "x": 140,
         "y": 440,
         "wires": [
             [
@@ -14293,8 +14298,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 270,
-        "y": 480,
+        "x": 330,
+        "y": 440,
         "wires": [
             [
                 "f4c95423.f57588"
@@ -14309,11 +14314,12 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 290,
-        "y": 520,
+        "x": 470,
+        "y": 440,
         "wires": [
             [
-                "54ce071a.5107a8"
+                "54ce071a.5107a8",
+                "d686bf14.520f5"
             ]
         ]
     },
@@ -14345,8 +14351,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 270,
-        "y": 600,
+        "x": 430,
+        "y": 560,
         "wires": [
             [
                 "69479a11.52ffe4"
@@ -14384,8 +14390,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 670,
-        "y": 600,
+        "x": 570,
+        "y": 560,
         "wires": [
             [
                 "6e4d847b.3fe2cc"
@@ -14406,8 +14412,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 810,
-        "y": 440,
+        "x": 830,
+        "y": 560,
         "wires": [
             []
         ]
@@ -15443,8 +15449,8 @@
         "id": "ab7c01a5.083eb",
         "type": "function",
         "z": "354f3ac2.1ff636",
-        "name": "call ft-transfer to network (testnet) (STILL UNDERCONSTRUCTION)",
-        "func": "//reference https://www.npmjs.com/package/@stacks/transactions\n\n//Network\nconst network = new stacksNetwork.StacksTestnet(); // or for mainnet, use `StacksMainnet()`\n\n//Contract Asset Info\nconst tempcontractid = global.get('tempcontractid'); //get the temporarily contract id\nconst ftname = tempcontractid.split(\".\")[1]; //remove everything prior and including \".\"\nconst ftaddress = tempcontractid.split(\".\")[0]; //remove everything after and including \".\"\nconst ftinfo = stacksTransactions.createAssetInfo(ftaddress, ftname, ftname); //set AssetInfo for type property\n\n//Sender\nconst senderkey = global.get('stxprivkey'); //get private key\nconst ftsender = global.get('testnetdepositaddress'); //or use depositaddress for mainnet\n\n//Amount, Destination, and Memo\nconst ftamount = msg.payload.ftamount; //pass in amount to send\nconst ftdestination = msg.payload.ftdestination; //pass in destination address\nconst ftmemo = msg.payload.ftmemo;//pass in the memo\n\n//Post Conditions for safety\nconst postConditionAddress = ftsender;\nconst postConditionCode = stacksTransactions.FungibleConditionCode.Equal;\nconst postConditionAmount = new BigNum(ftamount); //requires BigNum\nconst postConditionAssetInfo = ftinfo;//Problem like something to do with thi postConditionAssetInfo\n\nconst postConditions = [\n  stacksTransactions.makeStandardFungiblePostCondition(postConditionAddress, postConditionCode, postConditionAmount, postConditionAssetInfo),\n];\n\n//Transaction Options -the memo still needs encoded correctly\nconst txOptions = {\n  contractAddress: ftaddress,\n  contractName: ftname,\n  functionName: 'transfer',\n  functionArgs: [\n      stacksTransactions.uintCV(ftamount),\n      stacksTransactions.standardPrincipalCV(ftsender),\n      stacksTransactions.standardPrincipalCV(ftdestination),\n      stacksTransactions.noneCV(ftmemo)\n      ],\n  senderKey: senderkey,\n  validateWithAbi: true,\n  network,\n  postConditions,\n  anchorMode: stacksTransactions.AnchorMode.Any,\n};\n\n//Transaction Broadcast to Network\nconst transaction = await stacksTransactions.makeContractCall(txOptions);\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\n//Passed along Outputs for UI\nmsg.payload = transaction;\nmsg.blockchain = \"0x\" + broadcastTxn;//the transaction id\nmsg.txoptions = txOptions;//the tx options\nmsg.ftcontractid = tempcontractid;//full contract id\nmsg.ftinfo = ftinfo;\nmsg.ftname = ftname;//contract name\nmsg.ftaddress = ftaddress;//contract address\nmsg.ftsender = ftsender; //contract caller\nmsg.ftamount = ftamount; //amount to send\nmsg.ftdestination = ftdestination; //where to send\n\nreturn msg;",
+        "name": "call ft-transfer to network (testnet) (BETA VERSION)",
+        "func": "//reference https://www.npmjs.com/package/@stacks/transactions\n\n//Network\nconst network = new stacksNetwork.StacksTestnet(); // or for mainnet, use `StacksMainnet()`\n\n//Contract Asset Info\nconst tempcontractid = global.get('tempcontractid'); //get the temporarily contract id\nconst ftname = tempcontractid.split(\".\")[1]; //remove everything prior and including \".\"\nconst ftaddress = tempcontractid.split(\".\")[0]; //remove everything after and including \".\"\nconst ftinfo = stacksTransactions.createAssetInfo(ftaddress, ftname, ftname); //set AssetInfo for type property\n\n//Sender\nconst senderkey = global.get('stxprivkey'); //get private key\nconst ftsender = global.get('testnetdepositaddress'); //or use depositaddress for mainnet\n\n//Amount, Destination, and Memo\nconst ftamount = msg.payload.ftamount; //pass in amount to send\nconst ftdestination = msg.payload.ftdestination; //pass in destination address\nconst ftmemo = msg.payload.ftmemo;//pass in the memo\n\n//Post Conditions for safety\nconst postConditionAddress = ftsender;\nconst postConditionCode = stacksTransactions.FungibleConditionCode.Equal;\nconst postConditionAmount = new BigNum(ftamount); //requires BigNum\nconst postConditionAssetInfo = ftinfo;//Problem like something to do with thi postConditionAssetInfo\n\nconst postConditions = [\n  stacksTransactions.makeStandardFungiblePostCondition(postConditionAddress, postConditionCode, postConditionAmount, postConditionAssetInfo),\n];\n\n//Transaction Options -the memo still needs encoded correctly\nconst txOptions = {\n  contractAddress: ftaddress,\n  contractName: ftname,\n  functionName: 'transfer',\n  functionArgs: [\n      stacksTransactions.uintCV(ftamount),\n      stacksTransactions.standardPrincipalCV(ftsender),\n      stacksTransactions.standardPrincipalCV(ftdestination),\n      stacksTransactions.someCV(bufferCVfromString(ftmemo))\n      ],\n  senderKey: senderkey,\n  validateWithAbi: true,\n  network,\n  postConditions,\n  anchorMode: stacksTransactions.AnchorMode.Any,\n};\n\n//Transaction Broadcast to Network\nconst transaction = await stacksTransactions.makeContractCall(txOptions);\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\n//Passed along Outputs for UI\nmsg.payload = transaction;\nmsg.blockchain = \"0x\" + broadcastTxn;//the transaction id\nmsg.txoptions = txOptions;//the tx options\nmsg.ftcontractid = tempcontractid;//full contract id\nmsg.ftinfo = ftinfo;\nmsg.ftname = ftname;//contract name\nmsg.ftaddress = ftaddress;//contract address\nmsg.ftsender = ftsender; //contract caller\nmsg.ftamount = ftamount; //amount to send\nmsg.ftdestination = ftdestination; //where to send\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -15467,7 +15473,7 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 1190,
+        "x": 1130,
         "y": 360,
         "wires": [
             [
@@ -15927,5 +15933,1039 @@
                 "48af1254.6c5ddc"
             ]
         ]
+    },
+    {
+        "id": "49a99107.00da3",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "69801746.039c78",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token uri splitter",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\n\nmsg.payload = res;\nmsg.payload.source_code = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 1580,
+        "wires": [
+            [
+                "250795a.6d3b56a"
+            ]
+        ]
+    },
+    {
+        "id": "250795a.6d3b56a",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "if contains",
+        "property": "payload[1]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "some u",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ok none",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1520,
+        "y": 1580,
+        "wires": [
+            [
+                "9ac930a1.55f4",
+                "2599de5c.7dc032"
+            ],
+            [
+                "1a60cd26.d74763"
+            ],
+            [
+                "1a60cd26.d74763"
+            ]
+        ]
+    },
+    {
+        "id": "1a60cd26.d74763",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "or set image0 (default)",
+        "func": "const image0 = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image0};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2220,
+        "y": 1640,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "9ac930a1.55f4",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token meta 0",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1690,
+        "y": 1560,
+        "wires": [
+            [
+                "595e2ea1.c15cd"
+            ]
+        ]
+    },
+    {
+        "id": "595e2ea1.c15cd",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 1850,
+        "y": 1560,
+        "wires": [
+            [
+                "5fa839f3.776d68"
+            ]
+        ]
+    },
+    {
+        "id": "5fa839f3.776d68",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 2030,
+        "y": 1560,
+        "wires": [
+            [
+                "ca8dcb99.2d3178"
+            ]
+        ]
+    },
+    {
+        "id": "ca8dcb99.2d3178",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "set image0",
+        "func": "const image0 = msg.payload.image;\nmsg.payload = {image0};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2190,
+        "y": 1560,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "f94a9f4e.4aa3",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "set image1",
+        "func": "const image1 = msg.payload.image;\nmsg.payload = {image1};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2190,
+        "y": 1680,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "d1516889.068bc8",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "or image1 (default)",
+        "func": "const image1 = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image1};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2210,
+        "y": 1760,
+        "wires": [
+            [
+                "61361a6d.ebaa34"
+            ]
+        ]
+    },
+    {
+        "id": "9ee4696e.6030b8",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token meta 1",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1690,
+        "y": 1680,
+        "wires": [
+            [
+                "fb594fb2.89134"
+            ]
+        ]
+    },
+    {
+        "id": "8052aca3.fec73",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token uri splitter",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\n\nmsg.payload = res;\nmsg.payload.source_code = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 1700,
+        "wires": [
+            [
+                "a249c47f.41ae68"
+            ]
+        ]
+    },
+    {
+        "id": "a249c47f.41ae68",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "if contains",
+        "property": "payload[1]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "some u",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ok none",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1520,
+        "y": 1700,
+        "wires": [
+            [
+                "9ee4696e.6030b8",
+                "2599de5c.7dc032"
+            ],
+            [
+                "d1516889.068bc8"
+            ],
+            [
+                "d1516889.068bc8"
+            ]
+        ]
+    },
+    {
+        "id": "fb594fb2.89134",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 1850,
+        "y": 1680,
+        "wires": [
+            [
+                "6a7e5a67.737bd4"
+            ]
+        ]
+    },
+    {
+        "id": "6a7e5a67.737bd4",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 2030,
+        "y": 1680,
+        "wires": [
+            [
+                "f94a9f4e.4aa3"
+            ]
+        ]
+    },
+    {
+        "id": "2599de5c.7dc032",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "name": "some",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload[1]",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1710,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "2a8e7b97.61ab04",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token uri splitter",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\n\nmsg.payload = res;\nmsg.payload.source_code = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 1820,
+        "wires": [
+            [
+                "dd5f68ea.58ae68"
+            ]
+        ]
+    },
+    {
+        "id": "dd5f68ea.58ae68",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "if contains",
+        "property": "payload[1]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "some u",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ok none",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1520,
+        "y": 1820,
+        "wires": [
+            [
+                "5d68bd24.fdd954"
+            ],
+            [
+                "be8368f5.8612d8"
+            ],
+            [
+                "be8368f5.8612d8"
+            ]
+        ]
+    },
+    {
+        "id": "57c27740.ce7d48",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token uri splitter",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\n\nmsg.payload = res;\nmsg.payload.source_code = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 1940,
+        "wires": [
+            [
+                "28eaf145.c66c6e"
+            ]
+        ]
+    },
+    {
+        "id": "28eaf145.c66c6e",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "if contains",
+        "property": "payload[1]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "some u",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ok none",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1520,
+        "y": 1940,
+        "wires": [
+            [
+                "989a09f4.675c18"
+            ],
+            [
+                "b5a46201.258c4"
+            ],
+            [
+                "b5a46201.258c4"
+            ]
+        ]
+    },
+    {
+        "id": "d8bc754f.50dd28",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token uri splitter",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\n\nmsg.payload = res;\nmsg.payload.source_code = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 2040,
+        "wires": [
+            [
+                "cd06907a.d3d24"
+            ]
+        ]
+    },
+    {
+        "id": "cd06907a.d3d24",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "if contains",
+        "property": "payload[1]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "some u",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ok none",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1520,
+        "y": 2040,
+        "wires": [
+            [
+                "9cf9e16b.93a78"
+            ],
+            [
+                "307f543a.8222ac"
+            ],
+            [
+                "307f543a.8222ac"
+            ]
+        ]
+    },
+    {
+        "id": "d4f6ab82.c39208",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token uri splitter",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\n\nmsg.payload = res;\nmsg.payload.source_code = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 2180,
+        "wires": [
+            [
+                "8212c738.43cd38"
+            ]
+        ]
+    },
+    {
+        "id": "8212c738.43cd38",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "if contains",
+        "property": "payload[1]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "some u",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ok none",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1520,
+        "y": 2180,
+        "wires": [
+            [
+                "4f695cd6.030794"
+            ],
+            [
+                "4063f524.742d9c"
+            ],
+            [
+                "4063f524.742d9c"
+            ]
+        ]
+    },
+    {
+        "id": "4de52a5.6f4c2d4",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token uri splitter",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\n\nmsg.payload = res;\nmsg.payload.source_code = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 2300,
+        "wires": [
+            [
+                "ebf344da.933108"
+            ]
+        ]
+    },
+    {
+        "id": "ebf344da.933108",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "if contains",
+        "property": "payload[1]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "some u",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ok none",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1520,
+        "y": 2300,
+        "wires": [
+            [
+                "7538e879.7ec088"
+            ],
+            [
+                "af10197.3dac0e8"
+            ],
+            [
+                "af10197.3dac0e8"
+            ]
+        ]
+    },
+    {
+        "id": "b5c1fab6.2374c8",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token uri splitter",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\n\nmsg.payload = res;\nmsg.payload.source_code = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 2420,
+        "wires": [
+            [
+                "8ffe71a4.09c38"
+            ]
+        ]
+    },
+    {
+        "id": "8ffe71a4.09c38",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "if contains",
+        "property": "payload[1]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "some u",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ok none",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1520,
+        "y": 2420,
+        "wires": [
+            [
+                "5fa44ea0.92cbb"
+            ],
+            [
+                "32303503.c617ca"
+            ],
+            [
+                "32303503.c617ca"
+            ]
+        ]
+    },
+    {
+        "id": "b47f691c.cd7ef8",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token uri splitter",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\n\nmsg.payload = res;\nmsg.payload.source_code = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 2540,
+        "wires": [
+            [
+                "b4db631e.fff13"
+            ]
+        ]
+    },
+    {
+        "id": "b4db631e.fff13",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "if contains",
+        "property": "payload[1]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "some u",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ok none",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1520,
+        "y": 2540,
+        "wires": [
+            [
+                "54b396fa.a16838"
+            ],
+            [
+                "89d1d1c8.26f65"
+            ],
+            [
+                "89d1d1c8.26f65"
+            ]
+        ]
+    },
+    {
+        "id": "1274a026.8ee01",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "token uri splitter",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\n\nmsg.payload = res;\nmsg.payload.source_code = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 2660,
+        "wires": [
+            [
+                "928e5268.b0f5b"
+            ]
+        ]
+    },
+    {
+        "id": "928e5268.b0f5b",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "if contains",
+        "property": "payload[1]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "some u",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ok none",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1520,
+        "y": 2660,
+        "wires": [
+            [
+                "80e53f18.b8fba"
+            ],
+            [
+                "3f17a712.87fc98"
+            ],
+            [
+                "3f17a712.87fc98"
+            ]
+        ]
+    },
+    {
+        "id": "3291508.a4250b",
+        "type": "link in",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "links": [],
+        "x": 795,
+        "y": 980,
+        "wires": [
+            [
+                "37de726.b25348e"
+            ]
+        ]
+    },
+    {
+        "id": "37de726.b25348e",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "default names",
+        "func": "msg.payload.names = \"undefined\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 1000,
+        "wires": [
+            [
+                "7440f9a1.036a58"
+            ]
+        ]
+    },
+    {
+        "id": "d686bf14.520f5",
+        "type": "switch",
+        "z": "354f3ac2.1ff636",
+        "name": "pass thru unless errored",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 330,
+        "y": 880,
+        "wires": [
+            [
+                "28c6a1bc.a2301e"
+            ],
+            [
+                "7ad371e1.f4d23"
+            ]
+        ]
+    },
+    {
+        "id": "28c6a1bc.a2301e",
+        "type": "function",
+        "z": "354f3ac2.1ff636",
+        "name": "token uri splitter",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\n\nmsg.payload = res;\nmsg.payload.source_code = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 880,
+        "wires": [
+            [
+                "ad12e4a6.f7f758"
+            ]
+        ]
+    },
+    {
+        "id": "ad12e4a6.f7f758",
+        "type": "switch",
+        "z": "354f3ac2.1ff636",
+        "name": "if contains",
+        "property": "payload[1]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "some u",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ok none",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 720,
+        "y": 880,
+        "wires": [
+            [
+                "87675205.df446"
+            ],
+            [
+                "7ad371e1.f4d23"
+            ],
+            [
+                "7ad371e1.f4d23"
+            ]
+        ]
+    },
+    {
+        "id": "87675205.df446",
+        "type": "function",
+        "z": "354f3ac2.1ff636",
+        "name": "token meta",
+        "func": "const str = msg.payload.source_code;\nconst res = str.split(\"get-token-uri\");\nconst res2 = res[1].split(\"some u\\\"\");\nconst res3 = res2[1].split(\".json\");\n\nmsg.url = res3[0] + \".json\";\nmsg.payload = res3[0] + \".json\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 860,
+        "wires": [
+            [
+                "b2373730.d2f1d8"
+            ]
+        ]
+    },
+    {
+        "id": "b2373730.d2f1d8",
+        "type": "http request",
+        "z": "354f3ac2.1ff636",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 1050,
+        "y": 860,
+        "wires": [
+            [
+                "1c427453.07d54c"
+            ]
+        ]
+    },
+    {
+        "id": "1c427453.07d54c",
+        "type": "json",
+        "z": "354f3ac2.1ff636",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1230,
+        "y": 860,
+        "wires": [
+            [
+                "96269271.10e5c",
+                "6e4d847b.3fe2cc"
+            ]
+        ]
+    },
+    {
+        "id": "96269271.10e5c",
+        "type": "function",
+        "z": "354f3ac2.1ff636",
+        "name": "set image",
+        "func": "const image = msg.payload.image;\nmsg.payload = {image};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1380,
+        "y": 860,
+        "wires": [
+            [
+                "6e4d847b.3fe2cc"
+            ]
+        ]
+    },
+    {
+        "id": "7ad371e1.f4d23",
+        "type": "function",
+        "z": "354f3ac2.1ff636",
+        "name": "or set image (default)",
+        "func": "const image = \"https://cryptocracy.io/assets/images/cryptocracy_clear.png\";\nmsg.payload = {image};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 940,
+        "wires": [
+            [
+                "6e4d847b.3fe2cc"
+            ]
+        ]
+    },
+    {
+        "id": "adf9d941.6283a8",
+        "type": "comment",
+        "z": "354f3ac2.1ff636",
+        "name": "Relative to Passing in a Generic Token Image Icon",
+        "info": "",
+        "x": 470,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "15a35900.23f2f7",
+        "type": "comment",
+        "z": "354f3ac2.1ff636",
+        "name": "Relative to Passing Token Meta Data",
+        "info": "",
+        "x": 340,
+        "y": 520,
+        "wires": []
     }
 ]
