@@ -1147,8 +1147,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2220,
-        "y": 580,
+        "x": 4800,
+        "y": 100,
         "wires": [
             []
         ]
@@ -1167,8 +1167,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2400,
-        "y": 1940,
+        "x": 4840,
+        "y": 1460,
         "wires": [
             []
         ]
@@ -1228,13 +1228,13 @@
             "fturi": ""
         },
         "payload": "",
-        "submit": "Mint (Testnet)",
+        "submit": "Mint",
         "cancel": "",
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
-        "x": 180,
-        "y": 1500,
+        "x": 140,
+        "y": 780,
         "wires": [
             [
                 "91c1de09.7f63f",
@@ -1287,8 +1287,8 @@
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
-        "x": 170,
-        "y": 2660,
+        "x": 130,
+        "y": 1260,
         "wires": [
             [
                 "dc7aeb7a.41c8d8"
@@ -1376,8 +1376,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 210,
-        "y": 660,
+        "x": 2790,
+        "y": 180,
         "wires": [
             [
                 "24c58f0c.4ac51"
@@ -1403,8 +1403,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 220,
-        "y": 2000,
+        "x": 2660,
+        "y": 1520,
         "wires": [
             [
                 "f65c0e25.9c82d"
@@ -2379,11 +2379,9 @@
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 320,
+        "y": 280,
         "wires": [
-            [
-                "9706e8dc.3274b8"
-            ]
+            []
         ]
     },
     {
@@ -2400,9 +2398,7 @@
         "x": 460,
         "y": 360,
         "wires": [
-            [
-                "9706e8dc.3274b8"
-            ]
+            []
         ]
     },
     {
@@ -2428,7 +2424,7 @@
         "y": 320,
         "wires": [
             [
-                "8e75a447.bdaee8"
+                "723163e0.c1b44c"
             ]
         ]
     },
@@ -2455,7 +2451,7 @@
         "y": 360,
         "wires": [
             [
-                "fb875802.6b9498"
+                "f0d77659.2d1208"
             ]
         ]
     },
@@ -4472,8 +4468,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 660,
+        "x": 3050,
+        "y": 180,
         "wires": [
             [
                 "6c486db8.90b164",
@@ -4493,8 +4489,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 790,
-        "y": 620,
+        "x": 3370,
+        "y": 140,
         "wires": []
     },
     {
@@ -5418,8 +5414,8 @@
         "z": "613e85c9.c6210c",
         "name": "Clarity SIP-009 NFT - Standard",
         "info": "https://github.com/stacksgov/sips/blob/main/sips/sip-009/sip-009-nft-standard.md",
-        "x": 190,
-        "y": 1960,
+        "x": 150,
+        "y": 1180,
         "wires": []
     },
     {
@@ -5433,8 +5429,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 2000,
+        "x": 3030,
+        "y": 1520,
         "wires": [
             [
                 "140f3230.5c18ae",
@@ -5448,8 +5444,8 @@
         "z": "613e85c9.c6210c",
         "name": "Clarity SIP-010 FT - Standard",
         "info": "https://github.com/stacksgov/sips/blob/hstove-feat/sip-10-ft/sips/sip-010/sip-010-fungible-token-standard.md",
-        "x": 180,
-        "y": 620,
+        "x": 140,
+        "y": 680,
         "wires": []
     },
     {
@@ -5719,8 +5715,8 @@
         "z": "613e85c9.c6210c",
         "name": "FT Meta Data Sample",
         "info": "{\n  \"title\": \"Asset Metadata\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"name\": {\n      \"type\": \"string\",\n      \"description\": \"Identifies the asset to which this token represents\"\n    },\n    \"description\": {\n      \"type\": \"string\",\n      \"description\": \"Describes the asset to which this token represents\"\n    },\n    \"image\": {\n      \"type\": \"string\",\n      \"description\": \"A URI pointing to a resource with mime type image/* representing the asset to which this token represents. Consider making any images at a width between 320 and 1080 pixels and aspect ratio between 1.91:1 and 4:5 inclusive.\"\n    }\n  }\n}",
-        "x": 160,
-        "y": 580,
+        "x": 120,
+        "y": 640,
         "wires": []
     },
     {
@@ -5729,8 +5725,8 @@
         "z": "613e85c9.c6210c",
         "name": "NFT Meta Data Sample",
         "info": "{\n  \"title\": \"Asset Metadata\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"name\": {\n      \"type\": \"string\",\n      \"description\": \"Identifies the asset to which this token represents\"\n    },\n    \"description\": {\n      \"type\": \"string\",\n      \"description\": \"Describes the asset to which this token represents\"\n    },\n    \"image\": {\n      \"type\": \"string\",\n      \"description\": \"A URI pointing to a resource with mime type image/* representing the asset to which this token represents. Consider making any images at a width between 320 and 1080 pixels and aspect ratio between 1.91:1 and 4:5 inclusive.\"\n    }\n  }\n}",
-        "x": 160,
-        "y": 1920,
+        "x": 120,
+        "y": 1140,
         "wires": []
     },
     {
@@ -6243,8 +6239,8 @@
         "order": 4,
         "width": "1",
         "height": 1,
-        "passthru": true,
-        "decouple": "false",
+        "passthru": false,
+        "decouple": "true",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
@@ -6257,17 +6253,20 @@
         "officon": "fa-bell-slash-o",
         "offcolor": "White",
         "animate": true,
-        "x": 1690,
-        "y": 1200,
+        "x": 2750,
+        "y": 1400,
         "wires": [
-            []
+            [
+                "42cb42ff.22756c",
+                "8dbf40c7.b43c5"
+            ]
         ]
     },
     {
         "id": "bee6c88d.9c91d8",
         "type": "inject",
         "z": "42c07592.8d970c",
-        "name": "false",
+        "name": "check every 1sec",
         "props": [
             {
                 "p": "payload"
@@ -6277,18 +6276,18 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "1",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 1330,
-        "y": 1200,
+        "payload": "",
+        "payloadType": "date",
+        "x": 2050,
+        "y": 1380,
         "wires": [
             [
-                "840717c1.bd7348"
+                "96347598.2acfc8"
             ]
         ]
     },
@@ -9419,8 +9418,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 1640,
-        "y": 800,
+        "x": 4220,
+        "y": 320,
         "wires": [
             [],
             [
@@ -9441,8 +9440,8 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "ascii",
-        "x": 800,
-        "y": 660,
+        "x": 3380,
+        "y": 180,
         "wires": [
             [
                 "4027e761.6872c8"
@@ -9459,8 +9458,8 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 1210,
-        "y": 660,
+        "x": 3790,
+        "y": 180,
         "wires": [
             [
                 "aa7d458a.d4f308"
@@ -9485,8 +9484,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1490,
-        "y": 660,
+        "x": 4070,
+        "y": 180,
         "wires": [
             [
                 "fbd5eebb.f19ae",
@@ -9521,8 +9520,8 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 1920,
-        "y": 620,
+        "x": 4500,
+        "y": 140,
         "wires": [
             [
                 "3a2c2c18.f2a9d4",
@@ -9554,8 +9553,8 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 1920,
-        "y": 760,
+        "x": 4500,
+        "y": 280,
         "wires": [
             [
                 "13bdee36.3664b2",
@@ -9577,8 +9576,8 @@
         "raw": false,
         "topic": "Error",
         "name": "Missing: nettype",
-        "x": 1840,
-        "y": 860,
+        "x": 4420,
+        "y": 380,
         "wires": []
     },
     {
@@ -9595,8 +9594,8 @@
         "raw": false,
         "topic": "Almost There...",
         "name": "Attempting to Create and Deploy Interface.",
-        "x": 1950,
-        "y": 720,
+        "x": 4530,
+        "y": 240,
         "wires": []
     },
     {
@@ -9610,8 +9609,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
-        "y": 560,
+        "x": 3440,
+        "y": 80,
         "wires": [
             []
         ]
@@ -9630,8 +9629,8 @@
         "raw": false,
         "topic": "Error",
         "name": "Missing: stxprivkey",
-        "x": 1870,
-        "y": 660,
+        "x": 4450,
+        "y": 180,
         "wires": []
     },
     {
@@ -9646,8 +9645,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 1540,
+        "x": 490,
+        "y": 820,
         "wires": [
             [
                 "ae38fd54.be582"
@@ -9664,8 +9663,8 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "ascii",
-        "x": 860,
-        "y": 1500,
+        "x": 780,
+        "y": 780,
         "wires": [
             [
                 "bcf0e52d.676dd8",
@@ -9688,8 +9687,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1060,
-        "y": 1500,
+        "x": 980,
+        "y": 780,
         "wires": [
             [
                 "ae9a1e09.fd285"
@@ -9702,8 +9701,8 @@
         "z": "613e85c9.c6210c",
         "name": "Need to finish URI and reference in contract",
         "info": "",
-        "x": 610,
-        "y": 1660,
+        "x": 570,
+        "y": 880,
         "wires": []
     },
     {
@@ -9717,8 +9716,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 1740,
+        "x": 490,
+        "y": 960,
         "wires": [
             [
                 "16bf4f18.befd91"
@@ -9731,8 +9730,8 @@
         "z": "613e85c9.c6210c",
         "name": "notes regarding uri",
         "info": "Need new form to store image to @stacks/storage\nonce image urls are able to be created.\nneed to capture the url of the tokens uploaded image,\nthen include said url in the prop of the json file,\nthat json file is in turn needing to be uploaded to storage,\nonce the json file is in storage, use it url as a uri,\neg take its json file url and set it as the uri value in the relative smart contract for the token in question.",
-        "x": 530,
-        "y": 1700,
+        "x": 490,
+        "y": 920,
         "wires": []
     },
     {
@@ -9745,8 +9744,8 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "ascii",
-        "x": 730,
-        "y": 1740,
+        "x": 690,
+        "y": 960,
         "wires": [
             []
         ]
@@ -9764,8 +9763,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 1460,
+        "x": 1020,
+        "y": 740,
         "wires": []
     },
     {
@@ -9778,8 +9777,8 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 1290,
-        "y": 1500,
+        "x": 1210,
+        "y": 780,
         "wires": [
             [
                 "a73cd103.691db",
@@ -9812,8 +9811,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 1620,
-        "y": 1560,
+        "x": 1280,
+        "y": 840,
         "wires": [
             [],
             [
@@ -9849,8 +9848,8 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 1880,
-        "y": 1440,
+        "x": 1540,
+        "y": 720,
         "wires": [
             [
                 "19dc5a23.6b0be6",
@@ -9882,8 +9881,8 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 1880,
-        "y": 1500,
+        "x": 1540,
+        "y": 780,
         "wires": [
             [
                 "92c2ae63.edf91",
@@ -9905,8 +9904,8 @@
         "raw": false,
         "topic": "Missing: nettype",
         "name": "Net Type Not Set",
-        "x": 1830,
-        "y": 1580,
+        "x": 1490,
+        "y": 860,
         "wires": []
     },
     {
@@ -9922,8 +9921,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2220,
-        "y": 1500,
+        "x": 1880,
+        "y": 780,
         "wires": []
     },
     {
@@ -9939,8 +9938,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2220,
-        "y": 1440,
+        "x": 1880,
+        "y": 720,
         "wires": []
     },
     {
@@ -9976,8 +9975,8 @@
         "links": [
             "67d97386.ffb9fc"
         ],
-        "x": 395,
-        "y": 1580,
+        "x": 355,
+        "y": 860,
         "wires": []
     },
     {
@@ -10210,8 +10209,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 1000,
+        "x": 3400,
+        "y": 540,
         "wires": []
     },
     {
@@ -10222,8 +10221,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1110,
-        "y": 960,
+        "x": 3710,
+        "y": 500,
         "wires": [
             [
                 "855df234.4377a",
@@ -10253,8 +10252,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1280,
-        "y": 960,
+        "x": 3880,
+        "y": 500,
         "wires": [
             [
                 "34eaea80.59a846"
@@ -10290,8 +10289,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1470,
-        "y": 940,
+        "x": 4070,
+        "y": 480,
         "wires": [
             [
                 "5b5a8e01.b4ef5"
@@ -10324,8 +10323,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1470,
-        "y": 980,
+        "x": 4070,
+        "y": 520,
         "wires": [
             [
                 "90a30512.c71a18"
@@ -10344,8 +10343,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 920,
+        "x": 3870,
+        "y": 460,
         "wires": []
     },
     {
@@ -10359,8 +10358,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
-        "y": 960,
+        "x": 3140,
+        "y": 500,
         "wires": [
             [
                 "12c982e6.a4ac6d",
@@ -10379,8 +10378,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 550,
-        "y": 1160,
+        "x": 3150,
+        "y": 700,
         "wires": [
             [
                 "237b31dc.f8722e"
@@ -10402,8 +10401,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2180,
-        "y": 1400,
+        "x": 1840,
+        "y": 680,
         "wires": [
             []
         ]
@@ -10417,7 +10416,7 @@
         "order": 2,
         "width": 0,
         "height": 0,
-        "format": "<small>In order to Mint Fungible Tokens or NFT's you need to deploy a relative Trait contract first.</small>\n<small><small>(Unless you statically assign trait via Editor)</small></small>\n<br>\n<small>Once a relative Trait contract is Confirmed, you can access the relative Minting form.</small>\n<br>\n<small>Regarding Mainnet: You need 2 Trait contracts, 1 for Fungible Tokens, 1 for NFT's</small>\n<small>Regarding Testnet: You need 2 Trait contracts, 1 for Fungible Tokens, 1 for NFT's</small>",
+        "format": "<small>When Minting, Trait Contracts are referenced for Implementation.</small>\n<small><small><a href=\"https://explorer.stacks.co/txid/SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-10-ft-standard?chain=mainnet\" target=\"_blank\">View SIP-010 Standard Trait Contract (for FTs)</a></small></small>\n<small><small><a href=\"https://explorer.stacks.co/txid/SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait?chain=mainnet\" target=\"_blank\">View SIP-009 Standard Trait Contract (for NFTs)</a></small></small>\n<br>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -10637,8 +10636,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1930,
-        "y": 940,
+        "x": 4530,
+        "y": 480,
         "wires": [
             [
                 "bfcc6cf0.7b3a6"
@@ -10656,8 +10655,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1930,
-        "y": 1020,
+        "x": 4530,
+        "y": 560,
         "wires": [
             [
                 "a6dfdbc.87d5d28"
@@ -10670,8 +10669,8 @@
         "z": "613e85c9.c6210c",
         "name": "",
         "events": "all",
-        "x": 2120,
-        "y": 940,
+        "x": 4720,
+        "y": 480,
         "wires": [
             []
         ]
@@ -10682,8 +10681,8 @@
         "z": "613e85c9.c6210c",
         "name": "",
         "events": "all",
-        "x": 2120,
-        "y": 1020,
+        "x": 4720,
+        "y": 560,
         "wires": [
             []
         ]
@@ -10702,8 +10701,8 @@
         "raw": false,
         "topic": "",
         "name": "",
-        "x": 1730,
-        "y": 940,
+        "x": 4330,
+        "y": 480,
         "wires": [
             [
                 "da32eda8.fc84f"
@@ -10724,8 +10723,8 @@
         "raw": false,
         "topic": "",
         "name": "",
-        "x": 1730,
-        "y": 1020,
+        "x": 4330,
+        "y": 560,
         "wires": [
             [
                 "2445a7d8.daea18"
@@ -10751,8 +10750,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 190,
-        "y": 1160,
+        "x": 2790,
+        "y": 700,
         "wires": [
             [
                 "86420b1a.8256f8"
@@ -10772,8 +10771,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 810,
-        "y": 960,
+        "x": 3410,
+        "y": 500,
         "wires": [
             [
                 "9ba865e3.ce4ed8",
@@ -10793,8 +10792,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 990,
-        "y": 920,
+        "x": 3590,
+        "y": 460,
         "wires": []
     },
     {
@@ -10817,8 +10816,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 980,
-        "y": 1020,
+        "x": 3580,
+        "y": 560,
         "wires": [
             [
                 "8e705464.bd59c8"
@@ -10895,8 +10894,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2240,
-        "y": 760,
+        "x": 4820,
+        "y": 280,
         "wires": []
     },
     {
@@ -10912,8 +10911,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2240,
-        "y": 620,
+        "x": 4820,
+        "y": 140,
         "wires": []
     },
     {
@@ -10931,8 +10930,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1000,
-        "y": 660,
+        "x": 3580,
+        "y": 180,
         "wires": [
             [
                 "1aa8e753.dcf8c9"
@@ -10943,20 +10942,20 @@
         "id": "26b2364.c1de7ca",
         "type": "comment",
         "z": "613e85c9.c6210c",
-        "name": "Relative to Minting Fungible Tokens",
+        "name": "Relative to Minting Fungible Tokens Traits",
         "info": "",
-        "x": 200,
-        "y": 540,
+        "x": 2800,
+        "y": 60,
         "wires": []
     },
     {
         "id": "d6054e0c.5b462",
         "type": "comment",
         "z": "613e85c9.c6210c",
-        "name": "Relative to Minting Non-Fungible Tokens",
+        "name": "Relative to Minting Non-Fungible Tokens Traits",
         "info": "",
-        "x": 220,
-        "y": 1880,
+        "x": 2670,
+        "y": 1400,
         "wires": []
     },
     {
@@ -11268,14 +11267,14 @@
         "type": "function",
         "z": "613e85c9.c6210c",
         "name": "setup clarity ft contract file (Mainnet)",
-        "func": "const ftnameraw = msg.payload.ftname;///\nconst ftsymbol = msg.payload.ftsymbol;///might want to just snip and uppercase the first 3 characters of the ftname\nconst ftmax = msg.payload.ftmax;///\nconst ftminter = global.get(\"depositaddress\");///set the minter as the primary address\nconst fturi = msg.payload.fturi;//needs additional integration with stacks storage component.\nconst ftname = ftnameraw.toLowerCase();\n\n\n//take the inputs and construct the Clarity contract file contents\nmsg.payload =   \";;;; Define interface traits per sibling contract\\n\"+\n                \"(impl-trait .ft-trait.ft-trait)\\n\"+\n                \"\\n\"+\n                \";;;; Mint Fungible Tokens via Dapparatus and send supply to minter\\n\"+\n                \"(define-constant err-unauthorized u1)\\n\"+\n                \"(define-constant minter '\" + ftminter + \")\\n\" +\n                \"(define-fungible-token \" + ftname + \" u\" + ftmax + \")\\n\" +\n                \"(ft-mint? \" + ftname + \" u\" + ftmax + \" minter)\\n\" +\n                \"\\n\"+\n                \"(define-read-only (get-total-supply)\\n\"+\n                \"  (ok (ft-get-supply \" + ftname + \"))\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-name)\\n\"+\n                \"  (ok \\\"\" + ftname + \"\\\")\\n\" +\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-symbol)\\n\"+\n                \"  (ok \\\"\" + ftsymbol + \"\\\")\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-decimals)\\n\"+\n                \"  (ok u6)\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-balance-of (account principal))\\n\"+\n                \"  (ok (ft-get-balance \" + ftname + \" account))\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-public (transfer (amount uint) (sender principal) (recipient principal) (memo (optional (buff 34))))\\n\"+\n                \"  (if (is-eq tx-sender sender)\\n\"+\n                \"    (begin\\n\"+\n                \"      (try! (ft-transfer? \" + ftname + \" amount sender recipient))\\n\"+\n                \"      (print memo)\\n\"+\n                \"      (ok true)\\n\"+\n                \"    )\\n\"+\n                \"   (err u4)))\\n\"+\n                \"\\n\"+                \n                \"(define-read-only (get-token-uri)\\n\"+\n                \"  (ok (some u\\\"\" +  fturi + \"\\\"))\\n\"+\n                \")\\n\";\n               \nmsg.filename = ftnameraw + \".clar\"; // name the contract same as input custom token name\n\nreturn msg;",
+        "func": "const ftnameraw = msg.payload.ftname;///\nconst ftsymbol = msg.payload.ftsymbol;///might want to just snip and uppercase the first 3 characters of the ftname\nconst ftmax = msg.payload.ftmax;///\nconst ftminter = global.get(\"depositaddress\");///set the minter as the primary address\nconst fturi = msg.payload.fturi;//needs additional integration with stacks storage component.\nconst ftname = ftnameraw.toLowerCase();\n\n\n//take the inputs and construct the Clarity contract file contents\nmsg.payload =   \";;;; Define interface traits per sibling contract\\n\"+\n                \"(impl-trait 'SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard.sip-010-trait)\\n\"+\n                \"\\n\"+\n                \";;;; Mint Fungible Tokens via Dapparatus and send supply to minter\\n\"+\n                \"(define-constant err-unauthorized u1)\\n\"+\n                \"(define-constant minter '\" + ftminter + \")\\n\" +\n                \"(define-fungible-token \" + ftname + \" u\" + ftmax + \")\\n\" +\n                \"(ft-mint? \" + ftname + \" u\" + ftmax + \" minter)\\n\" +\n                \"\\n\"+\n                \"(define-read-only (get-total-supply)\\n\"+\n                \"  (ok (ft-get-supply \" + ftname + \"))\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-name)\\n\"+\n                \"  (ok \\\"\" + ftname + \"\\\")\\n\" +\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-symbol)\\n\"+\n                \"  (ok \\\"\" + ftsymbol + \"\\\")\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-decimals)\\n\"+\n                \"  (ok u6)\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-read-only (get-balance-of (account principal))\\n\"+\n                \"  (ok (ft-get-balance \" + ftname + \" account))\\n\"+\n                \")\\n\"+\n                \"\\n\"+\n                \"(define-public (transfer (amount uint) (sender principal) (recipient principal) (memo (optional (buff 34))))\\n\"+\n                \"  (if (is-eq tx-sender sender)\\n\"+\n                \"    (begin\\n\"+\n                \"      (try! (ft-transfer? \" + ftname + \" amount sender recipient))\\n\"+\n                \"      (print memo)\\n\"+\n                \"      (ok true)\\n\"+\n                \"    )\\n\"+\n                \"   (err u4)))\\n\"+\n                \"\\n\"+                \n                \"(define-read-only (get-token-uri)\\n\"+\n                \"  (ok (some u\\\"\" +  fturi + \"\\\"))\\n\"+\n                \")\\n\";\n               \nmsg.filename = ftnameraw + \".clar\"; // name the contract same as input custom token name\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 1500,
+        "x": 490,
+        "y": 780,
         "wires": [
             [
                 "ae38fd54.be582"
@@ -14564,8 +14563,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 830,
-        "y": 1960,
+        "x": 3270,
+        "y": 1480,
         "wires": []
     },
     {
@@ -14578,8 +14577,8 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 1230,
-        "y": 2000,
+        "x": 3670,
+        "y": 1520,
         "wires": [
             [
                 "6830e8ef.6ff088"
@@ -14604,8 +14603,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1510,
-        "y": 2000,
+        "x": 3950,
+        "y": 1520,
         "wires": [
             [
                 "1ba46fb1.2d646",
@@ -14630,8 +14629,8 @@
         "raw": false,
         "topic": "Error",
         "name": "Missing: stxprivkey",
-        "x": 1530,
-        "y": 2040,
+        "x": 3970,
+        "y": 1560,
         "wires": []
     },
     {
@@ -14649,8 +14648,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1020,
-        "y": 2000,
+        "x": 3460,
+        "y": 1520,
         "wires": [
             [
                 "c89ec016.dea9a"
@@ -14671,8 +14670,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2190,
-        "y": 1540,
+        "x": 1850,
+        "y": 820,
         "wires": [
             []
         ]
@@ -14702,8 +14701,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 1800,
-        "y": 2060,
+        "x": 4240,
+        "y": 1580,
         "wires": [
             [],
             [
@@ -14738,8 +14737,8 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 2100,
-        "y": 1980,
+        "x": 4540,
+        "y": 1500,
         "wires": [
             [
                 "d10341b1.5e999",
@@ -14771,8 +14770,8 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 2100,
-        "y": 2060,
+        "x": 4540,
+        "y": 1580,
         "wires": [
             [
                 "485e949d.18937c"
@@ -14793,8 +14792,8 @@
         "raw": false,
         "topic": "Error",
         "name": "Missing: nettype",
-        "x": 2040,
-        "y": 2100,
+        "x": 4480,
+        "y": 1620,
         "wires": []
     },
     {
@@ -14811,8 +14810,8 @@
         "raw": false,
         "topic": "Almost There...",
         "name": "Attempting to Create and Deploy Interface.",
-        "x": 2130,
-        "y": 1940,
+        "x": 4570,
+        "y": 1460,
         "wires": []
     },
     {
@@ -14828,8 +14827,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2380,
-        "y": 2060,
+        "x": 4820,
+        "y": 1580,
         "wires": []
     },
     {
@@ -14845,8 +14844,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2440,
-        "y": 1980,
+        "x": 4880,
+        "y": 1500,
         "wires": []
     },
     {
@@ -14863,8 +14862,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2180,
-        "y": 2620,
+        "x": 1820,
+        "y": 1220,
         "wires": [
             []
         ]
@@ -14883,8 +14882,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2190,
-        "y": 2800,
+        "x": 1830,
+        "y": 1400,
         "wires": [
             []
         ]
@@ -14901,7 +14900,7 @@
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 2660,
+        "y": 1260,
         "wires": [
             [
                 "cb1012de.505c1"
@@ -14920,7 +14919,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 2620,
+        "y": 1220,
         "wires": [
             []
         ]
@@ -14936,7 +14935,7 @@
         "overwriteFile": "true",
         "encoding": "ascii",
         "x": 760,
-        "y": 2660,
+        "y": 1260,
         "wires": [
             [
                 "f683ed5e.7a351",
@@ -14960,7 +14959,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "x": 980,
-        "y": 2660,
+        "y": 1260,
         "wires": [
             [
                 "129bfeee.54c0c1"
@@ -14981,7 +14980,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1020,
-        "y": 2620,
+        "y": 1220,
         "wires": []
     },
     {
@@ -14994,8 +14993,8 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 1330,
-        "y": 2660,
+        "x": 1210,
+        "y": 1260,
         "wires": [
             [
                 "988740f2.dcd"
@@ -15013,8 +15012,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1820,
-        "y": 2660,
+        "x": 1520,
+        "y": 1260,
         "wires": [
             [
                 "98b6dd2b.bb668",
@@ -15033,8 +15032,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1820,
-        "y": 2760,
+        "x": 1520,
+        "y": 1360,
         "wires": [
             [
                 "f4d0ce35.ce184",
@@ -15067,8 +15066,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 1540,
-        "y": 2760,
+        "x": 1240,
+        "y": 1360,
         "wires": [
             [
                 "1298ff7b.9bca51"
@@ -15093,8 +15092,8 @@
         "raw": false,
         "topic": "Missing: nettype",
         "name": "Net Type Not Set",
-        "x": 1770,
-        "y": 2820,
+        "x": 1470,
+        "y": 1420,
         "wires": []
     },
     {
@@ -15110,8 +15109,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2230,
-        "y": 2760,
+        "x": 1870,
+        "y": 1360,
         "wires": []
     },
     {
@@ -15127,8 +15126,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2220,
-        "y": 2660,
+        "x": 1860,
+        "y": 1260,
         "wires": []
     },
     {
@@ -15137,18 +15136,18 @@
         "z": "613e85c9.c6210c",
         "name": "NEEDS WRITTEN STILL",
         "info": "",
-        "x": 1790,
-        "y": 2620,
+        "x": 1490,
+        "y": 1220,
         "wires": []
     },
     {
         "id": "2dd12a2e.df7c36",
         "type": "comment",
         "z": "613e85c9.c6210c",
-        "name": "NEEDS WRITTEN STILL",
-        "info": "",
-        "x": 410,
-        "y": 2560,
+        "name": "NEEDS WRITTEN STILL (Imp ref inside this)",
+        "info": "(impl-trait 'SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait.nft-trait)",
+        "x": 470,
+        "y": 1180,
         "wires": []
     },
     {
@@ -15164,8 +15163,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
-        "y": 2340,
+        "x": 3300,
+        "y": 1820,
         "wires": []
     },
     {
@@ -15176,8 +15175,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1150,
-        "y": 2300,
+        "x": 3610,
+        "y": 1780,
         "wires": [
             [
                 "4df1ef8e.8ee57",
@@ -15207,8 +15206,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1320,
-        "y": 2300,
+        "x": 3780,
+        "y": 1780,
         "wires": [
             [
                 "1ebd675e.db3439"
@@ -15244,8 +15243,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1510,
-        "y": 2280,
+        "x": 3970,
+        "y": 1760,
         "wires": [
             [
                 "403d616b.ff861"
@@ -15278,8 +15277,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1510,
-        "y": 2320,
+        "x": 3970,
+        "y": 1800,
         "wires": [
             [
                 "24415682.cae87a"
@@ -15298,8 +15297,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1310,
-        "y": 2260,
+        "x": 3770,
+        "y": 1740,
         "wires": []
     },
     {
@@ -15313,8 +15312,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 550,
-        "y": 2300,
+        "x": 3010,
+        "y": 1780,
         "wires": [
             [
                 "76afe9bf.d0a898",
@@ -15333,8 +15332,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 550,
-        "y": 2260,
+        "x": 3010,
+        "y": 1740,
         "wires": [
             []
         ]
@@ -15350,8 +15349,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1980,
-        "y": 2280,
+        "x": 4440,
+        "y": 1760,
         "wires": [
             [
                 "d1296b43.1d1f48"
@@ -15369,8 +15368,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1980,
-        "y": 2360,
+        "x": 4440,
+        "y": 1840,
         "wires": [
             [
                 "248b914d.bd790e"
@@ -15383,8 +15382,8 @@
         "z": "613e85c9.c6210c",
         "name": "",
         "events": "all",
-        "x": 2160,
-        "y": 2280,
+        "x": 4620,
+        "y": 1760,
         "wires": [
             []
         ]
@@ -15395,8 +15394,8 @@
         "z": "613e85c9.c6210c",
         "name": "",
         "events": "all",
-        "x": 2160,
-        "y": 2360,
+        "x": 4620,
+        "y": 1840,
         "wires": [
             []
         ]
@@ -15415,8 +15414,8 @@
         "raw": false,
         "topic": "",
         "name": "",
-        "x": 1770,
-        "y": 2280,
+        "x": 4230,
+        "y": 1760,
         "wires": [
             [
                 "238dce32.2ba2b2"
@@ -15437,8 +15436,8 @@
         "raw": false,
         "topic": "",
         "name": "",
-        "x": 1770,
-        "y": 2360,
+        "x": 4230,
+        "y": 1840,
         "wires": [
             [
                 "53d3b917.3bc4b8"
@@ -15464,8 +15463,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 210,
-        "y": 2300,
+        "x": 2670,
+        "y": 1780,
         "wires": [
             [
                 "c0339c87.a4fe"
@@ -15485,8 +15484,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 850,
-        "y": 2300,
+        "x": 3310,
+        "y": 1780,
         "wires": [
             [
                 "3b0f7e9e.111c42",
@@ -15506,8 +15505,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1070,
-        "y": 2260,
+        "x": 3530,
+        "y": 1740,
         "wires": []
     },
     {
@@ -15530,8 +15529,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1020,
-        "y": 2360,
+        "x": 3480,
+        "y": 1840,
         "wires": [
             [
                 "fdb02834.ff6838"
@@ -15551,8 +15550,8 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "ascii",
-        "x": 840,
-        "y": 2000,
+        "x": 3280,
+        "y": 1520,
         "wires": [
             [
                 "aef264b9.8f1ff8"
@@ -18499,8 +18498,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 720,
+        "x": 3050,
+        "y": 240,
         "wires": [
             [
                 "fd034cb3.87179"
@@ -18517,8 +18516,8 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "ascii",
-        "x": 800,
-        "y": 720,
+        "x": 3380,
+        "y": 240,
         "wires": [
             [
                 "2dde65db.c0dc6a"
@@ -18540,8 +18539,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1000,
-        "y": 720,
+        "x": 3580,
+        "y": 240,
         "wires": [
             [
                 "91685e83.d8d6b"
@@ -18558,8 +18557,8 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 1210,
-        "y": 720,
+        "x": 3790,
+        "y": 240,
         "wires": [
             [
                 "ba7b8087.4192e"
@@ -18584,8 +18583,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1490,
-        "y": 720,
+        "x": 4070,
+        "y": 240,
         "wires": [
             [
                 "e621671b.60f598",
@@ -18610,8 +18609,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2230,
-        "y": 800,
+        "x": 4810,
+        "y": 320,
         "wires": [
             []
         ]
@@ -18635,8 +18634,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 210,
-        "y": 720,
+        "x": 2790,
+        "y": 240,
         "wires": [
             [
                 "3daa146a.19817c"
@@ -18656,8 +18655,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 1200,
+        "x": 3420,
+        "y": 740,
         "wires": []
     },
     {
@@ -18668,8 +18667,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1130,
-        "y": 1160,
+        "x": 3730,
+        "y": 700,
         "wires": [
             [
                 "3936ff8e.ad2a3",
@@ -18699,8 +18698,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1300,
-        "y": 1160,
+        "x": 3900,
+        "y": 700,
         "wires": [
             [
                 "5ae3fc3f.3862f4"
@@ -18736,8 +18735,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1490,
-        "y": 1140,
+        "x": 4090,
+        "y": 680,
         "wires": [
             [
                 "ba1b9031.869fd"
@@ -18770,8 +18769,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1490,
-        "y": 1180,
+        "x": 4090,
+        "y": 720,
         "wires": [
             [
                 "776d31fd.e7c1f"
@@ -18790,8 +18789,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1310,
-        "y": 1120,
+        "x": 3910,
+        "y": 660,
         "wires": []
     },
     {
@@ -18805,8 +18804,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1950,
-        "y": 1140,
+        "x": 4550,
+        "y": 680,
         "wires": [
             [
                 "9162ee43.c4fef"
@@ -18824,8 +18823,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1950,
-        "y": 1220,
+        "x": 4550,
+        "y": 760,
         "wires": [
             [
                 "33d97294.046d1e"
@@ -18838,8 +18837,8 @@
         "z": "613e85c9.c6210c",
         "name": "",
         "events": "all",
-        "x": 2140,
-        "y": 1140,
+        "x": 4740,
+        "y": 680,
         "wires": [
             []
         ]
@@ -18850,8 +18849,8 @@
         "z": "613e85c9.c6210c",
         "name": "",
         "events": "all",
-        "x": 2140,
-        "y": 1220,
+        "x": 4740,
+        "y": 760,
         "wires": [
             []
         ]
@@ -18870,8 +18869,8 @@
         "raw": false,
         "topic": "",
         "name": "",
-        "x": 1750,
-        "y": 1140,
+        "x": 4350,
+        "y": 680,
         "wires": [
             [
                 "5bee0476.bd3d5c"
@@ -18892,8 +18891,8 @@
         "raw": false,
         "topic": "",
         "name": "",
-        "x": 1750,
-        "y": 1220,
+        "x": 4350,
+        "y": 760,
         "wires": [
             [
                 "eb27829b.46cc2"
@@ -18913,8 +18912,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 830,
-        "y": 1160,
+        "x": 3430,
+        "y": 700,
         "wires": [
             [
                 "9a54a59c.eacac8",
@@ -18934,8 +18933,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1010,
-        "y": 1120,
+        "x": 3610,
+        "y": 660,
         "wires": []
     },
     {
@@ -18958,8 +18957,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1000,
-        "y": 1220,
+        "x": 3600,
+        "y": 760,
         "wires": [
             [
                 "7c9c8214.551dfc"
@@ -19288,7 +19287,9 @@
         "x": 1730,
         "y": 1420,
         "wires": [
-            []
+            [
+                "96347598.2acfc8"
+            ]
         ]
     },
     {
@@ -19523,7 +19524,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 1670,
-        "y": 1160,
+        "y": 1300,
         "wires": [
             [
                 "1f44419e.2fde9e"
@@ -19542,7 +19543,7 @@
         "finalize": "",
         "libs": [],
         "x": 1930,
-        "y": 1160,
+        "y": 1300,
         "wires": [
             [
                 "f8e9bb79.24bb58"
@@ -19555,8 +19556,8 @@
         "z": "42c07592.8d970c",
         "name": "",
         "events": "all",
-        "x": 2100,
-        "y": 1160,
+        "x": 2120,
+        "y": 1300,
         "wires": [
             [
                 "dc2144f0.744ed8"
@@ -19574,8 +19575,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2280,
-        "y": 1160,
+        "x": 2300,
+        "y": 1300,
         "wires": [
             [
                 "67abfefd.4ada9"
@@ -19588,8 +19589,8 @@
         "z": "42c07592.8d970c",
         "name": "",
         "events": "all",
-        "x": 2460,
-        "y": 1160,
+        "x": 2480,
+        "y": 1300,
         "wires": [
             [
                 "c02c8e3.5d9fd7"
@@ -19604,8 +19605,8 @@
         "links": [
             "6977afc.225a05"
         ],
-        "x": 2575,
-        "y": 1160,
+        "x": 2595,
+        "y": 1300,
         "wires": []
     },
     {
@@ -19642,5 +19643,503 @@
                 "c83da5a0.82f8f8"
             ]
         ]
+    },
+    {
+        "id": "95a21aa3.20d1b8",
+        "type": "ui_button",
+        "z": "613e85c9.c6210c",
+        "d": true,
+        "name": "",
+        "group": "93f1cccf.344e5",
+        "order": 5,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": "Check for FT Trait Contract (Testnet)",
+        "tooltip": "Manually check to see if you FT Trait Contract exists and is confirmed.",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-refresh",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2790,
+        "y": 500,
+        "wires": [
+            [
+                "f819d63c.3ced18"
+            ]
+        ]
+    },
+    {
+        "id": "31ccc6d3.5199ea",
+        "type": "inject",
+        "z": "613e85c9.c6210c",
+        "name": "force view form",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 4360,
+        "y": 640,
+        "wires": [
+            [
+                "5bee0476.bd3d5c"
+            ]
+        ]
+    },
+    {
+        "id": "723163e0.c1b44c",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "show Mint FT Form",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Minting_MintNav\",\n      \"Minting_MintNFT\",\n      \"Minting_MintNFT_Trait\",\n      \"Minting_MintNFT_Form\",\n      \"Minting_MintFT_Trait\"\n    ],\n    \"show\": [\n      \"Minting_MintFT_Form\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 320,
+        "wires": [
+            [
+                "9706e8dc.3274b8"
+            ]
+        ]
+    },
+    {
+        "id": "f0d77659.2d1208",
+        "type": "function",
+        "z": "613e85c9.c6210c",
+        "name": "show Mint NFT Form",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Minting_MintNav\",\n      \"Minting_MintNFT\",\n      \"Minting_MintNFT_Trait\",\n      \"Minting_MintFT_Form\",\n      \"Minting_MintFT_Trait\"\n    ],\n    \"show\": [\n      \"Minting_MintNFT_Form\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 400,
+        "wires": [
+            [
+                "9706e8dc.3274b8"
+            ]
+        ]
+    },
+    {
+        "id": "8db2ef07.c7d97",
+        "type": "comment",
+        "z": "613e85c9.c6210c",
+        "name": "Relative to Minting Non-Fungible Tokens",
+        "info": "",
+        "x": 180,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "b6397430.6f5a18",
+        "type": "comment",
+        "z": "613e85c9.c6210c",
+        "name": "Relative to Minting Fungible Tokens",
+        "info": "",
+        "x": 160,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "86d0b79f.4c5488",
+        "type": "file",
+        "z": "42c07592.8d970c",
+        "name": "append following.json",
+        "filename": "following.json",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 3920,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "54209208.f10dac",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "add follow prefunc",
+        "func": "var following = global.get(\"searchinput\");\nvar filecontent = msg.payload;\n\nmsg.searchinput = following;\nmsg.filecontent = filecontent;\nmsg.payload = following;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3390,
+        "y": 1340,
+        "wires": [
+            [
+                "23efa4b6.33d88c"
+            ]
+        ]
+    },
+    {
+        "id": "42cb42ff.22756c",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2950,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "8dbf40c7.b43c5",
+        "type": "switch",
+        "z": "42c07592.8d970c",
+        "name": "bool switch",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 3010,
+        "y": 1400,
+        "wires": [
+            [
+                "8e52579.d972ca8"
+            ],
+            [
+                "fab269de.ff5318"
+            ]
+        ],
+        "outputLabels": [
+            "true is equal to adding a follower",
+            "false is equal to removing a follower"
+        ]
+    },
+    {
+        "id": "8e52579.d972ca8",
+        "type": "file in",
+        "z": "42c07592.8d970c",
+        "name": "get file as string",
+        "filename": "following.json",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 3160,
+        "y": 1340,
+        "wires": [
+            [
+                "54209208.f10dac"
+            ]
+        ]
+    },
+    {
+        "id": "23efa4b6.33d88c",
+        "type": "switch",
+        "z": "42c07592.8d970c",
+        "name": "compare input to file",
+        "property": "filecontent",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "searchinput",
+                "vt": "global"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 3640,
+        "y": 1340,
+        "wires": [
+            [],
+            [
+                "86d0b79f.4c5488",
+                "5d3e5ae8.7040c4"
+            ]
+        ],
+        "outputLabels": [
+            "search input found in filecontent already",
+            "not found thus add"
+        ]
+    },
+    {
+        "id": "96347598.2acfc8",
+        "type": "file in",
+        "z": "42c07592.8d970c",
+        "name": "get file as string",
+        "filename": "following.json",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 2060,
+        "y": 1420,
+        "wires": [
+            [
+                "9f4f6504.995968"
+            ]
+        ]
+    },
+    {
+        "id": "9f4f6504.995968",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "prefunc",
+        "func": "var searchinput = global.get(\"searchinput\");\nvar filecontent = msg.payload;\n\nmsg.searchinput = searchinput;\nmsg.filecontent = filecontent;\nmsg.payload = \"compare other props\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2240,
+        "y": 1420,
+        "wires": [
+            [
+                "4f7a2c8c.b2f6d4"
+            ]
+        ]
+    },
+    {
+        "id": "4f7a2c8c.b2f6d4",
+        "type": "switch",
+        "z": "42c07592.8d970c",
+        "name": "compare",
+        "property": "filecontent",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "searchinput",
+                "vt": "global"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2400,
+        "y": 1420,
+        "wires": [
+            [
+                "832de8a6.ae6458"
+            ],
+            [
+                "561faf6b.5900e"
+            ]
+        ],
+        "outputLabels": [
+            "search input found in filecontent already",
+            "not found thus add"
+        ]
+    },
+    {
+        "id": "832de8a6.ae6458",
+        "type": "change",
+        "z": "42c07592.8d970c",
+        "name": "set true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2560,
+        "y": 1400,
+        "wires": [
+            [
+                "840717c1.bd7348"
+            ]
+        ]
+    },
+    {
+        "id": "561faf6b.5900e",
+        "type": "change",
+        "z": "42c07592.8d970c",
+        "name": "set false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2540,
+        "y": 1460,
+        "wires": [
+            [
+                "840717c1.bd7348"
+            ]
+        ]
+    },
+    {
+        "id": "fab269de.ff5318",
+        "type": "file in",
+        "z": "42c07592.8d970c",
+        "name": "get file as string",
+        "filename": "following.json",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 3160,
+        "y": 1460,
+        "wires": [
+            [
+                "f7cff76a.b664f8",
+                "9d17c146.bb772"
+            ]
+        ]
+    },
+    {
+        "id": "f7cff76a.b664f8",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "remove follow prefunc",
+        "func": "var name = global.get(\"searchinput\");//the searched named\nvar filecontent = msg.payload; //the users following list\n\nmsg.searchinput = name;//pass along to compare\nmsg.filecontent = filecontent;//pass along to compare\nmsg.payload = filecontent.replace(name,'');  //filecontent minus name searchinput\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3400,
+        "y": 1460,
+        "wires": [
+            [
+                "d1dbb3b9.7a7b6"
+            ]
+        ]
+    },
+    {
+        "id": "d1dbb3b9.7a7b6",
+        "type": "switch",
+        "z": "42c07592.8d970c",
+        "name": "compare input to file",
+        "property": "filecontent",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "searchinput",
+                "vt": "global"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 3640,
+        "y": 1460,
+        "wires": [
+            [
+                "5d3e5ae8.7040c4",
+                "a574eb07.1c04e8"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "search input found in filecontent already thus remove",
+            "not found thus can not remove"
+        ]
+    },
+    {
+        "id": "a574eb07.1c04e8",
+        "type": "file",
+        "z": "42c07592.8d970c",
+        "name": "overwrite following.json",
+        "filename": "following.json",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 3930,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9d17c146.bb772",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3370,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "5d3e5ae8.7040c4",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "update following debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3940,
+        "y": 1400,
+        "wires": []
     }
 ]
