@@ -4268,16 +4268,16 @@
         "type": "ui_template",
         "z": "42c07592.8d970c",
         "group": "51640c7f.5ee354",
-        "name": "New Post Template",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "format": "New Post PAGE",
+        "name": "Fee Disclaimer",
+        "order": 2,
+        "width": "13",
+        "height": "1",
+        "format": "<small><small>Fee Disclaimer: Chimes require a small fee to create.</small></small>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1270,
+        "x": 1260,
         "y": 120,
         "wires": [
             []
@@ -4287,22 +4287,22 @@
         "id": "56f77a5a.ccbb54",
         "type": "ui_button",
         "z": "42c07592.8d970c",
-        "name": "New Post BTN",
+        "name": "New Chime",
         "group": "d506506a.83f12",
         "order": 5,
         "width": 1,
         "height": 1,
         "passthru": false,
         "label": "",
-        "tooltip": "New Post",
+        "tooltip": "Broadcast New Chime",
         "color": "",
         "bgcolor": "",
-        "icon": "fa-edit",
+        "icon": "mi-add_alert",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 860,
+        "x": 850,
         "y": 80,
         "wires": [
             [
@@ -20141,5 +20141,55 @@
         "x": 3940,
         "y": 1400,
         "wires": []
+    },
+    {
+        "id": "455626dc.ed14f8",
+        "type": "ui_form",
+        "z": "42c07592.8d970c",
+        "name": "Chime Form",
+        "label": "",
+        "group": "51640c7f.5ee354",
+        "order": 1,
+        "width": "13",
+        "height": "5",
+        "options": [
+            {
+                "label": "Message",
+                "value": "memo",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "External URL",
+                "value": "link",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Fee Acknowledged",
+                "value": "tos",
+                "type": "checkbox",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "memo": "",
+            "link": "",
+            "tos": false
+        },
+        "payload": "",
+        "submit": "Post Chime",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "x": 1250,
+        "y": 160,
+        "wires": [
+            []
+        ]
     }
 ]
