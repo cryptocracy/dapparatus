@@ -1323,35 +1323,39 @@
         "group": "4079dee5.d84aa",
         "name": "NFT List",
         "order": 2,
-        "width": 0,
-        "height": 0,
-        "format": "<h3>NFT List</h3>",
+        "width": "13",
+        "height": "11",
+        "format": "<h3>{{msg.payload.total}} Other Asset(s) Owned</h3>\n<table>\n    <tr>\n        <th></th>\n        <th>Asset ID</th>\n        <th>Block</th>        \n        <th></th>\n        <th></th>\n    </tr>\n\n\t<tr ng-if=\"msg.payload.nft_events[0].asset_identifier !== undefined\">\n        <td><img src=\"{{msg.payload.image0}}\" width=\"32\" height=\"32\"> </td>\n        <td><small>{{msg.payload.nft_events[0].asset_identifier}}</small></td>\n        <td>{{msg.payload.nft_events[0].block_height}}</td>     \n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.nft_events[0].asset_identifier})\">Transfer\n            </md-button>\n        </td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'inspect', payload:msg.payload.nft_events[0].asset_identifier})\">Inspect\n            </md-button>\n        </td>\n    </tr>\n\n\t<tr ng-if=\"msg.payload.nft_events[1].asset_identifier !== undefined\">\n        <td><img src=\"{{msg.payload.image1}}\" width=\"32\" height=\"32\"></td>\n        <td><small>{{msg.payload.nft_events[1].asset_identifier}}</small></td>\n        <td>{{msg.payload.nft_events[1].block_height}}</td>     \n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.nft_events[1].asset_identifier})\">Transfer\n            </md-button>\n        </td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'inspect', payload:msg.payload.nft_events[1].asset_identifier})\">Inspect\n            </md-button>\n        </td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.nft_events[2].asset_identifier !== undefined\">\n        <td><img src=\"{{msg.payload.image2}}\" width=\"32\" height=\"32\"></td>\n        <td><small>{{msg.payload.nft_events[2].asset_identifier}}</small></td>\n        <td>{{msg.payload.nft_events[2].block_height}}</td>     \n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.nft_events[2].asset_identifier})\">Transfer\n            </md-button>\n        </td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'inspect', payload:msg.payload.nft_events[2].asset_identifier})\">Inspect\n            </md-button>\n        </td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.nft_events[3].asset_identifier !== undefined\">\n        <td><img src=\"{{msg.payload.image3}}\" width=\"32\" height=\"32\"></td>\n        <td><small>{{msg.payload.nft_events[3].asset_identifier}}</small></td>\n        <td>{{msg.payload.nft_events[3].block_height}}</td>     \n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.nft_events[3].asset_identifier})\">Transfer\n            </md-button>\n        </td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'inspect', payload:msg.payload.nft_events[3].asset_identifier})\">Inspect\n            </md-button>\n        </td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.nft_events[4].asset_identifier !== undefined\">\n        <td><img src=\"{{msg.payload.image4}}\" width=\"32\" height=\"32\"></td>\n        <td><small>{{msg.payload.nft_events[4].asset_identifier}}</small></td>\n        <td>{{msg.payload.nft_events[4].block_height}}</td>     \n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.nft_events[4].asset_identifier})\">Transfer\n            </md-button>\n        </td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'inspect', payload:msg.payload.nft_events[4].asset_identifier})\">Inspect\n            </md-button>\n        </td>        \n    </tr>\n    \n    <tr ng-if=\"msg.payload.nft_events[5].asset_identifier !== undefined\">\n        <td><img src=\"{{msg.payload.image5}}\" width=\"32\" height=\"32\"></td>\n        <td><small>{{msg.payload.nft_events[5].asset_identifier}}</small></td>\n        <td>{{msg.payload.nft_events[5].block_height}}</td>     \n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.nft_events[5].asset_identifier})\">Transfer\n            </md-button>\n        </td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'inspect', payload:msg.payload.nft_events[5].asset_identifier})\">Inspect\n            </md-button>\n        </td>       \n    </tr>\n\n    <tr ng-if=\"msg.payload.nft_events[6].asset_identifier !== undefined\">\n        <td><img src=\"{{msg.payload.image6}}\" width=\"32\" height=\"32\"></td>\n        <td><small>{{msg.payload.nft_events[6].asset_identifier}}</small></td>\n        <td>{{msg.payload.nft_events[6].block_height}}</td>     \n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.nft_events[6].asset_identifier})\">Transfer\n            </md-button>\n        </td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'inspect', payload:msg.payload.nft_events[6].asset_identifier})\">Inspect\n            </md-button>\n        </td>       \n    </tr>\n    <tr ng-if=\"msg.payload.nft_events[7].asset_identifier !== undefined\">\n        <td><img src=\"{{msg.payload.image7}}\" width=\"32\" height=\"32\"></td>\n        <td><small>{{msg.payload.nft_events[7].asset_identifier}}</small></td>\n        <td>{{msg.payload.nft_events[7].block_height}}</td>     \n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.nft_events[7].asset_identifier})\">Transfer\n            </md-button>\n        </td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'inspect', payload:msg.payload.nft_events[7].asset_identifier})\">Inspect\n            </md-button>\n        </td>        \n    </tr>\n    <tr ng-if=\"msg.payload.nft_events[8].asset_identifier !== undefined\">\n        <td><img src=\"{{msg.payload.image8}}\" width=\"32\" height=\"32\"></td>\n        <td><small>{{msg.payload.nft_events[8].asset_identifier}}</small></td>\n        <td>{{msg.payload.nft_events[8].block_height}}</td>     \n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.nft_events[8].asset_identifier})\">Transfer\n            </md-button>\n        </td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'inspect', payload:msg.payload.nft_events[8].asset_identifier})\">Inspect\n            </md-button>\n        </td>       \n    </tr>\n    <tr ng-if=\"msg.payload.nft_events[9].asset_identifier !== undefined\">\n        <td><img src=\"{{msg.payload.image9}}\" width=\"32\" height=\"32\"></td>\n        <td><small>{{msg.payload.nft_events[9].asset_identifier}}</small></td>\n        <td>{{msg.payload.nft_events[9].block_height}}</td>     \n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'transfer', payload:msg.payload.nft_events[9].asset_identifier})\">Transfer\n            </md-button>\n        </td>\n        <td>\n            <md-button \n                class=\"md-button\" \n                ng-click=\"send({topic:'inspect', payload:msg.payload.nft_events[9].asset_identifier})\">Inspect\n            </md-button>\n        </td>      \n    </tr>\n\n</table>\n\n<small><small>Disclaimer: Max 10 Asset Contracts Listed</small></small>\n\n\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 700,
-        "y": 380,
+        "x": 1540,
+        "y": 460,
         "wires": [
-            []
+            [
+                "9d1dbe2e.9ce11",
+                "230ea4cc.2ff1dc"
+            ]
         ]
     },
     {
         "id": "6ae1e717.4f7178",
         "type": "ui_template",
         "z": "42c07592.8d970c",
+        "d": true,
         "group": "eaf2cbdd.546078",
-        "name": "Default Home Feed Template",
+        "name": "Default Home Feed ADVANCED",
         "order": 1,
         "width": 13,
         "height": 8,
-        "format": "Default Home FEED\n{{msg.payload}}",
+        "format": "<table>\n    <tr ng-repeat=\"obj in msg.payload.results\">\n        <td><img src=\"https://raw.githubusercontent.com/cryptocracy/dapparatus/master/stx-logo-blue-round-small.png\" width=\"32\" height=\"32\"> </td>\n        <td><small><small>{{obj.sender_address}}</small></small></td>\n        <td><small><small>{{obj.token_transfer.memo}}</small></small></td>\n        <td><small><small><small><a href=\"https://explorer.stacks.co/txid/{{obj.tx_id}}?chain=mainnet\" target=\"_blank\" title=\"{{obj.tx_id}}\">View in Explorer</a></small></small></small></td>\n        <td><small><small>{{obj.burn_block_time_iso}}</small></small></td>\n    </tr>\n</table>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 560,
-        "y": 120,
+        "x": 990,
+        "y": 240,
         "wires": [
             []
         ]
@@ -2243,7 +2247,8 @@
         "y": 80,
         "wires": [
             [
-                "f9dcaec2.8526d"
+                "f9dcaec2.8526d",
+                "8e77cb03.8eda78"
             ]
         ]
     },
@@ -2606,7 +2611,7 @@
         "width": "6",
         "height": 1,
         "passthru": false,
-        "label": "My NFTs",
+        "label": "Other Assets",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -2615,11 +2620,12 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 140,
-        "y": 340,
+        "x": 150,
+        "y": 420,
         "wires": [
             [
-                "a621f66c.a1e8e8"
+                "a621f66c.a1e8e8",
+                "d254b10f.e6fea"
             ]
         ]
     },
@@ -2673,7 +2679,7 @@
         "finalize": "",
         "libs": [],
         "x": 720,
-        "y": 340,
+        "y": 420,
         "wires": [
             [
                 "d0c88850.42e3f8"
@@ -2699,7 +2705,7 @@
         "name": "",
         "events": "all",
         "x": 900,
-        "y": 340,
+        "y": 420,
         "wires": [
             []
         ]
@@ -2815,8 +2821,8 @@
         "links": [
             "bae8fcf5.8fe8"
         ],
-        "x": 315,
-        "y": 380,
+        "x": 335,
+        "y": 300,
         "wires": []
     },
     {
@@ -2866,7 +2872,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 170,
-        "y": 380,
+        "y": 300,
         "wires": [
             [
                 "d3afe6ff.e83ac8"
@@ -4272,12 +4278,12 @@
         "order": 2,
         "width": "13",
         "height": "1",
-        "format": "<small><small>Fee Disclaimer: Chimes require a small fee to create.</small></small>",
+        "format": "<small><small>Fee Disclaimer: New Chimes require a small fee in order to create.</small></small>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1260,
+        "x": 1380,
         "y": 120,
         "wires": [
             []
@@ -4302,7 +4308,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 850,
+        "x": 1030,
         "y": 80,
         "wires": [
             [
@@ -4321,7 +4327,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1080,
+        "x": 1200,
         "y": 80,
         "wires": [
             [
@@ -4335,7 +4341,7 @@
         "z": "42c07592.8d970c",
         "name": "",
         "events": "all",
-        "x": 1240,
+        "x": 1360,
         "y": 80,
         "wires": [
             []
@@ -4347,7 +4353,7 @@
         "z": "42c07592.8d970c",
         "name": "Relative to New Post",
         "info": "",
-        "x": 870,
+        "x": 1050,
         "y": 40,
         "wires": []
     },
@@ -4989,8 +4995,8 @@
         "officon": "fa-wrench",
         "offcolor": "Yellow",
         "animate": true,
-        "x": 1600,
-        "y": 80,
+        "x": 1800,
+        "y": 100,
         "wires": [
             [
                 "e24b569f.c73348"
@@ -5005,8 +5011,8 @@
         "links": [
             "514072aa.46826c"
         ],
-        "x": 1735,
-        "y": 80,
+        "x": 1935,
+        "y": 100,
         "wires": []
     },
     {
@@ -5015,8 +5021,8 @@
         "z": "42c07592.8d970c",
         "name": "Relative to Network Type",
         "info": "",
-        "x": 1630,
-        "y": 40,
+        "x": 1830,
+        "y": 60,
         "wires": []
     },
     {
@@ -7579,7 +7585,7 @@
         "type": "function",
         "z": "88cec2c0.c8804",
         "name": "filter where sender_address is equal to depositaddress  (mainnet)",
-        "func": "const obj = msg.payload;\nconst depositaddress = global.get(\"depositaddress\"); //use \"testnetdepositaddress\" for testnet\n\nconst filtered = obj.filter(by => by.sender_address === depositaddress);\n\nmsg.payload = filtered;\n\nreturn msg;",
+        "func": "const obj = msg.payload;\nconst depositaddress = global.get(\"depositaddress\"); //use \"testnetdepositaddress\" for testnet\n\nconst filtered = obj.filter(by => by.sender_address === depositaddress); // \n\nmsg.payload = filtered;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -11820,10 +11826,10 @@
         "id": "29cee1b2.92799e",
         "type": "comment",
         "z": "f7442446.0c97f8",
-        "name": "TRANSFER & HISTORY UNDER CONSTRUCTION",
-        "info": "",
-        "x": 1990,
-        "y": 520,
+        "name": "Asset Lists (Dev Notes)",
+        "info": "**Fungible Tokens:**\n - Get Owned List per Mainnet\n - Transfers Mainnet\n - History needs finished\n_(Additional Testing maybe required due to recent updates)_\n\n**Other Assets:**\n - Get Owned List per Mainnet\n - Transfers needs finished\n - Inspect needs finished\n_(Additional Testing maybe required due to recent updates)_\n",
+        "x": 1480,
+        "y": 260,
         "wires": []
     },
     {
@@ -20155,30 +20161,14 @@
         "options": [
             {
                 "label": "Message",
-                "value": "memo",
+                "value": "stxmemo",
                 "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "External URL",
-                "value": "link",
-                "type": "text",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "Fee Acknowledged",
-                "value": "tos",
-                "type": "checkbox",
                 "required": true,
                 "rows": null
             }
         ],
         "formValue": {
-            "memo": "",
-            "link": "",
-            "tos": false
+            "stxmemo": ""
         },
         "payload": "",
         "submit": "Post Chime",
@@ -20186,8 +20176,631 @@
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
-        "x": 1250,
+        "x": 1370,
         "y": 160,
+        "wires": [
+            [
+                "2b85680d.02b5c8"
+            ]
+        ]
+    },
+    {
+        "id": "d254b10f.e6fea",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "get nft_events url (mainnet)",
+        "func": "const nettype = \"stacks-node-api.mainnet.stacks.co\"; // or use testnet\nconst principal = global.get(\"depositaddress\"); // or use testnetdepositaddress for testnet\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/address/\" + principal + \"/nft_events\";// to get NFT list of Principal address\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 460,
+        "wires": [
+            [
+                "1caaf12c.cdafaf"
+            ]
+        ]
+    },
+    {
+        "id": "1caaf12c.cdafaf",
+        "type": "http request",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 1010,
+        "y": 460,
+        "wires": [
+            [
+                "7adfbc2c.2db574"
+            ]
+        ]
+    },
+    {
+        "id": "7adfbc2c.2db574",
+        "type": "json",
+        "z": "f7442446.0c97f8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1170,
+        "y": 460,
+        "wires": [
+            [
+                "3ec0ff84.583e8",
+                "5c76db9c.570c14"
+            ]
+        ]
+    },
+    {
+        "id": "5c76db9c.570c14",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "name": "NFT DEBUG",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1550,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "9d1dbe2e.9ce11",
+        "type": "switch",
+        "z": "f7442446.0c97f8",
+        "name": "asset switch by type",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "bns::names",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "boom-nfts::boom",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "stacks-punks-v3::stacks-punks",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 1800,
+        "y": 460,
+        "wires": [
+            [
+                "b76fc6fd.da7518"
+            ],
+            [
+                "5545088b.387458"
+            ],
+            [
+                "8d0288ae.e94508"
+            ],
+            [
+                "234629b5.289df6"
+            ]
+        ]
+    },
+    {
+        "id": "230ea4cc.2ff1dc",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "name": "NFT DEBUG",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1770,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "8d0288ae.e94508",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "name": "Punks DEBUG",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2040,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "5545088b.387458",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "name": "Boom DEBUG",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2040,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "b76fc6fd.da7518",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "name": "Names DEBUG",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2040,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "234629b5.289df6",
+        "type": "debug",
+        "z": "f7442446.0c97f8",
+        "name": "Other DEBUG",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2040,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "d8bb8f70.0a2b",
+        "type": "function",
+        "z": "f7442446.0c97f8",
+        "name": "pass to AssetsTemplate Tab",
+        "func": "const contractid = msg.payload;\n\n\nmsg.contractid = contractid;\nmsg.payload = {\"tab\":\"AssetsTemplate\"};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2140,
+        "y": 460,
+        "wires": [
+            [
+                "2c98823d.b1860e"
+            ]
+        ]
+    },
+    {
+        "id": "2c98823d.b1860e",
+        "type": "ui_ui_control",
+        "z": "f7442446.0c97f8",
+        "name": "ui change",
+        "events": "change",
+        "x": 2360,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "37cb38c8.7dc0c8",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "d": true,
+        "name": "filter where sender_address is equal to followersdepositaddress (mainnet)",
+        "func": "const obj = msg.payload;\nconst depositaddress = global.get(\"followersdepositaddress\"); //global variable needs to be array of principals\n\nconst filtered = obj.filter(by => by.sender_address === depositaddress); // \n\nmsg.payload = filtered;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 120,
+        "wires": [
+            [
+                "6ae1e717.4f7178"
+            ]
+        ]
+    },
+    {
+        "id": "2b85680d.02b5c8",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "Send STX to a Feed Principal Address (Mainnet)",
+        "func": "const network = new stacksNetwork.StacksMainnet(); // or StacksTestnet\nconst senderKey = global.get('stxprivkey'); //get the STX Private Key Stored Globally\n\n// skip automatic fee estimation\nconst fee = new BigNum(180);\nconst memo = msg.payload.stxmemo;\n\nconst txOptions = {\n    recipient: \"SP1T33SDB0Y1GE9WBN0X3G6MZ81XQG2XVNBHMRH1V\",\n    amount : new BigNum(10000),\n    fee,\n    senderKey,\n    network,\n    memo,\n    anchorMode: stacksTransactions.AnchorMode.Any //added to ensure 2.0.1 compatability\n};\n\nconst transaction = await stacksTransactions.makeSTXTokenTransfer(txOptions);\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\nmsg.blockchain = \"0x\" + broadcastTxn;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            }
+        ],
+        "x": 1660,
+        "y": 160,
+        "wires": [
+            [
+                "f2015d3.b4632a",
+                "4054e8cc.1caa38"
+            ]
+        ]
+    },
+    {
+        "id": "f2015d3.b4632a",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "txid to payload",
+        "func": "var txid = msg.blockchain;\n\nmsg.payload = txid;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1960,
+        "y": 160,
+        "wires": [
+            [
+                "5072d2ea.5f07ec",
+                "c83cafa4.9d688"
+            ]
+        ]
+    },
+    {
+        "id": "5072d2ea.5f07ec",
+        "type": "ui_toast",
+        "z": "42c07592.8d970c",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Show In Feed",
+        "cancel": "Send Another Chime",
+        "raw": false,
+        "topic": "",
+        "name": "Transaction ID Popup",
+        "x": 2180,
+        "y": 160,
+        "wires": [
+            [
+                "92552f9a.7d39",
+                "bb9252f3.b00b1"
+            ]
+        ]
+    },
+    {
+        "id": "92552f9a.7d39",
+        "type": "switch",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Show In History",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2370,
+        "y": 160,
+        "wires": [
+            [
+                "87ac835d.50297"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "bb9252f3.b00b1",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "mainnet send debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2400,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "87ac835d.50297",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "pass to Feed Tab",
+        "func": "msg.payload = {\"tab\":\"Feed\"};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2570,
+        "y": 120,
+        "wires": [
+            [
+                "3bc53968.d44ff6"
+            ]
+        ]
+    },
+    {
+        "id": "3bc53968.d44ff6",
+        "type": "ui_ui_control",
+        "z": "42c07592.8d970c",
+        "name": "ui change",
+        "events": "change",
+        "x": 2760,
+        "y": 120,
+        "wires": [
+            [
+                "240287b0.ac0568"
+            ]
+        ]
+    },
+    {
+        "id": "6219a56e.f5e32c",
+        "type": "ui_ui_control",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "events": "all",
+        "x": 3200,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "240287b0.ac0568",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "show Feed Feed (hide misc)",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Feed_Profile\",\n      \"Feed_RegisterName\",\n      \"Feed_NewPost\",\n      \"Feed_byContractName\",\n      \"Feed_byTokenName\",\n      \"Feed_byPrincipleAddress\",\n      \"Feed_byTransactionID\",\n      \"Feed_byName\"\n    ],\n    \"show\": [\n      \"Feed_Header\",\n      \"Feed_Feed\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2980,
+        "y": 120,
+        "wires": [
+            [
+                "6219a56e.f5e32c"
+            ]
+        ]
+    },
+    {
+        "id": "c83cafa4.9d688",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "mainnet send debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2140,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4054e8cc.1caa38",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "mainnet send debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1880,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b63240a3.7180f",
+        "type": "inject",
+        "z": "42c07592.8d970c",
+        "name": "every 60s check",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "8e77cb03.8eda78"
+            ]
+        ]
+    },
+    {
+        "id": "8e77cb03.8eda78",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "get Feed Principal",
+        "func": "const feedprincipal = \"SP1T33SDB0Y1GE9WBN0X3G6MZ81XQG2XVNBHMRH1V\";//Dapp Feed Principal Address\n\nmsg.payload = feedprincipal;\n\nmsg.url = \"https://stacks-node-api.mainnet.stacks.co/extended/v1/address/\" + feedprincipal + \"/transactions\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 240,
+        "wires": [
+            [
+                "60bf58cb.035fe8"
+            ]
+        ]
+    },
+    {
+        "id": "60bf58cb.035fe8",
+        "type": "http request",
+        "z": "42c07592.8d970c",
+        "name": "Get",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 530,
+        "y": 240,
+        "wires": [
+            [
+                "dc1cc465.cc24d8"
+            ]
+        ]
+    },
+    {
+        "id": "dc1cc465.cc24d8",
+        "type": "json",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 670,
+        "y": 240,
+        "wires": [
+            [
+                "9b3bee72.a269b",
+                "6ae1e717.4f7178",
+                "2f047c06.42f5b4",
+                "f5c0cc90.325be"
+            ]
+        ]
+    },
+    {
+        "id": "2f047c06.42f5b4",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "Feed Home Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "9b3bee72.a269b",
+        "type": "ui_template",
+        "z": "42c07592.8d970c",
+        "d": true,
+        "group": "eaf2cbdd.546078",
+        "name": "Default Home Feed BASIC",
+        "order": 1,
+        "width": 13,
+        "height": 8,
+        "format": "{{msg.payload.results}}",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 980,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f5c0cc90.325be",
+        "type": "ui_template",
+        "z": "42c07592.8d970c",
+        "group": "eaf2cbdd.546078",
+        "name": "Default Home Feed ADVANCED",
+        "order": 1,
+        "width": 13,
+        "height": 8,
+        "format": "<!DOCTYPE html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<style>\nbody {\n  font-family: 'Asap', sans-serif;\n  font-family: 'Roboto', sans-serif;\n\n}\nimg {\n  max-width:100%;\n}\n.avator {\n  border-radius:100px;\n  width:48px;\n  margin-right: 15px;\n}\n\n\n.tweet-wrap {\n  max-width:490px;\n  color: White;\n  margin: 0 auto;\n  margin-top: 50px;\n  border-radius:3px;\n  padding: 30px;\n  border-bottom: 1px solid #e6ecf0;\n  border-top: 1px solid #e6ecf0;\n}\n\n.tweet-header {\n  display: flex;\n  align-items:flex-start;\n  font-size:14px;\n}\n.tweet-header-info {\n  font-weight:bold;\n}\n.tweet-header-info span {\n  font-weight:normal;\n  margin-left: 5px;\n}\n.tweet-header-info p {\n  font-weight:normal;\n  margin-top: 5px;\n  \n}\n.tweet-img-wrap {\n  padding-left: 60px;\n}\n\n.tweet-info-counts {\n  display: flex;\n  margin-left: 60px;\n  margin-top: 10px;\n}\n.tweet-info-counts div {\n  display: flex;\n  margin-right: 20px;\n}\n.tweet-info-counts div svg {\n  margin-right: 10px;\n}\n@media screen and (max-width:430px){\n  body {\n    padding-left: 20px;\n    padding-right: 20px;\n  }\n  .tweet-header {\n    flex-direction:column;\n  }\n  .tweet-header img {\n    margin-bottom: 20px;\n  }\n  .tweet-header-info p {\n    color:Black;\n    margin-bottom: 30px;\n  }\n  .tweet-img-wrap {\n    padding-left: 0;\n  }\n  .tweet-info-counts {\n  display: flex;\n  margin-left: 0;\n}\n.tweet-info-counts div {\n  margin-right: 10px;\n}\n}\n</style>\n</head>\n\n<body>\n<link href=\"https://fonts.googleapis.com/css?family=Asap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n\n\n\n<div class=\"tweet-wrap\" ng-repeat=\"obj in msg.payload.results\">\n  <div class=\"tweet-header\">\n    <img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/512x512.png\" alt=\"\" class=\"avator\">\n    <div class=\"tweet-header-info\">\n      @PlaceHolder.BTC<span></span><span> <small><small>{{obj.burn_block_time_iso}}</small></small></span>\n      <p>{{obj.token_transfer.memo}}</p>\n    </div>\n  </div>\n<!--  <div class=\"tweet-img-wrap\">\n    <img src=\"https://pbs.twimg.com/media/Dgti2h0WkAEUPmT.png\" alt=\"\" class=\"tweet-img\">\n  </div>-->\n  <div class=\"tweet-info-counts\">\n    <div class=\"comments\">\n      <svg class=\"feather feather-message-circle sc-dnqmqq jxshSx\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z\"></path></svg>\n      <div class=\"comment-count\">1</div>\n    </div>\n    \n    <div class=\"retweets\">\n      <svg class=\"feather feather-repeat sc-dnqmqq jxshSx\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polyline points=\"17 1 21 5 17 9\"></polyline><path d=\"M3 11V9a4 4 0 0 1 4-4h14\"></path><polyline points=\"7 23 3 19 7 15\"></polyline><path d=\"M21 13v2a4 4 0 0 1-4 4H3\"></path></svg>\n      <div class=\"retweet-count\">2</div>\n    </div>\n    \n    <div class=\"likes\">\n      <svg class=\"feather feather-heart sc-dnqmqq jxshSx\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"></path></svg>\n      <div class=\"likes-count\">3</div>\n    </div>\n    \n    <div class=\"message\">\n      <svg class=\"feather feather-send sc-dnqmqq jxshSx\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><line x1=\"22\" y1=\"2\" x2=\"11\" y2=\"13\"></line><polygon points=\"22 2 15 22 11 13 2 9 22 2\"></polygon></svg>\n    </div>\n  </div>\n</div>\n</body>\n</html>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 990,
+        "y": 180,
         "wires": [
             []
         ]
