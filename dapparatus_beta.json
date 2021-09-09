@@ -2213,12 +2213,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 210,
+        "x": 190,
         "y": 740,
         "wires": [
             [
                 "f9dcaec2.8526d",
-                "8e77cb03.8eda78"
+                "8e77cb03.8eda78",
+                "d0c4fb2c.082848"
             ]
         ]
     },
@@ -2306,8 +2307,8 @@
         "z": "42c07592.8d970c",
         "name": "",
         "events": "all",
-        "x": 400,
-        "y": 700,
+        "x": 360,
+        "y": 620,
         "wires": [
             []
         ]
@@ -10867,6 +10868,7 @@
         "id": "a4a5fcfc.10dc1",
         "type": "ui_template",
         "z": "53028f3b.590b5",
+        "d": true,
         "group": "c75785b2.7363d8",
         "name": "Transaction Mempool (Mainnet)",
         "order": 1,
@@ -10887,6 +10889,7 @@
         "id": "be72974f.b7bde8",
         "type": "ui_template",
         "z": "53028f3b.590b5",
+        "d": true,
         "group": "20a23299.1e38be",
         "name": "Transaction Mempool (Testnet)",
         "order": 1,
@@ -19311,11 +19314,12 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 190,
+        "x": 170,
         "y": 780,
         "wires": [
             [
-                "8e77cb03.8eda78"
+                "8e77cb03.8eda78",
+                "d0c4fb2c.082848"
             ]
         ]
     },
@@ -19323,14 +19327,15 @@
         "id": "8e77cb03.8eda78",
         "type": "function",
         "z": "42c07592.8d970c",
-        "name": "get Feed Principal",
-        "func": "const feedprincipal = \"SP1T33SDB0Y1GE9WBN0X3G6MZ81XQG2XVNBHMRH1V\";//Dapp Feed Principal Address\n\nmsg.payload = feedprincipal;\n\nmsg.url = \"https://stacks-node-api.mainnet.stacks.co/extended/v1/address/\" + feedprincipal + \"/transactions\";\nreturn msg;",
+        "d": true,
+        "name": "get Feed Principal (legacy)",
+        "func": "const feedprincipal = \"SP1T33SDB0Y1GE9WBN0X3G6MZ81XQG2XVNBHMRH1V\";//Dapp Feed Principal Address\n\nmsg.payload = feedprincipal;\n\nmsg.url = \"https://stacks-node-api.mainnet.stacks.co/extended/v1/address/\" + feedprincipal + \"/transactions\";\nreturn msg;\n\n\n//feed will derive from contract soon\n//https://explorer.stacks.co/txid/ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H.luv",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 440,
         "y": 740,
         "wires": [
             [
@@ -19351,8 +19356,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 610,
-        "y": 740,
+        "x": 530,
+        "y": 700,
         "wires": [
             [
                 "dc1cc465.cc24d8"
@@ -19367,19 +19372,10 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 730,
-        "y": 740,
+        "x": 530,
+        "y": 660,
         "wires": [
-            [
-                "8dd30082.5b0a1",
-                "9b3bee72.a269b",
-                "70f7a50e.833f6c",
-                "15876e21.3350c2",
-                "be74617e.c219f",
-                "88137d96.fb83",
-                "8abc1729.379588",
-                "aedfbd23.ce37d"
-            ]
+            []
         ]
     },
     {
@@ -19391,7 +19387,7 @@
         "order": 1,
         "width": 13,
         "height": "12",
-        "format": "<!DOCTYPE html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<style>\nbody {\n  font-family: 'Asap', sans-serif;\n  font-family: 'Roboto', sans-serif;\n\n}\na {\n  color: #0040FF;\n}\n\na:hover {\n  color: Red;\n}\n\n\nimg {\n  max-width:100%;\n}\n.avator {\n  border-radius:100px;\n  width:64px;\n  margin-right: 5px;\n  padding-top: 5px;\n}\n\n\n.chime-wrap {\n  width: 85%;    \n  max-width:100%;\n  color: White;\n  margin: 0 auto;\n  margin-top: 8px;\n  padding: 10px;\n  border-bottom: 1px solid #0040FF;\n}\n\n.chime-header {\n  display: flex;\n  align-items:flex-start;\n  font-size:14px;\n}\n.chime-header-info {\n  font-weight:bold;\n}\n.chime-header-info span {\n  font-weight:normal;\n  margin-left: 5px;\n}\n.chime-header-info p {\n  font-weight:normal;\n  margin-top: 5px;\n  \n}\n.chime-img-wrap {\n  padding-left: 10px;\n}\n\n.chime-info-counts {\n  display: flex;\n  margin-left: 125px;\n  margin-top: 10px;\n}\n.chime-info-counts div {\n  display: flex;\n  margin-right: 20px;\n}\n.chime-info-counts div svg {\n  margin-right: 10px;\n}\n@media screen and (max-width:100%){\n  body {\n    padding-left: 2px;\n    padding-right: 2px;\n  }\n  .chime-header {\n    flex-direction:column;\n  }\n  .chime-header img {\n    margin-bottom: 10px;\n  }\n  .chime-header-info p {\n    color:Black;\n    margin-bottom: 10px;\n  }\n  .chime-img-wrap {\n    padding-left: 0;\n  }\n  .chime-info-counts {\n  display: flex;\n  margin-left: 0;\n}\n.chime-info-counts div {\n  margin-right: 10px;\n}\n}\n</style>\n</head>\n\n<body>\n<link href=\"https://fonts.googleapis.com/css?family=Asap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n\n\n\n<div class=\"chime-wrap\" ng-repeat=\"obj in msg.payload\">\n  <div class=\"chime-header\">\n    <div style=\"position: relative; width: 120px; height: 120px;\" class=\"avator\" ng-click=\"send({topic:'lookup', payload:obj.sender})\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/bg/{{obj.bg}}_bg.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/skin/{{obj.skin}}_skin.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/eyes/{{obj.eyes}}_eyes.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/teeth/{{obj.teeth}}_teeth.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/lips/{{obj.lips}}_lips.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hair/{{obj.hair}}_hair.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hat/{{obj.hat}}_hat.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/chest/{{obj.chest}}_chest.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n    </div>\n<!--    <img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/512x512.png\" alt=\"\" class=\"avator\"> -->\n    <div class=\"chime-header-info\">\n      <small>@{{obj.sender}}</small><span></span><span> </span>\n      <span></span>\n      <h2>{{obj.memo}}</h2>\n    </div>\n  </div>\n<!--  <div class=\"chime-img-wrap\">\n    <img src=\"https://pbs.twimg.com/media/Dgti2h0WkAEUPmT.png\" alt=\"\" class=\"chime-img\">\n  </div>-->\n  <div class=\"chime-info-counts\">\n    <div class=\"comments\">\n      <a href=\"\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i></a>\n      <div class=\"comment-count\">0</div>\n    </div>\n    \n    <div class=\"retweets\">\n      <a href=\"\"><i class=\"fa fa-retweet\" aria-hidden=\"true\"></i></a>\n      <div class=\"rechime-count\">0</div>\n    </div>\n    \n    <div class=\"likes\">\n<!--      <svg class=\"feather feather-heart sc-dnqmqq jxshSx\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"></path></svg> -->\n      <a href=\"\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\n      <div class=\"likes-count\">0</div>\n    </div>\n    \n    <div class=\"link\">\n        <a href=\"{{obj.link}}\" target=\"_blank\" title=\"Open External Link\"><i class=\"fa fa-link\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n    <div class=\"time\">\n        <small><small><small>{{obj.time}}</small></small></small>\n    </div>\n    \n    <div class=\"tx\">\n        <a href=\"https://explorer.stacks.co/txid/{{obj.txid}}?chain=mainnet\" target=\"_blank\" title=\"View Chime In Explorer\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n  </div>\n</div>\n</body>\n</html>\n\n",
+        "format": "<!DOCTYPE html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<style>\nbody {\n  font-family: 'Asap', sans-serif;\n  font-family: 'Roboto', sans-serif;\n\n}\na {\n  color: #0040FF;\n}\n\na:hover {\n  color: Red;\n}\n\n\nimg {\n  max-width:100%;\n}\n.avator {\n  border-radius:100px;\n  width:64px;\n  margin-right: 5px;\n  padding-top: 5px;\n}\n\n\n.chime-wrap {\n  width: 85%;    \n  max-width:100%;\n  color: White;\n  margin: 0 auto;\n  margin-top: 8px;\n  padding: 10px;\n  border-bottom: 1px solid #0040FF;\n}\n\n.chime-header {\n  display: flex;\n  align-items:flex-start;\n  font-size:14px;\n}\n.chime-header-info {\n  font-weight:bold;\n}\n.chime-header-info span {\n  font-weight:normal;\n  margin-left: 5px;\n}\n.chime-header-info p {\n  font-weight:normal;\n  margin-top: 5px;\n  \n}\n.chime-img-wrap {\n  padding-left: 30px;\n  width: 50%;\n  max-width: 50%;\n  margin-left: 100px;\n}\n\n.chime-info-counts {\n  display: flex;\n  margin-left: 125px;\n  margin-top: 10px;\n}\n.chime-info-counts div {\n  display: flex;\n  margin-right: 20px;\n}\n.chime-info-counts div svg {\n  margin-right: 10px;\n}\n@media screen and (max-width:100%){\n  body {\n    padding-left: 2px;\n    padding-right: 2px;\n  }\n  .chime-header {\n    flex-direction:column;\n  }\n  .chime-header img {\n    margin-bottom: 10px;\n  }\n  .chime-header-info p {\n    color:Black;\n    margin-bottom: 10px;\n  }\n  .chime-img-wrap {\n    width: 50%;\n    max-width: 50%;\n    margin-left: 100px;\n  }\n  .chime-info-counts {\n  display: flex;\n  margin-left: 0;\n}\n.chime-info-counts div {\n  margin-right: 10px;\n}\n}\n</style>\n</head>\n\n<body>\n<link href=\"https://fonts.googleapis.com/css?family=Asap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n\n\n\n<div class=\"chime-wrap\" ng-repeat=\"obj in msg.payload\">\n  <div class=\"chime-header\">\n    <div style=\"position: relative; width: 120px; height: 120px;\" class=\"avator\" ng-click=\"send({topic:'lookup', payload:obj.sender})\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/bg/{{obj.bg}}_bg.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/skin/{{obj.skin}}_skin.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/eyes/{{obj.eyes}}_eyes.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/teeth/{{obj.teeth}}_teeth.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/lips/{{obj.lips}}_lips.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hair/{{obj.hair}}_hair.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hat/{{obj.hat}}_hat.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/chest/{{obj.chest}}_chest.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n    </div>\n<!--    <img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/512x512.png\" alt=\"\" class=\"avator\"> -->\n    <div class=\"chime-header-info\">\n      <small>@{{obj.sender}}</small><span></span><span> </span>\n      <span></span>\n      <h2>{{obj.memo}}</h2>\n    </div>\n  </div>\n  <div class=\"chime-img-wrap\">\n  <img src=\"{{obj.link}}\" alt=\"\" class=\"chime-img\">\n  </div>\n  <div class=\"chime-info-counts\">\n    <div class=\"comments\">\n      <a href=\"\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i></a>\n      <div class=\"comment-count\">0</div>\n    </div>\n    \n    <div class=\"retweets\">\n      <a href=\"\"><i class=\"fa fa-retweet\" aria-hidden=\"true\"></i></a>\n      <div class=\"rechime-count\">0</div>\n    </div>\n    \n    <div class=\"likes\">\n<!--      <svg class=\"feather feather-heart sc-dnqmqq jxshSx\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"></path></svg> -->\n      <a href=\"\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\n      <div class=\"likes-count\">0</div>\n    </div>\n    \n    <div class=\"link\">\n        <a href=\"{{obj.link}}\" target=\"_blank\" title=\"Open External Link\"><i class=\"fa fa-link\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n    <div class=\"time\">\n        <small><small><small>{{obj.time}}</small></small></small>\n    </div>\n    \n    <div class=\"tx\">\n        <a href=\"https://explorer.stacks.co/txid/{{obj.txid}}?chain=mainnet\" target=\"_blank\" title=\"View Chime In Explorer\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n  </div>\n</div>\n</body>\n</html>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -19472,15 +19468,16 @@
         "id": "15876e21.3350c2",
         "type": "function",
         "z": "42c07592.8d970c",
-        "name": "deduce a memos array",
+        "d": true,
+        "name": "deduce a memos array (old)",
         "func": "var rawArray = msg.payload.results;\n\n\nvar memos = rawArray.map((obj) => {\n    return obj.token_transfer.memo.toString()\n});\n\n\nmsg.payload = memos;\nmsg.topic = \"memos\";\nreturn msg;\n\n\n//DeHex Memo example:\n/*var rawmemo = msg.payload.results[0].token_transfer.memo;//a raw memo\n\nvar hex  = rawmemo.toString();//force rawmemo to string\n\nvar memo = '';//decode of memo\nfor (var n = 0; n < hex.length; n += 2) {\n\tmemo += String.fromCharCode(parseInt(hex.substr(n, 2), 16));\n}\n\nmsg.payload = memo;//pass along decoded ascii version of memo*/",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 780,
+        "x": 980,
+        "y": 980,
         "wires": [
             [
                 "192b5a27.e2e4a6",
@@ -19492,16 +19489,17 @@
         "id": "70f7a50e.833f6c",
         "type": "debug",
         "z": "42c07592.8d970c",
+        "d": true,
         "name": "",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload.results",
+        "complete": "payload",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 960,
+        "x": 930,
         "y": 700,
         "wires": []
     },
@@ -19560,7 +19558,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1320,
-        "y": 780,
+        "y": 900,
         "wires": []
     },
     {
@@ -19575,7 +19573,7 @@
         "finalize": "",
         "libs": [],
         "x": 960,
-        "y": 820,
+        "y": 780,
         "wires": [
             [
                 "192b5a27.e2e4a6",
@@ -19595,7 +19593,7 @@
         "finalize": "",
         "libs": [],
         "x": 960,
-        "y": 860,
+        "y": 820,
         "wires": [
             [
                 "192b5a27.e2e4a6",
@@ -19634,7 +19632,7 @@
         "joinerType": "str",
         "accumulate": false,
         "timeout": "",
-        "count": "4",
+        "count": "5",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
@@ -19757,7 +19755,7 @@
         "type": "function",
         "z": "42c07592.8d970c",
         "name": "form chimes ",
-        "func": "let data = msg.payload\nlet result = []\n\ndata.memos.forEach((el, index) => {\n    result.push(\n        {\n            \"memo\": Buffer.from(data.memos[index].slice(2), \"hex\").toString('ascii'),\n            \"txid\": data.txids[index],\n            \"sender\": data.senders[index],\n            \"bg\": data.senders[index].substring(4).substr(0,1),\n            \"skin\": data.senders[index].substring(4).substr(1,1),\n            \"eyes\": data.senders[index].substring(4).substr(2,1),\n            \"teeth\": data.senders[index].substring(4).substr(3,1),\n            \"lips\": data.senders[index].substr(-4).substr(0,1),\n            \"hair\": data.senders[index].substr(-4).substr(1,1),            \n            \"hat\": data.senders[index].substr(-4).substr(2,1),            \n            \"chest\": data.senders[index].substr(-4).substr(3,1),            \n            \"time\": data.times[index].substring(0, 19).replace('T', ' ')\n        }\n    )\n})\n\nmsg.payload = result;\nreturn msg;",
+        "func": "let data = msg.payload\nlet result = []\n\ndata.memos.forEach((el, index) => {\n    result.push(\n        {\n            \"memo\": data.memos[index].substr(2).slice(0, -1),\n            \"link\": data.links[index].substr(8).slice(0, -2),\n            \"txid\": data.txids[index],\n            \"sender\": data.senders[index],\n            \"bg\": data.senders[index].substring(4).substr(0,1),\n            \"skin\": data.senders[index].substring(4).substr(1,1),\n            \"eyes\": data.senders[index].substring(4).substr(2,1),\n            \"teeth\": data.senders[index].substring(4).substr(3,1),\n            \"lips\": data.senders[index].substr(-4).substr(0,1),\n            \"hair\": data.senders[index].substr(-4).substr(1,1),            \n            \"hat\": data.senders[index].substr(-4).substr(2,1),            \n            \"chest\": data.senders[index].substr(-4).substr(3,1),            \n            \"time\": data.times[index].substring(0, 19).replace('T', ' ')\n        }\n    )\n})\n\nmsg.payload = result;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19777,6 +19775,7 @@
         "id": "a8c2df12.bf00a",
         "type": "debug",
         "z": "42c07592.8d970c",
+        "d": true,
         "name": "Deruptar Debug",
         "active": true,
         "tosidebar": true,
@@ -19824,7 +19823,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2000,
+        "x": 1960,
         "y": 680,
         "wires": []
     },
@@ -19867,7 +19866,8 @@
         "y": 740,
         "wires": [
             [
-                "162274d6.37394b"
+                "162274d6.37394b",
+                "4131bc5f.14c854"
             ],
             [],
             [],
@@ -19886,15 +19886,16 @@
         "id": "162274d6.37394b",
         "type": "function",
         "z": "42c07592.8d970c",
-        "name": "get author name by principal",
+        "d": true,
+        "name": "get author name by principal (mainnet)",
         "func": "const authorprincipal = msg.payload;//Chime Author Principal Address\n\nmsg.payload = authorprincipal;\n\nmsg.url = \"https://stacks-node-api.mainnet.stacks.co/v1/addresses/stacks/\" + authorprincipal;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2320,
-        "y": 720,
+        "x": 2310,
+        "y": 680,
         "wires": [
             [
                 "48b3fa7d.3fafa4",
@@ -19915,8 +19916,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 2530,
-        "y": 720,
+        "x": 2570,
+        "y": 680,
         "wires": [
             [
                 "f8cbebdd.6c7988"
@@ -19932,7 +19933,7 @@
         "action": "",
         "pretty": false,
         "x": 2690,
-        "y": 720,
+        "y": 680,
         "wires": [
             [
                 "4df1cc5b.0e4da4",
@@ -20093,7 +20094,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2610,
+        "x": 2630,
         "y": 600,
         "wires": [
             [
@@ -22285,6 +22286,186 @@
                 "1a54b8d8.b10777",
                 "aedcd473.b0f298",
                 "52f29bb6.d47464"
+            ]
+        ]
+    },
+    {
+        "id": "d0c4fb2c.082848",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "get Feed Principal (New) (Testnet)",
+        "func": "\nmsg.payload = \"ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H\";\nmsg.url = \"https://stacks-node-api.testnet.stacks.co/extended/v1/address/ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H.luv/transactions\";\nreturn msg;\n\n\n//feed derived from contract ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H.luv",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 780,
+        "wires": [
+            [
+                "e7844833.8a1cc8"
+            ]
+        ]
+    },
+    {
+        "id": "e7844833.8a1cc8",
+        "type": "http request",
+        "z": "42c07592.8d970c",
+        "name": "Get",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 530,
+        "y": 820,
+        "wires": [
+            [
+                "41283bf6.c14614"
+            ]
+        ]
+    },
+    {
+        "id": "41283bf6.c14614",
+        "type": "json",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 530,
+        "y": 860,
+        "wires": [
+            [
+                "1765a8fe.0029f7"
+            ]
+        ]
+    },
+    {
+        "id": "7f4d85d9.97202c",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "deduce a memos array (new)",
+        "func": "var rawArray = msg.payload.results;\n\n\nvar memos = rawArray.map((obj) => {\n    return obj.contract_call.function_args[0].repr.toString()\n});\n\n\nmsg.payload = memos;\nmsg.topic = \"memos\";\nreturn msg;\n\n\n//DeHex Memo example:\n/*var rawmemo = msg.payload.results[0].token_transfer.memo;//a raw memo\n\nvar hex  = rawmemo.toString();//force rawmemo to string\n\nvar memo = '';//decode of memo\nfor (var n = 0; n < hex.length; n += 2) {\n\tmemo += String.fromCharCode(parseInt(hex.substr(n, 2), 16));\n}\n\nmsg.payload = memo;//pass along decoded ascii version of memo*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 860,
+        "wires": [
+            [
+                "192b5a27.e2e4a6",
+                "3bf81293.d2ed4e"
+            ]
+        ]
+    },
+    {
+        "id": "8818bab.fd08148",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "form chimes  (old)",
+        "func": "let data = msg.payload\nlet result = []\n\ndata.memos.forEach((el, index) => {\n    result.push(\n        {\n            \"memo\": Buffer.from(data.memos[index].slice(2), \"hex\").toString('ascii'),\n            \"txid\": data.txids[index],\n            \"sender\": data.senders[index],\n            \"bg\": data.senders[index].substring(4).substr(0,1),\n            \"skin\": data.senders[index].substring(4).substr(1,1),\n            \"eyes\": data.senders[index].substring(4).substr(2,1),\n            \"teeth\": data.senders[index].substring(4).substr(3,1),\n            \"lips\": data.senders[index].substr(-4).substr(0,1),\n            \"hair\": data.senders[index].substr(-4).substr(1,1),            \n            \"hat\": data.senders[index].substr(-4).substr(2,1),            \n            \"chest\": data.senders[index].substr(-4).substr(3,1),            \n            \"time\": data.times[index].substring(0, 19).replace('T', ' ')\n        }\n    )\n})\n\nmsg.payload = result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1430,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4131bc5f.14c854",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "get author name by principal (testnet)",
+        "func": "const authorprincipal = msg.payload;//Chime Author Principal Address\n\nmsg.payload = authorprincipal;\n\nmsg.url = \"https://stacks-node-api.testnet.stacks.co/v1/addresses/stacks/\" + authorprincipal;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2310,
+        "y": 600,
+        "wires": [
+            [
+                "48b3fa7d.3fafa4",
+                "3463264f.5317ea"
+            ]
+        ]
+    },
+    {
+        "id": "1765a8fe.0029f7",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "filter where tx_status is equal to success",
+        "func": "const obj = msg.payload.results;\n\nconst results = obj.filter(by => by.tx_status === 'success');\n\nmsg.payload = {results};\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 900,
+        "wires": [
+            [
+                "bc19928c.972da"
+            ]
+        ]
+    },
+    {
+        "id": "bc19928c.972da",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "filter where tx_type is equal to smart_contract",
+        "func": "const obj = msg.payload.results;\n\nconst results = obj.filter(by => by.tx_type === 'contract_call');\n\nmsg.payload = {results};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 940,
+        "wires": [
+            [
+                "8dd30082.5b0a1",
+                "9b3bee72.a269b",
+                "70f7a50e.833f6c",
+                "15876e21.3350c2",
+                "be74617e.c219f",
+                "88137d96.fb83",
+                "8abc1729.379588",
+                "aedfbd23.ce37d",
+                "7f4d85d9.97202c",
+                "2cefd0df.f4d72"
+            ]
+        ]
+    },
+    {
+        "id": "2cefd0df.f4d72",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "deduce a links array (new)",
+        "func": "var rawArray = msg.payload.results;\n\n\nvar links = rawArray.map((obj) => {\n    return obj.contract_call.function_args[1].repr.toString()\n});\n\n\nmsg.payload = links;\nmsg.topic = \"links\";\nreturn msg;\n\n\n//DeHex Memo example:\n/*var rawmemo = msg.payload.results[0].token_transfer.memo;//a raw memo\n\nvar hex  = rawmemo.toString();//force rawmemo to string\n\nvar memo = '';//decode of memo\nfor (var n = 0; n < hex.length; n += 2) {\n\tmemo += String.fromCharCode(parseInt(hex.substr(n, 2), 16));\n}\n\nmsg.payload = memo;//pass along decoded ascii version of memo*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 900,
+        "wires": [
+            [
+                "3bf81293.d2ed4e",
+                "192b5a27.e2e4a6"
             ]
         ]
     }
