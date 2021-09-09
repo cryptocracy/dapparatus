@@ -28,13 +28,6 @@
         "info": ""
     },
     {
-        "id": "95a1aad9.425808",
-        "type": "tab",
-        "label": "Profiles",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "613e85c9.c6210c",
         "type": "tab",
         "label": "Minting",
@@ -77,39 +70,18 @@
         "info": ""
     },
     {
-        "id": "4552b603.ca4548",
+        "id": "552dd682.f93918",
         "type": "tab",
-        "label": "Storage",
-        "disabled": true,
-        "info": ""
-    },
-    {
-        "id": "b6c0f7b2.b0adb8",
-        "type": "tab",
-        "label": "ThreeJS",
-        "disabled": true,
-        "info": ""
-    },
-    {
-        "id": "3608a6f2.dddbfa",
-        "type": "tab",
-        "label": "UE5 WS Env Sync",
-        "disabled": true,
-        "info": ""
+        "label": "LUV Token",
+        "disabled": false,
+        "info": "Like Universal Value Token"
     },
     {
         "id": "32cdfd5f.3ad3a2",
         "type": "tab",
-        "label": "UE4 WS Env Sync",
+        "label": "STX UE4/5 and Storage",
         "disabled": true,
         "info": ""
-    },
-    {
-        "id": "ce9ea52e.624258",
-        "type": "tab",
-        "label": "HTTP to UE4",
-        "disabled": true,
-        "info": "to Serve data to UE4"
     },
     {
         "id": "d9ba26fa.6d2b18",
@@ -1166,8 +1138,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 4800,
-        "y": 100,
+        "x": 4660,
+        "y": 300,
         "wires": [
             []
         ]
@@ -1349,7 +1321,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1540,
+        "x": 1380,
         "y": 460,
         "wires": [
             [
@@ -1378,8 +1350,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2790,
-        "y": 180,
+        "x": 2650,
+        "y": 380,
         "wires": [
             [
                 "24c58f0c.4ac51"
@@ -2595,7 +2567,8 @@
         "wires": [
             [
                 "b6514d9a.4695c",
-                "5cb1010a.23a41"
+                "5cb1010a.23a41",
+                "788ea147.23459"
             ]
         ]
     },
@@ -2819,7 +2792,7 @@
         "links": [
             "bae8fcf5.8fe8"
         ],
-        "x": 335,
+        "x": 315,
         "y": 300,
         "wires": []
     },
@@ -3966,9 +3939,7 @@
         "x": 520,
         "y": 700,
         "wires": [
-            [
-                "81cd1a79.579b68"
-            ]
+            []
         ]
     },
     {
@@ -4044,23 +4015,6 @@
             ],
             []
         ]
-    },
-    {
-        "id": "81cd1a79.579b68",
-        "type": "debug",
-        "z": "e83b2318.6f5c6",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 730,
-        "y": 700,
-        "wires": []
     },
     {
         "id": "4b97e61.0fbac18",
@@ -4217,27 +4171,8 @@
         "x": 520,
         "y": 740,
         "wires": [
-            [
-                "6b22d1dd.7b4a8"
-            ]
+            []
         ]
-    },
-    {
-        "id": "6b22d1dd.7b4a8",
-        "type": "debug",
-        "z": "e83b2318.6f5c6",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 730,
-        "y": 740,
-        "wires": []
     },
     {
         "id": "27e68243.aae18e",
@@ -4472,8 +4407,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3050,
-        "y": 180,
+        "x": 2910,
+        "y": 380,
         "wires": [
             [
                 "6c486db8.90b164",
@@ -4493,8 +4428,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3370,
-        "y": 140,
+        "x": 3230,
+        "y": 340,
         "wires": []
     },
     {
@@ -4994,7 +4929,7 @@
         "officon": "fa-wrench",
         "offcolor": "Yellow",
         "animate": true,
-        "x": 920,
+        "x": 940,
         "y": 80,
         "wires": [
             [
@@ -6672,27 +6607,8 @@
         "x": 510,
         "y": 780,
         "wires": [
-            [
-                "1f533c5d.48ea54"
-            ]
+            []
         ]
-    },
-    {
-        "id": "1f533c5d.48ea54",
-        "type": "debug",
-        "z": "e83b2318.6f5c6",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 730,
-        "y": 780,
-        "wires": []
     },
     {
         "id": "cb2266cf.3a47e8",
@@ -7987,288 +7903,16 @@
         "wires": []
     },
     {
-        "id": "8c1e8e7b.d05aa",
-        "type": "function",
-        "z": "4552b603.ca4548",
-        "name": "initiate storage and create test2.json",
-        "func": "const tyme = msg.payload;\n\nconst appConfig = new stacksConnect.AppConfig(['store_write', 'publish_data']);\n\nconst userSession = new stacksConnect.UserSession({ appConfig });\n\nconst storage = new stacksStorage.Storage({ userSession });\n\nlet fileName = 'test.json';\n\nlet fileData = {\n  color: 'green',\n  title: 'Hello World',\n  body: 'stuff',\n  date: tyme\n};\n\nconst options = {\n  encrypt: true\n};\n\nlet fileUrl = await storage.putFile(fileName, JSON.stringify(fileData), options).then(() => {\n  // Handle any execution after data has been saved\n});\n\nmsg.payload = fileUrl;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "stacksStorage",
-                "module": "@stacks/storage"
-            },
-            {
-                "var": "stacksConnect",
-                "module": "@stacks/connect"
-            }
-        ],
-        "x": 470,
-        "y": 560,
-        "wires": [
-            [
-                "9c9d382a.0fd598"
-            ]
-        ]
-    },
-    {
-        "id": "9c9d382a.0fd598",
-        "type": "debug",
-        "z": "4552b603.ca4548",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 800,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "322531cd.b65f2e",
-        "type": "inject",
-        "z": "4552b603.ca4548",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 200,
-        "y": 560,
-        "wires": [
-            [
-                "8c1e8e7b.d05aa"
-            ]
-        ]
-    },
-    {
-        "id": "1d708d21.55b783",
-        "type": "function",
-        "z": "4552b603.ca4548",
-        "name": "Stacks Auth",
-        "func": "const appConfig = new stacksConnect.AppConfig(['store_write', 'publish_data']);\n\nconst userSession = new stacksConnect.UserSession({ appConfig });\nfunction authenticate() {\n  stacksConnect.showConnect({\n    appDetails: {\n      name: 'Dapparatus',\n      icon: window.location.origin + '/my-app-logo.svg',\n    },\n    redirectTo: '/',\n    finished: () => {\n      let userData = userSession.loadUserData();\n      // Save or otherwise utilize userData post-authentication\n    },\n    userSession: userSession,\n  });\n}\n\nmsg.payload = appConfig;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "stacksConnect",
-                "module": "@stacks/connect"
-            }
-        ],
-        "x": 390,
-        "y": 520,
-        "wires": [
-            [
-                "65176f8b.d8a24"
-            ]
-        ]
-    },
-    {
-        "id": "bdf96e19.8de9f",
-        "type": "ui_button",
-        "z": "4552b603.ca4548",
-        "name": "",
-        "group": "ae1844b2.235ae8",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Sign In with Stacks",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "fa-sign-in",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 160,
-        "y": 520,
-        "wires": [
-            [
-                "1d708d21.55b783"
-            ]
-        ]
-    },
-    {
-        "id": "65176f8b.d8a24",
-        "type": "debug",
-        "z": "4552b603.ca4548",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "e9781263.43872",
-        "type": "comment",
-        "z": "4552b603.ca4548",
-        "name": "DOES NOT WORK YET",
-        "info": "",
-        "x": 450,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "6bea3fdd.9c30e",
-        "type": "comment",
-        "z": "95a1aad9.425808",
-        "name": "Relative to Deruptar Avatar String for Profiles",
-        "info": "takes in the \"depositaddress\" 0 of the wallet\ncreates 8 digit Avatar String \nread function comments for more info",
-        "x": 310,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "dbfb67c6.ba18c8",
-        "type": "split",
-        "z": "95a1aad9.425808",
-        "name": "",
-        "splt": "1",
-        "spltType": "len",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 510,
-        "y": 80,
-        "wires": [
-            [
-                "80cf5ecd.707f"
-            ]
-        ]
-    },
-    {
-        "id": "b5e080fb.a63c8",
-        "type": "function",
-        "z": "95a1aad9.425808",
-        "name": "create Deruptar string",
-        "func": "var depositaddress = global.get(\"depositaddress\"); //for mainnet\n//or get global 'testnetdepositaddress' if on testnet\n\nrawaddy = depositaddress.substring(4); //Trim first 4 digits\n\na1 = rawaddy.substr(0,4); // keep next 4 digits\n\nz1 = rawaddy.substring(rawaddy.length - 4); //keep last 4 digits\n\nmsg.payload = a1+z1; // concat both and pass it along\nmsg.deruptar = a1+z1;\nmsg.depositaddress = depositaddress;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 320,
-        "y": 80,
-        "wires": [
-            [
-                "dbfb67c6.ba18c8"
-            ]
-        ]
-    },
-    {
-        "id": "17982304.c96ccd",
-        "type": "debug",
-        "z": "95a1aad9.425808",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 830,
-        "y": 20,
-        "wires": []
-    },
-    {
-        "id": "80cf5ecd.707f",
-        "type": "join",
-        "z": "95a1aad9.425808",
-        "name": "make array",
-        "mode": "custom",
-        "build": "array",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": false,
-        "timeout": "",
-        "count": "8",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 690,
-        "y": 80,
-        "wires": [
-            [
-                "17982304.c96ccd",
-                "8df78899.f720b8"
-            ]
-        ]
-    },
-    {
         "id": "ff4526e0.2d5308",
         "type": "link out",
         "z": "42c07592.8d970c",
         "name": "pass to Deruptar Generation (Profile Avatar)",
         "links": [
-            "27fe2069.03f4c"
+            "27fe2069.03f4c",
+            "e596310.fa1d8d"
         ],
         "x": 255,
         "y": 1380,
-        "wires": []
-    },
-    {
-        "id": "27fe2069.03f4c",
-        "type": "link in",
-        "z": "95a1aad9.425808",
-        "name": "to create Deruptar String for Profile",
-        "links": [
-            "ff4526e0.2d5308"
-        ],
-        "x": 155,
-        "y": 80,
-        "wires": [
-            [
-                "b5e080fb.a63c8"
-            ]
-        ]
-    },
-    {
-        "id": "8df78899.f720b8",
-        "type": "link out",
-        "z": "95a1aad9.425808",
-        "name": "pass back to Feed",
-        "links": [
-            "b20a4bd1.6c0da8"
-        ],
-        "x": 815,
-        "y": 80,
         "wires": []
     },
     {
@@ -8297,7 +7941,8 @@
         "z": "42c07592.8d970c",
         "name": "to Deruptar Template",
         "links": [
-            "8df78899.f720b8"
+            "8df78899.f720b8",
+            "841d664b.beb798"
         ],
         "x": 335,
         "y": 1320,
@@ -8307,76 +7952,6 @@
                 "f03228fb.9fb408"
             ]
         ]
-    },
-    {
-        "id": "548aed99.2dd634",
-        "type": "function",
-        "z": "95a1aad9.425808",
-        "name": "36 ^ 8",
-        "func": "var sn = 36 * 36 * 36 * 36 * 36 * 36 * 36 * 36;\nmsg.payload = sn;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "BigNum",
-                "module": "bn.js"
-            }
-        ],
-        "x": 290,
-        "y": 380,
-        "wires": [
-            [
-                "64760c98.a59964"
-            ]
-        ]
-    },
-    {
-        "id": "572bc030.627a8",
-        "type": "inject",
-        "z": "95a1aad9.425808",
-        "name": "get",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 380,
-        "wires": [
-            [
-                "548aed99.2dd634"
-            ]
-        ]
-    },
-    {
-        "id": "64760c98.a59964",
-        "type": "debug",
-        "z": "95a1aad9.425808",
-        "name": "deruptar total count debugger",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 520,
-        "y": 380,
-        "wires": []
     },
     {
         "id": "9d8dbdfd.2285e",
@@ -9121,18 +8696,14 @@
         "timer": "",
         "oldrc": false,
         "name": "",
-        "x": 620,
-        "y": 860,
+        "x": 680,
+        "y": 100,
         "wires": [
             [
-                "2ff8e49a.dda6bc"
+                "bd97239e.96878"
             ],
-            [
-                "37a2f1db.c0530e"
-            ],
-            [
-                "37a2f1db.c0530e"
-            ]
+            [],
+            []
         ]
     },
     {
@@ -9148,26 +8719,27 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1630,
-        "y": 920,
+        "x": 1710,
+        "y": 220,
         "wires": []
     },
     {
         "id": "42dfcd26.ec84c4",
         "type": "function",
         "z": "de33bfc8.0ee0f",
-        "name": "cli args",
-        "func": "const ftname = msg.ftname;\n\nmsg.payload = \"check \" + ftname;\nreturn msg;",
+        "name": "\"check\" setup",
+        "func": "const clarity = msg.clarity;\n\nmsg.payload = \"check \" + clarity;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 860,
+        "y": 40,
         "wires": [
             [
-                "89259028.7e432"
+                "89259028.7e432",
+                "56749719.56d248"
             ]
         ]
     },
@@ -9175,11 +8747,11 @@
         "id": "cc298fe2.ac09c",
         "type": "inject",
         "z": "de33bfc8.0ee0f",
-        "name": "clarity file name inject",
+        "name": "inject derp.clar file name",
         "props": [
             {
-                "p": "ftname",
-                "v": "ft-trait.clar",
+                "p": "clarity",
+                "v": "derp.clar",
                 "vt": "str"
             },
             {
@@ -9192,8 +8764,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 260,
-        "y": 860,
+        "x": 190,
+        "y": 300,
         "wires": [
             [
                 "42dfcd26.ec84c4"
@@ -9204,10 +8776,10 @@
         "id": "752b362e.d9be78",
         "type": "comment",
         "z": "de33bfc8.0ee0f",
-        "name": "How to make clarity-cli work",
+        "name": "Pass in .clar file name (help)",
         "info": "You will first need to put the clarity-cli tool in the root directory of this app.\n(or where your .clar files are to be stored, default is in root)\n\nDownload this (relative to your os) and or latest version. unzip and put them all in your app root.\nhttps://github.com/blockstack/stacks-blockchain/releases/tag/2.0.11.0.0",
-        "x": 540,
-        "y": 620,
+        "x": 180,
+        "y": 140,
         "wires": []
     },
     {
@@ -9215,7 +8787,7 @@
         "type": "switch",
         "z": "de33bfc8.0ee0f",
         "name": "pass or fail",
-        "property": "payload",
+        "property": "payload.message",
         "propertyType": "msg",
         "rules": [
             {
@@ -9224,21 +8796,27 @@
                 "vt": "str"
             },
             {
+                "t": "cont",
+                "v": "Checks failed.",
+                "vt": "str"
+            },
+            {
                 "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 2,
-        "x": 810,
-        "y": 820,
+        "outputs": 3,
+        "x": 670,
+        "y": 300,
         "wires": [
             [
-                "37a2f1db.c0530e"
+                "8c2a5876.dacf18"
             ],
             [
                 "37a2f1db.c0530e"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -9255,8 +8833,8 @@
         "raw": false,
         "topic": "Clarity Check",
         "name": "Possible Issue with ft-trait, attempting to bypass",
-        "x": 1540,
-        "y": 840,
+        "x": 1620,
+        "y": 140,
         "wires": []
     },
     {
@@ -9273,8 +8851,8 @@
         "raw": false,
         "topic": "Contracted Deployed",
         "name": "Pending Confirmation",
-        "x": 1640,
-        "y": 780,
+        "x": 1720,
+        "y": 80,
         "wires": []
     },
     {
@@ -9285,8 +8863,8 @@
         "links": [
             "3cbb627d.347d3e"
         ],
-        "x": 35,
-        "y": 860,
+        "x": 75,
+        "y": 500,
         "wires": [
             []
         ]
@@ -9340,8 +8918,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1350,
-        "y": 940,
+        "x": 1430,
+        "y": 240,
         "wires": [
             [
                 "c059f8b2.1b3d98",
@@ -9366,8 +8944,8 @@
         "raw": false,
         "topic": "Clarity Check",
         "name": "Unable to bypass Error",
-        "x": 1640,
-        "y": 1000,
+        "x": 1720,
+        "y": 300,
         "wires": []
     },
     {
@@ -9384,8 +8962,8 @@
         "raw": false,
         "topic": "Clarity Check",
         "name": "Able to bypass Error",
-        "x": 1640,
-        "y": 960,
+        "x": 1720,
+        "y": 260,
         "wires": []
     },
     {
@@ -9394,8 +8972,8 @@
         "z": "de33bfc8.0ee0f",
         "name": "",
         "info": "ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H.Monolith",
-        "x": 470,
-        "y": 1120,
+        "x": 240,
+        "y": 1480,
         "wires": []
     },
     {
@@ -9423,8 +9001,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 4220,
-        "y": 320,
+        "x": 4080,
+        "y": 520,
         "wires": [
             [],
             [
@@ -9445,8 +9023,8 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "ascii",
-        "x": 3380,
-        "y": 180,
+        "x": 3240,
+        "y": 380,
         "wires": [
             [
                 "4027e761.6872c8"
@@ -9463,8 +9041,8 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 3790,
-        "y": 180,
+        "x": 3650,
+        "y": 380,
         "wires": [
             [
                 "aa7d458a.d4f308"
@@ -9489,8 +9067,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 4070,
-        "y": 180,
+        "x": 3930,
+        "y": 380,
         "wires": [
             [
                 "fbd5eebb.f19ae",
@@ -9525,8 +9103,8 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 4500,
-        "y": 140,
+        "x": 4360,
+        "y": 340,
         "wires": [
             [
                 "3a2c2c18.f2a9d4",
@@ -9558,8 +9136,8 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 4500,
-        "y": 280,
+        "x": 4360,
+        "y": 480,
         "wires": [
             [
                 "13bdee36.3664b2",
@@ -9581,8 +9159,8 @@
         "raw": false,
         "topic": "Error",
         "name": "Missing: nettype",
-        "x": 4420,
-        "y": 380,
+        "x": 4280,
+        "y": 580,
         "wires": []
     },
     {
@@ -9599,8 +9177,8 @@
         "raw": false,
         "topic": "Almost There...",
         "name": "Attempting to Create and Deploy Interface.",
-        "x": 4530,
-        "y": 240,
+        "x": 4390,
+        "y": 440,
         "wires": []
     },
     {
@@ -9614,8 +9192,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3440,
-        "y": 80,
+        "x": 3300,
+        "y": 280,
         "wires": [
             []
         ]
@@ -9634,8 +9212,8 @@
         "raw": false,
         "topic": "Error",
         "name": "Missing: stxprivkey",
-        "x": 4450,
-        "y": 180,
+        "x": 4310,
+        "y": 380,
         "wires": []
     },
     {
@@ -9786,8 +9364,7 @@
         "y": 780,
         "wires": [
             [
-                "a73cd103.691db",
-                "395e262d.5ec54a"
+                "a73cd103.691db"
             ]
         ]
     },
@@ -10214,8 +9791,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3400,
-        "y": 540,
+        "x": 3260,
+        "y": 740,
         "wires": []
     },
     {
@@ -10226,8 +9803,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 3710,
-        "y": 500,
+        "x": 3570,
+        "y": 700,
         "wires": [
             [
                 "855df234.4377a",
@@ -10257,8 +9834,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 3880,
-        "y": 500,
+        "x": 3740,
+        "y": 700,
         "wires": [
             [
                 "34eaea80.59a846"
@@ -10294,8 +9871,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4070,
-        "y": 480,
+        "x": 3930,
+        "y": 680,
         "wires": [
             [
                 "5b5a8e01.b4ef5"
@@ -10328,8 +9905,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4070,
-        "y": 520,
+        "x": 3930,
+        "y": 720,
         "wires": [
             [
                 "90a30512.c71a18"
@@ -10348,8 +9925,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3870,
-        "y": 460,
+        "x": 3730,
+        "y": 660,
         "wires": []
     },
     {
@@ -10363,8 +9940,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3140,
-        "y": 500,
+        "x": 3000,
+        "y": 700,
         "wires": [
             [
                 "12c982e6.a4ac6d",
@@ -10383,8 +9960,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3150,
-        "y": 700,
+        "x": 3010,
+        "y": 900,
         "wires": [
             [
                 "237b31dc.f8722e"
@@ -10641,8 +10218,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4530,
-        "y": 480,
+        "x": 4390,
+        "y": 680,
         "wires": [
             [
                 "bfcc6cf0.7b3a6"
@@ -10660,8 +10237,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4530,
-        "y": 560,
+        "x": 4390,
+        "y": 760,
         "wires": [
             [
                 "a6dfdbc.87d5d28"
@@ -10674,8 +10251,8 @@
         "z": "613e85c9.c6210c",
         "name": "",
         "events": "all",
-        "x": 4720,
-        "y": 480,
+        "x": 4580,
+        "y": 680,
         "wires": [
             []
         ]
@@ -10686,8 +10263,8 @@
         "z": "613e85c9.c6210c",
         "name": "",
         "events": "all",
-        "x": 4720,
-        "y": 560,
+        "x": 4580,
+        "y": 760,
         "wires": [
             []
         ]
@@ -10706,8 +10283,8 @@
         "raw": false,
         "topic": "",
         "name": "",
-        "x": 4330,
-        "y": 480,
+        "x": 4190,
+        "y": 680,
         "wires": [
             [
                 "da32eda8.fc84f"
@@ -10728,8 +10305,8 @@
         "raw": false,
         "topic": "",
         "name": "",
-        "x": 4330,
-        "y": 560,
+        "x": 4190,
+        "y": 760,
         "wires": [
             [
                 "2445a7d8.daea18"
@@ -10755,8 +10332,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2790,
-        "y": 700,
+        "x": 2650,
+        "y": 900,
         "wires": [
             [
                 "86420b1a.8256f8"
@@ -10776,8 +10353,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 3410,
-        "y": 500,
+        "x": 3270,
+        "y": 700,
         "wires": [
             [
                 "9ba865e3.ce4ed8",
@@ -10797,8 +10374,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3590,
-        "y": 460,
+        "x": 3450,
+        "y": 660,
         "wires": []
     },
     {
@@ -10821,8 +10398,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 3580,
-        "y": 560,
+        "x": 3440,
+        "y": 760,
         "wires": [
             [
                 "8e705464.bd59c8"
@@ -10899,8 +10476,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4820,
-        "y": 280,
+        "x": 4680,
+        "y": 480,
         "wires": []
     },
     {
@@ -10916,8 +10493,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4820,
-        "y": 140,
+        "x": 4680,
+        "y": 340,
         "wires": []
     },
     {
@@ -10935,8 +10512,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 3580,
-        "y": 180,
+        "x": 3440,
+        "y": 380,
         "wires": [
             [
                 "1aa8e753.dcf8c9"
@@ -10949,8 +10526,8 @@
         "z": "613e85c9.c6210c",
         "name": "Relative to Minting Fungible Tokens Traits",
         "info": "",
-        "x": 2800,
-        "y": 60,
+        "x": 2660,
+        "y": 260,
         "wires": []
     },
     {
@@ -11575,7 +11152,9 @@
         "x": 320,
         "y": 920,
         "wires": [
-            []
+            [
+                "2d53e6be.0db00a"
+            ]
         ]
     },
     {
@@ -11589,8 +11168,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 170,
-        "y": 1060,
+        "x": 550,
+        "y": 960,
         "wires": [
             [
                 "b7683662.ee3d28"
@@ -11605,8 +11184,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 350,
-        "y": 1060,
+        "x": 730,
+        "y": 960,
         "wires": [
             [
                 "d8878be7.694068"
@@ -11632,8 +11211,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 1060,
+        "x": 940,
+        "y": 960,
         "wires": [
             [
                 "c0c8e2b5.31ca7",
@@ -11680,8 +11259,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 920,
-        "y": 1120,
+        "x": 1300,
+        "y": 1020,
         "wires": [
             [
                 "3f1208f3.82c9b8",
@@ -11712,8 +11291,8 @@
         "topic": "",
         "payload": "{\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.DERP::DERP\":{\"balance\":\"2821109907456\",\"total_sent\":\"0\",\"total_received\":\"2821109907456\"},\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.PDX::PDX\":{\"balance\":\"21000000\",\"total_sent\":\"0\",\"total_received\":\"21000000\"},\"ST1E645A6361NNMSXCGKCFASB936CD2ZWM2XSC1X2.LSD::LSD\":{\"balance\":\"42000000\",\"total_sent\":\"0\",\"total_received\":\"42000000\"}}",
         "payloadType": "json",
-        "x": 550,
-        "y": 1120,
+        "x": 930,
+        "y": 1020,
         "wires": [
             [
                 "c0c8e2b5.31ca7",
@@ -11742,8 +11321,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 1060,
+        "x": 1310,
+        "y": 960,
         "wires": [
             [
                 "3f1208f3.82c9b8",
@@ -11845,7 +11424,9 @@
         "x": 310,
         "y": 1600,
         "wires": [
-            []
+            [
+                "93bdcff4.29b0c"
+            ]
         ]
     },
     {
@@ -11899,8 +11480,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1320,
-        "y": 1140,
+        "x": 1700,
+        "y": 1040,
         "wires": []
     },
     {
@@ -11996,7 +11577,9 @@
         "x": 310,
         "y": 1720,
         "wires": [
-            []
+            [
+                "ceaef61c.5ceab8"
+            ]
         ]
     },
     {
@@ -12149,8 +11732,8 @@
         "links": [
             "e3fdd2dc.9c1a4"
         ],
-        "x": 1275,
-        "y": 1020,
+        "x": 1655,
+        "y": 900,
         "wires": []
     },
     {
@@ -12191,9 +11774,7 @@
         "x": 550,
         "y": 1020,
         "wires": [
-            [
-                "8c20a4b8.226fa8"
-            ]
+            []
         ]
     },
     {
@@ -12217,8 +11798,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 740,
-        "y": 1020,
+        "payloadType": "str",
+        "x": 1120,
+        "y": 920,
         "wires": [
             [
                 "7440f9a1.036a58"
@@ -12335,8 +11917,8 @@
         "links": [
             "4a7ebf16.a2495"
         ],
-        "x": 1275,
-        "y": 960,
+        "x": 1655,
+        "y": 860,
         "wires": []
     },
     {
@@ -12351,16 +11933,16 @@
         "y": 2100,
         "wires": [
             [
-                "7300fe54.a4ee5",
-                "e567ccf5.e74bf",
-                "2bb2d853.b61cc8",
-                "265daa08.c3e116",
-                "d2999417.33d3b8",
-                "b2e000fe.c54c9",
-                "94ac4d22.7deab",
-                "106e6c2.0cc6094",
-                "6a40f95d.4e31a8",
-                "59423230.98fa8c"
+                "359ac0fd.57a64",
+                "4f3cb59a.07fe0c",
+                "47341cf7.ba6a94",
+                "82787eb7.cc2f1",
+                "a83aa020.0149e",
+                "c37110ae.e291f",
+                "6e4b1773.ef7ee8",
+                "630d57ee.13de58",
+                "37febb68.bac794",
+                "b9b227ab.e939e8"
             ]
         ]
     },
@@ -12378,7 +11960,9 @@
         "x": 310,
         "y": 1840,
         "wires": [
-            []
+            [
+                "1ce38732.df7f69"
+            ]
         ]
     },
     {
@@ -12551,7 +12135,9 @@
         "x": 310,
         "y": 1960,
         "wires": [
-            []
+            [
+                "f1068bdf.868c28"
+            ]
         ]
     },
     {
@@ -12724,7 +12310,9 @@
         "x": 310,
         "y": 2060,
         "wires": [
-            []
+            [
+                "31d44d99.a947d2"
+            ]
         ]
     },
     {
@@ -12897,7 +12485,9 @@
         "x": 310,
         "y": 2200,
         "wires": [
-            []
+            [
+                "493e33b7.e9649c"
+            ]
         ]
     },
     {
@@ -13070,7 +12660,9 @@
         "x": 310,
         "y": 2320,
         "wires": [
-            []
+            [
+                "445c798e.dc2918"
+            ]
         ]
     },
     {
@@ -13243,7 +12835,9 @@
         "x": 310,
         "y": 2440,
         "wires": [
-            []
+            [
+                "b5570a77.3da428"
+            ]
         ]
     },
     {
@@ -13416,7 +13010,9 @@
         "x": 310,
         "y": 2560,
         "wires": [
-            []
+            [
+                "b415f6ad.f383c8"
+            ]
         ]
     },
     {
@@ -13589,7 +13185,9 @@
         "x": 310,
         "y": 2680,
         "wires": [
-            []
+            [
+                "4b06dd42.f51734"
+            ]
         ]
     },
     {
@@ -13749,23 +13347,6 @@
         ]
     },
     {
-        "id": "8c20a4b8.226fa8",
-        "type": "debug",
-        "z": "e83b2318.6f5c6",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
-        "y": 1020,
-        "wires": []
-    },
-    {
         "id": "30825d45.75b282",
         "type": "debug",
         "z": "f7442446.0c97f8",
@@ -13803,8 +13384,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 940,
-        "y": 960,
+        "x": 1320,
+        "y": 860,
         "wires": [
             [
                 "265f6e52.b3b642"
@@ -13857,8 +13438,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1330,
-        "y": 1080,
+        "x": 1710,
+        "y": 740,
         "wires": []
     },
     {
@@ -14145,7 +13726,7 @@
         "id": "37a2f1db.c0530e",
         "type": "debug",
         "z": "de33bfc8.0ee0f",
-        "name": "clarity-cli check debugger",
+        "name": "fail debug",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -14154,8 +13735,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1070,
-        "y": 860,
+        "x": 960,
+        "y": 300,
         "wires": []
     },
     {
@@ -14212,11 +13793,11 @@
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
-        "x": 760,
-        "y": 360,
+        "x": 920,
+        "y": 140,
         "wires": [
             [
-                "ab7c01a5.083eb"
+                "fa279be1.263c98"
             ]
         ]
     },
@@ -14226,8 +13807,8 @@
         "z": "354f3ac2.1ff636",
         "name": "Relative to Send Fungible Tokens",
         "info": "String in the format `{principaladdress}.{contractName}::{assetName}`",
-        "x": 310,
-        "y": 280,
+        "x": 250,
+        "y": 100,
         "wires": []
     },
     {
@@ -14244,8 +13825,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 810,
-        "y": 400,
+        "x": 870,
+        "y": 180,
         "wires": [
             []
         ]
@@ -14355,13 +13936,13 @@
         "links": [
             "42d2dffd.c86f6"
         ],
-        "x": 105,
-        "y": 400,
+        "x": 135,
+        "y": 180,
         "wires": [
             [
                 "f52099d4.4ac718",
-                "2f3e9dc4.9bbfe2",
-                "c35cef52.20fb7"
+                "c35cef52.20fb7",
+                "4c0e306f.7a523"
             ]
         ]
     },
@@ -14376,8 +13957,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
-        "y": 560,
+        "x": 870,
+        "y": 260,
         "wires": [
             [
                 "3ce0e55.0ba2f1a"
@@ -14395,12 +13976,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 140,
-        "y": 440,
+        "x": 300,
+        "y": 220,
         "wires": [
-            [
-                "2aa51c54.0fba34"
-            ]
+            []
         ]
     },
     {
@@ -14416,8 +13995,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 330,
-        "y": 440,
+        "x": 510,
+        "y": 220,
         "wires": [
             [
                 "f4c95423.f57588"
@@ -14432,8 +14011,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 470,
-        "y": 440,
+        "x": 670,
+        "y": 220,
         "wires": [
             [
                 "54ce071a.5107a8",
@@ -14454,8 +14033,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1570,
-        "y": 360,
+        "x": 1670,
+        "y": 100,
         "wires": []
     },
     {
@@ -14469,35 +14048,12 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 430,
-        "y": 560,
+        "x": 1030,
+        "y": 260,
         "wires": [
             [
                 "69479a11.52ffe4"
             ]
-        ]
-    },
-    {
-        "id": "b75bffa4.2d286",
-        "type": "change",
-        "z": "354f3ac2.1ff636",
-        "name": "delete msg header",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "header",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 490,
-        "y": 640,
-        "wires": [
-            []
         ]
     },
     {
@@ -14508,8 +14064,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 570,
-        "y": 560,
+        "x": 1170,
+        "y": 260,
         "wires": [
             [
                 "6e4d847b.3fe2cc"
@@ -14530,8 +14086,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 830,
-        "y": 560,
+        "x": 2250,
+        "y": 260,
         "wires": [
             []
         ]
@@ -15568,7 +15124,7 @@
         "type": "function",
         "z": "354f3ac2.1ff636",
         "name": "call ft-transfer to network (mainnet) (BETA VERSION)",
-        "func": "//reference https://www.npmjs.com/package/@stacks/transactions\n\n//Network\nconst network = new stacksNetwork.StacksMainnet(); // or for testnet, use `StacksTestnet()`\n\n//Contract Asset Info\nconst tempcontractid = global.get('tempcontractid'); //get the temporarily contract id\nconst ftname = tempcontractid.split(\".\")[1]; //remove everything prior and including \".\"\nconst ftaddress = tempcontractid.split(\".\")[0]; //remove everything after and including \".\"\nconst ftinfo = stacksTransactions.createAssetInfo(ftaddress, ftname, ftname); //set AssetInfo for type property\n\n//Sender\nconst senderkey = global.get('stxprivkey'); //get private key\nconst ftsender = global.get('depositaddress'); //or use depositaddress for mainnet\n\n//Amount, Destination, and Memo\nconst ftamount = msg.payload.ftamount; //pass in amount to send\nconst ftdestination = msg.payload.ftdestination; //pass in destination address\nconst ftmemo = msg.payload.ftmemo;//pass in the memo\n\n//Post Conditions for safety\nconst postConditionAddress = ftsender;\nconst postConditionCode = stacksTransactions.FungibleConditionCode.Equal;\nconst postConditionAmount = new BigNum(ftamount); //requires BigNum\nconst postConditionAssetInfo = ftinfo;//Problem like something to do with thi postConditionAssetInfo\n\nconst postConditions = [\n  stacksTransactions.makeStandardFungiblePostCondition(postConditionAddress, postConditionCode, postConditionAmount, postConditionAssetInfo),\n];\n\n//Transaction Options -the memo still needs encoded correctly\nconst txOptions = {\n  contractAddress: ftaddress,\n  contractName: ftname,\n  functionName: 'transfer',\n  functionArgs: [\n      stacksTransactions.uintCV(ftamount),\n      stacksTransactions.standardPrincipalCV(ftsender),\n      stacksTransactions.standardPrincipalCV(ftdestination),\n      stacksTransactions.someCV(bufferCVfromString(ftmemo))\n      ],\n  senderKey: senderkey,\n  validateWithAbi: true,\n  network,\n  postConditions,\n  anchorMode: stacksTransactions.AnchorMode.Any,\n};\n\n//Transaction Broadcast to Network\nconst transaction = await stacksTransactions.makeContractCall(txOptions);\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\n//Passed along Outputs for UI\nmsg.payload = transaction;\nmsg.blockchain = \"0x\" + broadcastTxn;//the transaction id\nmsg.txoptions = txOptions;//the tx options\nmsg.ftcontractid = tempcontractid;//full contract id\nmsg.ftinfo = ftinfo;\nmsg.ftname = ftname;//contract name\nmsg.ftaddress = ftaddress;//contract address\nmsg.ftsender = ftsender; //contract caller\nmsg.ftamount = ftamount; //amount to send\nmsg.ftdestination = ftdestination; //where to send\n\nreturn msg;",
+        "func": "//reference https://www.npmjs.com/package/@stacks/transactions\n\n//Network\nconst network = new stacksNetwork.StacksMainnet(); // or for testnet, use `StacksTestnet()`\n\n//Contract Asset Info\nconst tempcontractid = global.get('tempcontractid'); //get the temporarily contract id\nconst ftname = tempcontractid.split(\".\")[1]; //remove everything prior and including \".\"\nconst ftaddress = tempcontractid.split(\".\")[0]; //remove everything after and including \".\"\nconst ftinfo = stacksTransactions.createAssetInfo(ftaddress, ftname, ftname); //set AssetInfo for type property\n\n//Sender\nconst senderkey = global.get('stxprivkey'); //get private key\nconst ftsender = global.get('depositaddress'); //or use depositaddress for mainnet\n\n//Amount, Destination, and Memo\nconst ftamount = msg.payload.ftamount; //pass in amount to send\nconst ftdestination = msg.payload.ftdestination; //pass in destination address\nconst ftmemo = msg.payload.ftmemo;//pass in the memo\n\n//Post Conditions for safety\nconst postConditionAddress = ftsender;\nconst postConditionCode = stacksTransactions.FungibleConditionCode.Equal;\nconst postConditionAmount = new BigNum(ftamount); //requires BigNum\nconst postConditionAssetInfo = ftinfo;//Problem like something to do with thi postConditionAssetInfo\n\nconst postConditions = [\n  stacksTransactions.makeStandardFungiblePostCondition(postConditionAddress, postConditionCode, postConditionAmount, postConditionAssetInfo),\n];\n\n//Transaction Options -the memo still needs encoded correctly\nconst txOptions = {\n  contractAddress: ftaddress,\n  contractName: ftname,\n  functionName: 'transfer',\n  functionArgs: [\n      stacksTransactions.uintCV(ftamount),\n      stacksTransactions.standardPrincipalCV(ftsender),\n      stacksTransactions.standardPrincipalCV(ftdestination),\n      stacksTransactions.someCV(stacksTransactions.bufferCVFromString(ftmemo))\n      ],\n  senderKey: senderkey,\n  validateWithAbi: true,\n  network,\n  postConditions,\n  anchorMode: stacksTransactions.AnchorMode.Any,\n};\n\n//Transaction Broadcast to Network\nconst transaction = await stacksTransactions.makeContractCall(txOptions);\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\n//Passed along Outputs for UI\nmsg.payload = transaction;\nmsg.blockchain = \"0x\" + broadcastTxn;//the transaction id\nmsg.txoptions = txOptions;//the tx options\nmsg.ftcontractid = tempcontractid;//full contract id\nmsg.ftinfo = ftinfo;\nmsg.ftname = ftname;//contract name\nmsg.ftaddress = ftaddress;//contract address\nmsg.ftsender = ftsender; //contract caller\nmsg.ftamount = ftamount; //amount to send\nmsg.ftdestination = ftdestination; //where to send\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -15591,14 +15147,10 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 1140,
-        "y": 360,
+        "x": 1320,
+        "y": 140,
         "wires": [
-            [
-                "1a54b8d8.b10777",
-                "aedcd473.b0f298",
-                "52f29bb6.d47464"
-            ]
+            []
         ]
     },
     {
@@ -15609,8 +15161,8 @@
         "links": [
             "b1b2b358.b4efb"
         ],
-        "x": 195,
-        "y": 340,
+        "x": 215,
+        "y": 140,
         "wires": []
     },
     {
@@ -15635,9 +15187,7 @@
         "x": 550,
         "y": 1080,
         "wires": [
-            [
-                "e7faf126.a4c6d"
-            ]
+            []
         ]
     },
     {
@@ -15657,307 +15207,13 @@
         ]
     },
     {
-        "id": "e7faf126.a4c6d",
-        "type": "debug",
-        "z": "e83b2318.6f5c6",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
-        "y": 1080,
-        "wires": []
-    },
-    {
-        "id": "94b2919c.8d227",
-        "type": "comment",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "Three.js example with websockets",
-        "info": "",
-        "x": 300,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "46ec70a1.633d2",
-        "type": "http in",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "",
-        "url": "/xr",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 70,
-        "y": 160,
-        "wires": [
-            [
-                "5271d8e9.058678"
-            ]
-        ]
-    },
-    {
-        "id": "eabf70d7.4e2a6",
-        "type": "http response",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 730,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "10100179.769e2f",
-        "type": "template",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "basic three.js cube with websockets",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<html>\n<head>\n    <title>Dapparatus: XR</title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\">\n\t</script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\">\n\t</script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\">\n\t</script>\n    <style>\n        body{margin: 0;}\n        canvas{width:100%;height:100%;}\n    </style>\n\t<script>\n\t\tvar server = window.location.href.split(\"http://\")[1].split(\"/\")[0]\n\t\tconsole.log(\"Page location is \" + server)\n\n\t\tvar socket1 = new  WebSocket(\"ws://\" + server + \"/ws/receive\");\n\t\tvar socket2 = new  WebSocket(\"ws://\" + server + \"/ws/publish\");\n\t\tvar cubeRotationSpeed = 0.02;\n\t\tlet cubeColor = \"blue\"\n\t\tvar socket1Opened = false\n\n\t\tsocket1.onopen = function() {\n\t\t\tsocket1Opened = true\n\t\t  var message = {\n\t\t\t'payload': 'Client connected'\n\t\t  };\n\t\t  socket1.send(JSON.stringify(message));\n\t\t};\n\n\t\tsocket2.onopen = function() {\n\t\t  var message = {\n\t\t\t'payload': 'Client connected'\n\t\t  };\n\t\t  socket1.send(JSON.stringify(message));\n\t\t};\n\n\t\tsocket2.onclose = function(){\n\t\t  console.log('Connection closed');\n\t\t};\n\n\t\tsocket2.onerror = function(error) {\n\t\t  console.log('Error detected: ' + JSON.stringify(error));\n\t\t};\n\n\t\tsocket2.onmessage = function(e) {\n\t\t  var server_message = e.data;\n\t\t  responseObject = JSON.parse(server_message);\n\n\t\t  //alert(JSON.stringify(responseObject));\n\t\t  //Do the required stuff\n\t\t  console.log(responseObject.payload)\n\t\t  if (responseObject.payload.cubeRotationSpeed){\n\t\t\t  cubeRotationSpeed = responseObject.payload.cubeRotationSpeed\n\t\t  }else if(responseObject.payload.cubeColor){\n\t\t\t  cubeColor = responseObject.payload.cubeColor\n\t\t  }\n\t\t}\n\n\t\tvar scene = new THREE.Scene();\n\n\t\t// Make highly-transparent plane\n\t\tvar fadeMaterial = new THREE.MeshBasicMaterial({\n\t\t\tcolor: 0x000000,\n\t\t\ttransparent: true,\n\t\t\topacity: 0.45\n\t\t});\n\t\tvar fadePlane = new THREE.PlaneBufferGeometry(1, 1);\n\t\tvar fadeMesh = new THREE.Mesh(fadePlane, fadeMaterial);\n\n\t\t// Create Object3D to hold camera and transparent plane\n\t\tvar camGroup = new THREE.Object3D();\n\t\tvar camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);\n\t\tcamGroup.add(camera);\n\t\tcamGroup.add(fadeMesh);\n\n\t\t// Put plane in front of camera\n\t\tfadeMesh.position.z = -0.1;\n\n\t\t// Make plane render before particles\n\t\tfadeMesh.renderOrder = -1;\n\n\t\t// Add camGroup to scene\n\t\tscene.add(camGroup);\n\n\n\t\trenderer = new THREE.WebGLRenderer( { preserveDrawingBuffer: true, antialias: true } );\n\t\trenderer.autoClearColor = false;\n\t\trenderer.setSize(window.innerWidth, window.innerHeight);\n\n\t\tdocument.addEventListener('DOMContentLoaded', function () {   \n\t\t\tdocument.body.appendChild(renderer.domElement);\n\t\t});\n\n\t\tvar geometry = new THREE.BoxGeometry(1,1,1);\n\t\t//var color = new THREE.Color(0xff0000)\n\t\tvar material = new THREE.MeshNormalMaterial({color: \"blue\"});\n\t\tvar cube = new THREE.Mesh(geometry, material);\n\t\tscene.add(cube);\n\n\t\tcube.position.z = -5;\n\n\t\tvar step = .03;\n\t\tfunction animate(){\n\n\t\tcube.rotation.x += cubeRotationSpeed;\n\t\tcube.rotation.y += 0.02;\n\t\tcube.position.x += step;\n\t\tcube.material.color = new THREE.Color(cubeColor);\n\t\tif(Math.abs(cube.position.x) > 5.0)\n\t\t{\n\t\t\tstep = -step;\n\t\t\tif (socket1Opened){\n\t\t\t\tsocket1.send(\"ping\");\n\t\t\t}\n\t\t}\n\t\trenderer.render(scene, camera);\n\n\t\trequestAnimationFrame(animate);\n\t}\n\n\tanimate();\n\t</script>\n\n\n",
-        "output": "str",
-        "x": 300,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ec30902d.53091",
-        "type": "websocket out",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "",
-        "server": "c6bb1eb5.edd3d",
-        "client": "",
-        "x": 900,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "7f5a6907.75b288",
-        "type": "inject",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "Spin slow",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"cubeRotationSpeed\":0.02}",
-        "payloadType": "json",
-        "x": 425,
-        "y": 380,
-        "wires": [
-            [
-                "ec30902d.53091"
-            ]
-        ]
-    },
-    {
-        "id": "3fa0475a.564f68",
-        "type": "inject",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "Spin fast",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"cubeRotationSpeed\":0.1}",
-        "payloadType": "json",
-        "x": 425,
-        "y": 425,
-        "wires": [
-            [
-                "ec30902d.53091"
-            ]
-        ]
-    },
-    {
-        "id": "422b3c06.603914",
-        "type": "change",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "Set Headers",
-        "rules": [
-            {
-                "t": "set",
-                "p": "headers",
-                "pt": "msg",
-                "to": "{}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "headers.content-type",
-                "pt": "msg",
-                "to": "text/html",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "headers.Access-Control-Allow-Origin",
-                "pt": "msg",
-                "to": "*",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 555,
-        "y": 160,
-        "wires": [
-            [
-                "eabf70d7.4e2a6"
-            ]
-        ]
-    },
-    {
-        "id": "a2d0c5bf.142f98",
-        "type": "change",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "_session",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 615,
-        "y": 320,
-        "wires": [
-            [
-                "ec30902d.53091"
-            ]
-        ]
-    },
-    {
-        "id": "8f54d8df.cf4d88",
-        "type": "websocket in",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "",
-        "server": "a5db9e65.7dd36",
-        "client": "",
-        "x": 100,
-        "y": 320,
-        "wires": [
-            [
-                "e40e2193.3046"
-            ]
-        ]
-    },
-    {
-        "id": "e40e2193.3046",
-        "type": "switch",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "ping",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 265,
-        "y": 320,
-        "wires": [
-            [
-                "8a9545c4.147ce8"
-            ]
-        ]
-    },
-    {
-        "id": "8a9545c4.147ce8",
-        "type": "function",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "change color",
-        "func": "let colors = [\"white\",\"red\",0x00ff00,0x0000ff] //both hex or string are fine\nmsg.payload =  {\"cubeColor\": colors[Math.floor(Math.random()*colors.length)]}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 420,
-        "y": 320,
-        "wires": [
-            [
-                "a2d0c5bf.142f98"
-            ]
-        ]
-    },
-    {
-        "id": "dbe5c2f.795694",
-        "type": "template",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "advanced three.js vr (needs fixed still)",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n    <title>Dapparatus: XR</title>\n    <meta charset=\"utf-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\">\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\">\n\t</script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\">\n\t</script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\">\n\t</script>\n    <style>\n        body{margin: 0;}\n        canvas{width:100%;height:100%;}\n    </style>\n\t<link type=\"text/css\" rel=\"stylesheet\" href=\"main.css\">\n\t</head>\n\t<body>\n\n\t\t<div id=\"info\">\n\t\t\t<a href=\"https://dapparatus.io\" target=\"_blank\" rel=\"noopener\">Dapparatus</a> vr - interactive cubes\n\t\t</div>\n\n\t\t<script type=\"module\">\n\n\t\t\timport * as THREE from '../build/three.module.js';\n\n\t\t\timport { BoxLineGeometry } from './jsm/geometries/BoxLineGeometry.js';\n\t\t\timport { VRButton } from './jsm/webxr/VRButton.js';\n\t\t\timport { XRControllerModelFactory } from './jsm/webxr/XRControllerModelFactory.js';\n\n\t\t\tconst clock = new THREE.Clock();\n\n\t\t\tlet container;\n\t\t\tlet camera, scene, raycaster, renderer;\n\n\t\t\tlet room;\n\n\t\t\tlet controller, controllerGrip;\n\t\t\tlet INTERSECTED;\n\t\t\tconst tempMatrix = new THREE.Matrix4();\n\n\t\t\tinit();\n\t\t\tanimate();\n\n\t\t\tfunction init() {\n\n\t\t\t\tcontainer = document.createElement( 'div' );\n\t\t\t\tdocument.body.appendChild( container );\n\n\t\t\t\tscene = new THREE.Scene();\n\t\t\t\tscene.background = new THREE.Color( 0x505050 );\n\n\t\t\t\tcamera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 10 );\n\t\t\t\tcamera.position.set( 0, 1.6, 3 );\n\t\t\t\tscene.add( camera );\n\n\t\t\t\troom = new THREE.LineSegments(\n\t\t\t\t\tnew BoxLineGeometry( 6, 6, 6, 10, 10, 10 ).translate( 0, 3, 0 ),\n\t\t\t\t\tnew THREE.LineBasicMaterial( { color: 0x808080 } )\n\t\t\t\t);\n\t\t\t\tscene.add( room );\n\n\t\t\t\tscene.add( new THREE.HemisphereLight( 0x606060, 0x404040 ) );\n\n\t\t\t\tconst light = new THREE.DirectionalLight( 0xffffff );\n\t\t\t\tlight.position.set( 1, 1, 1 ).normalize();\n\t\t\t\tscene.add( light );\n\n\t\t\t\tconst geometry = new THREE.BoxGeometry( 0.15, 0.15, 0.15 );\n\n\t\t\t\tfor ( let i = 0; i < 200; i ++ ) {\n\n\t\t\t\t\tconst object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } ) );\n\n\t\t\t\t\tobject.position.x = Math.random() * 4 - 2;\n\t\t\t\t\tobject.position.y = Math.random() * 4;\n\t\t\t\t\tobject.position.z = Math.random() * 4 - 2;\n\n\t\t\t\t\tobject.rotation.x = Math.random() * 2 * Math.PI;\n\t\t\t\t\tobject.rotation.y = Math.random() * 2 * Math.PI;\n\t\t\t\t\tobject.rotation.z = Math.random() * 2 * Math.PI;\n\n\t\t\t\t\tobject.scale.x = Math.random() + 0.5;\n\t\t\t\t\tobject.scale.y = Math.random() + 0.5;\n\t\t\t\t\tobject.scale.z = Math.random() + 0.5;\n\n\t\t\t\t\tobject.userData.velocity = new THREE.Vector3();\n\t\t\t\t\tobject.userData.velocity.x = Math.random() * 0.01 - 0.005;\n\t\t\t\t\tobject.userData.velocity.y = Math.random() * 0.01 - 0.005;\n\t\t\t\t\tobject.userData.velocity.z = Math.random() * 0.01 - 0.005;\n\n\t\t\t\t\troom.add( object );\n\n\t\t\t\t}\n\n\t\t\t\traycaster = new THREE.Raycaster();\n\n\t\t\t\trenderer = new THREE.WebGLRenderer( { antialias: true } );\n\t\t\t\trenderer.setPixelRatio( window.devicePixelRatio );\n\t\t\t\trenderer.setSize( window.innerWidth, window.innerHeight );\n\t\t\t\trenderer.outputEncoding = THREE.sRGBEncoding;\n\t\t\t\trenderer.xr.enabled = true;\n\t\t\t\tcontainer.appendChild( renderer.domElement );\n\n\t\t\t\t//\n\n\t\t\t\tfunction onSelectStart() {\n\n\t\t\t\t\tthis.userData.isSelecting = true;\n\n\t\t\t\t}\n\n\t\t\t\tfunction onSelectEnd() {\n\n\t\t\t\t\tthis.userData.isSelecting = false;\n\n\t\t\t\t}\n\n\t\t\t\tcontroller = renderer.xr.getController( 0 );\n\t\t\t\tcontroller.addEventListener( 'selectstart', onSelectStart );\n\t\t\t\tcontroller.addEventListener( 'selectend', onSelectEnd );\n\t\t\t\tcontroller.addEventListener( 'connected', function ( event ) {\n\n\t\t\t\t\tthis.add( buildController( event.data ) );\n\n\t\t\t\t} );\n\t\t\t\tcontroller.addEventListener( 'disconnected', function () {\n\n\t\t\t\t\tthis.remove( this.children[ 0 ] );\n\n\t\t\t\t} );\n\t\t\t\tscene.add( controller );\n\n\t\t\t\tconst controllerModelFactory = new XRControllerModelFactory();\n\n\t\t\t\tcontrollerGrip = renderer.xr.getControllerGrip( 0 );\n\t\t\t\tcontrollerGrip.add( controllerModelFactory.createControllerModel( controllerGrip ) );\n\t\t\t\tscene.add( controllerGrip );\n\n\t\t\t\twindow.addEventListener( 'resize', onWindowResize );\n\n\t\t\t\t//\n\n\t\t\t\tdocument.body.appendChild( VRButton.createButton( renderer ) );\n\n\t\t\t}\n\n\t\t\tfunction buildController( data ) {\n\n\t\t\t\tlet geometry, material;\n\n\t\t\t\tswitch ( data.targetRayMode ) {\n\n\t\t\t\t\tcase 'tracked-pointer':\n\n\t\t\t\t\t\tgeometry = new THREE.BufferGeometry();\n\t\t\t\t\t\tgeometry.setAttribute( 'position', new THREE.Float32BufferAttribute( [ 0, 0, 0, 0, 0, - 1 ], 3 ) );\n\t\t\t\t\t\tgeometry.setAttribute( 'color', new THREE.Float32BufferAttribute( [ 0.5, 0.5, 0.5, 0, 0, 0 ], 3 ) );\n\n\t\t\t\t\t\tmaterial = new THREE.LineBasicMaterial( { vertexColors: true, blending: THREE.AdditiveBlending } );\n\n\t\t\t\t\t\treturn new THREE.Line( geometry, material );\n\n\t\t\t\t\tcase 'gaze':\n\n\t\t\t\t\t\tgeometry = new THREE.RingGeometry( 0.02, 0.04, 32 ).translate( 0, 0, - 1 );\n\t\t\t\t\t\tmaterial = new THREE.MeshBasicMaterial( { opacity: 0.5, transparent: true } );\n\t\t\t\t\t\treturn new THREE.Mesh( geometry, material );\n\n\t\t\t\t}\n\n\t\t\t}\n\n\t\t\tfunction onWindowResize() {\n\n\t\t\t\tcamera.aspect = window.innerWidth / window.innerHeight;\n\t\t\t\tcamera.updateProjectionMatrix();\n\n\t\t\t\trenderer.setSize( window.innerWidth, window.innerHeight );\n\n\t\t\t}\n\n\t\t\t//\n\n\t\t\tfunction animate() {\n\n\t\t\t\trenderer.setAnimationLoop( render );\n\n\t\t\t}\n\n\t\t\tfunction render() {\n\n\t\t\t\tconst delta = clock.getDelta() * 60;\n\n\t\t\t\tif ( controller.userData.isSelecting === true ) {\n\n\t\t\t\t\tconst cube = room.children[ 0 ];\n\t\t\t\t\troom.remove( cube );\n\n\t\t\t\t\tcube.position.copy( controller.position );\n\t\t\t\t\tcube.userData.velocity.x = ( Math.random() - 0.5 ) * 0.02 * delta;\n\t\t\t\t\tcube.userData.velocity.y = ( Math.random() - 0.5 ) * 0.02 * delta;\n\t\t\t\t\tcube.userData.velocity.z = ( Math.random() * 0.01 - 0.05 ) * delta;\n\t\t\t\t\tcube.userData.velocity.applyQuaternion( controller.quaternion );\n\t\t\t\t\troom.add( cube );\n\n\t\t\t\t}\n\n\t\t\t\t// find intersections\n\n\t\t\t\ttempMatrix.identity().extractRotation( controller.matrixWorld );\n\n\t\t\t\traycaster.ray.origin.setFromMatrixPosition( controller.matrixWorld );\n\t\t\t\traycaster.ray.direction.set( 0, 0, - 1 ).applyMatrix4( tempMatrix );\n\n\t\t\t\tconst intersects = raycaster.intersectObjects( room.children );\n\n\t\t\t\tif ( intersects.length > 0 ) {\n\n\t\t\t\t\tif ( INTERSECTED != intersects[ 0 ].object ) {\n\n\t\t\t\t\t\tif ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );\n\n\t\t\t\t\t\tINTERSECTED = intersects[ 0 ].object;\n\t\t\t\t\t\tINTERSECTED.currentHex = INTERSECTED.material.emissive.getHex();\n\t\t\t\t\t\tINTERSECTED.material.emissive.setHex( 0xff0000 );\n\n\t\t\t\t\t}\n\n\t\t\t\t} else {\n\n\t\t\t\t\tif ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );\n\n\t\t\t\t\tINTERSECTED = undefined;\n\n\t\t\t\t}\n\n\t\t\t\t// Keep cubes inside room\n\n\t\t\t\tfor ( let i = 0; i < room.children.length; i ++ ) {\n\n\t\t\t\t\tconst cube = room.children[ i ];\n\n\t\t\t\t\tcube.userData.velocity.multiplyScalar( 1 - ( 0.001 * delta ) );\n\n\t\t\t\t\tcube.position.add( cube.userData.velocity );\n\n\t\t\t\t\tif ( cube.position.x < - 3 || cube.position.x > 3 ) {\n\n\t\t\t\t\t\tcube.position.x = THREE.MathUtils.clamp( cube.position.x, - 3, 3 );\n\t\t\t\t\t\tcube.userData.velocity.x = - cube.userData.velocity.x;\n\n\t\t\t\t\t}\n\n\t\t\t\t\tif ( cube.position.y < 0 || cube.position.y > 6 ) {\n\n\t\t\t\t\t\tcube.position.y = THREE.MathUtils.clamp( cube.position.y, 0, 6 );\n\t\t\t\t\t\tcube.userData.velocity.y = - cube.userData.velocity.y;\n\n\t\t\t\t\t}\n\n\t\t\t\t\tif ( cube.position.z < - 3 || cube.position.z > 3 ) {\n\n\t\t\t\t\t\tcube.position.z = THREE.MathUtils.clamp( cube.position.z, - 3, 3 );\n\t\t\t\t\t\tcube.userData.velocity.z = - cube.userData.velocity.z;\n\n\t\t\t\t\t}\n\n\t\t\t\t\tcube.rotation.x += cube.userData.velocity.x * 2 * delta;\n\t\t\t\t\tcube.rotation.y += cube.userData.velocity.y * 2 * delta;\n\t\t\t\t\tcube.rotation.z += cube.userData.velocity.z * 2 * delta;\n\n\t\t\t\t}\n\n\t\t\t\trenderer.render( scene, camera );\n\n\t\t\t}\n\n\t\t</script>\n\t</body>\n</html>",
-        "output": "str",
-        "x": 310,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5271d8e9.058678",
-        "type": "template",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "basic three.js cube with text",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<title>Dapparatus: XR</title>\n\t\t<style>\n\t\t\tbody { margin: 0; }\n\t\t\tinfo {\n            \tposition: absolute;\n            \ttop: 10px;\n            \twidth: 100%;\n            \ttext-align: center;\n            \tz-index: 100;\n            \tdisplay:block;\n            }\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\"></script>\n\t\t<script>\n\t\t\tconst scene = new THREE.Scene();\n\t\t\tconst camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );\n\n\t\t\tconst renderer = new THREE.WebGLRenderer();\n\t\t\trenderer.setSize( window.innerWidth, window.innerHeight );\n\t\t\tdocument.body.appendChild( renderer.domElement );\n\n\t\t\tconst geometry = new THREE.BoxGeometry();\n\t\t\tconst material = new THREE.MeshNormalMaterial( { color: 0x00ff00 } );\n\t\t\tconst cube = new THREE.Mesh( geometry, material );\n\t\t\tscene.add( cube );\n\n\t\t\tcamera.position.z = 5;\n\n\t\t\tconst animate = function () {\n\t\t\t\trequestAnimationFrame( animate );\n\n\t\t\t\tcube.rotation.x += 0.01;\n\t\t\t\tcube.rotation.y += 0.01;\n\n\t\t\t\trenderer.render( scene, camera );\n\t\t\t};\n\n\t\t\tanimate();\n\t\t</script>\n\t\t<div class=\"info\">Dapparatus</div>\n\t</body>\n</html>",
-        "output": "str",
-        "x": 280,
-        "y": 160,
-        "wires": [
-            [
-                "422b3c06.603914"
-            ]
-        ]
-    },
-    {
-        "id": "5946ccb9.38e774",
-        "type": "comment",
-        "z": "b6c0f7b2.b0adb8",
-        "name": "Three.js example",
-        "info": "",
-        "x": 240,
-        "y": 120,
-        "wires": []
-    },
-    {
         "id": "8bd31a2c.72f948",
         "type": "comment",
         "z": "354f3ac2.1ff636",
         "name": "Post-Conditions Explained",
         "info": "# Transaction Post-Conditions\nA key use-case of smart contracts is to allow programmatic control over the assets in one or more accounts. However, where there is programmatic control, there are bound to be bugs. \nIn the world of smart contract programming, bugs (intentional or not) can have severe consequences to the user's well-being. In particular, bugs can destroy a user's assets and cause them to lose wealth. \nTransaction post-conditions are a feature meant to limit the damage a bug can do in terms of destroying a user's assets.\n\n**Post-conditions are intended to be used to force a transaction to abort if the transaction would cause a principal to send an asset in a way that is not to the user's liking.** \n### Example A: \nA user may append a post-condition saying that upon successful execution, their account's STX balance should have decreased by no more than 1 STX (excluding the fee). \nIf this is not the case, then the transaction would abort and the account would only pay the transaction fee of processing it. \n### Example B:\nA user purchasing a BNS name may append a post-condition saying that upon successful execution, the seller will have sent the BNS name. \nIf it did not, then the transaction aborts, the account is not billed for the name, and the selling account receives no payment.\n\nEach transaction includes a field that describes zero or more **post-conditions that must _ALL_ be true when the transaction finishes running.** Each post-condition is a quad that encodes the following information:\n\n * The **principal** that sent the asset. It can be a standard or contract address.\n * The **asset name**, i.e., the name of one of the assets in the originating account's asset map.\n * The **comparator**, (described below).\n * The **literal**, an integer or boolean value used to compare instances of the asset against via the condition. The type of literal depends on both the type of asset (fungible or non-fungible) and the comparator.\n\nThe Stacks blockchain supports the following two types of comparators:\n\n**Fungible asset changes** -- that is, a question of how much of a fungible asset was sent by a given account when the transaction ran. \nThe post-condition can assert that the quantity of tokens increased, decreased, or stayed the same.\n\n**Non-fungible asset state** -- that is, a question of whether or not an account sent a non-fungible asset when the transaction ran.\n\nIn addition, the Stacks blockchain supports an \"**allow**\" or \"**deny**\" mode for evaluating post-conditions: \nin \"**allow**\" mode, other asset transfers not covered by the post-conditions are permitted, \nbut in \"**deny**\" mode, no other asset transfers are permitted besides those named in the post-conditions.\n\n**Post-conditions are meant to be added by the user (or by the user's wallet software) at the moment they sign with their origin account. \nBecause the user defines the post-conditions, the user has the power to protect themselves from buggy or malicious smart contracts proactively, so even undiscovered bugs cannot steal or destroy their assets if they are guarded with post-conditions.**\n\nWell-designed wallets would provide an intuitive user interface for encoding post-conditions, as well as provide a set of recommended mitigations based on whether or not the transaction would interact with a known-buggy smart contract.\n\nPost-conditions may be used in conjunction with only contract-calls and smart contract instantiation transaction payloads.\n\n## **Post-Condition Limitations**\nPost-conditions do not consider who _currently_ owns an asset when the transaction finishes, nor do they consider the _sequence_ of owners an asset had during its execution. \nIt only encodes _who sent_ an asset, and _how much_. \n\nThis information is much cheaper to track, and requires no I/O to process (processing time is O(n) in the number of post-conditions). \n\nUsers who want richer post-conditions are encouraged to deploy their own proxy contracts for making such queries.",
-        "x": 730,
-        "y": 280,
+        "x": 990,
+        "y": 80,
         "wires": []
     },
     {
@@ -15971,8 +15227,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1790,
-        "y": 480,
+        "x": 2050,
+        "y": 180,
         "wires": [
             [
                 "49d8750f.46997c"
@@ -15985,8 +15241,8 @@
         "z": "354f3ac2.1ff636",
         "name": "ui change",
         "events": "change",
-        "x": 2080,
-        "y": 480,
+        "x": 2240,
+        "y": 180,
         "wires": [
             []
         ]
@@ -16005,8 +15261,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1620,
-        "y": 420,
+        "x": 1720,
+        "y": 140,
         "wires": [
             []
         ]
@@ -16025,8 +15281,8 @@
         "raw": true,
         "topic": "Pending",
         "name": "",
-        "x": 1590,
-        "y": 480,
+        "x": 1870,
+        "y": 180,
         "wires": [
             [
                 "3020941e.39f2dc"
@@ -16044,8 +15300,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
-        "y": 480,
+        "x": 1690,
+        "y": 180,
         "wires": [
             [
                 "48af1254.6c5ddc"
@@ -16066,8 +15322,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
-        "y": 880,
+        "x": 1290,
+        "y": 780,
         "wires": []
     },
     {
@@ -16385,8 +15641,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1710,
-        "y": 1480,
+        "x": 1790,
+        "y": 1420,
         "wires": []
     },
     {
@@ -16859,8 +16115,8 @@
         "z": "f7442446.0c97f8",
         "name": "",
         "links": [],
-        "x": 795,
-        "y": 980,
+        "x": 1175,
+        "y": 880,
         "wires": [
             [
                 "37de726.b25348e"
@@ -16878,8 +16134,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 940,
-        "y": 1000,
+        "x": 1320,
+        "y": 900,
         "wires": [
             [
                 "7440f9a1.036a58"
@@ -16904,8 +16160,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 330,
-        "y": 880,
+        "x": 910,
+        "y": 320,
         "wires": [
             [
                 "28c6a1bc.a2301e"
@@ -16926,8 +16182,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 560,
-        "y": 880,
+        "x": 1160,
+        "y": 320,
         "wires": [
             [
                 "ad12e4a6.f7f758"
@@ -16959,8 +16215,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 720,
-        "y": 880,
+        "x": 1320,
+        "y": 320,
         "wires": [
             [
                 "87675205.df446"
@@ -16984,8 +16240,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
-        "y": 860,
+        "x": 1610,
+        "y": 300,
         "wires": [
             [
                 "b2373730.d2f1d8"
@@ -17003,8 +16259,8 @@
         "url": "",
         "persist": false,
         "authType": "",
-        "x": 1050,
-        "y": 860,
+        "x": 1610,
+        "y": 340,
         "wires": [
             [
                 "1c427453.07d54c"
@@ -17019,8 +16275,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1230,
-        "y": 860,
+        "x": 1630,
+        "y": 380,
         "wires": [
             [
                 "96269271.10e5c",
@@ -17039,8 +16295,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1380,
-        "y": 860,
+        "x": 1800,
+        "y": 420,
         "wires": [
             [
                 "6e4d847b.3fe2cc"
@@ -17058,8 +16314,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1420,
-        "y": 940,
+        "x": 1780,
+        "y": 480,
         "wires": [
             [
                 "6e4d847b.3fe2cc"
@@ -17072,8 +16328,8 @@
         "z": "354f3ac2.1ff636",
         "name": "Relative to Passing in a Generic Token Image Icon",
         "info": "",
-        "x": 470,
-        "y": 820,
+        "x": 990,
+        "y": 380,
         "wires": []
     },
     {
@@ -17082,8 +16338,8 @@
         "z": "354f3ac2.1ff636",
         "name": "Relative to Passing Token Meta Data",
         "info": "",
-        "x": 340,
-        "y": 520,
+        "x": 940,
+        "y": 220,
         "wires": []
     },
     {
@@ -17751,185 +17007,6 @@
         ]
     },
     {
-        "id": "e641ca20.3bedd8",
-        "type": "debug",
-        "z": "3608a6f2.dddbfa",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 830,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "132316ce.a5c149",
-        "type": "http request",
-        "z": "3608a6f2.dddbfa",
-        "name": "PUT to UE5",
-        "method": "PUT",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 570,
-        "y": 520,
-        "wires": [
-            [
-                "99e899d1.3340c8"
-            ]
-        ]
-    },
-    {
-        "id": "99e899d1.3340c8",
-        "type": "json",
-        "z": "3608a6f2.dddbfa",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 650,
-        "y": 560,
-        "wires": [
-            [
-                "e641ca20.3bedd8"
-            ]
-        ]
-    },
-    {
-        "id": "ad32da1c.261ba8",
-        "type": "function",
-        "z": "3608a6f2.dddbfa",
-        "name": "UE5 Object Function Call - SetRelativeRotation",
-        "func": "msg.payload = {\n    \"objectPath\": \"/Game/ThirdPersonBP/Maps/Island.Island:PersistentLevel.DirectionalLight_1.LightComponent0\",\n    \"functionName\":\"SetRelativeRotation\",\n    \"access\": \"WRITE_ACCESS\",\n    \"parameters\": {\n        \"NewRotation\": {\n            \"Pitch\":90,\n            \"Yaw\":0,\n            \"Roll\":0\n        }\n    },\n    \"generateTransaction\":true\n};\n\nmsg.url = \"http://localhost:30010/remote/object/call\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 220,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9f5f985b.b875e8",
-        "type": "function",
-        "z": "3608a6f2.dddbfa",
-        "name": "UE5 Object Property Read - RelativeLocation",
-        "func": "msg.payload = {\n    \"objectPath\": \"/Game/ThirdPersonBP/Maps/Island.Island:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0\",\n    \"access\": \"READ_ACCESS\",\n    \"propertyName\": \"RelativeLocation\"\n};\n\nmsg.url = \"http://localhost:30010/remote/object/property\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 250,
-        "y": 520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8c294bc7.0fc698",
-        "type": "inject",
-        "z": "3608a6f2.dddbfa",
-        "name": "read",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 130,
-        "y": 460,
-        "wires": [
-            [
-                "5f991a20.1e96f4"
-            ]
-        ]
-    },
-    {
-        "id": "562540d.2666ec",
-        "type": "inject",
-        "z": "3608a6f2.dddbfa",
-        "name": "write",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 130,
-        "y": 660,
-        "wires": [
-            [
-                "ce1f3706.c42378"
-            ]
-        ]
-    },
-    {
-        "id": "7726fae3.50ccf4",
-        "type": "function",
-        "z": "3608a6f2.dddbfa",
-        "d": true,
-        "name": "ws",
-        "func": "msg.payload = {\n    \"MessageName\": \"http\",\n    \"Parameters\": {\n        \"Url\": \"/remote/object/property\",\n        \"Verb\": \"PUT\",\n        \"Body\": {\n            \"ObjectPath\": \"/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.CubeMesh_5.StaticMeshComponent0\",\n            \"propertyName\": \"StreamingDistanceMultiplier\",\n            \"access\": \"READ_ACCESS\"\n        }\n    }\n};\n\nmsg.url = ;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 1,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e85316a.b360ce8",
-        "type": "debug",
-        "z": "3608a6f2.dddbfa",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 510,
-        "y": 200,
-        "wires": []
-    },
-    {
         "id": "bb8e83fc.b8afe",
         "type": "change",
         "z": "32cdfd5f.3ad3a2",
@@ -18013,51 +17090,6 @@
         ]
     },
     {
-        "id": "2939c1ff.ef45fe",
-        "type": "function",
-        "z": "3608a6f2.dddbfa",
-        "name": "SetRelativeRotation of Object (Randomly) [in UE5 Editor]",
-        "func": "const pitch = Math.floor(Math.random() * 366);\nconst yaw = Math.floor(Math.random() * 366);\nconst roll = Math.floor(Math.random() * 366);\n\nmsg.payload = {\n    \"objectPath\": \"/Game/ThirdPersonBP/Maps/Island.Island:PersistentLevel.Cube_BP_C_0.StaticMeshComponent0\",\n    \"functionName\" : \"SetRelativeRotation\",\n    \"access\" : \"WRITE_TRANSACTION_ACCESS\",\n    \"parameters\" : {\n        \"NewRotation\": {\n            \"Pitch\": pitch,\n            \"Yaw\": yaw,\n            \"Roll\": roll\n        },\n        \"bSweep\" : true\n    },\n    \"generateTransaction\" : true\n}\n\nmsg.url = \"http://localhost:30010/remote/object/call\";// in UE5 Editor\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 760,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c17b04c6.24c6a8",
-        "type": "ui_button",
-        "z": "3608a6f2.dddbfa",
-        "name": "",
-        "group": "8720d2fe.9f3dd",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Move Cube",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 150,
-        "y": 820,
-        "wires": [
-            [
-                "2939c1ff.ef45fe",
-                "33a837f0.3e8178"
-            ]
-        ]
-    },
-    {
         "id": "42c48f04.f2198",
         "type": "websocket out",
         "z": "32cdfd5f.3ad3a2",
@@ -18098,282 +17130,6 @@
         "wires": [
             [
                 "cb80b54b.3468c"
-            ]
-        ]
-    },
-    {
-        "id": "7c173815.ebe198",
-        "type": "websocket in",
-        "z": "3608a6f2.dddbfa",
-        "d": true,
-        "name": "Connect to UE5 Websocket",
-        "server": "",
-        "client": "67706d15.b809f4",
-        "x": 210,
-        "y": 200,
-        "wires": [
-            [
-                "e85316a.b360ce8"
-            ]
-        ]
-    },
-    {
-        "id": "ce1f3706.c42378",
-        "type": "function",
-        "z": "3608a6f2.dddbfa",
-        "name": "UE5 Object Function Call - SetRelativeRotation",
-        "func": "msg.payload = {\n    \"objectPath\": \"/Game/ThirdPersonBP/Maps/Island.Island:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0\",\n    \"functionName\":\"SetRelativeRotation\",\n    \"access\": \"WRITE_ACCESS\",\n    \"parameters\": {\n        \"NewRotation\": {\n            \"Pitch\":13,\n            \"Yaw\":13,\n            \"Roll\":13\n        }\n    },\n    \"generateTransaction\":true\n};\n\nmsg.url = \"http://localhost:30010/remote/object/call\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 380,
-        "y": 660,
-        "wires": [
-            [
-                "132316ce.a5c149"
-            ]
-        ]
-    },
-    {
-        "id": "3b449c97.e827b4",
-        "type": "inject",
-        "z": "3608a6f2.dddbfa",
-        "d": true,
-        "name": "every 5s",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 160,
-        "y": 760,
-        "wires": [
-            [
-                "33a837f0.3e8178"
-            ]
-        ]
-    },
-    {
-        "id": "33a837f0.3e8178",
-        "type": "function",
-        "z": "3608a6f2.dddbfa",
-        "name": "SetRelativeRotation of Object (Randomly) [with UE5 Listen Server]",
-        "func": "const pitch = Math.floor(Math.random() * 366);\nconst yaw = Math.floor(Math.random() * 366);\nconst roll = Math.floor(Math.random() * 366);\n\nmsg.payload = {\n    \"objectPath\": \"/Game/ThirdPersonBP/Maps/Island.Island:PersistentLevel.Cube_BP_C_0.StaticMeshComponent0\",\n    \"functionName\" : \"SetRelativeRotation\",\n    \"access\" : \"WRITE_TRANSACTION_ACCESS\",\n    \"parameters\" : {\n        \"NewRotation\": {\n            \"Pitch\": pitch,\n            \"Yaw\": yaw,\n            \"Roll\": roll\n        },\n        \"bSweep\" : true\n    },\n    \"generateTransaction\" : true\n}\n\nmsg.url = \"https://localhost:7777/remote/object/call\";// in UE5 Listen Server\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 520,
-        "y": 820,
-        "wires": [
-            [
-                "132316ce.a5c149"
-            ]
-        ]
-    },
-    {
-        "id": "5f991a20.1e96f4",
-        "type": "function",
-        "z": "3608a6f2.dddbfa",
-        "name": "UE5 Object Property Read - RelativeRotation",
-        "func": "msg.payload = {\n    \"objectPath\": \"/Game/ThirdPersonBP/Maps/Island.Island:PersistentLevel.Cube_BP_C_0.StaticMeshComponent0\",\n    \"access\": \"READ_ACCESS\",\n    \"propertyName\": \"RelativeRotation\"\n};\n\nmsg.url = \"http://localhost:30010/remote/object/property\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 230,
-        "y": 560,
-        "wires": [
-            [
-                "132316ce.a5c149"
-            ]
-        ]
-    },
-    {
-        "id": "81b2d6b8.6d14a8",
-        "type": "http request",
-        "z": "ce9ea52e.624258",
-        "name": "UE4 GET /",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "127.0.0.1:8080/",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 350,
-        "y": 80,
-        "wires": [
-            [
-                "8d4f3727.54bac8"
-            ]
-        ]
-    },
-    {
-        "id": "2d70909d.837c4",
-        "type": "inject",
-        "z": "ce9ea52e.624258",
-        "name": "Get",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 190,
-        "y": 80,
-        "wires": [
-            [
-                "81b2d6b8.6d14a8"
-            ]
-        ]
-    },
-    {
-        "id": "8d4f3727.54bac8",
-        "type": "debug",
-        "z": "ce9ea52e.624258",
-        "name": "UE4 Response Debugger",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "3d34c71d.3ea2d8",
-        "type": "http request",
-        "z": "ce9ea52e.624258",
-        "name": "UE4 POST /post",
-        "method": "POST",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "127.0.0.1:8080/post",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 360,
-        "y": 160,
-        "wires": [
-            [
-                "8d4f3727.54bac8"
-            ]
-        ]
-    },
-    {
-        "id": "e96e1374.4b519",
-        "type": "inject",
-        "z": "ce9ea52e.624258",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Hello",
-        "payloadType": "str",
-        "x": 90,
-        "y": 160,
-        "wires": [
-            [
-                "3d34c71d.3ea2d8"
-            ]
-        ]
-    },
-    {
-        "id": "8ecb2bf6.002958",
-        "type": "ui_button",
-        "z": "ce9ea52e.624258",
-        "name": "",
-        "group": "8dc250c2.cad34",
-        "order": 0,
-        "width": "5",
-        "height": "1",
-        "passthru": false,
-        "label": "Goodbye",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "fa-gamepad",
-        "payload": "Goodbye",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 80,
-        "y": 260,
-        "wires": [
-            [
-                "3d34c71d.3ea2d8"
-            ]
-        ]
-    },
-    {
-        "id": "4fe61129.f0d58",
-        "type": "inject",
-        "z": "ce9ea52e.624258",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Goodbye",
-        "payloadType": "str",
-        "x": 100,
-        "y": 200,
-        "wires": [
-            [
-                "3d34c71d.3ea2d8"
             ]
         ]
     },
@@ -18503,8 +17259,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3050,
-        "y": 240,
+        "x": 2910,
+        "y": 440,
         "wires": [
             [
                 "fd034cb3.87179"
@@ -18521,8 +17277,8 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "ascii",
-        "x": 3380,
-        "y": 240,
+        "x": 3240,
+        "y": 440,
         "wires": [
             [
                 "2dde65db.c0dc6a"
@@ -18544,8 +17300,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 3580,
-        "y": 240,
+        "x": 3440,
+        "y": 440,
         "wires": [
             [
                 "91685e83.d8d6b"
@@ -18562,8 +17318,8 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 3790,
-        "y": 240,
+        "x": 3650,
+        "y": 440,
         "wires": [
             [
                 "ba7b8087.4192e"
@@ -18588,8 +17344,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 4070,
-        "y": 240,
+        "x": 3930,
+        "y": 440,
         "wires": [
             [
                 "e621671b.60f598",
@@ -18614,8 +17370,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 4810,
-        "y": 320,
+        "x": 4670,
+        "y": 520,
         "wires": [
             []
         ]
@@ -18639,8 +17395,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2790,
-        "y": 240,
+        "x": 2650,
+        "y": 440,
         "wires": [
             [
                 "3daa146a.19817c"
@@ -18660,8 +17416,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3420,
-        "y": 740,
+        "x": 3280,
+        "y": 940,
         "wires": []
     },
     {
@@ -18672,8 +17428,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 3730,
-        "y": 700,
+        "x": 3590,
+        "y": 900,
         "wires": [
             [
                 "3936ff8e.ad2a3",
@@ -18703,8 +17459,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 3900,
-        "y": 700,
+        "x": 3760,
+        "y": 900,
         "wires": [
             [
                 "5ae3fc3f.3862f4"
@@ -18740,8 +17496,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4090,
-        "y": 680,
+        "x": 3950,
+        "y": 880,
         "wires": [
             [
                 "ba1b9031.869fd"
@@ -18774,8 +17530,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4090,
-        "y": 720,
+        "x": 3950,
+        "y": 920,
         "wires": [
             [
                 "776d31fd.e7c1f"
@@ -18794,8 +17550,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3910,
-        "y": 660,
+        "x": 3770,
+        "y": 860,
         "wires": []
     },
     {
@@ -18809,8 +17565,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4550,
-        "y": 680,
+        "x": 4410,
+        "y": 880,
         "wires": [
             [
                 "9162ee43.c4fef"
@@ -18828,8 +17584,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4550,
-        "y": 760,
+        "x": 4410,
+        "y": 960,
         "wires": [
             [
                 "33d97294.046d1e"
@@ -18842,8 +17598,8 @@
         "z": "613e85c9.c6210c",
         "name": "",
         "events": "all",
-        "x": 4740,
-        "y": 680,
+        "x": 4600,
+        "y": 880,
         "wires": [
             []
         ]
@@ -18854,8 +17610,8 @@
         "z": "613e85c9.c6210c",
         "name": "",
         "events": "all",
-        "x": 4740,
-        "y": 760,
+        "x": 4600,
+        "y": 960,
         "wires": [
             []
         ]
@@ -18874,8 +17630,8 @@
         "raw": false,
         "topic": "",
         "name": "",
-        "x": 4350,
-        "y": 680,
+        "x": 4210,
+        "y": 880,
         "wires": [
             [
                 "5bee0476.bd3d5c"
@@ -18896,8 +17652,8 @@
         "raw": false,
         "topic": "",
         "name": "",
-        "x": 4350,
-        "y": 760,
+        "x": 4210,
+        "y": 960,
         "wires": [
             [
                 "eb27829b.46cc2"
@@ -18917,8 +17673,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 3430,
-        "y": 700,
+        "x": 3290,
+        "y": 900,
         "wires": [
             [
                 "9a54a59c.eacac8",
@@ -18938,8 +17694,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3610,
-        "y": 660,
+        "x": 3470,
+        "y": 860,
         "wires": []
     },
     {
@@ -18962,8 +17718,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 3600,
-        "y": 760,
+        "x": 3460,
+        "y": 960,
         "wires": [
             [
                 "7c9c8214.551dfc"
@@ -18977,6 +17733,7 @@
         "id": "5cb1010a.23a41",
         "type": "function",
         "z": "f7442446.0c97f8",
+        "d": true,
         "name": "get assets url (mainnet)",
         "func": "const nettype = \"stacks-node-api.mainnet.stacks.co\"; // or use testnet\nconst principal = global.get(\"depositaddress\"); // or use testnetdepositaddress for testnet\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/address/\" + principal + \"/balances\";// prior was /assets\n\nreturn msg;",
         "outputs": 1,
@@ -19006,9 +17763,7 @@
         "x": 320,
         "y": 1640,
         "wires": [
-            [
-                "93bdcff4.29b0c"
-            ]
+            []
         ]
     },
     {
@@ -19025,9 +17780,7 @@
         "x": 320,
         "y": 1760,
         "wires": [
-            [
-                "ceaef61c.5ceab8"
-            ]
+            []
         ]
     },
     {
@@ -19044,9 +17797,7 @@
         "x": 320,
         "y": 1880,
         "wires": [
-            [
-                "1ce38732.df7f69"
-            ]
+            []
         ]
     },
     {
@@ -19063,9 +17814,7 @@
         "x": 320,
         "y": 2000,
         "wires": [
-            [
-                "f1068bdf.868c28"
-            ]
+            []
         ]
     },
     {
@@ -19082,9 +17831,7 @@
         "x": 320,
         "y": 2100,
         "wires": [
-            [
-                "31d44d99.a947d2"
-            ]
+            []
         ]
     },
     {
@@ -19101,9 +17848,7 @@
         "x": 320,
         "y": 2240,
         "wires": [
-            [
-                "493e33b7.e9649c"
-            ]
+            []
         ]
     },
     {
@@ -19120,9 +17865,7 @@
         "x": 320,
         "y": 2360,
         "wires": [
-            [
-                "445c798e.dc2918"
-            ]
+            []
         ]
     },
     {
@@ -19139,9 +17882,7 @@
         "x": 320,
         "y": 2480,
         "wires": [
-            [
-                "b5570a77.3da428"
-            ]
+            []
         ]
     },
     {
@@ -19158,9 +17899,7 @@
         "x": 320,
         "y": 2600,
         "wires": [
-            [
-                "b415f6ad.f383c8"
-            ]
+            []
         ]
     },
     {
@@ -19177,9 +17916,7 @@
         "x": 320,
         "y": 2720,
         "wires": [
-            [
-                "4b06dd42.f51734"
-            ]
+            []
         ]
     },
     {
@@ -19298,105 +18035,14 @@
         ]
     },
     {
-        "id": "ee8427a8.2707e8",
-        "type": "function",
-        "z": "95a1aad9.425808",
-        "name": "create Deruptar string",
-        "func": "var depositaddress = global.get(\"tipjar\"); //for search returns\n\nrawaddy = depositaddress.substring(4); //Trim first 4 digits\n\na1 = rawaddy.substr(0,4); // keep next 4 digits\n\nz1 = rawaddy.substring(rawaddy.length - 4); //keep last 4 digits\n\nmsg.payload = a1+z1; // concat both and pass it along\nmsg.deruptar = a1+z1;\nmsg.depositaddress = depositaddress;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 320,
-        "y": 220,
-        "wires": [
-            [
-                "f2c4095c.d830f8"
-            ]
-        ]
-    },
-    {
-        "id": "f2c4095c.d830f8",
-        "type": "split",
-        "z": "95a1aad9.425808",
-        "name": "",
-        "splt": "1",
-        "spltType": "len",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 510,
-        "y": 220,
-        "wires": [
-            [
-                "b429a751.1ee5c8"
-            ]
-        ]
-    },
-    {
-        "id": "b429a751.1ee5c8",
-        "type": "join",
-        "z": "95a1aad9.425808",
-        "name": "make array",
-        "mode": "custom",
-        "build": "array",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": false,
-        "timeout": "",
-        "count": "8",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 690,
-        "y": 220,
-        "wires": [
-            [
-                "6f6c31b5.bddbc"
-            ]
-        ]
-    },
-    {
-        "id": "ff851172.d1b33",
-        "type": "comment",
-        "z": "95a1aad9.425808",
-        "name": "Relative to Deruptar Avatar String for Searches",
-        "info": "takes in a principal address\ncreates 8 digit Avatar String \nread function comments for more info",
-        "x": 320,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "afe7d4f3.f51128",
-        "type": "link in",
-        "z": "95a1aad9.425808",
-        "name": "to create Deruptar String for Search",
-        "links": [
-            "dd722558.2b5318"
-        ],
-        "x": 155,
-        "y": 220,
-        "wires": [
-            [
-                "ee8427a8.2707e8"
-            ]
-        ]
-    },
-    {
         "id": "dd722558.2b5318",
         "type": "link out",
         "z": "42c07592.8d970c",
         "name": "pass to Global (tipjar)",
         "links": [
             "2a9327d3.da9838",
-            "afe7d4f3.f51128"
+            "afe7d4f3.f51128",
+            "71db9c.cffe9464"
         ],
         "x": 1255,
         "y": 2120,
@@ -19463,25 +18109,14 @@
         ]
     },
     {
-        "id": "6f6c31b5.bddbc",
-        "type": "link out",
-        "z": "95a1aad9.425808",
-        "name": "pass back to Feed (search found results)",
-        "links": [
-            "8ec535fa.ab1a58"
-        ],
-        "x": 815,
-        "y": 220,
-        "wires": []
-    },
-    {
         "id": "8ec535fa.ab1a58",
         "type": "link in",
         "z": "42c07592.8d970c",
         "d": true,
         "name": "bind Feed (search found results avatar)",
         "links": [
-            "6f6c31b5.bddbc"
+            "6f6c31b5.bddbc",
+            "923b4f39.9ff18"
         ],
         "x": 1475,
         "y": 2120,
@@ -19667,8 +18302,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2790,
-        "y": 500,
+        "x": 2650,
+        "y": 700,
         "wires": [
             [
                 "f819d63c.3ced18"
@@ -19696,8 +18331,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 4360,
-        "y": 640,
+        "x": 4220,
+        "y": 840,
         "wires": [
             [
                 "5bee0476.bd3d5c"
@@ -20149,6 +18784,7 @@
         "id": "455626dc.ed14f8",
         "type": "ui_form",
         "z": "42c07592.8d970c",
+        "d": true,
         "name": "Chime Form",
         "label": "",
         "group": "51640c7f.5ee354",
@@ -20249,8 +18885,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1550,
-        "y": 540,
+        "x": 1390,
+        "y": 500,
         "wires": []
     },
     {
@@ -20283,7 +18919,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 1800,
+        "x": 1640,
         "y": 460,
         "wires": [
             [
@@ -20313,8 +18949,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
-        "y": 540,
+        "x": 1610,
+        "y": 520,
         "wires": []
     },
     {
@@ -20330,8 +18966,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2040,
-        "y": 640,
+        "x": 1900,
+        "y": 520,
         "wires": []
     },
     {
@@ -20347,8 +18983,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2040,
-        "y": 600,
+        "x": 1900,
+        "y": 480,
         "wires": []
     },
     {
@@ -20364,8 +19000,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2040,
-        "y": 560,
+        "x": 1900,
+        "y": 440,
         "wires": []
     },
     {
@@ -20381,8 +19017,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2040,
-        "y": 680,
+        "x": 1900,
+        "y": 560,
         "wires": []
     },
     {
@@ -20396,8 +19032,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2140,
-        "y": 460,
+        "x": 1660,
+        "y": 380,
         "wires": [
             [
                 "2c98823d.b1860e"
@@ -20410,8 +19046,8 @@
         "z": "f7442446.0c97f8",
         "name": "ui change",
         "events": "change",
-        "x": 2360,
-        "y": 400,
+        "x": 1880,
+        "y": 380,
         "wires": [
             []
         ]
@@ -20478,7 +19114,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
+        "x": 680,
         "y": 160,
         "wires": [
             [
@@ -20501,7 +19137,7 @@
         "raw": false,
         "topic": "",
         "name": "Transaction ID Popup",
-        "x": 940,
+        "x": 960,
         "y": 160,
         "wires": [
             [
@@ -20520,7 +19156,7 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "Show In History",
+                "v": "Show In Feed",
                 "vt": "str"
             },
             {
@@ -20552,8 +19188,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1240,
-        "y": 220,
+        "x": 1380,
+        "y": 80,
         "wires": []
     },
     {
@@ -20633,8 +19269,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 220,
+        "x": 960,
+        "y": 120,
         "wires": []
     },
     {
@@ -20650,8 +19286,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 220,
+        "x": 700,
+        "y": 120,
         "wires": []
     },
     {
@@ -20754,7 +19390,7 @@
         "name": "Feed of Chimes",
         "order": 1,
         "width": 13,
-        "height": "13",
+        "height": "12",
         "format": "<!DOCTYPE html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<style>\nbody {\n  font-family: 'Asap', sans-serif;\n  font-family: 'Roboto', sans-serif;\n\n}\na {\n  color: #0040FF;\n}\n\na:hover {\n  color: Red;\n}\n\n\nimg {\n  max-width:100%;\n}\n.avator {\n  border-radius:100px;\n  width:64px;\n  margin-right: 5px;\n  padding-top: 5px;\n}\n\n\n.chime-wrap {\n  width: 85%;    \n  max-width:100%;\n  color: White;\n  margin: 0 auto;\n  margin-top: 8px;\n  padding: 10px;\n  border-bottom: 1px solid #0040FF;\n}\n\n.chime-header {\n  display: flex;\n  align-items:flex-start;\n  font-size:14px;\n}\n.chime-header-info {\n  font-weight:bold;\n}\n.chime-header-info span {\n  font-weight:normal;\n  margin-left: 5px;\n}\n.chime-header-info p {\n  font-weight:normal;\n  margin-top: 5px;\n  \n}\n.chime-img-wrap {\n  padding-left: 10px;\n}\n\n.chime-info-counts {\n  display: flex;\n  margin-left: 125px;\n  margin-top: 10px;\n}\n.chime-info-counts div {\n  display: flex;\n  margin-right: 20px;\n}\n.chime-info-counts div svg {\n  margin-right: 10px;\n}\n@media screen and (max-width:100%){\n  body {\n    padding-left: 2px;\n    padding-right: 2px;\n  }\n  .chime-header {\n    flex-direction:column;\n  }\n  .chime-header img {\n    margin-bottom: 10px;\n  }\n  .chime-header-info p {\n    color:Black;\n    margin-bottom: 10px;\n  }\n  .chime-img-wrap {\n    padding-left: 0;\n  }\n  .chime-info-counts {\n  display: flex;\n  margin-left: 0;\n}\n.chime-info-counts div {\n  margin-right: 10px;\n}\n}\n</style>\n</head>\n\n<body>\n<link href=\"https://fonts.googleapis.com/css?family=Asap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n\n\n\n<div class=\"chime-wrap\" ng-repeat=\"obj in msg.payload\">\n  <div class=\"chime-header\">\n    <div style=\"position: relative; width: 120px; height: 120px;\" class=\"avator\" ng-click=\"send({topic:'lookup', payload:obj.sender})\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/bg/{{obj.bg}}_bg.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/skin/{{obj.skin}}_skin.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/eyes/{{obj.eyes}}_eyes.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/teeth/{{obj.teeth}}_teeth.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/lips/{{obj.lips}}_lips.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hair/{{obj.hair}}_hair.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hat/{{obj.hat}}_hat.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/chest/{{obj.chest}}_chest.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n    </div>\n<!--    <img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/512x512.png\" alt=\"\" class=\"avator\"> -->\n    <div class=\"chime-header-info\">\n      <small>@{{obj.sender}}</small><span></span><span> </span>\n      <span></span>\n      <h2>{{obj.memo}}</h2>\n    </div>\n  </div>\n<!--  <div class=\"chime-img-wrap\">\n    <img src=\"https://pbs.twimg.com/media/Dgti2h0WkAEUPmT.png\" alt=\"\" class=\"chime-img\">\n  </div>-->\n  <div class=\"chime-info-counts\">\n    <div class=\"comments\">\n      <a href=\"\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i></a>\n      <div class=\"comment-count\">0</div>\n    </div>\n    \n    <div class=\"retweets\">\n      <a href=\"\"><i class=\"fa fa-retweet\" aria-hidden=\"true\"></i></a>\n      <div class=\"rechime-count\">0</div>\n    </div>\n    \n    <div class=\"likes\">\n<!--      <svg class=\"feather feather-heart sc-dnqmqq jxshSx\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"></path></svg> -->\n      <a href=\"\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\n      <div class=\"likes-count\">0</div>\n    </div>\n    \n    <div class=\"link\">\n        <a href=\"{{obj.link}}\" target=\"_blank\" title=\"Open External Link\"><i class=\"fa fa-link\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n    <div class=\"time\">\n        <small><small><small>{{obj.time}}</small></small></small>\n    </div>\n    \n    <div class=\"tx\">\n        <a href=\"https://explorer.stacks.co/txid/{{obj.txid}}?chain=mainnet\" target=\"_blank\" title=\"View Chime In Explorer\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n  </div>\n</div>\n</body>\n</html>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -21072,8 +19708,8 @@
         "topic": "",
         "payload": "SP1TA84JTP4YRFWBK7PYKBA33H3YB60XP654RAR7M",
         "payloadType": "str",
-        "x": 800,
-        "y": 360,
+        "x": 150,
+        "y": 440,
         "wires": [
             [
                 "1f83c8ac.2cb977"
@@ -21091,8 +19727,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 360,
+        "x": 310,
+        "y": 440,
         "wires": [
             [
                 "1163a55a.023d5b"
@@ -21112,8 +19748,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
-        "y": 360,
+        "x": 510,
+        "y": 440,
         "wires": []
     },
     {
@@ -21526,6 +20162,2129 @@
             [
                 "32ccff.f8ff1302",
                 "4441efbe.eecb4"
+            ]
+        ]
+    },
+    {
+        "id": "9244e8de.18a838",
+        "type": "inject",
+        "z": "de33bfc8.0ee0f",
+        "name": "inject derp-token.clar file name",
+        "props": [
+            {
+                "p": "clarity",
+                "v": "derp-token.clar",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 180,
+        "y": 260,
+        "wires": [
+            [
+                "42dfcd26.ec84c4"
+            ]
+        ]
+    },
+    {
+        "id": "153c9952.0d3f37",
+        "type": "inject",
+        "z": "de33bfc8.0ee0f",
+        "name": "inject hey.clar file name",
+        "props": [
+            {
+                "p": "clarity",
+                "v": "hey.clar",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "42dfcd26.ec84c4"
+            ]
+        ]
+    },
+    {
+        "id": "8c2a5876.dacf18",
+        "type": "debug",
+        "z": "de33bfc8.0ee0f",
+        "name": "pass debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "bd97239e.96878",
+        "type": "json",
+        "z": "de33bfc8.0ee0f",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 690,
+        "y": 200,
+        "wires": [
+            [
+                "2ff8e49a.dda6bc"
+            ]
+        ]
+    },
+    {
+        "id": "56749719.56d248",
+        "type": "debug",
+        "z": "de33bfc8.0ee0f",
+        "name": "other debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "30941a10.d93676",
+        "type": "inject",
+        "z": "de33bfc8.0ee0f",
+        "name": "inject hey-token.clar file name",
+        "props": [
+            {
+                "p": "clarity",
+                "v": "hey-token.clar",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 180,
+        "y": 220,
+        "wires": [
+            [
+                "42dfcd26.ec84c4"
+            ]
+        ]
+    },
+    {
+        "id": "5dae0ad7.5e6124",
+        "type": "inject",
+        "z": "de33bfc8.0ee0f",
+        "name": "inject luv-token.clar file name",
+        "props": [
+            {
+                "p": "clarity",
+                "v": "luv-token.clar",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 180,
+        "y": 40,
+        "wires": [
+            [
+                "42dfcd26.ec84c4"
+            ]
+        ]
+    },
+    {
+        "id": "b3bf5845.039c78",
+        "type": "inject",
+        "z": "de33bfc8.0ee0f",
+        "name": "inject luv.clar file name",
+        "props": [
+            {
+                "p": "clarity",
+                "v": "luv.clar",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "42dfcd26.ec84c4"
+            ]
+        ]
+    },
+    {
+        "id": "9c80a625.8bf248",
+        "type": "debug",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2250,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "fd562137.ae813",
+        "type": "http request",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "PUT to UE5",
+        "method": "PUT",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1990,
+        "y": 480,
+        "wires": [
+            [
+                "2812d094.60bbd"
+            ]
+        ]
+    },
+    {
+        "id": "2812d094.60bbd",
+        "type": "json",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 2070,
+        "y": 520,
+        "wires": [
+            [
+                "9c80a625.8bf248"
+            ]
+        ]
+    },
+    {
+        "id": "aa3cceff.466f1",
+        "type": "function",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "UE5 Object Function Call - SetRelativeRotation",
+        "func": "msg.payload = {\n    \"objectPath\": \"/Game/ThirdPersonBP/Maps/Island.Island:PersistentLevel.DirectionalLight_1.LightComponent0\",\n    \"functionName\":\"SetRelativeRotation\",\n    \"access\": \"WRITE_ACCESS\",\n    \"parameters\": {\n        \"NewRotation\": {\n            \"Pitch\":90,\n            \"Yaw\":0,\n            \"Roll\":0\n        }\n    },\n    \"generateTransaction\":true\n};\n\nmsg.url = \"http://localhost:30010/remote/object/call\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1640,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8d7d201f.19817",
+        "type": "function",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "UE5 Object Property Read - RelativeLocation",
+        "func": "msg.payload = {\n    \"objectPath\": \"/Game/ThirdPersonBP/Maps/Island.Island:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0\",\n    \"access\": \"READ_ACCESS\",\n    \"propertyName\": \"RelativeLocation\"\n};\n\nmsg.url = \"http://localhost:30010/remote/object/property\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b7d7ab21.74d4d8",
+        "type": "inject",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "read",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 1550,
+        "y": 420,
+        "wires": [
+            [
+                "c20c8fb0.967f2"
+            ]
+        ]
+    },
+    {
+        "id": "cbe3dbe2.c6b768",
+        "type": "inject",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "write",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 1550,
+        "y": 620,
+        "wires": [
+            [
+                "4708cdd8.552c54"
+            ]
+        ]
+    },
+    {
+        "id": "282594a8.fb8eec",
+        "type": "function",
+        "z": "32cdfd5f.3ad3a2",
+        "d": true,
+        "name": "ws",
+        "func": "msg.payload = {\n    \"MessageName\": \"http\",\n    \"Parameters\": {\n        \"Url\": \"/remote/object/property\",\n        \"Verb\": \"PUT\",\n        \"Body\": {\n            \"ObjectPath\": \"/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.CubeMesh_5.StaticMeshComponent0\",\n            \"propertyName\": \"StreamingDistanceMultiplier\",\n            \"access\": \"READ_ACCESS\"\n        }\n    }\n};\n\nmsg.url = ;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 1,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f06f33a.02943c",
+        "type": "debug",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1930,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "7f584251.76c44c",
+        "type": "function",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "SetRelativeRotation of Object (Randomly) [in UE5 Editor]",
+        "func": "const pitch = Math.floor(Math.random() * 366);\nconst yaw = Math.floor(Math.random() * 366);\nconst roll = Math.floor(Math.random() * 366);\n\nmsg.payload = {\n    \"objectPath\": \"/Game/ThirdPersonBP/Maps/Island.Island:PersistentLevel.Cube_BP_C_0.StaticMeshComponent0\",\n    \"functionName\" : \"SetRelativeRotation\",\n    \"access\" : \"WRITE_TRANSACTION_ACCESS\",\n    \"parameters\" : {\n        \"NewRotation\": {\n            \"Pitch\": pitch,\n            \"Yaw\": yaw,\n            \"Roll\": roll\n        },\n        \"bSweep\" : true\n    },\n    \"generateTransaction\" : true\n}\n\nmsg.url = \"http://localhost:30010/remote/object/call\";// in UE5 Editor\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c00acb9.603b14",
+        "type": "ui_button",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "group": "8720d2fe.9f3dd",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Move Cube",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1570,
+        "y": 780,
+        "wires": [
+            [
+                "7f584251.76c44c",
+                "45e34cbb.0a2a44"
+            ]
+        ]
+    },
+    {
+        "id": "f0c62da7.4cdfb",
+        "type": "websocket in",
+        "z": "32cdfd5f.3ad3a2",
+        "d": true,
+        "name": "Connect to UE5 Websocket",
+        "server": "",
+        "client": "67706d15.b809f4",
+        "x": 1630,
+        "y": 180,
+        "wires": [
+            [
+                "7f06f33a.02943c"
+            ]
+        ]
+    },
+    {
+        "id": "4708cdd8.552c54",
+        "type": "function",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "UE5 Object Function Call - SetRelativeRotation",
+        "func": "msg.payload = {\n    \"objectPath\": \"/Game/ThirdPersonBP/Maps/Island.Island:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0\",\n    \"functionName\":\"SetRelativeRotation\",\n    \"access\": \"WRITE_ACCESS\",\n    \"parameters\": {\n        \"NewRotation\": {\n            \"Pitch\":13,\n            \"Yaw\":13,\n            \"Roll\":13\n        }\n    },\n    \"generateTransaction\":true\n};\n\nmsg.url = \"http://localhost:30010/remote/object/call\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1800,
+        "y": 620,
+        "wires": [
+            [
+                "fd562137.ae813"
+            ]
+        ]
+    },
+    {
+        "id": "5fc38bd0.ba9d14",
+        "type": "inject",
+        "z": "32cdfd5f.3ad3a2",
+        "d": true,
+        "name": "every 5s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1580,
+        "y": 720,
+        "wires": [
+            [
+                "45e34cbb.0a2a44"
+            ]
+        ]
+    },
+    {
+        "id": "45e34cbb.0a2a44",
+        "type": "function",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "SetRelativeRotation of Object (Randomly) [with UE5 Listen Server]",
+        "func": "const pitch = Math.floor(Math.random() * 366);\nconst yaw = Math.floor(Math.random() * 366);\nconst roll = Math.floor(Math.random() * 366);\n\nmsg.payload = {\n    \"objectPath\": \"/Game/ThirdPersonBP/Maps/Island.Island:PersistentLevel.Cube_BP_C_0.StaticMeshComponent0\",\n    \"functionName\" : \"SetRelativeRotation\",\n    \"access\" : \"WRITE_TRANSACTION_ACCESS\",\n    \"parameters\" : {\n        \"NewRotation\": {\n            \"Pitch\": pitch,\n            \"Yaw\": yaw,\n            \"Roll\": roll\n        },\n        \"bSweep\" : true\n    },\n    \"generateTransaction\" : true\n}\n\nmsg.url = \"https://localhost:7777/remote/object/call\";// in UE5 Listen Server\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1940,
+        "y": 780,
+        "wires": [
+            [
+                "fd562137.ae813"
+            ]
+        ]
+    },
+    {
+        "id": "c20c8fb0.967f2",
+        "type": "function",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "UE5 Object Property Read - RelativeRotation",
+        "func": "msg.payload = {\n    \"objectPath\": \"/Game/ThirdPersonBP/Maps/Island.Island:PersistentLevel.Cube_BP_C_0.StaticMeshComponent0\",\n    \"access\": \"READ_ACCESS\",\n    \"propertyName\": \"RelativeRotation\"\n};\n\nmsg.url = \"http://localhost:30010/remote/object/property\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 520,
+        "wires": [
+            [
+                "fd562137.ae813"
+            ]
+        ]
+    },
+    {
+        "id": "3971e17e.03517e",
+        "type": "comment",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "Three.js example with websockets",
+        "info": "",
+        "x": 1780,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "d1fbd455.3b9278",
+        "type": "http in",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "url": "/xr",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 1550,
+        "y": 1140,
+        "wires": [
+            [
+                "77eb660b.1c3728"
+            ]
+        ]
+    },
+    {
+        "id": "60ea0b11.5faa84",
+        "type": "http response",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 2210,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "fc803e9b.26f25",
+        "type": "template",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "basic three.js cube with websockets",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n<head>\n    <title>Dapparatus: XR</title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\">\n\t</script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\">\n\t</script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\">\n\t</script>\n    <style>\n        body{margin: 0;}\n        canvas{width:100%;height:100%;}\n    </style>\n\t<script>\n\t\tvar server = window.location.href.split(\"http://\")[1].split(\"/\")[0]\n\t\tconsole.log(\"Page location is \" + server)\n\n\t\tvar socket1 = new  WebSocket(\"ws://\" + server + \"/ws/receive\");\n\t\tvar socket2 = new  WebSocket(\"ws://\" + server + \"/ws/publish\");\n\t\tvar cubeRotationSpeed = 0.02;\n\t\tlet cubeColor = \"blue\"\n\t\tvar socket1Opened = false\n\n\t\tsocket1.onopen = function() {\n\t\t\tsocket1Opened = true\n\t\t  var message = {\n\t\t\t'payload': 'Client connected'\n\t\t  };\n\t\t  socket1.send(JSON.stringify(message));\n\t\t};\n\n\t\tsocket2.onopen = function() {\n\t\t  var message = {\n\t\t\t'payload': 'Client connected'\n\t\t  };\n\t\t  socket1.send(JSON.stringify(message));\n\t\t};\n\n\t\tsocket2.onclose = function(){\n\t\t  console.log('Connection closed');\n\t\t};\n\n\t\tsocket2.onerror = function(error) {\n\t\t  console.log('Error detected: ' + JSON.stringify(error));\n\t\t};\n\n\t\tsocket2.onmessage = function(e) {\n\t\t  var server_message = e.data;\n\t\t  responseObject = JSON.parse(server_message);\n\n\t\t  //alert(JSON.stringify(responseObject));\n\t\t  //Do the required stuff\n\t\t  console.log(responseObject.payload)\n\t\t  if (responseObject.payload.cubeRotationSpeed){\n\t\t\t  cubeRotationSpeed = responseObject.payload.cubeRotationSpeed\n\t\t  }else if(responseObject.payload.cubeColor){\n\t\t\t  cubeColor = responseObject.payload.cubeColor\n\t\t  }\n\t\t}\n\n\t\tvar scene = new THREE.Scene();\n\n\t\t// Make highly-transparent plane\n\t\tvar fadeMaterial = new THREE.MeshBasicMaterial({\n\t\t\tcolor: 0x000000,\n\t\t\ttransparent: true,\n\t\t\topacity: 0.45\n\t\t});\n\t\tvar fadePlane = new THREE.PlaneBufferGeometry(1, 1);\n\t\tvar fadeMesh = new THREE.Mesh(fadePlane, fadeMaterial);\n\n\t\t// Create Object3D to hold camera and transparent plane\n\t\tvar camGroup = new THREE.Object3D();\n\t\tvar camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);\n\t\tcamGroup.add(camera);\n\t\tcamGroup.add(fadeMesh);\n\n\t\t// Put plane in front of camera\n\t\tfadeMesh.position.z = -0.1;\n\n\t\t// Make plane render before particles\n\t\tfadeMesh.renderOrder = -1;\n\n\t\t// Add camGroup to scene\n\t\tscene.add(camGroup);\n\n\n\t\trenderer = new THREE.WebGLRenderer( { preserveDrawingBuffer: true, antialias: true } );\n\t\trenderer.autoClearColor = false;\n\t\trenderer.setSize(window.innerWidth, window.innerHeight);\n\n\t\tdocument.addEventListener('DOMContentLoaded', function () {   \n\t\t\tdocument.body.appendChild(renderer.domElement);\n\t\t});\n\n\t\tvar geometry = new THREE.BoxGeometry(1,1,1);\n\t\t//var color = new THREE.Color(0xff0000)\n\t\tvar material = new THREE.MeshNormalMaterial({color: \"blue\"});\n\t\tvar cube = new THREE.Mesh(geometry, material);\n\t\tscene.add(cube);\n\n\t\tcube.position.z = -5;\n\n\t\tvar step = .03;\n\t\tfunction animate(){\n\n\t\tcube.rotation.x += cubeRotationSpeed;\n\t\tcube.rotation.y += 0.02;\n\t\tcube.position.x += step;\n\t\tcube.material.color = new THREE.Color(cubeColor);\n\t\tif(Math.abs(cube.position.x) > 5.0)\n\t\t{\n\t\t\tstep = -step;\n\t\t\tif (socket1Opened){\n\t\t\t\tsocket1.send(\"ping\");\n\t\t\t}\n\t\t}\n\t\trenderer.render(scene, camera);\n\n\t\trequestAnimationFrame(animate);\n\t}\n\n\tanimate();\n\t</script>\n\n\n",
+        "output": "str",
+        "x": 1780,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93e2f2b.9f6b21",
+        "type": "websocket out",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "server": "c6bb1eb5.edd3d",
+        "client": "",
+        "x": 2380,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "ddf01850.bef658",
+        "type": "inject",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "Spin slow",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"cubeRotationSpeed\":0.02}",
+        "payloadType": "json",
+        "x": 1905,
+        "y": 1360,
+        "wires": [
+            [
+                "93e2f2b.9f6b21"
+            ]
+        ]
+    },
+    {
+        "id": "43b2b32f.b6294c",
+        "type": "inject",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "Spin fast",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"cubeRotationSpeed\":0.1}",
+        "payloadType": "json",
+        "x": 1905,
+        "y": 1405,
+        "wires": [
+            [
+                "93e2f2b.9f6b21"
+            ]
+        ]
+    },
+    {
+        "id": "e85fbcec.52518",
+        "type": "change",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/html",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.Access-Control-Allow-Origin",
+                "pt": "msg",
+                "to": "*",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2035,
+        "y": 1140,
+        "wires": [
+            [
+                "60ea0b11.5faa84"
+            ]
+        ]
+    },
+    {
+        "id": "fe8d98aa.c2f7a8",
+        "type": "change",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "_session",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2095,
+        "y": 1300,
+        "wires": [
+            [
+                "93e2f2b.9f6b21"
+            ]
+        ]
+    },
+    {
+        "id": "1e1e0212.7a3bfe",
+        "type": "websocket in",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "server": "a5db9e65.7dd36",
+        "client": "",
+        "x": 1580,
+        "y": 1300,
+        "wires": [
+            [
+                "ccccb858.f1d898"
+            ]
+        ]
+    },
+    {
+        "id": "ccccb858.f1d898",
+        "type": "switch",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ping",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1745,
+        "y": 1300,
+        "wires": [
+            [
+                "674d3f6b.d88bb"
+            ]
+        ]
+    },
+    {
+        "id": "674d3f6b.d88bb",
+        "type": "function",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "change color",
+        "func": "let colors = [\"white\",\"red\",0x00ff00,0x0000ff] //both hex or string are fine\nmsg.payload =  {\"cubeColor\": colors[Math.floor(Math.random()*colors.length)]}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1900,
+        "y": 1300,
+        "wires": [
+            [
+                "fe8d98aa.c2f7a8"
+            ]
+        ]
+    },
+    {
+        "id": "15ec717d.c55aaf",
+        "type": "template",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "advanced three.js vr (needs fixed still)",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n    <title>Dapparatus: XR</title>\n    <meta charset=\"utf-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\">\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\">\n\t</script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\">\n\t</script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\">\n\t</script>\n    <style>\n        body{margin: 0;}\n        canvas{width:100%;height:100%;}\n    </style>\n\t<link type=\"text/css\" rel=\"stylesheet\" href=\"main.css\">\n\t</head>\n\t<body>\n\n\t\t<div id=\"info\">\n\t\t\t<a href=\"https://dapparatus.io\" target=\"_blank\" rel=\"noopener\">Dapparatus</a> vr - interactive cubes\n\t\t</div>\n\n\t\t<script type=\"module\">\n\n\t\t\timport * as THREE from '../build/three.module.js';\n\n\t\t\timport { BoxLineGeometry } from './jsm/geometries/BoxLineGeometry.js';\n\t\t\timport { VRButton } from './jsm/webxr/VRButton.js';\n\t\t\timport { XRControllerModelFactory } from './jsm/webxr/XRControllerModelFactory.js';\n\n\t\t\tconst clock = new THREE.Clock();\n\n\t\t\tlet container;\n\t\t\tlet camera, scene, raycaster, renderer;\n\n\t\t\tlet room;\n\n\t\t\tlet controller, controllerGrip;\n\t\t\tlet INTERSECTED;\n\t\t\tconst tempMatrix = new THREE.Matrix4();\n\n\t\t\tinit();\n\t\t\tanimate();\n\n\t\t\tfunction init() {\n\n\t\t\t\tcontainer = document.createElement( 'div' );\n\t\t\t\tdocument.body.appendChild( container );\n\n\t\t\t\tscene = new THREE.Scene();\n\t\t\t\tscene.background = new THREE.Color( 0x505050 );\n\n\t\t\t\tcamera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 10 );\n\t\t\t\tcamera.position.set( 0, 1.6, 3 );\n\t\t\t\tscene.add( camera );\n\n\t\t\t\troom = new THREE.LineSegments(\n\t\t\t\t\tnew BoxLineGeometry( 6, 6, 6, 10, 10, 10 ).translate( 0, 3, 0 ),\n\t\t\t\t\tnew THREE.LineBasicMaterial( { color: 0x808080 } )\n\t\t\t\t);\n\t\t\t\tscene.add( room );\n\n\t\t\t\tscene.add( new THREE.HemisphereLight( 0x606060, 0x404040 ) );\n\n\t\t\t\tconst light = new THREE.DirectionalLight( 0xffffff );\n\t\t\t\tlight.position.set( 1, 1, 1 ).normalize();\n\t\t\t\tscene.add( light );\n\n\t\t\t\tconst geometry = new THREE.BoxGeometry( 0.15, 0.15, 0.15 );\n\n\t\t\t\tfor ( let i = 0; i < 200; i ++ ) {\n\n\t\t\t\t\tconst object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } ) );\n\n\t\t\t\t\tobject.position.x = Math.random() * 4 - 2;\n\t\t\t\t\tobject.position.y = Math.random() * 4;\n\t\t\t\t\tobject.position.z = Math.random() * 4 - 2;\n\n\t\t\t\t\tobject.rotation.x = Math.random() * 2 * Math.PI;\n\t\t\t\t\tobject.rotation.y = Math.random() * 2 * Math.PI;\n\t\t\t\t\tobject.rotation.z = Math.random() * 2 * Math.PI;\n\n\t\t\t\t\tobject.scale.x = Math.random() + 0.5;\n\t\t\t\t\tobject.scale.y = Math.random() + 0.5;\n\t\t\t\t\tobject.scale.z = Math.random() + 0.5;\n\n\t\t\t\t\tobject.userData.velocity = new THREE.Vector3();\n\t\t\t\t\tobject.userData.velocity.x = Math.random() * 0.01 - 0.005;\n\t\t\t\t\tobject.userData.velocity.y = Math.random() * 0.01 - 0.005;\n\t\t\t\t\tobject.userData.velocity.z = Math.random() * 0.01 - 0.005;\n\n\t\t\t\t\troom.add( object );\n\n\t\t\t\t}\n\n\t\t\t\traycaster = new THREE.Raycaster();\n\n\t\t\t\trenderer = new THREE.WebGLRenderer( { antialias: true } );\n\t\t\t\trenderer.setPixelRatio( window.devicePixelRatio );\n\t\t\t\trenderer.setSize( window.innerWidth, window.innerHeight );\n\t\t\t\trenderer.outputEncoding = THREE.sRGBEncoding;\n\t\t\t\trenderer.xr.enabled = true;\n\t\t\t\tcontainer.appendChild( renderer.domElement );\n\n\t\t\t\t//\n\n\t\t\t\tfunction onSelectStart() {\n\n\t\t\t\t\tthis.userData.isSelecting = true;\n\n\t\t\t\t}\n\n\t\t\t\tfunction onSelectEnd() {\n\n\t\t\t\t\tthis.userData.isSelecting = false;\n\n\t\t\t\t}\n\n\t\t\t\tcontroller = renderer.xr.getController( 0 );\n\t\t\t\tcontroller.addEventListener( 'selectstart', onSelectStart );\n\t\t\t\tcontroller.addEventListener( 'selectend', onSelectEnd );\n\t\t\t\tcontroller.addEventListener( 'connected', function ( event ) {\n\n\t\t\t\t\tthis.add( buildController( event.data ) );\n\n\t\t\t\t} );\n\t\t\t\tcontroller.addEventListener( 'disconnected', function () {\n\n\t\t\t\t\tthis.remove( this.children[ 0 ] );\n\n\t\t\t\t} );\n\t\t\t\tscene.add( controller );\n\n\t\t\t\tconst controllerModelFactory = new XRControllerModelFactory();\n\n\t\t\t\tcontrollerGrip = renderer.xr.getControllerGrip( 0 );\n\t\t\t\tcontrollerGrip.add( controllerModelFactory.createControllerModel( controllerGrip ) );\n\t\t\t\tscene.add( controllerGrip );\n\n\t\t\t\twindow.addEventListener( 'resize', onWindowResize );\n\n\t\t\t\t//\n\n\t\t\t\tdocument.body.appendChild( VRButton.createButton( renderer ) );\n\n\t\t\t}\n\n\t\t\tfunction buildController( data ) {\n\n\t\t\t\tlet geometry, material;\n\n\t\t\t\tswitch ( data.targetRayMode ) {\n\n\t\t\t\t\tcase 'tracked-pointer':\n\n\t\t\t\t\t\tgeometry = new THREE.BufferGeometry();\n\t\t\t\t\t\tgeometry.setAttribute( 'position', new THREE.Float32BufferAttribute( [ 0, 0, 0, 0, 0, - 1 ], 3 ) );\n\t\t\t\t\t\tgeometry.setAttribute( 'color', new THREE.Float32BufferAttribute( [ 0.5, 0.5, 0.5, 0, 0, 0 ], 3 ) );\n\n\t\t\t\t\t\tmaterial = new THREE.LineBasicMaterial( { vertexColors: true, blending: THREE.AdditiveBlending } );\n\n\t\t\t\t\t\treturn new THREE.Line( geometry, material );\n\n\t\t\t\t\tcase 'gaze':\n\n\t\t\t\t\t\tgeometry = new THREE.RingGeometry( 0.02, 0.04, 32 ).translate( 0, 0, - 1 );\n\t\t\t\t\t\tmaterial = new THREE.MeshBasicMaterial( { opacity: 0.5, transparent: true } );\n\t\t\t\t\t\treturn new THREE.Mesh( geometry, material );\n\n\t\t\t\t}\n\n\t\t\t}\n\n\t\t\tfunction onWindowResize() {\n\n\t\t\t\tcamera.aspect = window.innerWidth / window.innerHeight;\n\t\t\t\tcamera.updateProjectionMatrix();\n\n\t\t\t\trenderer.setSize( window.innerWidth, window.innerHeight );\n\n\t\t\t}\n\n\t\t\t//\n\n\t\t\tfunction animate() {\n\n\t\t\t\trenderer.setAnimationLoop( render );\n\n\t\t\t}\n\n\t\t\tfunction render() {\n\n\t\t\t\tconst delta = clock.getDelta() * 60;\n\n\t\t\t\tif ( controller.userData.isSelecting === true ) {\n\n\t\t\t\t\tconst cube = room.children[ 0 ];\n\t\t\t\t\troom.remove( cube );\n\n\t\t\t\t\tcube.position.copy( controller.position );\n\t\t\t\t\tcube.userData.velocity.x = ( Math.random() - 0.5 ) * 0.02 * delta;\n\t\t\t\t\tcube.userData.velocity.y = ( Math.random() - 0.5 ) * 0.02 * delta;\n\t\t\t\t\tcube.userData.velocity.z = ( Math.random() * 0.01 - 0.05 ) * delta;\n\t\t\t\t\tcube.userData.velocity.applyQuaternion( controller.quaternion );\n\t\t\t\t\troom.add( cube );\n\n\t\t\t\t}\n\n\t\t\t\t// find intersections\n\n\t\t\t\ttempMatrix.identity().extractRotation( controller.matrixWorld );\n\n\t\t\t\traycaster.ray.origin.setFromMatrixPosition( controller.matrixWorld );\n\t\t\t\traycaster.ray.direction.set( 0, 0, - 1 ).applyMatrix4( tempMatrix );\n\n\t\t\t\tconst intersects = raycaster.intersectObjects( room.children );\n\n\t\t\t\tif ( intersects.length > 0 ) {\n\n\t\t\t\t\tif ( INTERSECTED != intersects[ 0 ].object ) {\n\n\t\t\t\t\t\tif ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );\n\n\t\t\t\t\t\tINTERSECTED = intersects[ 0 ].object;\n\t\t\t\t\t\tINTERSECTED.currentHex = INTERSECTED.material.emissive.getHex();\n\t\t\t\t\t\tINTERSECTED.material.emissive.setHex( 0xff0000 );\n\n\t\t\t\t\t}\n\n\t\t\t\t} else {\n\n\t\t\t\t\tif ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );\n\n\t\t\t\t\tINTERSECTED = undefined;\n\n\t\t\t\t}\n\n\t\t\t\t// Keep cubes inside room\n\n\t\t\t\tfor ( let i = 0; i < room.children.length; i ++ ) {\n\n\t\t\t\t\tconst cube = room.children[ i ];\n\n\t\t\t\t\tcube.userData.velocity.multiplyScalar( 1 - ( 0.001 * delta ) );\n\n\t\t\t\t\tcube.position.add( cube.userData.velocity );\n\n\t\t\t\t\tif ( cube.position.x < - 3 || cube.position.x > 3 ) {\n\n\t\t\t\t\t\tcube.position.x = THREE.MathUtils.clamp( cube.position.x, - 3, 3 );\n\t\t\t\t\t\tcube.userData.velocity.x = - cube.userData.velocity.x;\n\n\t\t\t\t\t}\n\n\t\t\t\t\tif ( cube.position.y < 0 || cube.position.y > 6 ) {\n\n\t\t\t\t\t\tcube.position.y = THREE.MathUtils.clamp( cube.position.y, 0, 6 );\n\t\t\t\t\t\tcube.userData.velocity.y = - cube.userData.velocity.y;\n\n\t\t\t\t\t}\n\n\t\t\t\t\tif ( cube.position.z < - 3 || cube.position.z > 3 ) {\n\n\t\t\t\t\t\tcube.position.z = THREE.MathUtils.clamp( cube.position.z, - 3, 3 );\n\t\t\t\t\t\tcube.userData.velocity.z = - cube.userData.velocity.z;\n\n\t\t\t\t\t}\n\n\t\t\t\t\tcube.rotation.x += cube.userData.velocity.x * 2 * delta;\n\t\t\t\t\tcube.rotation.y += cube.userData.velocity.y * 2 * delta;\n\t\t\t\t\tcube.rotation.z += cube.userData.velocity.z * 2 * delta;\n\n\t\t\t\t}\n\n\t\t\t\trenderer.render( scene, camera );\n\n\t\t\t}\n\n\t\t</script>\n\t</body>\n</html>",
+        "output": "str",
+        "x": 1790,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "77eb660b.1c3728",
+        "type": "template",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "basic three.js cube with text",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<title>Dapparatus: XR</title>\n\t\t<style>\n\t\t\tbody { margin: 0; }\n\t\t\tinfo {\n            \tposition: absolute;\n            \ttop: 10px;\n            \twidth: 100%;\n            \ttext-align: center;\n            \tz-index: 100;\n            \tdisplay:block;\n            }\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\"></script>\n\t\t<script>\n\t\t\tconst scene = new THREE.Scene();\n\t\t\tconst camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );\n\n\t\t\tconst renderer = new THREE.WebGLRenderer();\n\t\t\trenderer.setSize( window.innerWidth, window.innerHeight );\n\t\t\tdocument.body.appendChild( renderer.domElement );\n\n\t\t\tconst geometry = new THREE.BoxGeometry();\n\t\t\tconst material = new THREE.MeshNormalMaterial( { color: 0x00ff00 } );\n\t\t\tconst cube = new THREE.Mesh( geometry, material );\n\t\t\tscene.add( cube );\n\n\t\t\tcamera.position.z = 5;\n\n\t\t\tconst animate = function () {\n\t\t\t\trequestAnimationFrame( animate );\n\n\t\t\t\tcube.rotation.x += 0.01;\n\t\t\t\tcube.rotation.y += 0.01;\n\n\t\t\t\trenderer.render( scene, camera );\n\t\t\t};\n\n\t\t\tanimate();\n\t\t</script>\n\t\t<div class=\"info\">Dapparatus</div>\n\t</body>\n</html>",
+        "output": "str",
+        "x": 1760,
+        "y": 1140,
+        "wires": [
+            [
+                "e85fbcec.52518"
+            ]
+        ]
+    },
+    {
+        "id": "5d04227e.a903fc",
+        "type": "comment",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "Three.js example",
+        "info": "",
+        "x": 1720,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "a70f851c.1a9888",
+        "type": "function",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "initiate storage and create test2.json",
+        "func": "const tyme = msg.payload;\n\nconst appConfig = new stacksConnect.AppConfig(['store_write', 'publish_data']);\n\nconst userSession = new stacksConnect.UserSession({ appConfig });\n\nconst storage = new stacksStorage.Storage({ userSession });\n\nlet fileName = 'test.json';\n\nlet fileData = {\n  color: 'green',\n  title: 'Hello World',\n  body: 'stuff',\n  date: tyme\n};\n\nconst options = {\n  encrypt: true\n};\n\nlet fileUrl = await storage.putFile(fileName, JSON.stringify(fileData), options).then(() => {\n  // Handle any execution after data has been saved\n});\n\nmsg.payload = fileUrl;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "stacksStorage",
+                "module": "@stacks/storage"
+            },
+            {
+                "var": "stacksConnect",
+                "module": "@stacks/connect"
+            }
+        ],
+        "x": 1850,
+        "y": 1840,
+        "wires": [
+            [
+                "bea2a889.9442d8"
+            ]
+        ]
+    },
+    {
+        "id": "bea2a889.9442d8",
+        "type": "debug",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2180,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "36070860.1e4b58",
+        "type": "inject",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1580,
+        "y": 1840,
+        "wires": [
+            [
+                "a70f851c.1a9888"
+            ]
+        ]
+    },
+    {
+        "id": "9d6e7c2b.f9c2c",
+        "type": "function",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "Stacks Auth",
+        "func": "const appConfig = new stacksConnect.AppConfig(['store_write', 'publish_data']);\n\nconst userSession = new stacksConnect.UserSession({ appConfig });\nfunction authenticate() {\n  stacksConnect.showConnect({\n    appDetails: {\n      name: 'Dapparatus',\n      icon: window.location.origin + '/my-app-logo.svg',\n    },\n    redirectTo: '/',\n    finished: () => {\n      let userData = userSession.loadUserData();\n      // Save or otherwise utilize userData post-authentication\n    },\n    userSession: userSession,\n  });\n}\n\nmsg.payload = appConfig;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "stacksConnect",
+                "module": "@stacks/connect"
+            }
+        ],
+        "x": 1770,
+        "y": 1800,
+        "wires": [
+            [
+                "ca419dcf.1f612"
+            ]
+        ]
+    },
+    {
+        "id": "b05b2636.b3b478",
+        "type": "ui_button",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "group": "ae1844b2.235ae8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Sign In with Stacks",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-sign-in",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1540,
+        "y": 1800,
+        "wires": [
+            [
+                "9d6e7c2b.f9c2c"
+            ]
+        ]
+    },
+    {
+        "id": "ca419dcf.1f612",
+        "type": "debug",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1990,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "74ed521e.7abc5c",
+        "type": "comment",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "DOES NOT WORK YET",
+        "info": "",
+        "x": 1830,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "267197a.94aca68",
+        "type": "comment",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "Storage ToDo",
+        "info": "",
+        "x": 1580,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "45de3734.d32bf8",
+        "type": "comment",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "ThreeJS ToDo",
+        "info": "",
+        "x": 1450,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "ac72dde8.b8991",
+        "type": "comment",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "UE5 WS ToDo",
+        "info": "",
+        "x": 1570,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "d6287cf6.212a2",
+        "type": "http request",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "UE4 GET /",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "127.0.0.1:8080/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 410,
+        "y": 1140,
+        "wires": [
+            [
+                "2eb2ac38.0e3c24"
+            ]
+        ]
+    },
+    {
+        "id": "e304bd03.d03a8",
+        "type": "inject",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "Get",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 1140,
+        "wires": [
+            [
+                "d6287cf6.212a2"
+            ]
+        ]
+    },
+    {
+        "id": "2eb2ac38.0e3c24",
+        "type": "debug",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "UE4 Response Debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "1b0d33ae.5b7b5c",
+        "type": "http request",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "UE4 POST /post",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "127.0.0.1:8080/post",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 420,
+        "y": 1220,
+        "wires": [
+            [
+                "2eb2ac38.0e3c24"
+            ]
+        ]
+    },
+    {
+        "id": "54e140c3.68a9c",
+        "type": "inject",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Goodbye",
+        "payloadType": "str",
+        "x": 240,
+        "y": 1220,
+        "wires": [
+            [
+                "1b0d33ae.5b7b5c"
+            ]
+        ]
+    },
+    {
+        "id": "7ac59e6a.d8d02",
+        "type": "comment",
+        "z": "32cdfd5f.3ad3a2",
+        "name": "HTTP to UE4",
+        "info": "",
+        "x": 290,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "199461f0.9566ee",
+        "type": "comment",
+        "z": "42c07592.8d970c",
+        "name": "Relative to Deruptar Avatar String for Profiles",
+        "info": "takes in the \"depositaddress\" 0 of the wallet\ncreates 8 digit Avatar String \nread function comments for more info",
+        "x": 1950,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "540826a.597d9d8",
+        "type": "split",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "splt": "1",
+        "spltType": "len",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 2150,
+        "y": 1360,
+        "wires": [
+            [
+                "afe53f06.8b39a"
+            ]
+        ]
+    },
+    {
+        "id": "29b8246b.afdadc",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "create Deruptar string",
+        "func": "var depositaddress = global.get(\"depositaddress\"); //for mainnet\n//or get global 'testnetdepositaddress' if on testnet\n\nrawaddy = depositaddress.substring(4); //Trim first 4 digits\n\na1 = rawaddy.substr(0,4); // keep next 4 digits\n\nz1 = rawaddy.substring(rawaddy.length - 4); //keep last 4 digits\n\nmsg.payload = a1+z1; // concat both and pass it along\nmsg.deruptar = a1+z1;\nmsg.depositaddress = depositaddress;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1960,
+        "y": 1360,
+        "wires": [
+            [
+                "540826a.597d9d8"
+            ]
+        ]
+    },
+    {
+        "id": "afe53f06.8b39a",
+        "type": "join",
+        "z": "42c07592.8d970c",
+        "name": "make array",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "8",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 2330,
+        "y": 1360,
+        "wires": [
+            [
+                "841d664b.beb798"
+            ]
+        ]
+    },
+    {
+        "id": "e596310.fa1d8d",
+        "type": "link in",
+        "z": "42c07592.8d970c",
+        "name": "to create Deruptar String for Profile",
+        "links": [
+            "ff4526e0.2d5308"
+        ],
+        "x": 1795,
+        "y": 1360,
+        "wires": [
+            [
+                "29b8246b.afdadc"
+            ]
+        ]
+    },
+    {
+        "id": "841d664b.beb798",
+        "type": "link out",
+        "z": "42c07592.8d970c",
+        "name": "pass back to Feed",
+        "links": [
+            "b20a4bd1.6c0da8"
+        ],
+        "x": 2455,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "33d36b73.fa82e4",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "36 ^ 8",
+        "func": "var sn = 36 * 36 * 36 * 36 * 36 * 36 * 36 * 36;\nmsg.payload = sn;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            }
+        ],
+        "x": 1990,
+        "y": 1560,
+        "wires": [
+            [
+                "6dcced29.ae1b74"
+            ]
+        ]
+    },
+    {
+        "id": "ca920efa.ee1e4",
+        "type": "inject",
+        "z": "42c07592.8d970c",
+        "name": "get",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1840,
+        "y": 1560,
+        "wires": [
+            [
+                "33d36b73.fa82e4"
+            ]
+        ]
+    },
+    {
+        "id": "6dcced29.ae1b74",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "deruptar total count debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2220,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "bad6583b.56fa58",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "create Deruptar string",
+        "func": "var depositaddress = global.get(\"tipjar\"); //for search returns\n\nrawaddy = depositaddress.substring(4); //Trim first 4 digits\n\na1 = rawaddy.substr(0,4); // keep next 4 digits\n\nz1 = rawaddy.substring(rawaddy.length - 4); //keep last 4 digits\n\nmsg.payload = a1+z1; // concat both and pass it along\nmsg.deruptar = a1+z1;\nmsg.depositaddress = depositaddress;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1960,
+        "y": 1500,
+        "wires": [
+            [
+                "14325ad.b2b30a5"
+            ]
+        ]
+    },
+    {
+        "id": "14325ad.b2b30a5",
+        "type": "split",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "splt": "1",
+        "spltType": "len",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 2150,
+        "y": 1500,
+        "wires": [
+            [
+                "c34a00f1.faf75"
+            ]
+        ]
+    },
+    {
+        "id": "c34a00f1.faf75",
+        "type": "join",
+        "z": "42c07592.8d970c",
+        "name": "make array",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "8",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 2330,
+        "y": 1500,
+        "wires": [
+            [
+                "923b4f39.9ff18"
+            ]
+        ]
+    },
+    {
+        "id": "ed3859a.a6b05a8",
+        "type": "comment",
+        "z": "42c07592.8d970c",
+        "name": "Relative to Deruptar Avatar String for Searches",
+        "info": "takes in a principal address\ncreates 8 digit Avatar String \nread function comments for more info",
+        "x": 1960,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "71db9c.cffe9464",
+        "type": "link in",
+        "z": "42c07592.8d970c",
+        "name": "to create Deruptar String for Search",
+        "links": [
+            "dd722558.2b5318"
+        ],
+        "x": 1795,
+        "y": 1500,
+        "wires": [
+            [
+                "bad6583b.56fa58"
+            ]
+        ]
+    },
+    {
+        "id": "923b4f39.9ff18",
+        "type": "link out",
+        "z": "42c07592.8d970c",
+        "name": "pass back to Feed (search found results)",
+        "links": [
+            "8ec535fa.ab1a58"
+        ],
+        "x": 2455,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "a0d072bb.4364f",
+        "type": "function",
+        "z": "552dd682.f93918",
+        "d": true,
+        "name": "deploy luv-token to network (mainnet)",
+        "func": "const ftname = \"luv\";// or \"sip-10-ft-standard\";//gathered from global\n\nconst claritybody = msg.payload; //gathered from the contents of the clarity contract via prior node\n\nconst senderKey = global.get('stxprivkey');\n\n// for testnet, use `StacksTestnet()`\nconst network = new stacksNetwork.StacksMainnet();\n\nconst txOptions = {\n  contractName: ftname,\n  codeBody: claritybody,\n  senderKey,\n  network,\n};\n\n\nconst transaction = await stacksTransactions.makeContractDeploy(txOptions);\n\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\n\nmsg.blockchain = \"0x\" + broadcastTxn; //tx id\nmsg.txoptions = txOptions;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            }
+        ],
+        "x": 690,
+        "y": 340,
+        "wires": [
+            [
+                "3eb8ef94.cfca4"
+            ]
+        ]
+    },
+    {
+        "id": "17bc745.428118c",
+        "type": "inject",
+        "z": "552dd682.f93918",
+        "name": "Deploy Definitions Contract",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 380,
+        "wires": [
+            [
+                "d12cba64.0b1948"
+            ]
+        ]
+    },
+    {
+        "id": "d12cba64.0b1948",
+        "type": "file in",
+        "z": "552dd682.f93918",
+        "name": "Get luv-token.clar",
+        "filename": "luv-token.clar",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 390,
+        "y": 380,
+        "wires": [
+            [
+                "a0d072bb.4364f",
+                "28c6098a.89c5a6"
+            ]
+        ]
+    },
+    {
+        "id": "3eb8ef94.cfca4",
+        "type": "debug",
+        "z": "552dd682.f93918",
+        "name": "Definitions debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "83d54011.8b04f",
+        "type": "function",
+        "z": "552dd682.f93918",
+        "name": "deploy ft-trait to network (testnet)",
+        "func": "const ftname = \"ft-trait\";\n\nconst claritybody = msg.payload; //gathered from the contents of the clarity contract via prior node\n\nconst senderKey = global.get('stxprivkey');\n\n// for testnet, use `StacksTestnet()`\nconst network = new stacksNetwork.StacksTestnet();\n\nconst txOptions = {\n  contractName: ftname,\n  codeBody: claritybody,\n  senderKey,\n  network,\n};\n\n\nconst transaction = await stacksTransactions.makeContractDeploy(txOptions);\n\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\n\nmsg.blockchain = \"0x\" + broadcastTxn;\nmsg.txoptions = txOptions;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            }
+        ],
+        "x": 680,
+        "y": 260,
+        "wires": [
+            [
+                "b7e4748b.a6abe8"
+            ]
+        ]
+    },
+    {
+        "id": "9f79c4ae.16d508",
+        "type": "file in",
+        "z": "552dd682.f93918",
+        "name": "Get ft-trait.clar",
+        "filename": "ft-trait.clar",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "83d54011.8b04f",
+                "4ac15a89.7bcc74"
+            ]
+        ]
+    },
+    {
+        "id": "b7e4748b.a6abe8",
+        "type": "debug",
+        "z": "552dd682.f93918",
+        "name": "Traits debug",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "386f5dad.070862",
+        "type": "inject",
+        "z": "552dd682.f93918",
+        "name": "Deploy Trait Contract",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "9f79c4ae.16d508"
+            ]
+        ]
+    },
+    {
+        "id": "28c6098a.89c5a6",
+        "type": "function",
+        "z": "552dd682.f93918",
+        "name": "deploy luv-token to network (testnet)",
+        "func": "const ftname = \"luv-token\";// or \"sip-10-ft-standard\";//gathered from global\n\nconst claritybody = msg.payload; //gathered from the contents of the clarity contract via prior node\n\nconst senderKey = global.get('stxprivkey');\n\n// for testnet, use `StacksMainnet()`\nconst network = new stacksNetwork.StacksTestnet();\n\nconst txOptions = {\n  contractName: ftname,\n  codeBody: claritybody,\n  senderKey,\n  network,\n};\n\n\nconst transaction = await stacksTransactions.makeContractDeploy(txOptions);\n\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\n\nmsg.blockchain = \"0x\" + broadcastTxn; //tx id\nmsg.txoptions = txOptions;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            }
+        ],
+        "x": 690,
+        "y": 380,
+        "wires": [
+            [
+                "3eb8ef94.cfca4"
+            ]
+        ]
+    },
+    {
+        "id": "f5f84493.fc5c08",
+        "type": "function",
+        "z": "552dd682.f93918",
+        "d": true,
+        "name": "deploy luv to network (mainnet)",
+        "func": "const ftname = \"luv\";// or \"sip-10-ft-standard\";//gathered from global\n\nconst claritybody = msg.payload; //gathered from the contents of the clarity contract via prior node\n\nconst senderKey = global.get('stxprivkey');\n\n// for testnet, use `StacksTestnet()`\nconst network = new stacksNetwork.StacksMainnet();\n\nconst txOptions = {\n  contractName: ftname,\n  codeBody: claritybody,\n  senderKey,\n  network,\n};\n\n\nconst transaction = await stacksTransactions.makeContractDeploy(txOptions);\n\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\n\nmsg.blockchain = \"0x\" + broadcastTxn; //tx id\nmsg.txoptions = txOptions;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            }
+        ],
+        "x": 670,
+        "y": 480,
+        "wires": [
+            [
+                "1b3e3c36.a2bdf4"
+            ]
+        ]
+    },
+    {
+        "id": "68cc538.ba883ac",
+        "type": "inject",
+        "z": "552dd682.f93918",
+        "name": "Deploy luv Contract",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 520,
+        "wires": [
+            [
+                "76c07e9.2a93d8"
+            ]
+        ]
+    },
+    {
+        "id": "76c07e9.2a93d8",
+        "type": "file in",
+        "z": "552dd682.f93918",
+        "name": "Get luv.clar",
+        "filename": "luv.clar",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 370,
+        "y": 520,
+        "wires": [
+            [
+                "f5f84493.fc5c08",
+                "9b1e8f0e.fe576"
+            ]
+        ]
+    },
+    {
+        "id": "1b3e3c36.a2bdf4",
+        "type": "debug",
+        "z": "552dd682.f93918",
+        "name": "Contract debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "9b1e8f0e.fe576",
+        "type": "function",
+        "z": "552dd682.f93918",
+        "name": "deploy luv to network (testnet)",
+        "func": "const ftname = \"luv\";// or \"sip-10-ft-standard\";//gathered from global\n\nconst claritybody = msg.payload; //gathered from the contents of the clarity contract via prior node\n\nconst senderKey = global.get('stxprivkey');\n\n// for testnet, use `StacksMainnet()`\nconst network = new stacksNetwork.StacksTestnet();\n\nconst txOptions = {\n  contractName: ftname,\n  codeBody: claritybody,\n  senderKey,\n  network,\n};\n\n\nconst transaction = await stacksTransactions.makeContractDeploy(txOptions);\n\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\n\nmsg.blockchain = \"0x\" + broadcastTxn; //tx id\nmsg.txoptions = txOptions;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            }
+        ],
+        "x": 670,
+        "y": 540,
+        "wires": [
+            [
+                "1b3e3c36.a2bdf4"
+            ]
+        ]
+    },
+    {
+        "id": "4ac15a89.7bcc74",
+        "type": "function",
+        "z": "552dd682.f93918",
+        "d": true,
+        "name": "deploy ft-trait to network (mainnet)",
+        "func": "const ftname = \"ft-trait\";\n\nconst claritybody = msg.payload; //gathered from the contents of the clarity contract via prior node\n\nconst senderKey = global.get('stxprivkey');\n\n// for testnet, use `StacksTestnet()`\nconst network = new stacksNetwork.StacksMainnet();\n\nconst txOptions = {\n  contractName: ftname,\n  codeBody: claritybody,\n  senderKey,\n  network,\n};\n\n\nconst transaction = await stacksTransactions.makeContractDeploy(txOptions);\n\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\nmsg.payload = transaction;\n\nmsg.blockchain = \"0x\" + broadcastTxn;\nmsg.txoptions = txOptions;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            }
+        ],
+        "x": 680,
+        "y": 220,
+        "wires": [
+            [
+                "b7e4748b.a6abe8"
+            ]
+        ]
+    },
+    {
+        "id": "847c72dd.80eea",
+        "type": "comment",
+        "z": "552dd682.f93918",
+        "name": "Notes About Deployment",
+        "info": "These contracts are relative to\ndeploying Contracts for the Feed\nFeed messages \"Chimes\" aught to cost \"Luv\" tokens.\nFeed likes aught to cost \"Luv\" tokens.",
+        "x": 400,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "a87638be.be91f8",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "Call Send-message Function in On-Chain luv.clar",
+        "func": "//reference https://www.npmjs.com/package/@stacks/transactions\n\n//Network\nconst network = new stacksNetwork.StacksTestnet(); // or for testnet, use `StacksTestnet()`\n\n//Contract Asset Info\nconst tempcontractid = \"ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H.luv\"; //get the temporarily contract id\nconst ftname = tempcontractid.split(\".\")[1]; //remove everything prior and including \".\"\nconst ftaddress = tempcontractid.split(\".\")[0]; //remove everything after and including \".\"\n//const ftinfo = stacksTransactions.createAssetInfo(ftaddress, ftname, ftname); //set AssetInfo for type property\nconst ftamount = 1;\n\n//Sender\nconst senderkey = global.get('stxprivkey'); //get private key\nconst ftsender = global.get('testnetdepositaddress'); //or use depositaddress for mainnet\n\n//Message and Attachment URL\nconst content = msg.payload.ftmessage;//pass in the memo\nconst attachmentUri = msg.payload.fturl;//pass in the attachment url\n\n//Post Conditions for safety\nconst postConditionAddress = ftsender;\nconst postConditionCode = stacksTransactions.FungibleConditionCode.Equal;\nconst postConditionAmount = new BigNum(1); //requires BigNum\n//const postConditionAssetInfo = ftinfo;//Problem like something to do with thi postConditionAssetInfo\nconst postConditionAssetInfo = stacksTransactions.createAssetInfo(ftaddress, \"luv-token\", \"luv-token\");\n\nconst postConditions = [\n  stacksTransactions.makeStandardFungiblePostCondition(postConditionAddress, postConditionCode, postConditionAmount, postConditionAssetInfo),\n];\n\n//Transaction Options\nconst txOptions = {\n  contractAddress: ftaddress,\n  contractName: ftname,\n  functionName: 'send-message',\n  functionArgs: [\n      stacksTransactions.stringUtf8CV(content),\n      stacksTransactions.someCV(stacksTransactions.stringUtf8CV(attachmentUri))\n      ],\n  senderKey: senderkey,\n  validateWithAbi: true,\n  network,\n  postConditions,\n  anchorMode: stacksTransactions.AnchorMode.Any,\n};\n\n//Transaction Broadcast to Network\nconst transaction = await stacksTransactions.makeContractCall(txOptions);\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\n//Passed along Outputs for UI\nmsg.payload = transaction;\nmsg.blockchain = \"0x\" + broadcastTxn;//the transaction id\nmsg.txoptions = txOptions;//the tx options\nmsg.ftcontractid = tempcontractid;//full contract id\n//msg.ftinfo = ftinfo;\nmsg.ftname = ftname;//contract name\nmsg.ftaddress = ftaddress;//contract address\nmsg.ftsender = ftsender; //contract caller\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            },
+            {
+                "var": "BufferCV",
+                "module": "@stacks/transactions"
+            }
+        ],
+        "x": 370,
+        "y": 320,
+        "wires": [
+            [
+                "2628d159.71cede",
+                "abd704a0.d37428"
+            ]
+        ]
+    },
+    {
+        "id": "2628d159.71cede",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "Debug Send-Message 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3f46400d.d6415",
+        "type": "inject",
+        "z": "42c07592.8d970c",
+        "name": "Test",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 300,
+        "wires": [
+            [
+                "a87638be.be91f8"
+            ]
+        ]
+    },
+    {
+        "id": "275b670f.f1f9e8",
+        "type": "ui_form",
+        "z": "42c07592.8d970c",
+        "name": "Chime Form",
+        "label": "",
+        "group": "51640c7f.5ee354",
+        "order": 1,
+        "width": "13",
+        "height": "5",
+        "options": [
+            {
+                "label": "Message",
+                "value": "ftmessage",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Attachment URL",
+                "value": "fturl",
+                "type": "text",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "ftmessage": "",
+            "fturl": ""
+        },
+        "payload": "",
+        "submit": "Post Chime",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "a87638be.be91f8"
+            ]
+        ]
+    },
+    {
+        "id": "abd704a0.d37428",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "txid to payload",
+        "func": "var txid = msg.blockchain;\n\nmsg.payload = txid;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 300,
+        "wires": [
+            [
+                "c2fcaf9d.1f753",
+                "e1bbab79.9ea778"
+            ]
+        ]
+    },
+    {
+        "id": "c2fcaf9d.1f753",
+        "type": "ui_toast",
+        "z": "42c07592.8d970c",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Show In Feed",
+        "cancel": "Send Another Chime",
+        "raw": false,
+        "topic": "",
+        "name": "Transaction ID Popup",
+        "x": 960,
+        "y": 300,
+        "wires": [
+            [
+                "920f6c4.87a2a9"
+            ]
+        ]
+    },
+    {
+        "id": "920f6c4.87a2a9",
+        "type": "switch",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Show In Feed",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1190,
+        "y": 300,
+        "wires": [
+            [
+                "3c329334.f9946c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3c329334.f9946c",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "pass to Feed Tab",
+        "func": "msg.payload = {\"tab\":\"Feed\"};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 260,
+        "wires": [
+            [
+                "a5c63322.02d27"
+            ]
+        ]
+    },
+    {
+        "id": "a5c63322.02d27",
+        "type": "ui_ui_control",
+        "z": "42c07592.8d970c",
+        "name": "ui change",
+        "events": "change",
+        "x": 1560,
+        "y": 260,
+        "wires": [
+            [
+                "f18e74d1.03a1a8"
+            ]
+        ]
+    },
+    {
+        "id": "f18e74d1.03a1a8",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "show Feed Feed (hide misc)",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Feed_Profile\",\n      \"Feed_RegisterName\",\n      \"Feed_NewPost\",\n      \"Feed_byContractName\",\n      \"Feed_byTokenName\",\n      \"Feed_byPrincipleAddress\",\n      \"Feed_byTransactionID\",\n      \"Feed_byName\",\n      \"Feed_byChimeDeruptar\"\n    ],\n    \"show\": [\n      \"Feed_Header\",\n      \"Feed_Feed\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1780,
+        "y": 260,
+        "wires": [
+            [
+                "eff3cd77.874d6"
+            ]
+        ]
+    },
+    {
+        "id": "eff3cd77.874d6",
+        "type": "ui_ui_control",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "events": "all",
+        "x": 2000,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e1bbab79.9ea778",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "Debug Send-Message 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4c0e306f.7a523",
+        "type": "function",
+        "z": "354f3ac2.1ff636",
+        "name": "get contract (testnet)",
+        "func": "const nettype = \"stacks-node-api.testnet.stacks.co\"; // or use mainnet\nconst contract = msg.contractid;//\n\nmsg.url = \"https://\" + nettype + \"/extended/v1/contract/\" + contract;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 260,
+        "wires": [
+            [
+                "2aa51c54.0fba34"
+            ]
+        ]
+    },
+    {
+        "id": "fa279be1.263c98",
+        "type": "function",
+        "z": "354f3ac2.1ff636",
+        "name": "call ft-transfer to network (testnet) (BETA VERSION)",
+        "func": "//reference https://www.npmjs.com/package/@stacks/transactions\n\n//Network\nconst network = new stacksNetwork.StacksTestnet(); // network selection\n\n//Contract Asset Info\nconst tempcontractid = global.get('tempcontractid'); //get the temporarily contract id\nconst ftname = tempcontractid.split(\".\")[1]; //remove everything prior and including \".\"\nconst ftaddress = tempcontractid.split(\".\")[0]; //remove everything after and including \".\"\nconst ftinfo = stacksTransactions.createAssetInfo(ftaddress, ftname, ftname); //set AssetInfo for type property\n\n//Sender\nconst senderkey = global.get('stxprivkey'); //get private key\nconst ftsender = global.get('testnetdepositaddress'); //or use depositaddress for mainnet\n\n//Amount, Destination, and Memo\nconst ftamount = msg.payload.ftamount; //pass in amount to send\nconst ftdestination = msg.payload.ftdestination; //pass in destination address\nconst ftmemo = msg.payload.ftmemo;//pass in the memo\n\n//Post Conditions for safety\nconst postConditionAddress = ftsender;\nconst postConditionCode = stacksTransactions.FungibleConditionCode.Equal;\nconst postConditionAmount = new BigNum(ftamount); //requires BigNum\nconst postConditionAssetInfo = ftinfo;//Problem like something to do with thi postConditionAssetInfo\n\nconst postConditions = [\n  stacksTransactions.makeStandardFungiblePostCondition(postConditionAddress, postConditionCode, postConditionAmount, postConditionAssetInfo),\n];\n\n//Transaction Options -the memo still needs encoded correctly\nconst txOptions = {\n  contractAddress: ftaddress,\n  contractName: ftname,\n  functionName: 'transfer',\n  functionArgs: [\n      stacksTransactions.uintCV(ftamount),\n      stacksTransactions.standardPrincipalCV(ftsender),\n      stacksTransactions.standardPrincipalCV(ftdestination),\n      stacksTransactions.someCV(stacksTransactions.bufferCVFromString(ftmemo))\n      ],\n  senderKey: senderkey,\n  validateWithAbi: true,\n  network,\n  postConditions,\n  anchorMode: stacksTransactions.AnchorMode.Any,\n};\n\n//Transaction Broadcast to Network\nconst transaction = await stacksTransactions.makeContractCall(txOptions);\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\n//Passed along Outputs for UI\nmsg.payload = transaction;\nmsg.blockchain = \"0x\" + broadcastTxn;//the transaction id\nmsg.txoptions = txOptions;//the tx options\nmsg.ftcontractid = tempcontractid;//full contract id\nmsg.ftinfo = ftinfo;\nmsg.ftname = ftname;//contract name\nmsg.ftaddress = ftaddress;//contract address\nmsg.ftsender = ftsender; //contract caller\nmsg.ftamount = ftamount; //amount to send\nmsg.ftdestination = ftdestination; //where to send\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            },
+            {
+                "var": "BufferCV",
+                "module": "@stacks/transactions"
+            }
+        ],
+        "x": 1310,
+        "y": 180,
+        "wires": [
+            [
+                "1a54b8d8.b10777",
+                "aedcd473.b0f298",
+                "52f29bb6.d47464"
             ]
         ]
     }
