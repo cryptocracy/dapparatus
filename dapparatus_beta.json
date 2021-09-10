@@ -2080,7 +2080,7 @@
         "topic": "searchinput",
         "topicType": "str",
         "x": 90,
-        "y": 2220,
+        "y": 2780,
         "wires": [
             [
                 "1ae11b46.bb67d5",
@@ -2107,8 +2107,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 90,
-        "y": 1420,
+        "x": 150,
+        "y": 2180,
         "wires": [
             [
                 "ff4526e0.2d5308",
@@ -2132,7 +2132,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 1670,
-        "y": 2320,
+        "y": 2880,
         "wires": [
             []
         ]
@@ -2156,8 +2156,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 50,
-        "y": 740,
+        "x": 70,
+        "y": 880,
         "wires": [
             [
                 "c9d3b79d.f9a488"
@@ -2176,7 +2176,7 @@
         "finalize": "",
         "libs": [],
         "x": 640,
-        "y": 1940,
+        "y": 2500,
         "wires": [
             [
                 "697b50a.2220ab"
@@ -2194,8 +2194,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
-        "y": 1400,
+        "x": 1010,
+        "y": 2160,
         "wires": [
             [
                 "869168df.0b5888"
@@ -2213,13 +2213,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 190,
-        "y": 740,
+        "x": 210,
+        "y": 880,
         "wires": [
             [
                 "f9dcaec2.8526d",
                 "8e77cb03.8eda78",
-                "d0c4fb2c.082848"
+                "d0c4fb2c.082848",
+                "28edd09c.affd2"
             ]
         ]
     },
@@ -2229,8 +2230,8 @@
         "z": "42c07592.8d970c",
         "name": "",
         "events": "all",
-        "x": 1280,
-        "y": 1400,
+        "x": 1340,
+        "y": 2160,
         "wires": [
             []
         ]
@@ -2280,7 +2281,7 @@
         "topic": "searchtype",
         "topicType": "str",
         "x": 90,
-        "y": 2000,
+        "y": 2560,
         "wires": [
             [
                 "aca7dc96.8b27a",
@@ -2296,7 +2297,7 @@
         "name": "",
         "events": "all",
         "x": 1040,
-        "y": 1980,
+        "y": 2540,
         "wires": [
             []
         ]
@@ -2307,8 +2308,8 @@
         "z": "42c07592.8d970c",
         "name": "",
         "events": "all",
-        "x": 360,
-        "y": 620,
+        "x": 380,
+        "y": 760,
         "wires": [
             []
         ]
@@ -2319,8 +2320,8 @@
         "z": "42c07592.8d970c",
         "name": "Relative to Profiles",
         "info": "",
-        "x": 110,
-        "y": 1380,
+        "x": 170,
+        "y": 2140,
         "wires": []
     },
     {
@@ -2330,7 +2331,7 @@
         "name": "Relative to Searching",
         "info": "",
         "x": 120,
-        "y": 1940,
+        "y": 2500,
         "wires": []
     },
     {
@@ -2339,8 +2340,8 @@
         "z": "42c07592.8d970c",
         "name": "Relative to Feed Home",
         "info": "",
-        "x": 100,
-        "y": 700,
+        "x": 120,
+        "y": 840,
         "wires": []
     },
     {
@@ -3560,7 +3561,7 @@
         "finalize": "",
         "libs": [],
         "x": 610,
-        "y": 2280,
+        "y": 2840,
         "wires": [
             [
                 "f7df69fb.404dc8"
@@ -3581,7 +3582,7 @@
         "proxy": "",
         "authType": "",
         "x": 770,
-        "y": 2280,
+        "y": 2840,
         "wires": [
             [
                 "6340ae52.9e9d7"
@@ -3597,7 +3598,7 @@
         "action": "",
         "pretty": false,
         "x": 910,
-        "y": 2280,
+        "y": 2840,
         "wires": [
             [
                 "adcdd527.9195a8",
@@ -3622,7 +3623,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 1650,
-        "y": 2400,
+        "y": 2960,
         "wires": [
             []
         ]
@@ -3642,7 +3643,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 1650,
-        "y": 2440,
+        "y": 3000,
         "wires": [
             []
         ]
@@ -3662,7 +3663,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 1660,
-        "y": 2480,
+        "y": 3040,
         "wires": [
             []
         ]
@@ -3682,7 +3683,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 1650,
-        "y": 2360,
+        "y": 2920,
         "wires": [
             []
         ]
@@ -3699,7 +3700,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 2020,
+        "y": 2580,
         "wires": [
             [
                 "697b50a.2220ab"
@@ -3718,7 +3719,7 @@
         "finalize": "",
         "libs": [],
         "x": 660,
-        "y": 2060,
+        "y": 2620,
         "wires": [
             [
                 "697b50a.2220ab"
@@ -3737,7 +3738,7 @@
         "finalize": "",
         "libs": [],
         "x": 680,
-        "y": 2100,
+        "y": 2660,
         "wires": [
             [
                 "697b50a.2220ab"
@@ -3756,7 +3757,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 1980,
+        "y": 2540,
         "wires": [
             [
                 "697b50a.2220ab"
@@ -3804,7 +3805,7 @@
         "repair": false,
         "outputs": 6,
         "x": 370,
-        "y": 2000,
+        "y": 2560,
         "wires": [
             [
                 "9cc3c90.0e85138"
@@ -3836,7 +3837,7 @@
         "finalize": "",
         "libs": [],
         "x": 830,
-        "y": 1900,
+        "y": 2460,
         "wires": [
             [
                 "697b50a.2220ab"
@@ -3865,7 +3866,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 610,
-        "y": 1900,
+        "y": 2460,
         "wires": [
             [
                 "e4a65fcb.f9887"
@@ -3886,7 +3887,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1050,
-        "y": 2320,
+        "y": 2880,
         "wires": []
     },
     {
@@ -3910,7 +3911,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 360,
-        "y": 2220,
+        "y": 2780,
         "wires": [
             [
                 "e53e6919.d89028",
@@ -3957,7 +3958,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 590,
-        "y": 2220,
+        "y": 2780,
         "wires": []
     },
     {
@@ -4001,7 +4002,7 @@
         "repair": false,
         "outputs": 6,
         "x": 370,
-        "y": 2340,
+        "y": 2900,
         "wires": [
             [
                 "b174b178.74327"
@@ -4042,7 +4043,7 @@
             "4b97e61.0fbac18"
         ],
         "x": 315,
-        "y": 2100,
+        "y": 2660,
         "wires": []
     },
     {
@@ -4067,7 +4068,7 @@
         "payload": "fqn",
         "payloadType": "str",
         "x": 110,
-        "y": 2100,
+        "y": 2660,
         "wires": [
             [
                 "62a9e217.4a2bcc",
@@ -4088,7 +4089,7 @@
         "finalize": "",
         "libs": [],
         "x": 610,
-        "y": 2320,
+        "y": 2880,
         "wires": [
             [
                 "c8b07fde.de5a8"
@@ -4109,7 +4110,7 @@
         "proxy": "",
         "authType": "",
         "x": 770,
-        "y": 2320,
+        "y": 2880,
         "wires": [
             [
                 "7f1cca7e.aa5474"
@@ -4125,7 +4126,7 @@
         "action": "",
         "pretty": false,
         "x": 910,
-        "y": 2360,
+        "y": 2920,
         "wires": [
             [
                 "9020504f.895bf",
@@ -4147,7 +4148,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1050,
-        "y": 2380,
+        "y": 2940,
         "wires": []
     },
     {
@@ -4184,7 +4185,7 @@
             "f5c69381.17376"
         ],
         "x": 315,
-        "y": 2140,
+        "y": 2700,
         "wires": []
     },
     {
@@ -4335,7 +4336,7 @@
         "finalize": "",
         "libs": [],
         "x": 610,
-        "y": 2440,
+        "y": 3000,
         "wires": [
             [
                 "104e0697.7857a9"
@@ -4356,7 +4357,7 @@
         "proxy": "",
         "authType": "",
         "x": 770,
-        "y": 2440,
+        "y": 3000,
         "wires": [
             [
                 "4c8e8c17.de9954"
@@ -4372,7 +4373,7 @@
         "action": "",
         "pretty": false,
         "x": 910,
-        "y": 2480,
+        "y": 3040,
         "wires": [
             [
                 "298788eb.64d0a8",
@@ -4394,7 +4395,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1050,
-        "y": 2540,
+        "y": 3100,
         "wires": []
     },
     {
@@ -6195,7 +6196,7 @@
         "offcolor": "White",
         "animate": true,
         "x": 2690,
-        "y": 2260,
+        "y": 2820,
         "wires": [
             [
                 "42cb42ff.22756c",
@@ -6225,7 +6226,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 1990,
-        "y": 2240,
+        "y": 2800,
         "wires": [
             [
                 "96347598.2acfc8"
@@ -7912,8 +7913,8 @@
             "27fe2069.03f4c",
             "e596310.fa1d8d"
         ],
-        "x": 255,
-        "y": 1380,
+        "x": 315,
+        "y": 2140,
         "wires": []
     },
     {
@@ -7930,8 +7931,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 480,
-        "y": 1320,
+        "x": 540,
+        "y": 2080,
         "wires": [
             []
         ]
@@ -7945,8 +7946,8 @@
             "8df78899.f720b8",
             "841d664b.beb798"
         ],
-        "x": 335,
-        "y": 1320,
+        "x": 395,
+        "y": 2080,
         "wires": [
             [
                 "47647f72.5b551",
@@ -7973,8 +7974,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 860,
-        "y": 1360,
+        "x": 920,
+        "y": 2120,
         "wires": [
             [
                 "dc2baaf0.8c50f8"
@@ -8024,8 +8025,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 490,
-        "y": 1360,
+        "x": 550,
+        "y": 2120,
         "wires": [
             []
         ]
@@ -8041,8 +8042,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1060,
-        "y": 1360,
+        "x": 1120,
+        "y": 2120,
         "wires": [
             [
                 "869168df.0b5888"
@@ -8067,8 +8068,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 630,
-        "y": 1420,
+        "x": 690,
+        "y": 2180,
         "wires": [
             [
                 "5b9261e5.88906",
@@ -8090,8 +8091,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 350,
-        "y": 1420,
+        "x": 410,
+        "y": 2180,
         "wires": [
             [
                 "cadd7bb2.ba75c8"
@@ -8111,8 +8112,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 1320,
+        "x": 940,
+        "y": 2080,
         "wires": []
     },
     {
@@ -8126,8 +8127,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 1460,
+        "x": 1020,
+        "y": 2220,
         "wires": [
             [
                 "869168df.0b5888"
@@ -14110,7 +14111,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 1670,
-        "y": 2240,
+        "y": 2800,
         "wires": [
             []
         ]
@@ -17935,8 +17936,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 650,
-        "y": 1520,
+        "x": 710,
+        "y": 2280,
         "wires": [
             [
                 "b23ec85d.55d538"
@@ -17954,8 +17955,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 1520,
+        "x": 420,
+        "y": 2280,
         "wires": [
             [
                 "cf9bc937.711158"
@@ -17976,8 +17977,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1020,
-        "y": 1520,
+        "x": 1080,
+        "y": 2280,
         "wires": [
             []
         ]
@@ -17990,8 +17991,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 810,
-        "y": 1520,
+        "x": 870,
+        "y": 2280,
         "wires": [
             [
                 "c5e25f05.bd30e",
@@ -18011,8 +18012,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 990,
-        "y": 1560,
+        "x": 1050,
+        "y": 2320,
         "wires": []
     },
     {
@@ -18030,7 +18031,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 1670,
-        "y": 2280,
+        "y": 2840,
         "wires": [
             [
                 "96347598.2acfc8"
@@ -18048,7 +18049,7 @@
             "71db9c.cffe9464"
         ],
         "x": 1255,
-        "y": 2120,
+        "y": 2680,
         "wires": []
     },
     {
@@ -18063,7 +18064,7 @@
         "finalize": "",
         "libs": [],
         "x": 1100,
-        "y": 2120,
+        "y": 2680,
         "wires": [
             [
                 "dd722558.2b5318"
@@ -18122,7 +18123,7 @@
             "923b4f39.9ff18"
         ],
         "x": 1475,
-        "y": 2120,
+        "y": 2680,
         "wires": [
             []
         ]
@@ -18140,7 +18141,7 @@
         "finalize": "",
         "libs": [],
         "x": 1410,
-        "y": 2040,
+        "y": 2600,
         "wires": [
             []
         ]
@@ -18165,7 +18166,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 1610,
-        "y": 2160,
+        "y": 2720,
         "wires": [
             [
                 "1f44419e.2fde9e"
@@ -18184,7 +18185,7 @@
         "finalize": "",
         "libs": [],
         "x": 1870,
-        "y": 2160,
+        "y": 2720,
         "wires": [
             [
                 "f8e9bb79.24bb58"
@@ -18198,7 +18199,7 @@
         "name": "",
         "events": "all",
         "x": 2060,
-        "y": 2160,
+        "y": 2720,
         "wires": [
             [
                 "dc2144f0.744ed8"
@@ -18217,7 +18218,7 @@
         "finalize": "",
         "libs": [],
         "x": 2240,
-        "y": 2160,
+        "y": 2720,
         "wires": [
             [
                 "67abfefd.4ada9"
@@ -18231,7 +18232,7 @@
         "name": "",
         "events": "all",
         "x": 2420,
-        "y": 2160,
+        "y": 2720,
         "wires": [
             [
                 "c02c8e3.5d9fd7"
@@ -18247,7 +18248,7 @@
             "6977afc.225a05"
         ],
         "x": 2535,
-        "y": 2160,
+        "y": 2720,
         "wires": []
     },
     {
@@ -18411,7 +18412,7 @@
         "overwriteFile": "false",
         "encoding": "none",
         "x": 3860,
-        "y": 2200,
+        "y": 2760,
         "wires": [
             []
         ]
@@ -18428,7 +18429,7 @@
         "finalize": "",
         "libs": [],
         "x": 3330,
-        "y": 2200,
+        "y": 2760,
         "wires": [
             [
                 "23efa4b6.33d88c"
@@ -18448,7 +18449,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2890,
-        "y": 2140,
+        "y": 2700,
         "wires": []
     },
     {
@@ -18470,7 +18471,7 @@
         "repair": false,
         "outputs": 2,
         "x": 2950,
-        "y": 2260,
+        "y": 2820,
         "wires": [
             [
                 "8e52579.d972ca8"
@@ -18495,7 +18496,7 @@
         "sendError": false,
         "encoding": "none",
         "x": 3100,
-        "y": 2200,
+        "y": 2760,
         "wires": [
             [
                 "54209208.f10dac"
@@ -18523,7 +18524,7 @@
         "repair": false,
         "outputs": 2,
         "x": 3580,
-        "y": 2200,
+        "y": 2760,
         "wires": [
             [],
             [
@@ -18547,7 +18548,7 @@
         "sendError": false,
         "encoding": "none",
         "x": 2000,
-        "y": 2280,
+        "y": 2840,
         "wires": [
             [
                 "9f4f6504.995968"
@@ -18566,7 +18567,7 @@
         "finalize": "",
         "libs": [],
         "x": 2180,
-        "y": 2280,
+        "y": 2840,
         "wires": [
             [
                 "4f7a2c8c.b2f6d4"
@@ -18594,7 +18595,7 @@
         "repair": false,
         "outputs": 2,
         "x": 2340,
-        "y": 2280,
+        "y": 2840,
         "wires": [
             [
                 "832de8a6.ae6458"
@@ -18628,7 +18629,7 @@
         "to": "",
         "reg": false,
         "x": 2500,
-        "y": 2260,
+        "y": 2820,
         "wires": [
             [
                 "840717c1.bd7348"
@@ -18655,7 +18656,7 @@
         "to": "",
         "reg": false,
         "x": 2480,
-        "y": 2320,
+        "y": 2880,
         "wires": [
             [
                 "840717c1.bd7348"
@@ -18673,7 +18674,7 @@
         "sendError": false,
         "encoding": "none",
         "x": 3100,
-        "y": 2320,
+        "y": 2880,
         "wires": [
             [
                 "f7cff76a.b664f8",
@@ -18693,7 +18694,7 @@
         "finalize": "",
         "libs": [],
         "x": 3340,
-        "y": 2320,
+        "y": 2880,
         "wires": [
             [
                 "d1dbb3b9.7a7b6"
@@ -18721,7 +18722,7 @@
         "repair": false,
         "outputs": 2,
         "x": 3580,
-        "y": 2320,
+        "y": 2880,
         "wires": [
             [
                 "5d3e5ae8.7040c4",
@@ -18745,7 +18746,7 @@
         "overwriteFile": "true",
         "encoding": "none",
         "x": 3870,
-        "y": 2320,
+        "y": 2880,
         "wires": [
             []
         ]
@@ -18763,7 +18764,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3310,
-        "y": 2260,
+        "y": 2820,
         "wires": []
     },
     {
@@ -18780,7 +18781,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3880,
-        "y": 2260,
+        "y": 2820,
         "wires": []
     },
     {
@@ -19067,8 +19068,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1120,
-        "y": 480,
+        "x": 1920,
+        "y": 460,
         "wires": [
             []
         ]
@@ -19315,11 +19316,12 @@
         "payload": "",
         "payloadType": "date",
         "x": 170,
-        "y": 780,
+        "y": 960,
         "wires": [
             [
                 "8e77cb03.8eda78",
-                "d0c4fb2c.082848"
+                "d0c4fb2c.082848",
+                "28edd09c.affd2"
             ]
         ]
     },
@@ -19335,8 +19337,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 740,
+        "x": 460,
+        "y": 840,
         "wires": [
             [
                 "60bf58cb.035fe8"
@@ -19356,8 +19358,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 530,
-        "y": 700,
+        "x": 690,
+        "y": 840,
         "wires": [
             [
                 "dc1cc465.cc24d8"
@@ -19372,8 +19374,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 530,
-        "y": 660,
+        "x": 810,
+        "y": 840,
         "wires": [
             []
         ]
@@ -19387,13 +19389,13 @@
         "order": 1,
         "width": 13,
         "height": "12",
-        "format": "<!DOCTYPE html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<style>\nbody {\n  font-family: 'Asap', sans-serif;\n  font-family: 'Roboto', sans-serif;\n\n}\na {\n  color: #0040FF;\n}\n\na:hover {\n  color: Red;\n}\n\n\nimg {\n  max-width:100%;\n}\n.avator {\n  border-radius:100px;\n  width:64px;\n  margin-right: 5px;\n  padding-top: 5px;\n}\n\n\n.chime-wrap {\n  width: 85%;    \n  max-width:100%;\n  color: White;\n  margin: 0 auto;\n  margin-top: 8px;\n  padding: 10px;\n  border-bottom: 1px solid #0040FF;\n}\n\n.chime-header {\n  display: flex;\n  align-items:flex-start;\n  font-size:14px;\n}\n.chime-header-info {\n  font-weight:bold;\n}\n.chime-header-info span {\n  font-weight:normal;\n  margin-left: 5px;\n}\n.chime-header-info p {\n  font-weight:normal;\n  margin-top: 5px;\n  \n}\n.chime-img-wrap {\n  padding-left: 30px;\n  width: 50%;\n  max-width: 50%;\n  margin-left: 100px;\n}\n\n.chime-info-counts {\n  display: flex;\n  margin-left: 125px;\n  margin-top: 10px;\n}\n.chime-info-counts div {\n  display: flex;\n  margin-right: 20px;\n}\n.chime-info-counts div svg {\n  margin-right: 10px;\n}\n@media screen and (max-width:100%){\n  body {\n    padding-left: 2px;\n    padding-right: 2px;\n  }\n  .chime-header {\n    flex-direction:column;\n  }\n  .chime-header img {\n    margin-bottom: 10px;\n  }\n  .chime-header-info p {\n    color:Black;\n    margin-bottom: 10px;\n  }\n  .chime-img-wrap {\n    width: 50%;\n    max-width: 50%;\n    margin-left: 100px;\n  }\n  .chime-info-counts {\n  display: flex;\n  margin-left: 0;\n}\n.chime-info-counts div {\n  margin-right: 10px;\n}\n}\n</style>\n</head>\n\n<body>\n<link href=\"https://fonts.googleapis.com/css?family=Asap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n\n\n\n<div class=\"chime-wrap\" ng-repeat=\"obj in msg.payload\">\n  <div class=\"chime-header\">\n    <div style=\"position: relative; width: 120px; height: 120px;\" class=\"avator\" ng-click=\"send({topic:'lookup', payload:obj.sender})\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/bg/{{obj.bg}}_bg.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/skin/{{obj.skin}}_skin.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/eyes/{{obj.eyes}}_eyes.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/teeth/{{obj.teeth}}_teeth.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/lips/{{obj.lips}}_lips.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hair/{{obj.hair}}_hair.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hat/{{obj.hat}}_hat.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/chest/{{obj.chest}}_chest.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n    </div>\n<!--    <img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/512x512.png\" alt=\"\" class=\"avator\"> -->\n    <div class=\"chime-header-info\">\n      <small>@{{obj.sender}}</small><span></span><span> </span>\n      <span></span>\n      <h2>{{obj.memo}}</h2>\n    </div>\n  </div>\n  <div class=\"chime-img-wrap\">\n  <img src=\"{{obj.link}}\" alt=\"\" class=\"chime-img\">\n  </div>\n  <div class=\"chime-info-counts\">\n    <div class=\"comments\">\n      <a href=\"\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i></a>\n      <div class=\"comment-count\">0</div>\n    </div>\n    \n    <div class=\"retweets\">\n      <a href=\"\"><i class=\"fa fa-retweet\" aria-hidden=\"true\"></i></a>\n      <div class=\"rechime-count\">0</div>\n    </div>\n    \n    <div class=\"likes\">\n<!--      <svg class=\"feather feather-heart sc-dnqmqq jxshSx\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"></path></svg> -->\n      <a href=\"\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\n      <div class=\"likes-count\">0</div>\n    </div>\n    \n    <div class=\"link\">\n        <a href=\"{{obj.link}}\" target=\"_blank\" title=\"Open External Link\"><i class=\"fa fa-link\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n    <div class=\"time\">\n        <small><small><small>{{obj.time}}</small></small></small>\n    </div>\n    \n    <div class=\"tx\">\n        <a href=\"https://explorer.stacks.co/txid/{{obj.txid}}?chain=mainnet\" target=\"_blank\" title=\"View Chime In Explorer\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n  </div>\n</div>\n</body>\n</html>\n\n",
+        "format": "<!DOCTYPE html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<style>\nbody {\n  font-family: 'Asap', sans-serif;\n  font-family: 'Roboto', sans-serif;\n\n}\na {\n  color: #0040FF;\n}\n\na:hover {\n  color: Red;\n}\n\n\nimg {\n  max-width:100%;\n}\n.avator {\n  border-radius:100px;\n  width:64px;\n  margin-right: 5px;\n  padding-top: 5px;\n}\n\n\n.chime-wrap {\n  width: 85%;    \n  max-width:100%;\n  color: White;\n  margin: 0 auto;\n  margin-top: 8px;\n  padding: 10px;\n  border-bottom: 1px solid #0040FF;\n}\n\n.chime-header {\n  display: flex;\n  align-items:flex-start;\n  font-size:14px;\n}\n.chime-header-info {\n  font-weight:bold;\n}\n.chime-header-info span {\n  font-weight:normal;\n  margin-left: 5px;\n}\n.chime-header-info p {\n  font-weight:normal;\n  margin-top: 5px;\n  \n}\n.chime-img-wrap {\n  padding-left: 30px;\n  width: 50%;\n  max-width: 50%;\n  margin-left: 100px;\n}\n\n.chime-info-counts {\n  display: flex;\n  margin-left: 125px;\n  margin-top: 10px;\n}\n.chime-info-counts div {\n  display: flex;\n  margin-right: 20px;\n}\n.chime-info-counts div svg {\n  margin-right: 10px;\n}\n@media screen and (max-width:100%){\n  body {\n    padding-left: 2px;\n    padding-right: 2px;\n  }\n  .chime-header {\n    flex-direction:column;\n  }\n  .chime-header img {\n    margin-bottom: 10px;\n  }\n  .chime-header-info p {\n    color:Black;\n    margin-bottom: 10px;\n  }\n  .chime-img-wrap {\n    width: 50%;\n    max-width: 50%;\n    margin-left: 100px;\n  }\n  .chime-info-counts {\n  display: flex;\n  margin-left: 0;\n}\n.chime-info-counts div {\n  margin-right: 10px;\n}\n}\n</style>\n</head>\n\n<body>\n<link href=\"https://fonts.googleapis.com/css?family=Asap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n\n\n\n<div class=\"chime-wrap\" ng-repeat=\"obj in msg.payload\">\n  <div class=\"chime-header\">\n    <div style=\"position: relative; width: 120px; height: 120px;\" class=\"avator\" ng-click=\"send({topic:'lookup', payload:obj.sender})\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/bg/{{obj.bg}}_bg.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/skin/{{obj.skin}}_skin.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/eyes/{{obj.eyes}}_eyes.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/teeth/{{obj.teeth}}_teeth.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/lips/{{obj.lips}}_lips.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hair/{{obj.hair}}_hair.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hat/{{obj.hat}}_hat.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/chest/{{obj.chest}}_chest.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n    </div>\n<!--    <img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/512x512.png\" alt=\"\" class=\"avator\"> -->\n    <div class=\"chime-header-info\">\n      <small>@{{obj.sender}}</small><span></span><span> </span>\n      <span></span>\n      <h2>{{obj.memo}}</h2>\n    </div>\n  </div>\n  <div class=\"chime-img-wrap\">\n  <img src=\"{{obj.link}}\" alt=\"\" class=\"chime-img\">\n  </div>\n  <div class=\"chime-info-counts\">\n    <div class=\"comments\">\n      <a href=\"\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i></a>\n      <div class=\"comment-count\">0</div>\n    </div>\n    \n    <div class=\"retweets\">\n      <a href=\"\"><i class=\"fa fa-retweet\" aria-hidden=\"true\"></i></a>\n      <div class=\"rechime-count\">0</div>\n    </div>\n    \n    <div class=\"likes\">\n<!--      <svg class=\"feather feather-heart sc-dnqmqq jxshSx\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"></path></svg> -->\n      <a href=\"\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\n      <div class=\"likes-count\">0</div>\n    </div>\n    \n    <div class=\"link\">\n        <a href=\"{{obj.link}}\" target=\"_blank\" title=\"Open External Link\"><i class=\"fa fa-link\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n    <div class=\"idx\">\n        <small><small><small>Chime ID: {{obj.idx}}</small></small></small>\n    </div>\n    \n    <div class=\"tx\">\n        <a href=\"https://explorer.stacks.co/txid/{{obj.txid}}?chain=mainnet\" target=\"_blank\" title=\"View Chime In Explorer\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n  </div>\n</div>\n</body>\n</html>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1640,
-        "y": 740,
+        "x": 2160,
+        "y": 1500,
         "wires": [
             [
                 "a6e8599b.5f8d08",
@@ -19418,8 +19420,8 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 960,
-        "y": 520,
+        "x": 1760,
+        "y": 500,
         "wires": [
             [
                 "4dc4d113.bfb6d"
@@ -19439,8 +19441,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1310,
-        "y": 520,
+        "x": 2030,
+        "y": 500,
         "wires": []
     },
     {
@@ -19458,8 +19460,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 980,
-        "y": 600,
+        "x": 1780,
+        "y": 580,
         "wires": [
             []
         ]
@@ -19476,11 +19478,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
-        "y": 980,
+        "x": 1780,
+        "y": 940,
         "wires": [
             [
-                "192b5a27.e2e4a6",
                 "3bf81293.d2ed4e"
             ]
         ]
@@ -19490,17 +19491,17 @@
         "type": "debug",
         "z": "42c07592.8d970c",
         "d": true,
-        "name": "",
+        "name": "Chimes Debugger",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 930,
-        "y": 700,
+        "x": 1750,
+        "y": 680,
         "wires": []
     },
     {
@@ -19518,8 +19519,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1030,
-        "y": 640,
+        "x": 1830,
+        "y": 620,
         "wires": [
             []
         ]
@@ -19535,12 +19536,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
-        "y": 740,
+        "x": 1770,
+        "y": 760,
         "wires": [
             [
-                "3bf81293.d2ed4e",
-                "192b5a27.e2e4a6"
+                "3bf81293.d2ed4e"
             ]
         ]
     },
@@ -19548,6 +19548,7 @@
         "id": "3bf81293.d2ed4e",
         "type": "debug",
         "z": "42c07592.8d970c",
+        "d": true,
         "name": "Chime Chunks Debug",
         "active": true,
         "tosidebar": true,
@@ -19557,8 +19558,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1320,
-        "y": 900,
+        "x": 2120,
+        "y": 720,
         "wires": []
     },
     {
@@ -19572,11 +19573,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 780,
+        "x": 1760,
+        "y": 720,
         "wires": [
             [
-                "192b5a27.e2e4a6",
                 "3bf81293.d2ed4e"
             ]
         ]
@@ -19592,11 +19592,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 820,
+        "x": 1760,
+        "y": 800,
         "wires": [
             [
-                "192b5a27.e2e4a6",
                 "3bf81293.d2ed4e"
             ]
         ]
@@ -19605,6 +19604,7 @@
         "id": "595348d0.ff8358",
         "type": "debug",
         "z": "42c07592.8d970c",
+        "d": true,
         "name": "Chimes Array Reconstructed",
         "active": true,
         "tosidebar": true,
@@ -19614,8 +19614,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1680,
-        "y": 780,
+        "x": 2200,
+        "y": 1540,
         "wires": []
     },
     {
@@ -19638,8 +19638,8 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 1290,
-        "y": 740,
+        "x": 1510,
+        "y": 1500,
         "wires": [
             [
                 "1979d565.8b521b"
@@ -19658,8 +19658,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 600,
+        "x": 2410,
+        "y": 580,
         "wires": [
             []
         ]
@@ -19679,8 +19679,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1000,
-        "y": 560,
+        "x": 1800,
+        "y": 540,
         "wires": [
             []
         ]
@@ -19706,8 +19706,8 @@
         "topic": "",
         "payload": "SP1TA84JTP4YRFWBK7PYKBA33H3YB60XP654RAR7M",
         "payloadType": "str",
-        "x": 150,
-        "y": 440,
+        "x": 210,
+        "y": 1760,
         "wires": [
             [
                 "1f83c8ac.2cb977"
@@ -19718,15 +19718,15 @@
         "id": "1f83c8ac.2cb977",
         "type": "function",
         "z": "42c07592.8d970c",
-        "name": "",
+        "name": "Deruptar Tester",
         "func": "var depositaddress = msg.payload; //Your Deposit address\n\nvar rawaddy = depositaddress.substring(4); //Trim first 4 digits\n\na1 = rawaddy.substr(0,4); // keep next 4 digits\n\nz1 = rawaddy.substring(rawaddy.length - 4); //keep last 4 digits\n\nmsg.a1 = depositaddress.substring(4).substr(0,1);//bg\nmsg.a2 = depositaddress.substring(4).substr(1,1);//skin\nmsg.a3 = depositaddress.substring(4).substr(2,1);//eyes\nmsg.a4 = depositaddress.substring(4).substr(3,1);//teeth\nmsg.z1 = depositaddress.substring(depositaddress.length -4).substr(0,1);//lips\nmsg.z2 = depositaddress.substring(depositaddress.length -4).substr(1,1);//hair\nmsg.z3 = depositaddress.substring(depositaddress.length -4).substr(2,1);//hat\nmsg.z4 = depositaddress.substring(depositaddress.length -4).substr(3,1);//chest\nmsg.payload = \"check props\";\nmsg.deruptar = a1+z1;// concat both and pass string along\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 440,
+        "x": 390,
+        "y": 1760,
         "wires": [
             [
                 "1163a55a.023d5b"
@@ -19746,8 +19746,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 510,
-        "y": 440,
+        "x": 570,
+        "y": 1760,
         "wires": []
     },
     {
@@ -19755,14 +19755,14 @@
         "type": "function",
         "z": "42c07592.8d970c",
         "name": "form chimes ",
-        "func": "let data = msg.payload\nlet result = []\n\ndata.memos.forEach((el, index) => {\n    result.push(\n        {\n            \"memo\": data.memos[index].substr(2).slice(0, -1),\n            \"link\": data.links[index].substr(8).slice(0, -2),\n            \"txid\": data.txids[index],\n            \"sender\": data.senders[index],\n            \"bg\": data.senders[index].substring(4).substr(0,1),\n            \"skin\": data.senders[index].substring(4).substr(1,1),\n            \"eyes\": data.senders[index].substring(4).substr(2,1),\n            \"teeth\": data.senders[index].substring(4).substr(3,1),\n            \"lips\": data.senders[index].substr(-4).substr(0,1),\n            \"hair\": data.senders[index].substr(-4).substr(1,1),            \n            \"hat\": data.senders[index].substr(-4).substr(2,1),            \n            \"chest\": data.senders[index].substr(-4).substr(3,1),            \n            \"time\": data.times[index].substring(0, 19).replace('T', ' ')\n        }\n    )\n})\n\nmsg.payload = result;\nreturn msg;",
+        "func": "let data = msg.payload\nlet result = []\n\ndata.memos.forEach((el, index) => {\n    result.push(\n        {\n            \"memo\": data.memos[index],\n            \"link\": data.links[index],\n            \"txid\": data.txids[index],\n            \"sender\": data.senders[index],\n            \"bg\": data.senders[index].substring(4).substr(0,1),\n            \"skin\": data.senders[index].substring(4).substr(1,1),\n            \"eyes\": data.senders[index].substring(4).substr(2,1),\n            \"teeth\": data.senders[index].substring(4).substr(3,1),\n            \"lips\": data.senders[index].substr(-4).substr(0,1),\n            \"hair\": data.senders[index].substr(-4).substr(1,1),            \n            \"hat\": data.senders[index].substr(-4).substr(2,1),            \n            \"chest\": data.senders[index].substr(-4).substr(3,1),            \n            \"idx\": data.idxs[index]\n        }\n    )\n})\n\nmsg.payload = result;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 740,
+        "x": 1730,
+        "y": 1500,
         "wires": [
             [
                 "a8c2df12.bf00a",
@@ -19785,8 +19785,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1640,
-        "y": 660,
+        "x": 2160,
+        "y": 1420,
         "wires": []
     },
     {
@@ -19804,8 +19804,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1640,
-        "y": 700,
+        "x": 2160,
+        "y": 1460,
         "wires": [
             []
         ]
@@ -19814,6 +19814,7 @@
         "id": "a6e8599b.5f8d08",
         "type": "debug",
         "z": "42c07592.8d970c",
+        "d": true,
         "name": "Lookup Name by Principal Debug 1",
         "active": true,
         "tosidebar": true,
@@ -19823,8 +19824,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1960,
-        "y": 680,
+        "x": 2480,
+        "y": 1440,
         "wires": []
     },
     {
@@ -19862,8 +19863,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 5,
-        "x": 1990,
-        "y": 740,
+        "x": 2510,
+        "y": 1500,
         "wires": [
             [
                 "162274d6.37394b",
@@ -19894,8 +19895,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2310,
-        "y": 680,
+        "x": 2910,
+        "y": 1480,
         "wires": [
             [
                 "48b3fa7d.3fafa4",
@@ -19916,8 +19917,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 2570,
-        "y": 680,
+        "x": 3230,
+        "y": 1540,
         "wires": [
             [
                 "f8cbebdd.6c7988"
@@ -19932,8 +19933,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 2690,
-        "y": 680,
+        "x": 3350,
+        "y": 1540,
         "wires": [
             [
                 "4df1cc5b.0e4da4",
@@ -19946,6 +19947,7 @@
         "id": "4df1cc5b.0e4da4",
         "type": "debug",
         "z": "42c07592.8d970c",
+        "d": true,
         "name": "Lookup Name by Principal Debug 2",
         "active": true,
         "tosidebar": true,
@@ -19955,8 +19957,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2960,
-        "y": 720,
+        "x": 3620,
+        "y": 1580,
         "wires": []
     },
     {
@@ -19970,8 +19972,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2910,
-        "y": 680,
+        "x": 3570,
+        "y": 1540,
         "wires": [
             [
                 "25efcccd.889c04"
@@ -19984,8 +19986,8 @@
         "z": "42c07592.8d970c",
         "name": "ui change",
         "events": "change",
-        "x": 3100,
-        "y": 680,
+        "x": 3760,
+        "y": 1540,
         "wires": [
             [
                 "367c69bb.e3c606"
@@ -20003,8 +20005,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3360,
-        "y": 680,
+        "x": 4020,
+        "y": 1540,
         "wires": [
             [
                 "c5d429ac.c93608"
@@ -20017,8 +20019,8 @@
         "z": "42c07592.8d970c",
         "name": "",
         "events": "all",
-        "x": 3640,
-        "y": 680,
+        "x": 4300,
+        "y": 1540,
         "wires": [
             []
         ]
@@ -20037,8 +20039,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2950,
-        "y": 560,
+        "x": 3610,
+        "y": 1420,
         "wires": [
             []
         ]
@@ -20057,8 +20059,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2950,
-        "y": 640,
+        "x": 3610,
+        "y": 1500,
         "wires": [
             []
         ]
@@ -20077,8 +20079,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2950,
-        "y": 600,
+        "x": 3610,
+        "y": 1460,
         "wires": [
             []
         ]
@@ -20094,8 +20096,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2630,
-        "y": 600,
+        "x": 3290,
+        "y": 1460,
         "wires": [
             [
                 "cc09eb58.f999a8",
@@ -20123,8 +20125,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 3010,
-        "y": 520,
+        "x": 3670,
+        "y": 1380,
         "wires": [
             []
         ]
@@ -20133,6 +20135,7 @@
         "id": "a4a44aae.2990b8",
         "type": "debug",
         "z": "42c07592.8d970c",
+        "d": true,
         "name": "Lookup Name by Principal Debug 3",
         "active": true,
         "tosidebar": true,
@@ -20142,8 +20145,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2820,
-        "y": 440,
+        "x": 3480,
+        "y": 1300,
         "wires": []
     },
     {
@@ -20158,7 +20161,7 @@
         "finalize": "",
         "libs": [],
         "x": 1310,
-        "y": 2260,
+        "y": 2820,
         "wires": [
             [
                 "32ccff.f8ff1302",
@@ -21281,8 +21284,8 @@
         "z": "42c07592.8d970c",
         "name": "Relative to Deruptar Avatar String for Profiles",
         "info": "takes in the \"depositaddress\" 0 of the wallet\ncreates 8 digit Avatar String \nread function comments for more info",
-        "x": 1950,
-        "y": 1320,
+        "x": 1850,
+        "y": 2160,
         "wires": []
     },
     {
@@ -21296,8 +21299,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 2150,
-        "y": 1360,
+        "x": 2050,
+        "y": 2200,
         "wires": [
             [
                 "afe53f06.8b39a"
@@ -21315,8 +21318,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1960,
-        "y": 1360,
+        "x": 1860,
+        "y": 2200,
         "wires": [
             [
                 "540826a.597d9d8"
@@ -21343,8 +21346,8 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 2330,
-        "y": 1360,
+        "x": 2230,
+        "y": 2200,
         "wires": [
             [
                 "841d664b.beb798"
@@ -21359,8 +21362,8 @@
         "links": [
             "ff4526e0.2d5308"
         ],
-        "x": 1795,
-        "y": 1360,
+        "x": 1695,
+        "y": 2200,
         "wires": [
             [
                 "29b8246b.afdadc"
@@ -21375,8 +21378,8 @@
         "links": [
             "b20a4bd1.6c0da8"
         ],
-        "x": 2455,
-        "y": 1360,
+        "x": 2355,
+        "y": 2200,
         "wires": []
     },
     {
@@ -21395,8 +21398,8 @@
                 "module": "bn.js"
             }
         ],
-        "x": 1990,
-        "y": 1560,
+        "x": 1890,
+        "y": 2400,
         "wires": [
             [
                 "6dcced29.ae1b74"
@@ -21424,8 +21427,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1840,
-        "y": 1560,
+        "x": 1740,
+        "y": 2400,
         "wires": [
             [
                 "33d36b73.fa82e4"
@@ -21445,8 +21448,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2220,
-        "y": 1560,
+        "x": 2120,
+        "y": 2400,
         "wires": []
     },
     {
@@ -21460,8 +21463,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1960,
-        "y": 1500,
+        "x": 1860,
+        "y": 2340,
         "wires": [
             [
                 "14325ad.b2b30a5"
@@ -21479,8 +21482,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 2150,
-        "y": 1500,
+        "x": 2050,
+        "y": 2340,
         "wires": [
             [
                 "c34a00f1.faf75"
@@ -21507,8 +21510,8 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 2330,
-        "y": 1500,
+        "x": 2230,
+        "y": 2340,
         "wires": [
             [
                 "923b4f39.9ff18"
@@ -21521,8 +21524,8 @@
         "z": "42c07592.8d970c",
         "name": "Relative to Deruptar Avatar String for Searches",
         "info": "takes in a principal address\ncreates 8 digit Avatar String \nread function comments for more info",
-        "x": 1960,
-        "y": 1460,
+        "x": 1860,
+        "y": 2300,
         "wires": []
     },
     {
@@ -21533,8 +21536,8 @@
         "links": [
             "dd722558.2b5318"
         ],
-        "x": 1795,
-        "y": 1500,
+        "x": 1695,
+        "y": 2340,
         "wires": [
             [
                 "bad6583b.56fa58"
@@ -21549,8 +21552,8 @@
         "links": [
             "8ec535fa.ab1a58"
         ],
-        "x": 2455,
-        "y": 1500,
+        "x": 2355,
+        "y": 2340,
         "wires": []
     },
     {
@@ -22293,15 +22296,16 @@
         "id": "d0c4fb2c.082848",
         "type": "function",
         "z": "42c07592.8d970c",
-        "name": "get Feed Principal (New) (Testnet)",
+        "d": true,
+        "name": "get Feed (Transactions) (Testnet)",
         "func": "\nmsg.payload = \"ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H\";\nmsg.url = \"https://stacks-node-api.testnet.stacks.co/extended/v1/address/ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H.luv/transactions\";\nreturn msg;\n\n\n//feed derived from contract ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H.luv",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 780,
+        "x": 480,
+        "y": 880,
         "wires": [
             [
                 "e7844833.8a1cc8"
@@ -22321,8 +22325,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 530,
-        "y": 820,
+        "x": 690,
+        "y": 880,
         "wires": [
             [
                 "41283bf6.c14614"
@@ -22337,8 +22341,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 530,
-        "y": 860,
+        "x": 810,
+        "y": 880,
         "wires": [
             [
                 "1765a8fe.0029f7"
@@ -22356,11 +22360,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
-        "y": 860,
+        "x": 1780,
+        "y": 840,
         "wires": [
             [
-                "192b5a27.e2e4a6",
                 "3bf81293.d2ed4e"
             ]
         ]
@@ -22376,8 +22379,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1430,
-        "y": 800,
+        "x": 2390,
+        "y": 780,
         "wires": [
             []
         ]
@@ -22393,8 +22396,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2310,
-        "y": 600,
+        "x": 2910,
+        "y": 1460,
         "wires": [
             [
                 "48b3fa7d.3fafa4",
@@ -22406,15 +22409,16 @@
         "id": "1765a8fe.0029f7",
         "type": "function",
         "z": "42c07592.8d970c",
-        "name": "filter where tx_status is equal to success",
+        "d": true,
+        "name": "filter by tx_status is success",
         "func": "const obj = msg.payload.results;\n\nconst results = obj.filter(by => by.tx_status === 'success');\n\nmsg.payload = {results};\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 900,
+        "x": 1000,
+        "y": 880,
         "wires": [
             [
                 "bc19928c.972da"
@@ -22425,15 +22429,16 @@
         "id": "bc19928c.972da",
         "type": "function",
         "z": "42c07592.8d970c",
-        "name": "filter where tx_type is equal to smart_contract",
+        "d": true,
+        "name": "filter by tx_type is smart_contract",
         "func": "const obj = msg.payload.results;\n\nconst results = obj.filter(by => by.tx_type === 'contract_call');\n\nmsg.payload = {results};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 940,
+        "x": 1280,
+        "y": 880,
         "wires": [
             [
                 "8dd30082.5b0a1",
@@ -22445,7 +22450,9 @@
                 "8abc1729.379588",
                 "aedfbd23.ce37d",
                 "7f4d85d9.97202c",
-                "2cefd0df.f4d72"
+                "2cefd0df.f4d72",
+                "696d2513.14852c",
+                "50f9bd65.6c5b04"
             ]
         ]
     },
@@ -22460,13 +22467,720 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
-        "y": 900,
+        "x": 1780,
+        "y": 880,
         "wires": [
             [
-                "3bf81293.d2ed4e",
+                "3bf81293.d2ed4e"
+            ]
+        ]
+    },
+    {
+        "id": "d58e5093.ee56e",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "tx status debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.tx_status",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3050,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "50f9bd65.6c5b04",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "use txids array",
+        "func": "var rawArray = msg.payload.results;\n\n\nvar txids = rawArray.map((obj) => {\n    return obj.tx_id.toString()\n});\n\n\nmsg.payload = txids;\nmsg.topic = \"txids\";\nreturn msg;\n\n\n//DeHex Memo example:\n/*var rawmemo = msg.payload.results[0].token_transfer.memo;//a raw memo\n\nvar hex  = rawmemo.toString();//force rawmemo to string\n\nvar memo = '';//decode of memo\nfor (var n = 0; n < hex.length; n += 2) {\n\tmemo += String.fromCharCode(parseInt(hex.substr(n, 2), 16));\n}\n\nmsg.payload = memo;//pass along decoded ascii version of memo*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1820,
+        "y": 1020,
+        "wires": [
+            [
+                "dc291006.2baa4",
+                "ba94f036.89c6c"
+            ]
+        ]
+    },
+    {
+        "id": "696d2513.14852c",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "use senders array",
+        "func": "var rawArray = msg.payload.results;\n\n\nvar principals = rawArray.map((obj) => {\n    return obj.sender_address.toString()\n});\n\n\nmsg.payload = principals;\nmsg.topic = \"senders\";\nreturn msg;\n\n\n//DeHex Memo example:\n/*var rawmemo = msg.payload.results[0].token_transfer.memo;//a raw memo\n\nvar hex  = rawmemo.toString();//force rawmemo to string\n\nvar memo = '';//decode of memo\nfor (var n = 0; n < hex.length; n += 2) {\n\tmemo += String.fromCharCode(parseInt(hex.substr(n, 2), 16));\n}\n\nmsg.payload = memo;//pass along decoded ascii version of memo*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1810,
+        "y": 1060,
+        "wires": [
+            [
+                "9449e25c.f9be9",
+                "193e43f7.9b304c"
+            ]
+        ]
+    },
+    {
+        "id": "83e96019.3c5ad",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "principal to name debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2440,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "6e0519a7.f19708",
+        "type": "http request",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 740,
+        "y": 2000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dc291006.2baa4",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "d": true,
+        "name": "split array by length",
+        "func": "for (i = 0; i < msg.payload.length; i=i+1) {\n    var txid = RED.util.cloneMessage(msg);\n    txid.payload = msg.payload[i];\n    node.send(txid);\n}\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2030,
+        "y": 960,
+        "wires": [
+            [
+                "70b61ae4.62a224"
+            ]
+        ]
+    },
+    {
+        "id": "70b61ae4.62a224",
+        "type": "delay",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "0.5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 2190,
+        "y": 1020,
+        "wires": [
+            [
+                "a47f54b7.ab1e68"
+            ]
+        ]
+    },
+    {
+        "id": "9449e25c.f9be9",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "d": true,
+        "name": "split array by length",
+        "func": "for (i = 0; i < msg.payload.length; i=i+1) {\n    var senderprincipal = RED.util.cloneMessage(msg);\n    senderprincipal.payload = msg.payload[i];\n    node.send(senderprincipal);\n}\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2030,
+        "y": 1120,
+        "wires": [
+            [
+                "d6549545.d319d8"
+            ]
+        ]
+    },
+    {
+        "id": "d6549545.d319d8",
+        "type": "delay",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "0.5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 2190,
+        "y": 1060,
+        "wires": [
+            [
+                "3e07b51e.b4b24a",
+                "83e96019.3c5ad"
+            ]
+        ]
+    },
+    {
+        "id": "a47f54b7.ab1e68",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "d": true,
+        "name": "construct Url to call (testnet)",
+        "func": "var txid = msg.payload;\n\n//use mainnet if needed\nmsg.url = \"https://stacks-node-api.testnet.stacks.co/extended/v1/tx/\" + txid; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2440,
+        "y": 1020,
+        "wires": [
+            [
+                "ca3315f8.5c0208"
+            ]
+        ]
+    },
+    {
+        "id": "ca3315f8.5c0208",
+        "type": "http request",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 2690,
+        "y": 1020,
+        "wires": [
+            [
+                "645667da.40f658"
+            ]
+        ]
+    },
+    {
+        "id": "645667da.40f658",
+        "type": "json",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 2830,
+        "y": 1020,
+        "wires": [
+            [
+                "51264a57.0c2074",
+                "d58e5093.ee56e",
+                "6751f659.36ec38",
+                "442535ba.ceb2bc"
+            ]
+        ]
+    },
+    {
+        "id": "3e07b51e.b4b24a",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "d": true,
+        "name": "construct Url to call (mainnet)",
+        "func": "var sender = msg.payload;\n\n//use mainnet if needed\nmsg.url = \"https://stacks-node-api.mainnet.stacks.co/v1/addresses/stacks/\" + sender; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2440,
+        "y": 1060,
+        "wires": [
+            [
+                "3ac120d2.4ad2a"
+            ]
+        ]
+    },
+    {
+        "id": "3ac120d2.4ad2a",
+        "type": "http request",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "x": 2690,
+        "y": 1060,
+        "wires": [
+            [
+                "d44ca21b.ddb11"
+            ]
+        ]
+    },
+    {
+        "id": "d44ca21b.ddb11",
+        "type": "json",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 2830,
+        "y": 1060,
+        "wires": [
+            [
+                "32101f4d.7d639"
+            ]
+        ]
+    },
+    {
+        "id": "ba94f036.89c6c",
+        "type": "split",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "txid",
+        "x": 1990,
+        "y": 1020,
+        "wires": [
+            [
+                "70b61ae4.62a224"
+            ]
+        ]
+    },
+    {
+        "id": "193e43f7.9b304c",
+        "type": "split",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "sender",
+        "x": 1990,
+        "y": 1060,
+        "wires": [
+            [
+                "d6549545.d319d8"
+            ]
+        ]
+    },
+    {
+        "id": "51264a57.0c2074",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "tx index debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.tx_index",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3050,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "32101f4d.7d639",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "principal to name debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3080,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "6751f659.36ec38",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "tx id debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.tx_id",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3040,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "442535ba.ceb2bc",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "tx type debugger",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.tx_type",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3050,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "ac06ed70.45d37",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "Call Like-message Function in On-Chain luv.clar",
+        "func": "//reference https://www.npmjs.com/package/@stacks/transactions\n\n//Network\nconst network = new stacksNetwork.StacksTestnet(); // or for testnet, use `StacksTestnet()`\n\n//Contract Asset Info\nconst tempcontractid = \"ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H.luv\"; //get the temporarily contract id\nconst ftname = tempcontractid.split(\".\")[1]; //remove everything prior and including \".\"\nconst ftaddress = tempcontractid.split(\".\")[0]; //remove everything after and including \".\"\n//const ftinfo = stacksTransactions.createAssetInfo(ftaddress, ftname, ftname); //set AssetInfo for type property\nconst ftamount = 1;\n\n//Sender\nconst senderkey = global.get('stxprivkey'); //get private key\nconst ftsender = global.get('testnetdepositaddress'); //or use depositaddress for mainnet\n\n//Message and Attachment URL\nconst id = msg.payload.chimeid;//pass in the ID of the message in question\n\n//Post Conditions for safety\nconst postConditionAddress = ftsender;\nconst postConditionCode = stacksTransactions.FungibleConditionCode.Equal;\nconst postConditionAmount = new BigNum(1); //requires BigNum\n//const postConditionAssetInfo = ftinfo;//Problem like something to do with thi postConditionAssetInfo\nconst postConditionAssetInfo = stacksTransactions.createAssetInfo(ftaddress, \"luv-token\", \"luv-token\");\n\nconst postConditions = [\n  stacksTransactions.makeStandardFungiblePostCondition(postConditionAddress, postConditionCode, postConditionAmount, postConditionAssetInfo),\n];\n\n//Transaction Options\nconst txOptions = {\n  contractAddress: ftaddress,\n  contractName: ftname,\n  functionName: 'like-message',\n  functionArgs: [\n      stacksTransactions.uintCV(id)\n      ],\n  senderKey: senderkey,\n  validateWithAbi: true,\n  network,\n  postConditions,\n  anchorMode: stacksTransactions.AnchorMode.Any,\n};\n\n//Transaction Broadcast to Network\nconst transaction = await stacksTransactions.makeContractCall(txOptions);\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\n//Passed along Outputs for UI\nmsg.payload = transaction;\nmsg.blockchain = \"0x\" + broadcastTxn;//the transaction id\nmsg.txoptions = txOptions;//the tx options\nmsg.ftcontractid = tempcontractid;//full contract id\n//msg.ftinfo = ftinfo;\nmsg.ftname = ftname;//contract name\nmsg.ftaddress = ftaddress;//contract address\nmsg.ftsender = ftsender; //contract caller\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "BigNum",
+                "module": "bn.js"
+            },
+            {
+                "var": "stacksNetwork",
+                "module": "@stacks/network"
+            },
+            {
+                "var": "stacksTransactions",
+                "module": "@stacks/transactions"
+            },
+            {
+                "var": "BufferCV",
+                "module": "@stacks/transactions"
+            }
+        ],
+        "x": 340,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "28edd09c.affd2",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "get Feed (Events) (Testnet)",
+        "func": "\nmsg.payload = \"ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H\";\nmsg.url = \"https://stacks-node-api.testnet.stacks.co/extended/v1/contract/ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H.luv/events\";\nreturn msg;\n\n\n//feed derived from contract ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H.luv",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1140,
+        "wires": [
+            [
+                "b2226bbe.1f7ed8"
+            ]
+        ]
+    },
+    {
+        "id": "b2226bbe.1f7ed8",
+        "type": "http request",
+        "z": "42c07592.8d970c",
+        "name": "Get",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 670,
+        "y": 1140,
+        "wires": [
+            [
+                "b03da851.222ad8"
+            ]
+        ]
+    },
+    {
+        "id": "b03da851.222ad8",
+        "type": "json",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 790,
+        "y": 1140,
+        "wires": [
+            [
+                "4d19209e.c0ab8",
+                "6afdf7d3.9b45c8",
+                "9d56d4d4.23d2d8",
+                "820fa847.5721d8",
+                "8ca7cdf.281973",
+                "f40bf464.b48538",
+                "9bcd99f9.8fc9b8"
+            ]
+        ]
+    },
+    {
+        "id": "4d19209e.c0ab8",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.results",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "6afdf7d3.9b45c8",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "deduce a txids array",
+        "func": "var rawArray = msg.payload.results;\n\n\nvar txids = rawArray.map((obj) => {\n    return obj.tx_id.toString()\n});\n\n\nmsg.payload = txids;\nmsg.topic = \"txids\";\nreturn msg;\n\n\n//DeHex Memo example:\n/*var rawmemo = msg.payload.results[0].token_transfer.memo;//a raw memo\n\nvar hex  = rawmemo.toString();//force rawmemo to string\n\nvar memo = '';//decode of memo\nfor (var n = 0; n < hex.length; n += 2) {\n\tmemo += String.fromCharCode(parseInt(hex.substr(n, 2), 16));\n}\n\nmsg.payload = memo;//pass along decoded ascii version of memo*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 1140,
+        "wires": [
+            [
+                "2e96cb0.2611636",
                 "192b5a27.e2e4a6"
             ]
+        ]
+    },
+    {
+        "id": "2e96cb0.2611636",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "Chime Chunks Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1480,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "94ddebc2.c10078",
+        "type": "comment",
+        "z": "42c07592.8d970c",
+        "name": "possibly pointless?",
+        "info": "",
+        "x": 1810,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "9d56d4d4.23d2d8",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "d": true,
+        "name": "deduce events logs array",
+        "func": "var rawArray = msg.payload.results;\n\n\nvar log = rawArray.map((obj) => {\n    return obj.contract_log.value.repr.toString()\n});\n\n\nmsg.payload = log;\nmsg.topic = \"logs\";\nreturn msg;\n\n\n//DeHex Memo example:\n/*var rawmemo = msg.payload.results[0].token_transfer.memo;//a raw memo\n\nvar hex  = rawmemo.toString();//force rawmemo to string\n\nvar memo = '';//decode of memo\nfor (var n = 0; n < hex.length; n += 2) {\n\tmemo += String.fromCharCode(parseInt(hex.substr(n, 2), 16));\n}\n\nmsg.payload = memo;//pass along decoded ascii version of memo*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "820fa847.5721d8",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "deduce a links array (new)",
+        "func": "var rawArray = msg.payload.results;\n\n\nvar links = rawArray.map((obj) => {\n    return obj.contract_log.value.repr.toString().substr(31).split('\\(content u\\\"')[0].slice(0, -4)\n});\n\n\nmsg.payload = links;\nmsg.topic = \"links\";\nreturn msg;\n\n\n//DeHex Memo example:\n/*var rawmemo = msg.payload.results[0].token_transfer.memo;//a raw memo\n\nvar hex  = rawmemo.toString();//force rawmemo to string\n\nvar memo = '';//decode of memo\nfor (var n = 0; n < hex.length; n += 2) {\n\tmemo += String.fromCharCode(parseInt(hex.substr(n, 2), 16));\n}\n\nmsg.payload = memo;//pass along decoded ascii version of memo*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 1300,
+        "wires": [
+            [
+                "2e96cb0.2611636",
+                "192b5a27.e2e4a6"
+            ]
+        ]
+    },
+    {
+        "id": "bcc9070e.6ed568",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "d": true,
+        "name": "deduce events logs array",
+        "func": "var rawArray = msg.payload.results;\n\n\nvar log = rawArray.map((obj) => {\n    return obj.contract_log.value.repr.toString()\n});\n\n\nmsg.payload = log;\nmsg.topic = \"logs\";\nreturn msg;\n\n\n//DeHex Memo example:\n/*var rawmemo = msg.payload.results[0].token_transfer.memo;//a raw memo\n\nvar hex  = rawmemo.toString();//force rawmemo to string\n\nvar memo = '';//decode of memo\nfor (var n = 0; n < hex.length; n += 2) {\n\tmemo += String.fromCharCode(parseInt(hex.substr(n, 2), 16));\n}\n\nmsg.payload = memo;//pass along decoded ascii version of memo*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8ca7cdf.281973",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "deduce a senders array",
+        "func": "var rawArray = msg.payload.results;\n\n\nvar principals = rawArray.map((obj) => {\n    return obj.contract_log.value.repr.toString().split('\\) \\(publisher ')[1].split('\\)\\)')[0]\n});\n\n\nmsg.payload = principals;\nmsg.topic = \"senders\";\nreturn msg;\n\n\n//DeHex Memo example:\n/*var rawmemo = msg.payload.results[0].token_transfer.memo;//a raw memo\n\nvar hex  = rawmemo.toString();//force rawmemo to string\n\nvar memo = '';//decode of memo\nfor (var n = 0; n < hex.length; n += 2) {\n\tmemo += String.fromCharCode(parseInt(hex.substr(n, 2), 16));\n}\n\nmsg.payload = memo;//pass along decoded ascii version of memo*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 1180,
+        "wires": [
+            [
+                "2e96cb0.2611636",
+                "192b5a27.e2e4a6"
+            ]
+        ]
+    },
+    {
+        "id": "e214004c.4cc8d",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "d": true,
+        "name": "deduce a times array (deprecated)",
+        "func": "var rawArray = msg.payload.results;\n\n\nvar isotime = rawArray.map((obj) => {\n    return obj.burn_block_time_iso.toString()\n});\n\n\nmsg.payload = isotime;\nmsg.topic = \"times\";\nreturn msg;\n\n\n//DeHex Memo example:\n/*var rawmemo = msg.payload.results[0].token_transfer.memo;//a raw memo\n\nvar hex  = rawmemo.toString();//force rawmemo to string\n\nvar memo = '';//decode of memo\nfor (var n = 0; n < hex.length; n += 2) {\n\tmemo += String.fromCharCode(parseInt(hex.substr(n, 2), 16));\n}\n\nmsg.payload = memo;//pass along decoded ascii version of memo*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f40bf464.b48538",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "deduce a memos array (new)",
+        "func": "var rawArray = msg.payload.results;\n\n\nvar memos = rawArray.map((obj) => {\n    return obj.contract_log.value.repr.toString().split('\\(content u\\\"')[1].split('\\\"\\) \\(index')[0]\n});\n\n\nmsg.payload = memos;\nmsg.topic = \"memos\";\nreturn msg;\n\n\n//DeHex Memo example:\n/*var rawmemo = msg.payload.results[0].token_transfer.memo;//a raw memo\n\nvar hex  = rawmemo.toString();//force rawmemo to string\n\nvar memo = '';//decode of memo\nfor (var n = 0; n < hex.length; n += 2) {\n\tmemo += String.fromCharCode(parseInt(hex.substr(n, 2), 16));\n}\n\nmsg.payload = memo;//pass along decoded ascii version of memo*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 1260,
+        "wires": [
+            [
+                "2e96cb0.2611636",
+                "192b5a27.e2e4a6"
+            ]
+        ]
+    },
+    {
+        "id": "9bcd99f9.8fc9b8",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "deduce ids array",
+        "func": "var rawArray = msg.payload.results;\n\n\nvar idx = rawArray.map((obj) => {\n    return obj.contract_log.value.repr.toString().split('\\) \\(index u')[1].split('\\) \\(publisher')[0]\n});\n\n\nmsg.payload = idx;\nmsg.topic = \"idxs\";\nreturn msg;\n\n\n//DeHex Memo example:\n/*var rawmemo = msg.payload.results[0].token_transfer.memo;//a raw memo\n\nvar hex  = rawmemo.toString();//force rawmemo to string\n\nvar memo = '';//decode of memo\nfor (var n = 0; n < hex.length; n += 2) {\n\tmemo += String.fromCharCode(parseInt(hex.substr(n, 2), 16));\n}\n\nmsg.payload = memo;//pass along decoded ascii version of memo*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 1340,
+        "wires": [
+            [
+                "2e96cb0.2611636",
+                "192b5a27.e2e4a6"
+            ]
+        ]
+    },
+    {
+        "id": "165da036.f32e9",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "form chimes ",
+        "func": "let data = msg.payload\nlet result = []\n\ndata.memos.forEach((el, index) => {\n    result.push(\n        {\n            \"memo\": data.memos[index].substr(2).slice(0, -1),\n            \"link\": data.links[index].substr(8).slice(0, -2),\n            \"txid\": data.txids[index],\n            \"sender\": data.senders[index],\n            \"bg\": data.senders[index].substring(4).substr(0,1),\n            \"skin\": data.senders[index].substring(4).substr(1,1),\n            \"eyes\": data.senders[index].substring(4).substr(2,1),\n            \"teeth\": data.senders[index].substring(4).substr(3,1),\n            \"lips\": data.senders[index].substr(-4).substr(0,1),\n            \"hair\": data.senders[index].substr(-4).substr(1,1),            \n            \"hat\": data.senders[index].substr(-4).substr(2,1),            \n            \"chest\": data.senders[index].substr(-4).substr(3,1),            \n            \"time\": data.times[index].substring(0, 19).replace('T', ' ')\n        }\n    )\n})\n\nmsg.payload = result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1750,
+        "y": 1400,
+        "wires": [
+            []
         ]
     }
 ]
