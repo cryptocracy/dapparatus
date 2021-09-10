@@ -2157,7 +2157,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 70,
-        "y": 880,
+        "y": 1100,
         "wires": [
             [
                 "c9d3b79d.f9a488"
@@ -2214,7 +2214,7 @@
         "finalize": "",
         "libs": [],
         "x": 210,
-        "y": 880,
+        "y": 1100,
         "wires": [
             [
                 "f9dcaec2.8526d",
@@ -2308,8 +2308,8 @@
         "z": "42c07592.8d970c",
         "name": "",
         "events": "all",
-        "x": 380,
-        "y": 760,
+        "x": 400,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -2341,7 +2341,7 @@
         "name": "Relative to Feed Home",
         "info": "",
         "x": 120,
-        "y": 840,
+        "y": 1060,
         "wires": []
     },
     {
@@ -19316,7 +19316,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 170,
-        "y": 960,
+        "y": 1140,
         "wires": [
             [
                 "8e77cb03.8eda78",
@@ -19389,7 +19389,7 @@
         "order": 1,
         "width": 13,
         "height": "12",
-        "format": "<!DOCTYPE html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<style>\nbody {\n  font-family: 'Asap', sans-serif;\n  font-family: 'Roboto', sans-serif;\n\n}\na {\n  color: #0040FF;\n}\n\na:hover {\n  color: Red;\n}\n\n\nimg {\n  max-width:100%;\n}\n.avator {\n  border-radius:100px;\n  width:64px;\n  margin-right: 5px;\n  padding-top: 5px;\n}\n\n\n.chime-wrap {\n  width: 85%;    \n  max-width:100%;\n  color: White;\n  margin: 0 auto;\n  margin-top: 8px;\n  padding: 10px;\n  border-bottom: 1px solid #0040FF;\n}\n\n.chime-header {\n  display: flex;\n  align-items:flex-start;\n  font-size:14px;\n}\n.chime-header-info {\n  font-weight:bold;\n}\n.chime-header-info span {\n  font-weight:normal;\n  margin-left: 5px;\n}\n.chime-header-info p {\n  font-weight:normal;\n  margin-top: 5px;\n  \n}\n.chime-img-wrap {\n  padding-left: 30px;\n  width: 50%;\n  max-width: 50%;\n  margin-left: 100px;\n}\n\n.chime-info-counts {\n  display: flex;\n  margin-left: 125px;\n  margin-top: 10px;\n}\n.chime-info-counts div {\n  display: flex;\n  margin-right: 20px;\n}\n.chime-info-counts div svg {\n  margin-right: 10px;\n}\n@media screen and (max-width:100%){\n  body {\n    padding-left: 2px;\n    padding-right: 2px;\n  }\n  .chime-header {\n    flex-direction:column;\n  }\n  .chime-header img {\n    margin-bottom: 10px;\n  }\n  .chime-header-info p {\n    color:Black;\n    margin-bottom: 10px;\n  }\n  .chime-img-wrap {\n    width: 50%;\n    max-width: 50%;\n    margin-left: 100px;\n  }\n  .chime-info-counts {\n  display: flex;\n  margin-left: 0;\n}\n.chime-info-counts div {\n  margin-right: 10px;\n}\n}\n</style>\n</head>\n\n<body>\n<link href=\"https://fonts.googleapis.com/css?family=Asap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n\n\n\n<div class=\"chime-wrap\" ng-repeat=\"obj in msg.payload\">\n  <div class=\"chime-header\">\n    <div style=\"position: relative; width: 120px; height: 120px;\" class=\"avator\" ng-click=\"send({topic:'lookup', payload:obj.sender})\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/bg/{{obj.bg}}_bg.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/skin/{{obj.skin}}_skin.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/eyes/{{obj.eyes}}_eyes.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/teeth/{{obj.teeth}}_teeth.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/lips/{{obj.lips}}_lips.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hair/{{obj.hair}}_hair.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hat/{{obj.hat}}_hat.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/chest/{{obj.chest}}_chest.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n    </div>\n<!--    <img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/512x512.png\" alt=\"\" class=\"avator\"> -->\n    <div class=\"chime-header-info\">\n      <small>@{{obj.sender}}</small><span></span><span> </span>\n      <span></span>\n      <h2>{{obj.memo}}</h2>\n    </div>\n  </div>\n  <div class=\"chime-img-wrap\">\n  <img src=\"{{obj.link}}\" alt=\"\" class=\"chime-img\">\n  </div>\n  <div class=\"chime-info-counts\">\n    <div class=\"comments\">\n      <a href=\"\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i></a>\n      <div class=\"comment-count\">0</div>\n    </div>\n    \n    <div class=\"retweets\">\n      <a href=\"\"><i class=\"fa fa-retweet\" aria-hidden=\"true\"></i></a>\n      <div class=\"rechime-count\">0</div>\n    </div>\n    \n    <div class=\"likes\">\n<!--      <svg class=\"feather feather-heart sc-dnqmqq jxshSx\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"></path></svg> -->\n      <a href=\"\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\n      <div class=\"likes-count\">0</div>\n    </div>\n    \n    <div class=\"link\">\n        <a href=\"{{obj.link}}\" target=\"_blank\" title=\"Open External Link\"><i class=\"fa fa-link\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n    <div class=\"idx\">\n        <small><small><small>Chime ID: {{obj.idx}}</small></small></small>\n    </div>\n    \n    <div class=\"tx\">\n        <a href=\"https://explorer.stacks.co/txid/{{obj.txid}}?chain=mainnet\" target=\"_blank\" title=\"View Chime In Explorer\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n  </div>\n</div>\n</body>\n</html>\n\n",
+        "format": "<!DOCTYPE html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<style>\nbody {\n  font-family: 'Asap', sans-serif;\n  font-family: 'Roboto', sans-serif;\n\n}\na {\n  color: #0040FF;\n}\n\na:hover {\n  color: Red;\n}\n\n\nimg {\n  max-width:100%;\n}\n.avator {\n  border-radius:100px;\n  width:64px;\n  margin-right: 5px;\n  padding-top: 5px;\n}\n\n\n.chime-wrap {\n  width: 85%;    \n  max-width:100%;\n  color: White;\n  margin: 0 auto;\n  margin-top: 8px;\n  padding: 10px;\n  border-bottom: 1px solid #0040FF;\n}\n\n.chime-header {\n  display: flex;\n  align-items:flex-start;\n  font-size:14px;\n}\n.chime-header-info {\n  font-weight:bold;\n}\n.chime-header-info span {\n  font-weight:normal;\n  margin-left: 5px;\n}\n.chime-header-info p {\n  font-weight:normal;\n  margin-top: 5px;\n  \n}\n.chime-img-wrap {\n  padding-left: 30px;\n  width: 50%;\n  max-width: 50%;\n  margin-left: 100px;\n}\n\n.chime-info-counts {\n  display: flex;\n  margin-left: 125px;\n  margin-top: 10px;\n}\n.chime-info-counts div {\n  display: flex;\n  margin-right: 20px;\n}\n.chime-info-counts div svg {\n  margin-right: 10px;\n}\n@media screen and (max-width:100%){\n  body {\n    padding-left: 2px;\n    padding-right: 2px;\n  }\n  .chime-header {\n    flex-direction:column;\n  }\n  .chime-header img {\n    margin-bottom: 10px;\n  }\n  .chime-header-info p {\n    color:Black;\n    margin-bottom: 10px;\n  }\n  .chime-img-wrap {\n    width: 50%;\n    max-width: 50%;\n    margin-left: 100px;\n  }\n  .chime-info-counts {\n  display: flex;\n  margin-left: 0;\n}\n.chime-info-counts div {\n  margin-right: 10px;\n}\n}\n</style>\n</head>\n\n<body>\n<link href=\"https://fonts.googleapis.com/css?family=Asap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n\n\n\n<div class=\"chime-wrap\" ng-repeat=\"obj in msg.payload\">\n  <div class=\"chime-header\">\n    <div style=\"position: relative; width: 120px; height: 120px;\" class=\"avator\" ng-click=\"send({topic:'lookup', payload:obj.sender})\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/bg/{{obj.bg}}_bg.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/skin/{{obj.skin}}_skin.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/eyes/{{obj.eyes}}_eyes.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/teeth/{{obj.teeth}}_teeth.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/lips/{{obj.lips}}_lips.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hair/{{obj.hair}}_hair.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hat/{{obj.hat}}_hat.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/chest/{{obj.chest}}_chest.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n    </div>\n<!--    <img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/512x512.png\" alt=\"\" class=\"avator\"> -->\n    <div class=\"chime-header-info\">\n      <small>@{{obj.sender}}</small><span></span><span> </span>\n      <span></span>\n      <h2>{{obj.memo}}</h2>\n    </div>\n  </div>\n  <div class=\"chime-img-wrap\">\n  <img src=\"{{obj.link}}\" alt=\"\" class=\"chime-img\">\n  </div>\n  <div class=\"chime-info-counts\">\n    <div class=\"comments\">\n      <a href=\"\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i></a>\n      <div class=\"comment-count\">0</div>\n    </div>\n    \n    <div class=\"retweets\">\n      <a href=\"\"><i class=\"fa fa-retweet\" aria-hidden=\"true\"></i></a>\n      <div class=\"rechime-count\">0</div>\n    </div>\n    \n    <div class=\"likes\">\n<!--      <svg class=\"feather feather-heart sc-dnqmqq jxshSx\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"></path></svg> -->\n      <a ng-click=\"send({topic:'Tip?', payload:obj.memo, chime:obj.idx, idx:obj.idx})\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\n      <div class=\"likes-count\">0</div>\n    </div>\n    \n    <div class=\"link\">\n        <a href=\"{{obj.link}}\" target=\"_blank\" title=\"Open External Link\"><i class=\"fa fa-link\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n    <div class=\"idx\">\n        <small><small><small>Chime ID: {{obj.idx}}</small></small></small>\n    </div>\n    \n    <div class=\"tx\">\n        <a href=\"https://explorer.stacks.co/txid/{{obj.txid}}?chain=mainnet\" target=\"_blank\" title=\"View Chime In Explorer\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n  </div>\n</div>\n</body>\n</html>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -19815,16 +19815,16 @@
         "type": "debug",
         "z": "42c07592.8d970c",
         "d": true,
-        "name": "Lookup Name by Principal Debug 1",
+        "name": "Chime Debug",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
+        "complete": "chime",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2480,
+        "x": 2460,
         "y": 1440,
         "wires": []
     },
@@ -19843,7 +19843,7 @@
             },
             {
                 "t": "eq",
-                "v": "like",
+                "v": "Tip?",
                 "vt": "str"
             },
             {
@@ -19867,10 +19867,11 @@
         "y": 1500,
         "wires": [
             [
-                "162274d6.37394b",
                 "4131bc5f.14c854"
             ],
-            [],
+            [
+                "bace3834.62ed48"
+            ],
             [],
             [],
             []
@@ -19896,7 +19897,7 @@
         "finalize": "",
         "libs": [],
         "x": 2910,
-        "y": 1480,
+        "y": 1420,
         "wires": [
             [
                 "48b3fa7d.3fafa4",
@@ -19918,7 +19919,7 @@
         "proxy": "",
         "authType": "",
         "x": 3230,
-        "y": 1540,
+        "y": 1400,
         "wires": [
             [
                 "f8cbebdd.6c7988"
@@ -19934,7 +19935,7 @@
         "action": "",
         "pretty": false,
         "x": 3350,
-        "y": 1540,
+        "y": 1400,
         "wires": [
             [
                 "4df1cc5b.0e4da4",
@@ -19958,7 +19959,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3620,
-        "y": 1580,
+        "y": 1440,
         "wires": []
     },
     {
@@ -19973,7 +19974,7 @@
         "finalize": "",
         "libs": [],
         "x": 3570,
-        "y": 1540,
+        "y": 1400,
         "wires": [
             [
                 "25efcccd.889c04"
@@ -19987,7 +19988,7 @@
         "name": "ui change",
         "events": "change",
         "x": 3760,
-        "y": 1540,
+        "y": 1400,
         "wires": [
             [
                 "367c69bb.e3c606"
@@ -20005,8 +20006,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4020,
-        "y": 1540,
+        "x": 4040,
+        "y": 1380,
         "wires": [
             [
                 "c5d429ac.c93608"
@@ -20020,7 +20021,7 @@
         "name": "",
         "events": "all",
         "x": 4300,
-        "y": 1540,
+        "y": 1380,
         "wires": [
             []
         ]
@@ -20040,7 +20041,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 3610,
-        "y": 1420,
+        "y": 1280,
         "wires": [
             []
         ]
@@ -20060,7 +20061,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 3610,
-        "y": 1500,
+        "y": 1360,
         "wires": [
             []
         ]
@@ -20080,7 +20081,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 3610,
-        "y": 1460,
+        "y": 1320,
         "wires": [
             []
         ]
@@ -20097,7 +20098,7 @@
         "finalize": "",
         "libs": [],
         "x": 3290,
-        "y": 1460,
+        "y": 1320,
         "wires": [
             [
                 "cc09eb58.f999a8",
@@ -20126,7 +20127,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 3670,
-        "y": 1380,
+        "y": 1240,
         "wires": [
             []
         ]
@@ -20146,7 +20147,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3480,
-        "y": 1300,
+        "y": 1160,
         "wires": []
     },
     {
@@ -22397,7 +22398,7 @@
         "finalize": "",
         "libs": [],
         "x": 2910,
-        "y": 1460,
+        "y": 1400,
         "wires": [
             [
                 "48b3fa7d.3fafa4",
@@ -22876,8 +22877,9 @@
         "id": "ac06ed70.45d37",
         "type": "function",
         "z": "42c07592.8d970c",
+        "d": true,
         "name": "Call Like-message Function in On-Chain luv.clar",
-        "func": "//reference https://www.npmjs.com/package/@stacks/transactions\n\n//Network\nconst network = new stacksNetwork.StacksTestnet(); // or for testnet, use `StacksTestnet()`\n\n//Contract Asset Info\nconst tempcontractid = \"ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H.luv\"; //get the temporarily contract id\nconst ftname = tempcontractid.split(\".\")[1]; //remove everything prior and including \".\"\nconst ftaddress = tempcontractid.split(\".\")[0]; //remove everything after and including \".\"\n//const ftinfo = stacksTransactions.createAssetInfo(ftaddress, ftname, ftname); //set AssetInfo for type property\nconst ftamount = 1;\n\n//Sender\nconst senderkey = global.get('stxprivkey'); //get private key\nconst ftsender = global.get('testnetdepositaddress'); //or use depositaddress for mainnet\n\n//Message and Attachment URL\nconst id = msg.payload.chimeid;//pass in the ID of the message in question\n\n//Post Conditions for safety\nconst postConditionAddress = ftsender;\nconst postConditionCode = stacksTransactions.FungibleConditionCode.Equal;\nconst postConditionAmount = new BigNum(1); //requires BigNum\n//const postConditionAssetInfo = ftinfo;//Problem like something to do with thi postConditionAssetInfo\nconst postConditionAssetInfo = stacksTransactions.createAssetInfo(ftaddress, \"luv-token\", \"luv-token\");\n\nconst postConditions = [\n  stacksTransactions.makeStandardFungiblePostCondition(postConditionAddress, postConditionCode, postConditionAmount, postConditionAssetInfo),\n];\n\n//Transaction Options\nconst txOptions = {\n  contractAddress: ftaddress,\n  contractName: ftname,\n  functionName: 'like-message',\n  functionArgs: [\n      stacksTransactions.uintCV(id)\n      ],\n  senderKey: senderkey,\n  validateWithAbi: true,\n  network,\n  postConditions,\n  anchorMode: stacksTransactions.AnchorMode.Any,\n};\n\n//Transaction Broadcast to Network\nconst transaction = await stacksTransactions.makeContractCall(txOptions);\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\n//Passed along Outputs for UI\nmsg.payload = transaction;\nmsg.blockchain = \"0x\" + broadcastTxn;//the transaction id\nmsg.txoptions = txOptions;//the tx options\nmsg.ftcontractid = tempcontractid;//full contract id\n//msg.ftinfo = ftinfo;\nmsg.ftname = ftname;//contract name\nmsg.ftaddress = ftaddress;//contract address\nmsg.ftsender = ftsender; //contract caller\n\nreturn msg;",
+        "func": "//reference https://www.npmjs.com/package/@stacks/transactions\n\n//Network\nconst network = new stacksNetwork.StacksTestnet(); // or for testnet, use `StacksTestnet()`\n\n//Contract Asset Info\nconst tempcontractid = \"ST1ZG09W7XN7S1WH5F06YN25C5CGK2RE01D6CSA1H.luv\"; //get the temporarily contract id\nconst ftname = tempcontractid.split(\".\")[1]; //remove everything prior and including \".\"\nconst ftaddress = tempcontractid.split(\".\")[0]; //remove everything after and including \".\"\n//const ftinfo = stacksTransactions.createAssetInfo(ftaddress, ftname, ftname); //set AssetInfo for type property\nconst ftamount = 1;\n\n//Sender\nconst senderkey = global.get('stxprivkey'); //get private key\nconst ftsender = global.get('testnetdepositaddress'); //or use depositaddress for mainnet\n\n//Message ID to Like\nconst id = msg.idx;//pass in the ID of the message in question\n\n//Post Conditions for safety\nconst postConditionAddress = ftsender;\nconst postConditionCode = stacksTransactions.FungibleConditionCode.Equal;\nconst postConditionAmount = new BigNum(1); //requires BigNum\n//const postConditionAssetInfo = ftinfo;//Problem like something to do with thi postConditionAssetInfo\nconst postConditionAssetInfo = stacksTransactions.createAssetInfo(ftaddress, \"luv-token\", \"luv-token\");\n\nconst postConditions = [\n  stacksTransactions.makeStandardFungiblePostCondition(postConditionAddress, postConditionCode, postConditionAmount, postConditionAssetInfo),\n];\n\n//Transaction Options\nconst txOptions = {\n  contractAddress: ftaddress,\n  contractName: ftname,\n  functionName: 'like-message',\n  functionArgs: [\n      stacksTransactions.uintCV(id)\n      ],\n  senderKey: senderkey,\n  validateWithAbi: true,\n  network,\n  postConditions,\n  anchorMode: stacksTransactions.AnchorMode.Any,\n};\n\n//Transaction Broadcast to Network\nconst transaction = await stacksTransactions.makeContractCall(txOptions);\nconst broadcastTxn = await stacksTransactions.broadcastTransaction(transaction, network);\n\n//Passed along Outputs for UI\nmsg.payload = transaction;\nmsg.blockchain = \"0x\" + broadcastTxn;//the transaction id\nmsg.txoptions = txOptions;//the tx options\nmsg.ftcontractid = tempcontractid;//full contract id\n//msg.ftinfo = ftinfo;\nmsg.ftname = ftname;//contract name\nmsg.ftaddress = ftaddress;//contract address\nmsg.ftsender = ftsender; //contract caller\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -22900,10 +22902,12 @@
                 "module": "@stacks/transactions"
             }
         ],
-        "x": 340,
-        "y": 480,
+        "x": 3320,
+        "y": 1680,
         "wires": [
-            []
+            [
+                "4c420d7b.ff4bc4"
+            ]
         ]
     },
     {
@@ -22972,6 +22976,7 @@
         "id": "4d19209e.c0ab8",
         "type": "debug",
         "z": "42c07592.8d970c",
+        "d": true,
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -23009,6 +23014,7 @@
         "id": "2e96cb0.2611636",
         "type": "debug",
         "z": "42c07592.8d970c",
+        "d": true,
         "name": "Chime Chunks Debug",
         "active": true,
         "tosidebar": true,
@@ -23182,5 +23188,190 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "a911e330.1d487",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "d": true,
+        "name": "Like Message Debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3060,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "bace3834.62ed48",
+        "type": "ui_toast",
+        "z": "42c07592.8d970c",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Yes Tip 1 Luv",
+        "cancel": "Woops Back",
+        "raw": false,
+        "topic": "",
+        "name": "{{msg.chime}}",
+        "x": 2820,
+        "y": 1540,
+        "wires": [
+            [
+                "ad1a20f8.1b5d6",
+                "a911e330.1d487",
+                "210f2271.fa500e"
+            ]
+        ]
+    },
+    {
+        "id": "ad1a20f8.1b5d6",
+        "type": "function",
+        "z": "42c07592.8d970c",
+        "name": "show Feed",
+        "func": "msg.payload = {\n  \"group\": {\n    \"hide\": [\n      \"Feed_Profile\",\n      \"Feed_RegisterName\",\n      \"Feed_NewPost\",\n      \"Feed_byContractName\",\n      \"Feed_byTokenName\",\n      \"Feed_byPrincipleAddress\",\n      \"Feed_byTransactionID\",\n      \"Feed_byChimeDeruptar\",      \n      \"Feed_byName\"\n    ],\n    \"show\": [\n      \"Feed_Header\",\n      \"Feed_Feed\"\n    ],\n    \"focus\": true\n  }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3190,
+        "y": 1540,
+        "wires": [
+            [
+                "377ee0f6.d5473",
+                "a718eb27.e950f8"
+            ]
+        ]
+    },
+    {
+        "id": "377ee0f6.d5473",
+        "type": "ui_ui_control",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "events": "all",
+        "x": 3360,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1d69e6d9.a6a679",
+        "type": "link in",
+        "z": "42c07592.8d970c",
+        "name": "Show Feed Again",
+        "links": [
+            "a718eb27.e950f8"
+        ],
+        "x": 235,
+        "y": 1180,
+        "wires": [
+            [
+                "28edd09c.affd2"
+            ]
+        ]
+    },
+    {
+        "id": "a718eb27.e950f8",
+        "type": "link out",
+        "z": "42c07592.8d970c",
+        "name": "Show Feed",
+        "links": [
+            "1d69e6d9.a6a679"
+        ],
+        "x": 3335,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "210f2271.fa500e",
+        "type": "switch",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Yes Tip 1 Luv",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 3020,
+        "y": 1640,
+        "wires": [
+            [
+                "b55e6618.ec2e38",
+                "ac06ed70.45d37"
+            ],
+            [
+                "4ed781a6.b8a28"
+            ]
+        ]
+    },
+    {
+        "id": "4ed781a6.b8a28",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "DO NOT TIP",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "idx",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3170,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "b55e6618.ec2e38",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "TIP THIS ID (msg.idx)",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "idx",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3220,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "4c420d7b.ff4bc4",
+        "type": "debug",
+        "z": "42c07592.8d970c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3610,
+        "y": 1680,
+        "wires": []
     }
 ]
