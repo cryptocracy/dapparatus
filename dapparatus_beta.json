@@ -19068,6 +19068,7 @@
         "id": "b63240a3.7180f",
         "type": "inject",
         "z": "42c07592.8d970c",
+        "d": true,
         "name": "every 10m check",
         "props": [
             {
@@ -19155,16 +19156,16 @@
         "type": "ui_template",
         "z": "42c07592.8d970c",
         "group": "eaf2cbdd.546078",
-        "name": "Feed of Chimes",
+        "name": "Feed of Chimes (testnet)",
         "order": 1,
         "width": 13,
         "height": "12",
-        "format": "<!DOCTYPE html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<style>\nbody {\n  font-family: 'Asap', sans-serif;\n  font-family: 'Roboto', sans-serif;\n\n}\na {\n  color: #34af07;\n}\n\na:hover {\n  color: Red;\n}\n\n\nimg {\n  max-width:100%;\n}\n.avator {\n  border-radius:100px;\n  width:64px;\n  margin-right: 5px;\n  padding-top: 5px;\n}\n\n\n.chime-wrap {\n  width: 85%;    \n  max-width:100%;\n  color: White;\n  margin: 0 auto;\n  margin-top: 8px;\n  padding: 10px;\n  border-bottom: 1px solid #34af07;\n}\n\n.chime-header {\n  display: flex;\n  align-items:flex-start;\n  font-size:14px;\n}\n.chime-header-info {\n  font-weight:bold;\n}\n.chime-header-info span {\n  font-weight:normal;\n  margin-left: 5px;\n}\n.chime-header-info p {\n  font-weight:normal;\n  margin-top: 5px;\n  \n}\n.chime-img-wrap {\n  padding-left: 30px;\n  width: 50%;\n  max-width: 50%;\n  margin-left: 100px;\n}\n\n.chime-info-counts {\n  display: flex;\n  margin-left: 125px;\n  margin-top: 10px;\n}\n.chime-info-counts div {\n  display: flex;\n  margin-right: 20px;\n}\n.chime-info-counts div svg {\n  margin-right: 10px;\n}\n@media screen and (max-width:100%){\n  body {\n    padding-left: 2px;\n    padding-right: 2px;\n  }\n  .chime-header {\n    flex-direction:column;\n  }\n  .chime-header img {\n    margin-bottom: 10px;\n  }\n  .chime-header-info p {\n    color:Black;\n    margin-bottom: 10px;\n  }\n  .chime-img-wrap {\n    width: 50%;\n    max-width: 50%;\n    margin-left: 100px;\n  }\n  .chime-info-counts {\n  display: flex;\n  margin-left: 0;\n}\n.chime-info-counts div {\n  margin-right: 10px;\n}\n}\n</style>\n</head>\n\n<body>\n<link href=\"https://fonts.googleapis.com/css?family=Asap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n\n\n\n<div class=\"chime-wrap\" ng-repeat=\"obj in msg.payload\">\n  <div class=\"chime-header\">\n    <div style=\"position: relative; width: 120px; height: 120px;\" class=\"avator\" ng-click=\"send({topic:'lookup', payload:obj.sender})\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/bg/{{obj.bg}}_bg.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/skin/{{obj.skin}}_skin.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/eyes/{{obj.eyes}}_eyes.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/teeth/{{obj.teeth}}_teeth.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/lips/{{obj.lips}}_lips.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hair/{{obj.hair}}_hair.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hat/{{obj.hat}}_hat.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/chest/{{obj.chest}}_chest.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n    </div>\n<!--    <img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/512x512.png\" alt=\"\" class=\"avator\"> -->\n    <div class=\"chime-header-info\">\n      <small>@{{obj.sender}}</small><span></span><span> </span>\n      <span></span>\n      <h2>{{obj.memo}}</h2>\n    </div>\n  </div>\n  <div class=\"chime-img-wrap\">\n  <img src=\"{{obj.link}}\" alt=\"\" class=\"chime-img\">\n  </div>\n  <div class=\"chime-info-counts\">\n    <div class=\"comments\">\n      <a href=\"\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i></a>\n      <div class=\"comment-count\">0</div>\n    </div>\n    \n    <div class=\"retweets\">\n      <a href=\"\"><i class=\"fa fa-retweet\" aria-hidden=\"true\"></i></a>\n      <div class=\"rechime-count\">0</div>\n    </div>\n    \n    <div class=\"likes\">\n<!--      <svg class=\"feather feather-heart sc-dnqmqq jxshSx\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"></path></svg> -->\n      <a ng-click=\"send({topic:'Tip?', payload:obj.memo, chime:obj.idx, idx:obj.idx})\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\n      <div class=\"likes-count\">{{obj.likecount}}</div>\n    </div>\n    \n    <div class=\"link\">\n        <a href=\"{{obj.link}}\" target=\"_blank\" title=\"Open External Link\"><i class=\"fa fa-link\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n    <div class=\"idx\">\n        <small><small><small>Chime ID: {{obj.idx}}</small></small></small>\n    </div>\n    \n    <div class=\"tx\">\n        <a href=\"https://explorer.stacks.co/txid/{{obj.txid}}?chain=mainnet\" target=\"_blank\" title=\"View Chime In Explorer\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n  </div>\n</div>\n</body>\n</html>\n\n",
+        "format": "<!DOCTYPE html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<style>\nbody {\n  font-family: 'Asap', sans-serif;\n  font-family: 'Roboto', sans-serif;\n\n}\na {\n  color: #34af07;\n}\n\na:hover {\n  color: Red;\n}\n\n\nimg {\n  max-width:100%;\n\n}\n.avator {\n  border-radius:100px;\n  width:96px;\n  margin-top: -13px;\n  margin-left: 1px;\n}\n\n\n.chime-wrap {\n  width: 85%;    \n  max-width:100%;\n  color: White;\n  margin: 0 auto;\n  margin-top: 8px;\n  padding: 10px;\n  border-bottom: 1px solid #34af07;\n}\n\n.chime-header {\n  display: flex;\n  align-items:flex-start;\n  font-size:14px;\n}\n\n.chime-header-info {\n  font-weight:bold;\n}\n.chime-header-info span {\n  font-weight:normal;\n  margin-left: 5px;\n}\n.chime-header-info p {\n  font-weight:normal;\n  margin-top: 5px;\n  \n}\n.chime-img-wrap {\n  padding-left: 3px;\n  width: 50%;\n  max-width: 50%;\n  margin-left: 100px;\n  margin-top: -15px;\n}\n\n.chime-vid-wrap {\n  padding-left: 30px;\n  width: 50%;\n  max-width: 50%;\n  margin-left: 100px;\n  margin-top: -15px;\n}\n\n.chime-info-counts {\n  display: flex;\n  margin-left: 125px;\n  margin-top: 10px;\n}\n.chime-info-counts div {\n  display: flex;\n  margin-right: 20px;\n}\n.chime-info-counts div svg {\n  margin-right: 10px;\n}\n@media screen and (max-width:100%){\n  body {\n    padding-left: 2px;\n    padding-right: 2px;\n  }\n  .chime-header {\n    flex-direction:column;\n  }\n  .chime-header img {\n    margin-bottom: 10px;\n  }\n  .chime-header-info p {\n    color:Black;\n    margin-bottom: 10px;\n  }\n  .chime-img-wrap {\n    width: 50%;\n    max-width: 50%;\n    margin-left: 100px;\n    margin-top: -15px;\n  }\n  .chime-vid-wrap {\n    width: 50%;\n    max-width: 50%;\n    margin-left: 100px;\n    margin-top: -15px;\n  }\n  .chime-info-counts {\n  display: flex;\n  margin-left: 0;\n}\n.chime-info-counts div {\n  margin-right: 10px;\n}\n}\n</style>\n</head>\n\n<body>\n<link href=\"https://fonts.googleapis.com/css?family=Asap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n\n<div class=\"chime-wrap\" ng-repeat=\"obj in msg.payload\">\n  <div class=\"chime-header\">\n    <div style=\"position: relative; width: 96px; height: 96px;\" class=\"avator\" ng-click=\"send({topic:'lookup', payload:obj.sender})\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/bg/{{obj.bg}}_bg.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/skin/{{obj.skin}}_skin.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/eyes/{{obj.eyes}}_eyes.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/teeth/{{obj.teeth}}_teeth.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/lips/{{obj.lips}}_lips.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hair/{{obj.hair}}_hair.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hat/{{obj.hat}}_hat.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/chest/{{obj.chest}}_chest.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n    </div>\n    <div class=\"chime-header-info\">\n      <small>@{{obj.sender}}</small><span></span><span> </span>\n      <span></span>\n      <h2>{{obj.memo}}</h2>\n    </div>\n  </div>\n  <div class=\"chime-img-wrap\" ng-if=\"obj.isgif === true\">\n    <img src=\"{{obj.link}}\" alt=\"\" class=\"chime-img\" >\n  </div>\n  \n  <div class=\"chime-img-wrap\" ng-if=\"obj.ispng === true\">\n    <img src=\"{{obj.link}}\" alt=\"\" class=\"chime-img\" >\n  </div>\n  \n  <div class=\"chime-img-wrap\" ng-if=\"obj.ismp4 === true\">\n    <video width=\"320\" height=\"240\" controls>\n    <source src=\"{{obj.link}}\" type=\"video/mp4\">\n    </video>\n  </div>\n  \n  <div class=\"chime-img-wrap\" ng-if=\"obj.ismp3 === true\">\n    <audio controls>\n    <source src=\"{{obj.link}}\" type=\"audio/mp3\">\n    </audio>\n  </div>\n\n  <div class=\"chime-info-counts\">\n    <div class=\"comments\">\n    <a href=\"\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i></a>\n    <div class=\"comment-count\">0</div>\n    </div>\n    \n    <div class=\"retweets\">\n    <a href=\"\"><i class=\"fa fa-retweet\" aria-hidden=\"true\"></i></a>\n    <div class=\"rechime-count\">0</div>\n    </div>\n    \n    <div class=\"likes\">\n    <a ng-click=\"send({topic:'Tip?', payload:obj.memo, chime:obj.idx, idx:obj.idx})\"><i class=\"fa fa-heart\" aria-hidden=\"true\" title=\"Like to Tip\"></i></a>\n    <div class=\"likes-count\">{{obj.likecount}}</div>\n    </div>\n\n    <div class=\"tx\">\n    <a href=\"https://explorer.stacks.co/txid/{{obj.txid}}?chain=testnet\" target=\"_blank\" title=\"View Chime In Explorer\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n    <div class=\"idx\">\n    <small><small><small>Chime ID: {{obj.idx}}</small></small></small>\n    </div>\n        \n  </div>\n</div>\n</body>\n</html>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2160,
+        "x": 2170,
         "y": 1440,
         "wires": [
             [
@@ -19374,7 +19375,6 @@
         "id": "595348d0.ff8358",
         "type": "debug",
         "z": "42c07592.8d970c",
-        "d": true,
         "name": "Chimes Array Reconstructed",
         "active": true,
         "tosidebar": true,
@@ -19384,8 +19384,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2200,
-        "y": 1540,
+        "x": 2180,
+        "y": 1520,
         "wires": []
     },
     {
@@ -19497,7 +19497,7 @@
         "type": "function",
         "z": "42c07592.8d970c",
         "name": "form chimes ",
-        "func": "let data = msg.payload\nlet result = []\n\ndata.memos.forEach((el, index) => {\n    result.push(\n        {\n            \"memo\": data.memos[index],\n            \"link\": data.links[index],\n            \"txid\": data.txids[index],\n            \"sender\": data.senders[index],\n            \"bg\": data.senders[index].substring(4).substr(0,1),\n            \"skin\": data.senders[index].substring(4).substr(1,1),\n            \"eyes\": data.senders[index].substring(4).substr(2,1),\n            \"teeth\": data.senders[index].substring(4).substr(3,1),\n            \"lips\": data.senders[index].substr(-4).substr(0,1),\n            \"hair\": data.senders[index].substr(-4).substr(1,1),            \n            \"hat\": data.senders[index].substr(-4).substr(2,1),            \n            \"chest\": data.senders[index].substr(-4).substr(3,1),            \n            \"idx\": data.idxs[index],\n            \"likecount\": data.likecounts[index]\n        }\n    )\n})\n\nmsg.payload = result;\nreturn msg;",
+        "func": "let data = msg.payload\nlet result = []\n\ndata.memos.forEach((el, index) => {\n    result.push(\n        {\n            \"memo\": data.memos[index],\n            \"link\": data.links[index],\n            \"ismp4\": data.links[index].includes(\".mp4\"),\n            \"ismp3\": data.links[index].includes(\".mp3\"),\n            \"isgif\": data.links[index].includes(\".gif\"),\n            \"ispng\": data.links[index].includes(\".png\"),\n            \"txid\": data.txids[index],\n            \"sender\": data.senders[index],\n            \"bg\": data.senders[index].substring(4).substr(0,1),\n            \"skin\": data.senders[index].substring(4).substr(1,1),\n            \"eyes\": data.senders[index].substring(4).substr(2,1),\n            \"teeth\": data.senders[index].substring(4).substr(3,1),\n            \"lips\": data.senders[index].substr(-4).substr(0,1),\n            \"hair\": data.senders[index].substr(-4).substr(1,1),            \n            \"hat\": data.senders[index].substr(-4).substr(2,1),            \n            \"chest\": data.senders[index].substr(-4).substr(3,1),            \n            \"idx\": data.idxs[index],\n            \"likecount\": data.likecounts[index]\n        }\n    )\n})\n\nmsg.payload = result;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19527,8 +19527,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2160,
-        "y": 1380,
+        "x": 2140,
+        "y": 1400,
         "wires": []
     },
     {
@@ -19546,8 +19546,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2160,
-        "y": 1320,
+        "x": 2140,
+        "y": 1360,
         "wires": [
             []
         ]
@@ -19606,7 +19606,7 @@
         "repair": false,
         "outputs": 5,
         "x": 2510,
-        "y": 1500,
+        "y": 1380,
         "wires": [
             [
                 "4131bc5f.14c854"
@@ -20889,7 +20889,7 @@
                 "rows": null
             },
             {
-                "label": "Attachment URL",
+                "label": "Media URL (.mp3 .mp4 .png .gif)",
                 "value": "fturl",
                 "type": "text",
                 "required": false,
@@ -22012,7 +22012,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1750,
+        "x": 1730,
         "y": 1400,
         "wires": [
             []
@@ -22987,6 +22987,27 @@
                 "192b5a27.e2e4a6",
                 "2e96cb0.2611636"
             ]
+        ]
+    },
+    {
+        "id": "32bfaae.fbbfc56",
+        "type": "ui_template",
+        "z": "42c07592.8d970c",
+        "d": true,
+        "group": "eaf2cbdd.546078",
+        "name": "Feed of Chimes (testnet) (backup)",
+        "order": 1,
+        "width": 13,
+        "height": "12",
+        "format": "<!DOCTYPE html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<style>\nbody {\n  font-family: 'Asap', sans-serif;\n  font-family: 'Roboto', sans-serif;\n\n}\na {\n  color: #34af07;\n}\n\na:hover {\n  color: Red;\n}\n\n\nimg {\n  max-width:100%;\n}\n.avator {\n  border-radius:100px;\n  width:64px;\n  margin-right: 5px;\n  padding-top: 5px;\n}\n\n\n.chime-wrap {\n  width: 85%;    \n  max-width:100%;\n  color: White;\n  margin: 0 auto;\n  margin-top: 8px;\n  padding: 10px;\n  border-bottom: 1px solid #34af07;\n}\n\n.chime-header {\n  display: flex;\n  align-items:flex-start;\n  font-size:14px;\n}\n.chime-header-info {\n  font-weight:bold;\n}\n.chime-header-info span {\n  font-weight:normal;\n  margin-left: 5px;\n}\n.chime-header-info p {\n  font-weight:normal;\n  margin-top: 5px;\n  \n}\n.chime-img-wrap {\n  padding-left: 30px;\n  width: 50%;\n  max-width: 50%;\n  margin-left: 100px;\n}\n\n.chime-info-counts {\n  display: flex;\n  margin-left: 125px;\n  margin-top: 10px;\n}\n.chime-info-counts div {\n  display: flex;\n  margin-right: 20px;\n}\n.chime-info-counts div svg {\n  margin-right: 10px;\n}\n@media screen and (max-width:100%){\n  body {\n    padding-left: 2px;\n    padding-right: 2px;\n  }\n  .chime-header {\n    flex-direction:column;\n  }\n  .chime-header img {\n    margin-bottom: 10px;\n  }\n  .chime-header-info p {\n    color:Black;\n    margin-bottom: 10px;\n  }\n  .chime-img-wrap {\n    width: 50%;\n    max-width: 50%;\n    margin-left: 100px;\n  }\n  .chime-info-counts {\n  display: flex;\n  margin-left: 0;\n}\n.chime-info-counts div {\n  margin-right: 10px;\n}\n}\n</style>\n</head>\n\n<body>\n<link href=\"https://fonts.googleapis.com/css?family=Asap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n\n\n\n<div class=\"chime-wrap\" ng-repeat=\"obj in msg.payload\">\n  <div class=\"chime-header\">\n    <div style=\"position: relative; width: 120px; height: 120px;\" class=\"avator\" ng-click=\"send({topic:'lookup', payload:obj.sender})\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/bg/{{obj.bg}}_bg.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/skin/{{obj.skin}}_skin.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/eyes/{{obj.eyes}}_eyes.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/teeth/{{obj.teeth}}_teeth.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/lips/{{obj.lips}}_lips.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hair/{{obj.hair}}_hair.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/hat/{{obj.hat}}_hat.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n        <img src=\"https://raw.githubusercontent.com/cryptocracy/deruptars/main/chest/{{obj.chest}}_chest.png\" alt=\"\" style=\"position: absolute; top: 0; left: 0;\">\n    </div>\n<!--    <img src=\"https://raw.githubusercontent.com/cryptocracy/images/master/512x512.png\" alt=\"\" class=\"avator\"> -->\n    <div class=\"chime-header-info\">\n      <small>@{{obj.sender}}</small><span></span><span> </span>\n      <span></span>\n      <h2>{{obj.memo}}</h2>\n    </div>\n  </div>\n  <div class=\"chime-img-wrap\">\n  <img src=\"{{obj.link}}\" alt=\"\" class=\"chime-img\">\n  </div>\n  <div class=\"chime-info-counts\">\n    <div class=\"comments\">\n      <a href=\"\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i></a>\n      <div class=\"comment-count\">0</div>\n    </div>\n    \n    <div class=\"retweets\">\n      <a href=\"\"><i class=\"fa fa-retweet\" aria-hidden=\"true\"></i></a>\n      <div class=\"rechime-count\">0</div>\n    </div>\n    \n    <div class=\"likes\">\n<!--      <svg class=\"feather feather-heart sc-dnqmqq jxshSx\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"></path></svg> -->\n      <a ng-click=\"send({topic:'Tip?', payload:obj.memo, chime:obj.idx, idx:obj.idx})\"><i class=\"fa fa-heart\" aria-hidden=\"true\" title=\"Like to Tip\"></i></a>\n      <div class=\"likes-count\">{{obj.likecount}}</div>\n    </div>\n    \n    <!-- <div class=\"link\">\n        <a href=\"{{obj.link}}\" target=\"_blank\" title=\"Open External Link\"><i class=\"fa fa-link\" aria-hidden=\"true\"></i></a>\n    </div> -->\n    <div class=\"tx\">\n        <a href=\"https://explorer.stacks.co/txid/{{obj.txid}}?chain=testnet\" target=\"_blank\" title=\"View Chime In Explorer\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></a>\n    </div>\n    \n    <div class=\"idx\">\n        <small><small><small>Chime ID: {{obj.idx}}</small></small></small>\n    </div>\n        \n  </div>\n</div>\n</body>\n</html>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 2200,
+        "y": 1480,
+        "wires": [
+            []
         ]
     }
 ]
