@@ -8,7 +8,6 @@ const network = new stacksNetwork.StacksMainnet();
 const ftcontractid = "SP3T3JC6V4S94PPB7WFEK17863HPG3EYP6CJ65E7M.luv"; //get our contract id
 const ftname = ftcontractid.split(".")[1]; //remove everything prior and including "."
 const ftaddress = ftcontractid.split(".")[0]; //remove everything after and including "."
-//const ftinfo = stacksTransactions.createAssetInfo(ftaddress, ftname, ftname); //set AssetInfo for type property
 const ftamount = 1;
 
 //Sender
@@ -23,7 +22,6 @@ const attachmentUri = msg.payload.fturl;//pass in the attachment url
 const postConditionAddress = ftsender;
 const postConditionCode = stacksTransactions.FungibleConditionCode.Equal;
 const postConditionAmount = new BigNum(1); //requires BigNum
-//const postConditionAssetInfo = ftinfo;//Problem like something to do with thi postConditionAssetInfo
 const postConditionAssetInfo = stacksTransactions.createAssetInfo(ftaddress, "luv", "luv");
 
 const postConditions = [
@@ -55,7 +53,6 @@ msg.payload = transaction;
 msg.blockchain = "0x" + broadcastTxn;//the transaction id
 msg.txoptions = txOptions;//the tx options
 msg.ftcontractid = ftcontractid;//full contract id
-//msg.ftinfo = ftinfo;
 msg.ftname = ftname;//contract name
 msg.ftaddress = ftaddress;//contract address
 msg.ftsender = ftsender; //contract caller
